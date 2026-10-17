@@ -5,6 +5,17 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / TSSB: 75 series built locally from revision
+  `e0c7a1f6cee6874e60cbacd3b8601f2de259606e`, SHA256-pinned archive; 359,497
+  samples, 265 segments, lengths 240 / 3,456 median / 20,700, recurrence in
+  **10/75** (65/75 without recurrence), no missing labels. Class IDs reconstructed
+  from provider properties using subsegment index // (label_cut+1), matching
+  every source CP. No physical rate asserted. Croissant/Parquet validation 0/0.
+  **Rights hold:** BSD-3-Clause verified for TSSB repository, but UCR/UEA source
+  redistribution rights not established by their primary archive pages.
+  Conservatively moved to tier C, source-only; rationale in docs/licenses/tssb.md.
+  Local build 1.2 MiB; no redistribution or publication.
+
 - [x] Batch 1 / ActRecTut: all four walk/gesture matrices from primary Codeberg
   revision `6d65a5a646f9d12ac45509db9dfe59c01f3183e4`, GPL-3.0-or-later verified in
   settings.m on 2026-10-18; SHA256-pinned archive. 197,227 samples, lengths

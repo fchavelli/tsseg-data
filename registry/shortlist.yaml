@@ -27,11 +27,11 @@ datasets:
     task: sd
     label_type: states
     license: BSD-3-Clause
-    license_tier: A
+    license_tier: C
     why: "benchmark de référence du CPD univarié récent, déjà au banc"
-    risks: "frontières artificielles (concaténation UCR/UEA), 65/75 séries sans état récurrent"
+    risks: "2026-10-18: BSD covers TSSB repository; underlying UCR/UEA redistribution rights unresolved. Source-only pending clarification. Artificial boundaries; 65/75 series without recurrence."
     subset: null
-    contact_needed: false
+    contact_needed: true
   - id: utsa
     registry: cpd_benchmarks.yaml
     domain: generic_cpd

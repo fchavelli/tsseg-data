@@ -85,6 +85,9 @@ def finish(
     labels = list(spec.label_columns)
     null_states = null_states or {}
     evidence = {"date": "2026-10-18", "url": license_evidence, "license": license_spdx}
+    if info and info.get("license_scope"):
+        evidence["scope"] = info["license_scope"]
+        evidence["rehosting_allowed"] = info.get("rehosting_allowed", False)
     info = {
         "label_type": "states",
         "default_label": labels[0],
@@ -167,9 +170,11 @@ def finish(
         f"{license_spdx}. Verified at the primary source on 2026-10-18: "
         f"[{license_evidence}]({license_evidence}). Conversion code: MIT."
     )
+    if info.get("license_scope"):
+        license_text += " " + info["license_scope"]
     card = {
         "pretty_name": title,
-        "hf_license": license_spdx.lower(),
+        "hf_license": info.get("hf_license", license_spdx.lower()),
         "tags": ["time-series", "state-detection", "change-point-detection", "tsseg"],
         "size_category": "n<1K",
         "annotations_creators": ["expert-generated"],

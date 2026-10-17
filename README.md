@@ -53,7 +53,7 @@ the authors allow re-hosting.
 <!-- datasets:start -->
 | Dataset | Domain | Task | License (tier) | Status |
 |---|---|---|---|---|
-| `tssb`: Time Series Segmentation Benchmark (TSSB) | generic_cpd | SD | BSD-3-Clause (A) | planned |
+| `tssb`: Time Series Segmentation Benchmark (TSSB) | generic_cpd | SD | BSD-3-Clause (TSSB repo); upstream UCR/UEA rights unresolved (C) | builder + validated local build (10/75 recurrent); source-only builder until the authors allow re-hosting |
 | `utsa`: UCR Time Series Semantic Segmentation Archive (UTSA, FLOSS datasets) | generic_cpd | CPD | none at the source (C) | planned; source-only builder until the authors allow re-hosting |
 | `has`: Human Activity Segmentation Challenge 2023 (ECML/PKDD) | har | SD | CC-BY-NC-SA-4.0 (B) | planned |
 | `actrectut`: ActRecTut — Human Activity Recognition Tutorial dataset (Bulling et al.) | har | SD | GPL-3.0-or-later (B) | builder + validated build (walk + gesture) |

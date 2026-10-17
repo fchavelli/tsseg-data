@@ -21,6 +21,7 @@ STATUS = {  # id -> status text, for datasets beyond "planned"
     "pump": "builder + validated build (400 cycles)",
     "skab": "builder + validated build (all 129 source CP markers)",
     "actrectut": "builder + validated build (walk + gesture)",
+    "tssb": "builder + validated local build (10/75 recurrent)",
     "mozilla-perf-cpd-annotations": "builder + validated build",
     "opportunity": "builder + validated build",
     "dreem-dod-h": "builder + validated build (3 of 25 nights)",
@@ -28,6 +29,7 @@ STATUS = {  # id -> status text, for datasets beyond "planned"
 TASK = {"sd": "SD", "cpd": "CPD", "both": "SD + CPD"}
 # English wording for registry fields written in French (the registry is a copy).
 LICENSE_EN = {
+    "tssb": "BSD-3-Clause (TSSB repo); upstream UCR/UEA rights unresolved",
     "utsa": "none at the source",
     "usc-had": "none at the source",
     "mocap": "CMU MoCap terms (free use, no resale)",
