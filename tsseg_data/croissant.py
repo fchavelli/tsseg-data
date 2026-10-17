@@ -329,7 +329,9 @@ def build_croissant(root: Path, meta: DatasetMetadata, configs: list[str]) -> di
     doc["prov:wasDerivedFrom"] = meta.derived_from
     doc["prov:wasGeneratedBy"] = [a.to_jsonld(i) for i, a in enumerate(meta.activities)]
     for k, v in meta.tsseg.items():
-        doc[f"tsseg:{k}"] = v
+        # empty JSON objects make mlcroissant 1.1 recurse without end: omit empties
+        if v not in (None, {}, []):
+            doc[f"tsseg:{k}"] = v
     return doc
 
 

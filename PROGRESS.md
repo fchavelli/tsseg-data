@@ -17,9 +17,15 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
   aligned by `record_id` (window rule reproduces every h5 length exactly, no
   agreement search); Opportunity's 24 repeated `accX` renamed X/Y/Z by position.
 
+- [x] 3. `scripts/validate.py`: files + SHA256SUMS, Croissant (mlcroissant 1.1.1 of
+  `pilot/.venv`, required RAI, DOI in `prov:wasDerivedFrom`, three
+  `prov:wasGeneratedBy` activities, record-set fields = Parquet columns, records
+  read from a 1-row excerpt), Parquet schema, chunks, labels, change points,
+  identity across configs. The three datasets pass (10 s, 1 GB RAM); a corrupted
+  index is caught. Fixed on the way: an empty `tsseg:nullStates` object made
+  mlcroissant recurse forever (empties are now omitted).
+
 ## To do
 
-- [ ] 3. `scripts/validate.py` (mlcroissant, Parquet schema, CP/label coherence);
-  all three valid.
 - [ ] 4. README (collection, one line per dataset), CONTRIBUTING.
 - [ ] 5. `docs/NEURIPS_CHECKLIST.md`.

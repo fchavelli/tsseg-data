@@ -213,6 +213,7 @@ def main() -> None:
         "dataAnnotationPlatform": "TCPD-style annotation web tool.",
         "dataAnnotationAnalysis": f"Agreement computed by the builder on the default change "
         f"types ({', '.join(DEFAULT_TYPES)}), margin {MARGIN} points: mean pairwise F1 "
+        "(index 0 added to both sets, TCPD convention) "
         f"{agreement['pairwise_f1_mean']}, mean one-vs-rest TCPD F1 "
         f"{agreement['one_vs_rest_tcpd_f1_mean']} (paper: 0.76). All annotations are kept, "
         "with their type; no consensus is defined by the source.",

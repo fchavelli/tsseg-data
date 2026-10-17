@@ -285,9 +285,7 @@ def main() -> None:
     }
     cite = ("@inproceedings{roggen2010opportunity, title={Collecting complex activity "
             "datasets in highly rich networked sensor environments}, author={Roggen, "
-            "Daniel and Calatroni, Alberto and Rossi, Mirco and Holleczek, Thomas and "
-            "F{\\\"o}rster, Kilian and Tr{\\\"o}ster, Gerhard and Lukowicz, Paul and "
-            "Bannach, David and Pirkl, Gerald and Ferscha, Alois and others}, "
+            "Daniel and Calatroni, Alberto and Rossi, Mirco and others}, "
             "booktitle={Seventh International Conference on Networked Sensing Systems "
             "(INSS)}, pages={233--240}, year={2010}}\n"
             "@article{chavarriaga2013opportunity, title={The Opportunity challenge: A "
