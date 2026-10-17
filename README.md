@@ -61,7 +61,7 @@ the authors allow re-hosting.
 | `usc-had`: USC-HAD: USC Human Activity Dataset | har | SD | none at the source (C) | planned; source-only builder until the authors allow re-hosting |
 | `pump`: Hydraulic End-of-Line Testing (Bosch) — PUMP | industry_energy | SD | CC-BY-4.0 (A) | builder + validated build (400 cycles) |
 | `skab`: Skoltech Anomaly Benchmark (SKAB) | industry_energy | CPD | GPL-3.0 (B) | builder + validated build (all 129 source CP markers) |
-| `mocap`: CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004) | mocap_surgery_assembly | CPD | CMU MoCap terms (free use, no resale) (B) | planned; author contact planned |
+| `mocap`: CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004) | mocap_surgery_assembly | CPD | CMU motion terms; Barbič labels unlicensed (C) | builder + validated local build (14 Barbič trials); source-only builder until the authors allow re-hosting |
 | `sleep-edfx`: Sleep-EDF Database Expanded | physio | SD | ODC-By-1.0 (A) | planned |
 | `dreem-dod-h`: Dreem Open Dataset — Healthy (DOD-H) | physio | SD | MIT (A) | builder + validated build (3 of 25 nights) |
 | `mitdb`: MIT-BIH Arrhythmia Database | physio | SD | ODC-By-1.0 (A) | planned |

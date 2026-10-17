@@ -10,8 +10,10 @@ code 1 if any dataset has an error. Checks:
 1. files: README.md (HF YAML header, configs = tsseg.json configs), croissant.json,
    tsseg.json, index.parquet, SHA256SUMS (all digests verified);
 2. Croissant: ``mlcroissant`` loads it without error (the library behind the
-   NeurIPS checker), required RAI fields present and non-empty, a DOI in
-   ``prov:wasDerivedFrom``, collection / annotation / preprocessing activities in
+   NeurIPS checker), required RAI fields present and non-empty, an explicit
+   primary HTTP(S) source URL in ``prov:wasDerivedFrom`` (DOI preferred when
+   established; a planned collection destination is not source provenance),
+   collection / annotation / preprocessing activities in
    ``prov:wasGeneratedBy``; the first ``N`` records of every record set are read;
    the fields of every record set equal the Parquet columns;
 3. Parquet: every part file of a config has the expected schema (reserved columns,
@@ -113,8 +115,19 @@ def check_croissant(root: Path, info: dict, r: Report, n_records: int) -> None:
     r.check(isinstance(doc.get("rai:hasSyntheticData"), bool),
             "croissant: rai:hasSyntheticData must be a boolean")
     derived = doc.get("prov:wasDerivedFrom") or []
-    r.check(any("doi.org/" in (d.get("@id", "") if isinstance(d, dict) else str(d))
-                for d in derived), "croissant: no DOI in prov:wasDerivedFrom")
+    source_urls = [d.get("@id", "") if isinstance(d, dict) else str(d) for d in derived]
+    primary_urls = [
+        u
+        for u in source_urls
+        if re.match(r"https?://[^/\s]+", u)
+        and u.rstrip("/") != str(doc.get("url", "")).rstrip("/")
+        and not re.match(r"https?://huggingface\.co/datasets/fchavelli/", u)
+    ]
+    r.check(
+        bool(primary_urls), "croissant: no primary source URL in prov:wasDerivedFrom"
+    )
+    if not any("doi.org/" in u for u in source_urls):
+        r.note("source provenance uses a primary URL; no source DOI asserted")
     kinds = {a.get("name") for a in doc.get("prov:wasGeneratedBy", [])}
     for k in ["data collection", "data annotation", "preprocessing"]:
         r.check(k in kinds, f"croissant: prov:wasGeneratedBy lacks a '{k}' activity")

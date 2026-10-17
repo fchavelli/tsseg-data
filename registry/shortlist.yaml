@@ -115,7 +115,7 @@ datasets:
     task: cpd
     label_type: cps
     license: "CMU MoCap terms (libre, pas de revente)"
-    license_tier: B
+    license_tier: C
     why: "version complétée : 14 essais Barbič, 62 DOF, CP à tolérance (tôt/meilleur/tard)"
     risks: "labels Barbič sans licence (3 coquilles) ; désaccord avec labels Time2State sur 11 et 14"
     subset: null

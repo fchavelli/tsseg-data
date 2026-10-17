@@ -144,6 +144,7 @@ def finish(
             Activity("preprocessing", conversion, agents=["tsseg-data"], used=[source]),
         ],
         rai=rai,
+        auxiliary=info.get("auxiliary", {}),
         tsseg={"licenseVerification": evidence, "sourceSha256": sha256},
     )
     facts = [

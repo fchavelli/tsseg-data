@@ -5,6 +5,20 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / MoCap: all 14 primary Barbič trials, 62 DOFs at 120 Hz,
+  109,052 frames, lengths 4,579 / 8,370.5 median / 10,617, 124 action segments,
+  recurrence in 14/14 after explicit walk/walking alias. Source transition
+  triplets and action names preserved in segments.parquet; invalid 05/06 ordering
+  and broad overlapping 04 window flagged, never silently repaired. Terminal label
+  counts differ by up to eight frames: source endpoints retained, final action
+  extended/clipped to actual signal rows; interior CP values unchanged. Both
+  archives SHA256-pinned. CMU motion rights and absent annotation licence checked
+  2026-10-18: **source-only, effective tier C** for labelled product. Validation 0/0.
+  Provenance validator now accepts explicit primary HTTP(S) source URLs without
+  inventing DOIs, matching NeurIPS rules; rejects planned collection HF destinations
+  as sole provenance (two negative cases verified). Checklist and local HANDOFF §3
+  updated. Existing DOI provenance remains supported.
+
 - [x] Batch 1 / PAMAP2: complete UCI archive (CC BY 4.0 verified 2026-10-18),
   SHA256 `76b3580bd5a804121f507717cb498c66a312ef5c774f4a78ac470e6558add352`.
   **14 sessions** (9 Protocol + 5 Optional, correcting the registry's six-subject
