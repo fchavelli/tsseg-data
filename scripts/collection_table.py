@@ -22,6 +22,7 @@ STATUS = {  # id -> status text, for datasets beyond "planned"
     "skab": "builder + validated build (all 129 source CP markers)",
     "actrectut": "builder + validated build (walk + gesture)",
     "tssb": "builder + validated local build (10/75 recurrent)",
+    "has": "builder + validated build (250 series, GPS removed)",
     "mozilla-perf-cpd-annotations": "builder + validated build",
     "opportunity": "builder + validated build",
     "dreem-dod-h": "builder + validated build (3 of 25 nights)",

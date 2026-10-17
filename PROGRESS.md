@@ -5,6 +5,17 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / HAS: all 250 labelled master CSV series (125 public / 125 private),
+  1,929,951 samples, 1,035 segments, recurrence in 83/250, no missing labels,
+  lengths 340 / 4,985.5 median / 41,465. Nine inertial columns, six present for
+  outdoor recordings (missing gyroscopes padded with NaN), nominal 50 Hz verified
+  in primary README. All **100 exact activity names** preserved via a global
+  mapping, including ordinary transition/rest/break classes. Latitude, longitude
+  and speed are excluded. Master/challenge IDs retained. Safe literal/numeric
+  parsing replaces the provider's eval-based loader. CC BY-NC-SA 4.0 verified at
+  primary source on 2026-10-18, revision `a77bf78d1ff7e7115e64b2214da809660f99d943`;
+  archive SHA256 pinned. Validation passes with 0 errors / 0 warnings.
+
 - [x] Batch 1 / TSSB: 75 series built locally from revision
   `e0c7a1f6cee6874e60cbacd3b8601f2de259606e`, SHA256-pinned archive; 359,497
   samples, 265 segments, lengths 240 / 3,456 median / 20,700, recurrence in
