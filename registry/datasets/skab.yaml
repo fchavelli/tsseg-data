@@ -1,0 +1,39 @@
+# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+id: skab
+name: "Skoltech Anomaly Benchmark (SKAB)"
+domain: industry
+task: both
+source_url: https://github.com/waico/SKAB
+doi: 10.34740/KAGGLE/DSV/1693952
+citation: "Katser & Kozitsin, SKAB, Kaggle 2020"
+license: GPL-3.0
+license_url: https://github.com/waico/SKAB/blob/master/LICENSE
+license_tier: B
+license_verified: "2026-10-17, dépôt GitHub (LICENSE GPL-3.0)"
+n_series: 34
+length: {min: 700, median: null, max: 1300}
+n_channels: 8
+sampling_rate_hz: 1
+label_type: states
+n_states: 2
+n_annotators: null
+label_origin: protocol
+unlabeled_regions: "non"
+continuous: true
+access: direct
+size: "~ quelques Mo"
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: medium
+value_reason: "banc d'essai physique (pompe à eau) à anomalie collective injectée ; trivial en SD (0-1-0)"
+effort: low
+confidence: high
+notes: >-
+  Anomalies = intervalles de régime (injection protocolaire : vannes fermées,
+  fuites, cavitation...), pas des points. Version plus complète à la source :
+  la colonne `changepoint` pose 4 marques par anomalie (début/fin des phases de
+  transition) → version 5 segments (normal, montée, anomalie, descente, normal)
+  possible. Le README annonce une v1.0 avec « 300+ fichiers » (non publiée au
+  2026-10-17, à surveiller). Fichier anomaly-free non utilisé. Fréquence 1 Hz
+  selon le papier (non relu ici).
+rejected: null

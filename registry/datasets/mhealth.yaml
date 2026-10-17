@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: mhealth
+name: "MHEALTH (Mobile HEALTH) dataset"
+domain: har
+task: both
+source_url: "https://archive.ics.uci.edu/dataset/319/mhealth+dataset"
+doi: "10.24432/C5TW22"
+citation: "Banos et al., IWAAL 2014 (mHealthDroid) ; BioMedical Engineering OnLine 2015"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/legalcode"
+license_verified: "2026-10-17, page UCI"
+license_tier: A
+n_series: 10
+length: {min: null, median: null, max: null}
+n_channels: 23
+sampling_rate_hz: 50
+label_type: states
+n_states: 12
+n_annotators: null
+label_origin: protocol
+unlabeled_regions: "oui : label 0 = null entre les activités"
+continuous: true
+access: direct
+size: "~70 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "un log continu par sujet, 3 IMU + ECG 2 dérivations, null entre activités ; utilisé par ClaSS (Ermshaus et al. 2024)"
+effort: low
+confidence: medium
+notes: "10 sujets, 12 activités (debout, assis, allongé, marche, escaliers, flexion, bras, accroupi, vélo, jogging, course, sauts) enregistrées à la suite, vidéo pour l'étiquetage. Chaque activité une seule fois par sujet : pas d'état récurrent hors null. Longueurs non relevées (~1 min par activité, 20 s pour certaines)."
+rejected: null

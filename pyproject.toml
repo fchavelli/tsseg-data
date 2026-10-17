@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsseg-data"
+version = "0.1.0.dev0"
+description = "Builders, metadata and checks for the tsseg collection of change point and state detection datasets"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Félix Chavelli" }]
+dependencies = ["numpy>=1.24", "pyarrow>=14"]
+
+[project.optional-dependencies]
+# Everything the builders need (download, decode the source formats, write Parquet).
+build = ["pandas>=2.0", "h5py>=3.8", "pooch>=1.7", "pyyaml>=6"]
+# Validation of the Croissant files (same library as the NeurIPS checker).
+validate = ["mlcroissant>=1.1"]
+
+[tool.setuptools]
+packages = ["tsseg_data"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP"]
+ignore = ["E501"]

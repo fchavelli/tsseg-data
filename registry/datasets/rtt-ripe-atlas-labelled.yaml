@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: rtt-ripe-atlas-labelled
+name: "RTT change detection dataset (RIPE Atlas, labels manuels) — Shao et al."
+domain: networking
+task: cpd
+source_url: https://github.com/WenqinSHAO/rtt
+doi: null
+citation: "Shao, Rougier, Paris, Devienne & Viste, One-to-One Matching of RTT and Path Changes, ITC 29, 2017 (arXiv 1709.04819)"
+license: "MIT (dépôt) ; mesures brutes RIPE Atlas soumises aux conditions RIPE NCC (non relues)"
+license_url: https://github.com/WenqinSHAO/rtt/blob/master/LICENSE
+license_tier: A
+license_verified: "2026-10-17, licence GitHub du dépôt (MIT) ; conditions RIPE Atlas à vérifier en phase 2"
+n_series: 50
+length: {min: null, median: 8162, max: null}
+n_channels: 1
+sampling_rate_hz: "1/240 (≈ 4 min, déduit de 8 162 points ≈ 680 h ; à vérifier)"
+label_type: cps
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: non
+continuous: true
+access: direct
+size: "dépôt ~85 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "50 séries réelles longues, 1 047 CP annotés à la main, plus 20 séries synthétiques (935 CP connus) annotées par les mêmes annotateurs : mesure rare de la fiabilité des annotateurs ; licence A ; domaine absent de TSB-SEG"
+effort: low
+confidence: high
+notes: >-
+  Longueur donnée en moyenne (8 162 points) : la médiane du schéma est en fait
+  la moyenne. Total > 34 008 h de mesures. Le jeu synthétique
+  (dataset/artificial_trace_ground_fact, 20 traces de 8 646 points en moyenne)
+  vient du générateur rtt_gen (voir générateurs). Utilisé ensuite par un papier
+  SBRC 2025 (XGBoost pour changements de route).
+rejected: null

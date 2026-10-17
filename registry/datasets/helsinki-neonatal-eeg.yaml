@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: helsinki-neonatal-eeg
+name: "A dataset of neonatal EEG recordings with seizure annotations (Helsinki)"
+domain: "physio"
+task: "both"
+source_url: "https://zenodo.org/records/4940267"
+doi: "10.5281/zenodo.4940267"
+citation: "Stevenson et al., Sci Data 6:190039, 2019"
+license: "CC-BY-4.0"
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_tier: "A"
+license_verified: "2026-10-17, API Zenodo"
+n_series: 79
+length: {min: null, median: null, max: null}
+n_channels: 19
+sampling_rate_hz: null
+label_type: "multi_track"
+n_states: 2
+n_annotators: 3
+label_origin: "human"
+unlabeled_regions: "non"
+continuous: true
+access: "direct"
+size: "4.3 GB"
+in_tsseg_bench: false
+fm_pretraining: "unknown"
+value: "high"
+value_reason: "crises néonatales annotées par 3 experts (≈ 460 crises par expert) : CPD/SD multi-annotateurs, désaccords documentés"
+effort: "low"
+confidence: "high"
+notes: "Durée médiane 74 min (IQR 64-96). 39 nouveau-nés avec crises par consensus, 22 sans. 256 Hz d'après le papier (non relu). Candidat pilote « CPD multi-annotateurs »."
+rejected: null

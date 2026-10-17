@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: bebe
+name: "BEBE — Bio-logger Ethogram Benchmark (collection de 9 jeux)"
+domain: ethology
+task: both
+source_url: "https://zenodo.org/records/10982620"
+doi: "10.5281/zenodo.10982620"
+citation: "Hoffman et al., Movement Ecology 2024 (arXiv 2305.10740)"
+license: "CC-BY-4.0 (dépôt) ; licences propres par jeu : CC BY 4.0 (baleines, phoques, chiens, goélands, corneilles, crotales), domaine public USGS (ours), sans mention (tortues)"
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_verified: "2026-10-17, page Zenodo + license.txt de chaque raw_*.zip lus à distance (requêtes Range)"
+license_tier: A
+n_series: null
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: null
+label_type: states
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui, massivement (comportements annotés sur une partie seulement des enregistrements)"
+continuous: true
+access: direct
+size: "~7 Go (raw), ~1,9 Go (formatted)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "seul benchmark multi-espèces d'éthogrammes sur séries continues (1 654 h, 149 individus, 9 taxons d'après le papier) ; SD non supervisée explicitement visée (k-means, HMM, VAME)"
+effort: medium
+confidence: medium
+notes: "Jeux : jeantet_turtles (13 tortues vertes, acc+gyr+profondeur 20 Hz, 46 comportements sur vidéo), friedlaender_whales (DTAG baleines à bosse), pagano_bears (ours polaires, colliers vidéo ; USGS), ladds_seals (otaries, captivité), vehkaoja_dogs (= dog-behaviour-vehkaoja), maekawa_gulls (goélands, labels début/fin), baglione_crows (corneilles), desantis_rattlesnakes (crotales, 10 Mo), HAR (= hapt). Fiches détaillées par jeu à faire en phase 2 ; les chiffres globaux viennent du papier (non relus). Version « formatted » = fichiers par individu avec label par échantillon, directement utilisables. Tortues : license.txt sans licence (citation seule) → s'en remettre au CC BY 4.0 du dépôt, à confirmer avec L. Jeantet."
+rejected: null

@@ -1,0 +1,10 @@
+# Build outputs and download caches (never committed)
+build/
+raw/
+.venv/
+__pycache__/
+*.py[cod]
+*.part
+*.egg-info/
+.pytest_cache/
+.ruff_cache/

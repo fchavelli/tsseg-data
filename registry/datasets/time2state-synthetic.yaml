@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: time2state-synthetic
+name: "Time2State / E2USD synthetic segmentation dataset"
+domain: synthetic
+task: both
+source_url: https://github.com/Lab-ANT/Time2State/tree/main/data/synthetic_data_for_segmentation
+doi: "10.1145/3588697"
+citation: "Wang, Wu, Lu, Liu, Yang, Shu & Wang, Time2State: An Unsupervised Framework for Inferring the Latent States in Time Series Data, SIGMOD 2023"
+license: MIT
+license_url: https://github.com/Lab-ANT/Time2State/blob/main/LICENSE
+license_tier: A
+license_verified: "2026-10-17, licence GitHub du dépôt (MIT) ; données générées par les auteurs du dépôt"
+n_series: 100
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: null
+label_type: states
+n_states: null
+n_annotators: null
+label_origin: simulated
+unlabeled_regions: non
+continuous: true
+access: direct
+size: "~160 Mo (100 CSV de ~1,6 Mo)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: medium
+value_reason: "jeu synthétique SD de référence (Time2State, E2USD, ISSD) ; états récurrents ; permet la comparaison directe aux chiffres publiés"
+effort: low
+confidence: medium
+notes: "Généré avec TSAGen (Lab-ANT, sans licence). Le dépôt contient aussi synthetic_data_for_Autoplait, effect_of_dim et effect_of_length (études de passage à l'échelle)."
+rejected: null

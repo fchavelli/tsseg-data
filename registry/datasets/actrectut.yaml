@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: actrectut
+name: "ActRecTut — Human Activity Recognition Tutorial dataset (Bulling et al.)"
+domain: har
+task: both
+source_url: "https://github.com/andreas-bulling/ActRecTut"
+doi: "10.1145/2499621"
+citation: "Bulling, Blanke, Schiele, ACM Computing Surveys 46(3), 2014"
+license: GPL-3.0-or-later
+license_url: "https://github.com/andreas-bulling/ActRecTut/blob/master/LICENSE"
+license_verified: "2026-10-08 (audit) + 2026-10-17, API GitHub (GPL-3.0)"
+license_tier: B
+n_series: 4
+length: {min: 31000, median: 47000, max: 70778}
+n_channels: 15
+sampling_rate_hz: 32
+label_type: states
+n_states: 12
+n_annotators: null
+label_origin: human
+unlabeled_regions: "classe NULL récurrente entre chaque geste (sous-ensemble gesture)"
+continuous: true
+access: direct
+size: "~20 Mo (dépôt)"
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: high
+value_reason: "le sous-ensemble gesture (2 × 62-71 k points, 572 CP, NULL récurrent) manque au banc ; états récurrents"
+effort: low
+confidence: medium
+notes: "Banc : seulement subject{1,2}_walk, colonnes 0-9 sur 24 (choix Time2State, coupe un capteur). Version plus complète à la source : subject{1,2}_gesture, 3 IMU (acc xyz + gyr xy) = 15 canaux, NULL + 11 gestes, 26 répétitions. Le « walk » (6 classes) n'est documenté nulle part. Fréquence 32 Hz : de mémoire, à confirmer. Dépôt migré sur Codeberg."
+rejected: null

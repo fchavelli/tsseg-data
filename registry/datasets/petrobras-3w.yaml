@@ -1,0 +1,41 @@
+# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+id: petrobras-3w
+name: "3W Dataset 2.0.0 (undesirable events in offshore oil wells)"
+domain: industry
+task: both
+source_url: https://github.com/petrobras/3W
+doi: 10.6084/m9.figshare.29205836.v1
+citation: "Vargas et al., 3W Dataset 2.0.0, Scientific Data 2026 (doi:10.1038/s41597-026-07225-z) ; v1 : J. Petrol. Sci. Eng. 2019"
+license: CC-BY-4.0
+license_url: https://github.com/petrobras/3W/blob/main/LICENSE
+license_tier: A
+license_verified: "2026-10-17, README GitHub (données CC BY 4.0, code Apache-2.0) + papier §licence"
+n_series: 2228
+length: {min: null, median: null, max: null}
+n_channels: 27
+sampling_rate_hz: 1
+label_type: multi_track
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui : 5,26 % des observations réelles en Unknown (NaN)"
+continuous: true
+access: direct
+size: null
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "industriel réel, 1 119 instances réelles labellisées par experts ; deux pistes d'états par observation (classe normal/transitoire/régime de défaut + état opérationnel du puits : open, shut-in, flushing...)"
+effort: medium
+confidence: high
+notes: >-
+  Instances réelles (1 119, 42 puits, 2011-2023), simulées OLGA (1 089, label
+  `simulated`) et dessinées à la main (20) : à séparer ou étiqueter. Classe par
+  observation : 0 normal, 101-109 transitoire vers défaut, 1-9 régime établi du
+  défaut → typiquement normal → transitoire → défaut (CPD 1-2 CP par instance,
+  SD 3 états ; peu de récurrence). Piste « state » (Open, Closed with diesel,
+  Flushing...) plus riche pour SD. 76,6 M observations réelles au total ;
+  longueurs par instance non relevées (heures à jours). 65,9 % de variables
+  manquantes dans les instances réelles, variables gelées (9,8 %). Parquet.
+  Les 594 instances « normal » n'ont qu'un état.
+rejected: null

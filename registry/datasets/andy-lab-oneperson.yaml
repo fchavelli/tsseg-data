@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+id: andy-lab-oneperson
+name: "AndyData-lab-onePerson (AnDy industry-oriented human movement and ergonomics dataset)"
+domain: motion_capture
+task: both
+source_url: "https://zenodo.org/records/3254403"
+doi: "10.5281/zenodo.3254403"
+citation: "Maurice et al., Human Movement and Ergonomics: an Industry-Oriented Dataset for Collaborative Robotics, IJRR 38(14), 2019"
+license: CC-BY-4.0
+license_url: "https://zenodo.org/records/3254403"
+license_tier: A
+license_verified: "2026-10-17, champ licence de l'enregistrement Zenodo (API)"
+n_series: 195
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: null
+label_type: multi_track
+n_states: null
+n_annotators: 3
+label_origin: human
+unlabeled_regions: null
+continuous: true
+access: direct
+size: "labels 4,1 Mo ; xsens_csv 15,6 Go ; qualisys_csv 1,3 Go ; ~95 Go en tout"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "13 sujets × 15 essais de 1,5–2 min ; mocap optique + inertielle + gant de pression ; actions élémentaires (reach, carry, pick…) ET postures EAWS annotées image par image par 3 annotateurs : rare jeu SD/CPD multi-annotateurs et multi-pistes, licence A"
+effort: medium
+confidence: medium
+notes: >
+  n_series = 13 × 15 essais (description Zenodo). Annotations faites sur la vidéo d'un
+  avatar rejouant le mouvement, en CSV. Pistes : posture générale, posture détaillée,
+  action courante (taxonomie à confirmer dans le papier IJRR / HAL hal-02289107).
+  Fréquences : Xsens et Qualisys à confirmer (non lues). Choisir un sous-ensemble de
+  canaux (positions/angles articulaires Xsens) ; ne télécharger que xsens_csv + labels.
+rejected: null

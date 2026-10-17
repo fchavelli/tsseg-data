@@ -1,0 +1,35 @@
+# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+id: swimming-smartwatch
+name: "Swimming Style Recognition and Lap Counting Using a Smartwatch (40 swimmers)"
+domain: sport
+task: sd
+source_url: "https://github.com/brunnergino/swimming-recognition-lap-counting"
+doi: null
+citation: "Brunner et al., Swimming Style Recognition and Lap Counting Using a Smartwatch and Deep Learning, ISWC 2019"
+license: MIT
+license_url: "https://github.com/brunnergino/swimming-recognition-lap-counting"
+license_tier: A
+license_verified: "2026-10-17, API GitHub (MIT) ; le dépôt contient les données"
+n_series: 206
+length: {min: 1300, median: 6400, max: 53000}
+n_channels: 11
+sampling_rate_hz: 30
+label_type: states
+n_states: 6
+n_annotators: null
+label_origin: human
+unlabeled_regions: "classe « null » (repos entre longueurs)"
+continuous: true
+access: direct
+size: null
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "montre au poignet (acc, gyro, mag 3 axes + pression + lumière) pendant des séances de natation ; labels par échantillon null / crawl / brasse / dos / papillon / virage : virages courts et récurrents, repos, changements de nage ; licence A"
+effort: low
+confidence: medium
+notes: >
+  40 nageurs, un fichier par séance (nage dominante dans le nom) : n_series = nombre de
+  fichiers, à compter. Données déjà prétraitées et rééchantillonnées à 30 Hz (pas le
+  brut). Liste des auteurs à relever sur la page ACM (id 3347719).
+rejected: null

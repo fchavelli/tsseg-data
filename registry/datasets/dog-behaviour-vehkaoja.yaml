@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: dog-behaviour-vehkaoja
+name: "Movement Sensor Dataset for Dog Behavior Classification"
+domain: ethology
+task: both
+source_url: "https://data.mendeley.com/datasets/vxhx934tbn"
+doi: "10.17632/vxhx934tbn.4"
+citation: "Vehkaoja et al., Data in Brief 40, 2022 ; Kumpulainen et al., Applied Animal Behaviour Science 241, 2021"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_verified: "2026-10-17, API Mendeley Data + license.txt BEBE"
+license_tier: A
+n_series: 63
+length: {min: null, median: 170000, max: null}
+n_channels: 12
+sampling_rate_hz: 100
+label_type: multi_track
+n_states: 7
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui : Task <undefined> hors tâches, comportement non annoté par endroits"
+continuous: true
+access: direct
+size: "~2 Go (CSV, 10,6 M lignes)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "2 IMU (cou, dos) à 100 Hz, deux pistes (tâche demandée + comportement annoté sur vidéo, jusqu'à 3 simultanés), 45 chiens environ"
+effort: low
+confidence: medium
+notes: "63 tests (DogID × TestNum 1-2) ; médiane = ordre de grandeur (10,6 M lignes / 63 ; exemple MATLAB : 171 168 lignes). Comportements : galop, couché, assis, renifle, debout, trot, marche (+ autres). Aussi dans BEBE."
+rejected: null

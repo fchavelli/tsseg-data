@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: dreem-dod-h
+name: "Dreem Open Dataset — Healthy (DOD-H)"
+domain: "physio"
+task: "both"
+source_url: "https://zenodo.org/records/15900394"
+doi: "10.5281/zenodo.15900394"
+citation: "Guillot et al., IEEE TNSRE 28(9), 2020 (Dreem Open Datasets)"
+license: "MIT"
+license_url: "https://opensource.org/licenses/MIT"
+license_tier: "A"
+license_verified: "2026-10-17, API Zenodo (mit-license) ; dépôt GitHub Dreem-Organization/dreem-learning-open sans licence de données distincte"
+n_series: 25
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: 250
+label_type: "multi_track"
+n_states: 5
+n_annotators: 5
+label_origin: "human"
+unlabeled_regions: "oui : stade -1 (non scoré)"
+continuous: true
+access: "direct"
+size: "21.9 GB (dodh.zip)"
+in_tsseg_bench: false
+fm_pretraining: "unknown"
+value: "high"
+value_reason: "PSG de sujets sains scorées par 5 experts indépendants : référence multi-annotateurs du sleep staging, licence permissive"
+effort: "low"
+confidence: "medium"
+notes: "Fichiers .h5 (hypnogrammes + signaux EEG/EOG/EMG/ECG). 25 sujets et 5 scoreurs d'après Guillot et al. 2020 (non relu ici) ; 250 Hz à confirmer."
+rejected: null

@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
+id: ami-meeting-corpus
+name: "AMI Meeting Corpus — diarisation, locuteurs récurrents (piste caractéristiques dérivées)"
+domain: audio_speech
+task: sd
+source_url: https://groups.inf.ed.ac.uk/ami/corpus/
+doi: null
+citation: "Carletta et al., MLMI 2005 (The AMI Meeting Corpus)"
+license: CC-BY-4.0
+license_url: https://groups.inf.ed.ac.uk/ami/corpus/license.shtml
+license_tier: A
+license_verified: "2026-10-17, page licence du site AMI (« The AMI corpus and its annotations are released under the Creative Commons Attribution 4.0 license »)"
+n_series: null
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: 16000
+label_type: multi_track
+n_states: 4
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui (silences) ; recouvrements de parole à traiter (classe « recouvrement » ou piste par locuteur)"
+continuous: true
+access: direct
+size: "~100 h de réunions ; dizaines de Go d'audio (casque mixé seul : quelques Go)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "réunions de ~30 min à 4 participants : les mêmes locuteurs reviennent des dizaines de fois par série, vrai jeu SD ; licence A couvrant corpus et annotations"
+effort: high
+confidence: medium
+notes: "derived-feature track: plongements de locuteur (x-vectors / ECAPA) ou MFCC sur fenêtres de ~0,5–1 s. États récurrents : oui (4 locuteurs alternant tout au long de la réunion). Redistribution des caractéristiques : oui, le corpus entier étant CC BY 4.0 (la page licence ne cite pas l'audio à part ; à confirmer sur la page « Audio and video signals »). Corrige l'entrée ami-diarization de motion_misc.yaml (licence alors non vérifiée)."
+rejected: null

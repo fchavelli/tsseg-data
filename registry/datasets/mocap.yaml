@@ -1,0 +1,40 @@
+# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+id: mocap
+name: "CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004)"
+domain: motion_capture
+task: both
+source_url: "http://graphics.cs.cmu.edu/projects/segmentation/"
+doi: null
+citation: "Barbič, Safonova, Pan, Faloutsos, Hodgins, Pollard, Graphics Interface 2004"
+license: "CMU MoCap terms (custom): free for all uses; may be copied, modified or redistributed without permission; no direct resale, even converted; acknowledgment requested"
+license_url: "http://mocap.cs.cmu.edu/faqs.php"
+license_tier: B
+license_verified: "2026-10-17, accueil + FAQ mocap.cs.cmu.edu (données). Labels Barbič : aucune mention sur la page projet"
+n_series: 14
+length: {min: null, median: null, max: null}
+n_channels: 62
+sampling_rate_hz: 120
+label_type: cps
+n_states: null
+n_annotators: 1
+label_origin: human
+unlabeled_regions: "non"
+continuous: true
+access: direct
+size: "~28 Mo (AMC 62 DOF) + 4,6 ko (vérité terrain)"
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: high
+value_reason: "référence historique de la segmentation de mouvement ; chaque frontière a trois valeurs (au plus tôt / meilleure / au plus tard) = tolérance d'annotation explicite ; noms d'actions (walk, punch, squat…) donc états récurrents"
+effort: low
+confidence: high
+notes: >
+  tsseg embarque 9 des 14 essais annotés (01, 02, 03, 07, 08, 09, 10, 11, 14 : version
+  4 canaux d'AutoPlait / Time2State, 4,6–10,6 k points, labels Time2State qui ne sont pas
+  ceux de Barbič : 52/65 CP dans la tolérance). Manquent 04, 05, 06, 12, 13. Coquilles
+  dans les fichiers Barbič (05, 06, 04 ; cf. audit 2026-10-08 §2). Labels Barbič sans
+  licence : servir le builder depuis la source (http seul, chaîne de certificats https
+  incomplète) ou demander l'accord de J. Hodgins / N. Pollard. Le tier B tient à
+  l'interdiction de revente (proche d'une clause NC) ; sinon la redistribution est
+  explicitement permise.
+rejected: null

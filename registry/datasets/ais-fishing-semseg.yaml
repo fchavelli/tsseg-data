@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
+id: ais-fishing-semseg
+name: "Dataset for Semantic Segmentation of Fishing Trajectories (128 trajectoires AIS)"
+domain: maritime
+task: sd
+source_url: https://zenodo.org/records/7283281
+doi: 10.5281/zenodo.7283281
+citation: "« Semantic Segmentation of AIS Trajectories for Detecting Complete Fishing Activities », MDM 2022"
+license: CC-BY-4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_tier: A
+license_verified: "2026-10-17, API Zenodo"
+n_series: 128
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: null
+label_type: states
+n_states: null
+n_annotators: 1
+label_origin: human
+unlabeled_regions: null
+continuous: true
+access: direct
+size: "170 Mo (un CSV)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "segmentation sémantique manuelle de trajectoires de pêche complètes (sortie, pêche, retour) : tâche SD native, domaine absent du registre, licence A"
+effort: low
+confidence: medium
+notes: "États récurrents : oui probablement (alternance pêche / route au sein d'une marée ; à vérifier sur le CSV). Canaux AIS (lat, lon, vitesse, cap) à échantillonnage irrégulier : ré-échantillonner. Nombre de classes non lu (README de 0,6 Ko)."
+rejected: null

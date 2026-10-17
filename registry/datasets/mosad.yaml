@@ -1,0 +1,36 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: mosad
+name: "MOSAD — Mobile Sensing Human Activity Data Set"
+domain: har
+task: both
+source_url: "https://github.com/ermshaua/mobile-sensing-human-activity-data-set"
+doi: null
+citation: "Ermshaus, Singh, Leser, DARLI-AP@EDBT/ICDT 2023"
+license: CC-BY-SA-3.0
+license_url: "http://creativecommons.org/licenses/by-sa/3.0/"
+license_verified: "2026-10-17, README du dépôt (badge + phrase de licence ; GitHub : NOASSERTION)"
+license_tier: B
+n_series: 14
+length: {min: null, median: 55000, max: null}
+n_channels: 9
+sampling_rate_hz: 50
+label_type: states
+n_states: 21
+n_annotators: null
+label_origin: protocol
+unlabeled_regions: null
+continuous: true
+access: direct
+size: "~35 Mo (data.npz)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "conçu pour la segmentation (ClaSP, FLOSS, ESPRESSO…), routines enchaînées de 3 à 13 activités, prêt à l'emploi (CP + noms)"
+effort: low
+confidence: medium
+notes: "14 enregistrements (6 sujets, 3 routines : ménage 13 activités, gym au sol 3, course/sport 6) × 9 capteurs (acc, gyr, mag × xyz) ; le papier compte 126 séries univariées. Probable ancêtre du jeu HAS (même équipe, même téléphone) : vérifier le recouvrement avant intégration. Médiane ≈ ordre de grandeur lu sur Routine1_Subject1 (dernier CP 53 254), pas calculée."
+rejected: null
+
+  # ------------------------------------------------------------------
+  # UCI Machine Learning Repository (licence CC BY 4.0 sur chaque page)
+  # ------------------------------------------------------------------

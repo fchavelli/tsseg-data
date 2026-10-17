@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: casas-aruba-milan-tulum-cairo
+name: "CASAS Smart Home dataset (aruba, cairo, milan, tulum) — labelled, with temperature"
+domain: smart_home
+task: sd
+source_url: "https://zenodo.org/records/17180309"
+doi: "10.5281/zenodo.17180309"
+citation: "Cook et al. 2013 ; Zenodo 2025"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_verified: "2026-10-17, API Zenodo"
+license_tier: A
+n_series: 4
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: null
+label_type: states
+n_states: null
+n_annotators: 1
+label_origin: human
+unlabeled_regions: "oui : « Other » / non annoté entre activités"
+continuous: true
+access: direct
+size: "33 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "les 4 maisons CASAS de référence en HAR ambiante (Aruba ~ 7 mois, 1 résidente), entièrement annotées, petite taille"
+effort: medium
+confidence: medium
+notes: "Même format événementiel ; Cairo et Tulum : 2 résidents. Remplace les anciens liens casas.wsu.edu. Sous-ensemble d'Aruba aussi dans UCI 506 (casas-uci-506)."
+rejected: null

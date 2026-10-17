@@ -1,0 +1,36 @@
+# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+id: rosmag40
+name: "ROSMAG40 — ROSMA subset with gesture annotations (dVRK)"
+domain: surgical_robotics
+task: sd
+source_url: "https://zenodo.org/records/10719748"
+doi: "10.5281/zenodo.10719748"
+citation: "Rivas-Blanco et al., Applied Sciences 14:3701, 2024 ; ROSMA : Rivas-Blanco et al., arXiv 2102.03643, 2021"
+license: CC-BY-4.0
+license_url: "https://zenodo.org/records/10719748"
+license_tier: A
+license_verified: "2026-10-17, champ licence Zenodo (API)"
+n_series: 22
+length: {min: null, median: 3311, max: null}
+n_channels: null
+sampling_rate_hz: null
+label_type: hierarchical
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: null
+continuous: true
+access: direct
+size: "~4,0 Go (zip, vidéos comprises)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: medium
+value_reason: "seul jeu chirurgical robotique (dVRK) à gestes annotés sous licence A ; deux niveaux (MD haut niveau, FGD fin)"
+effort: medium
+confidence: medium
+notes: >
+  22 vidéos, 72 843 images annotées (médiane estimée = moyenne 3 311 images, non une
+  vraie médiane). Cinématique dVRK à 50 Hz dans ROSMA (154 variables selon arXiv v2) ;
+  synchronisation avec les labels vidéo à vérifier. ROSMA complet (206 essais, sans
+  gestes) : hébergement et licence non retrouvés.
+rejected: null

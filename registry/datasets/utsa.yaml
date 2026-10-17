@@ -1,0 +1,35 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: utsa
+name: "UCR Time Series Semantic Segmentation Archive (UTSA, jeux FLOSS)"
+domain: generic_cpd
+task: cpd
+source_url: https://sites.google.com/site/onlinesemanticsegmentation/
+doi: "10.1109/ICDM.2017.21"
+citation: "Gharghabi, Ding, Yeh, Kamgar, Ulanova & Keogh, Matrix Profile VIII: Domain Agnostic Online Semantic Segmentation at Superhuman Performance Levels, ICDM 2017 ; version journal DMKD 2018"
+license: "aucune à la source (site Google + liens Google Drive)"
+license_url: null
+license_tier: C
+license_verified: "2026-10-17, page Google Sites : aucune mention de licence ; le BSD-3 est celui du dépôt CLaP qui reconditionne"
+n_series: 32
+length: {min: 2000, median: null, max: 40000}
+n_channels: 1
+sampling_rate_hz: "variable selon la série"
+label_type: cps
+n_states: "2 à 3 par série"
+n_annotators: null
+label_origin: "mixte : protocol (enregistrements à régime connu), human, simulated (SimpleSynthetic)"
+unlabeled_regions: non
+continuous: true
+access: direct
+size: "~20 Mo (archive Google Drive)"
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: high
+value_reason: "benchmark historique du CPD univarié (FLUSS, ClaSP, ClaSS, CLaP) ; déjà dans TSB-SEG"
+effort: low
+confidence: medium
+notes: >-
+  Le site distribue aussi un jeu « PRCP_experiment » (non inspecté) et le jeu
+  de comparaison avec AutoPlait. 31/32 séries sans état récurrent (audit).
+  Contact Keogh envisageable pour une licence explicite.
+rejected: null

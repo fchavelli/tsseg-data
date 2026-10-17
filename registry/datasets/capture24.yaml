@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: capture24
+name: "CAPTURE-24: Activity tracker dataset for human activity recognition"
+domain: har
+task: both
+source_url: "https://ora.ox.ac.uk/objects/uuid:99d7c092-d865-4a19-b096-cc16440cd001"
+doi: "10.5287/bodleian:NGx0JOMP5"
+citation: "Chan, Walmsley, Gershuny et al., Scientific Data 11, 2024 (arXiv 2402.19229)"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_verified: "2026-10-17, page ORA Oxford (CC BY 4.0 + clause : ne pas tenter de réidentifier, respecter la vie privée)"
+license_tier: A
+n_series: 151
+length: {min: null, median: 8640000, max: null}
+n_channels: 3
+sampling_rate_hz: 100
+label_type: hierarchical
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui : ~1 500 h non annotées sur ~4 000 h (caméra coupée, vie privée)"
+continuous: true
+access: direct
+size: "6,4 Go (zip)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "le plus grand jeu ouvert en vie libre (151 × ~24 h à 100 Hz), labels issus de caméras portées + journaux de sommeil, plusieurs granularités (~200 libellés fins → schémas à 4-10 classes) : SD longue à états très récurrents"
+effort: medium
+confidence: medium
+notes: "Axivity AX3 au poignet. Médiane = 24 h × 100 Hz (théorique). Libellés fins (codes de temps compendium) + correspondances vers schémas Willetts / Walmsley. Autre DOI ORA (10.5287/bodleian:nzvqj2ojw) et jeu complémentaire température/lumière (10.5287/ora-yeodey7eo). Une version « MoveAtlas » harmonisée existe sur Zenodo (22662983, 2026) : reconditionneur, ne pas s'y fier pour la licence."
+rejected: null

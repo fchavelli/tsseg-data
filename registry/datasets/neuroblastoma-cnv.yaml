@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: neuroblastoma-cnv
+name: "Neuroblastoma copy number profiles with breakpoint annotations"
+domain: genomics
+task: cpd
+source_url: https://cran.r-project.org/package=neuroblastoma
+doi: "10.1186/1471-2105-14-164"
+citation: "Hocking, Schleiermacher, Janoueix-Lerosey, Boeva, Cappo, Delattre, Bach & Vert, Learning smoothing models of copy number profiles using breakpoint annotations, BMC Bioinformatics 14:164, 2013"
+license: GPL-3.0
+license_url: https://cran.r-project.org/web/packages/neuroblastoma/index.html
+license_tier: B
+license_verified: "2026-10-17, page CRAN du paquet neuroblastoma (champ License : GPL-3) ; données de l'Institut Curie, pas de licence propre"
+n_series: 575
+length: {min: null, median: null, max: null}
+n_channels: 1
+sampling_rate_hz: null
+label_type: "cps (annotations par région : « normal » = 0 CP, « breakpoint » = ≥ 1 CP)"
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui, la plupart des positions ne sont pas annotées (étiquettes faibles par région)"
+continuous: true
+access: direct
+size: "~10 Mo (paquet R)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: medium
+value_reason: "benchmark CPD réel de référence en statistique (apprentissage de pénalité : penaltyLearning, LOPART) ; annotations d'experts ; mais étiquettes par intervalle, pas de CP exacts"
+effort: medium
+confidence: medium
+notes: >-
+  575 profils aCGH (tutoriel Hocking, Montréal 2017), jusqu'à 6 chromosomes
+  annotés par profil ; chaque (profil, chromosome) = un problème de segmentation
+  (quelques dizaines à quelques centaines de sondes). Non équidistant (position
+  génomique). Exige une métrique par région (erreur d'étiquette) en plus des
+  métriques tsseg. Nombre de problèmes annotés non relu.
+rejected: null

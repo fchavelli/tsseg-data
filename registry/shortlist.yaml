@@ -1,0 +1,596 @@
+# Liste courte — phase 2 (qualification) du projet « jeux CPD / SD ».
+# Source : registry/*.yaml (non modifiés). Rédigé le 2026-10-17.
+# Domaines de la liste courte (équilibre) : physio, har, ethology, industry_energy,
+# mocap_surgery_assembly, generic_cpd, synthetic. Le domaine fin reste dans le registre.
+# task : sd = labels d'états denses (utilisables aussi en CPD) ; cpd = CP annotés seuls.
+# license_check : rempli seulement si license_verified était faux/vide (aucun cas)
+# ou si une vérification restait ouverte dans le registre.
+
+progress:
+  done:
+    - "lot 1 (10) : jeux TSB-SEG inclus d'office (tssb … mocap)"
+    - "lot 2 (10) : JIGSAWS ×3 + physio (sleep-edfx … helsinki-neonatal-eeg)"
+    - "lot 3 (10) : physio (noneeg … daphnet-fog) + HAR (mosad … harth)"
+    - "lot 4 (10) : HAR, éthologie, industrie/énergie"
+    - "lot 5 (8) : mocap/chirurgie/assemblage, CPD génériques, synthétique"
+    - "vérification de licence : aucun jeu retenu avec license_verified vide ; contrôle ouvert RIPE Atlas tenté (non concluant)"
+    - runners_up
+    - "2026-10-17, décision utilisateur : JIGSAWS ×3 (D) retirés de la nouvelle collection (rosmag40 suffit pour la chirurgie) ; restent dans TSB-SEG v1.0 seulement. Jeux à contact auteur (tcpd, mocap, bee-dance, utsa, usc-had) gardés."
+    - "2026-10-17 : +5 jeux de la passe ciblée (calms21, fly-vs-fly, ais-fishing-semseg, ami-meeting-corpus, rsdf-china-forest) → 50 jeux"
+  todo: []
+
+datasets:
+  # ---------------- lot 1 : TSB-SEG (inclus d'office) ----------------
+  - id: tssb
+    registry: cpd_benchmarks.yaml
+    domain: generic_cpd
+    task: sd
+    label_type: states
+    license: BSD-3-Clause
+    license_tier: A
+    why: "benchmark de référence du CPD univarié récent, déjà au banc"
+    risks: "frontières artificielles (concaténation UCR/UEA), 65/75 séries sans état récurrent"
+    subset: null
+    contact_needed: false
+  - id: utsa
+    registry: cpd_benchmarks.yaml
+    domain: generic_cpd
+    task: cpd
+    label_type: cps
+    license: "aucune à la source"
+    license_tier: C
+    why: "benchmark historique du CPD univarié (FLUSS, ClaSP, CLaP), déjà au banc"
+    risks: "aucune licence ; 31/32 séries sans état récurrent ; ne pas réhéberger"
+    subset: null
+    contact_needed: true
+  - id: has
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: CC-BY-NC-SA-4.0
+    license_tier: B
+    why: "plus grand benchmark multivarié annoté (250 séries), déjà au banc"
+    risks: "NC ; GPS (lat/lon/vitesse) à retirer avant redistribution"
+    subset: null
+    contact_needed: false
+  - id: actrectut
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: GPL-3.0-or-later
+    license_tier: B
+    why: "version complétée : ajouter subject{1,2}_gesture (572 CP, NULL récurrent) et les 24 colonnes"
+    risks: "4 séries seulement ; README tsseg-exp décrit un autre jeu (à remplacer)"
+    subset: null
+    contact_needed: false
+  - id: pamap2
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "longues séries multi-IMU (52 canaux, 100 Hz), états récurrents ; version complétée (Optional, tous canaux)"
+    risks: "classe 0 traitée comme un état dans le banc (à marquer null) ; NaN (cardio)"
+    subset: null
+    contact_needed: false
+  - id: usc-had
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: "aucune licence"
+    license_tier: C
+    why: "déjà au banc (comparabilité)"
+    risks: "concaténation dans un ordre fixe a1→a12 ; âge/taille/poids à retirer ; site instable"
+    subset: null
+    contact_needed: true
+  - id: pump
+    registry: industry_energy.yaml
+    domain: industry_energy
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "seul jeu industriel à états fins et récurrents ; version complétée (+280 cycles de la source)"
+    risks: "labels opérateur bruités (segments d'1 échantillon, papillotements) ; variante lissée à côté"
+    subset: null
+    contact_needed: false
+  - id: skab
+    registry: industry_energy.yaml
+    domain: industry_energy
+    task: cpd
+    label_type: cps
+    license: GPL-3.0
+    license_tier: B
+    why: "banc physique à anomalie injectée ; version complétée à 4 CP (colonne changepoint, 5 segments)"
+    risks: "trivial en SD (0-1-0) ; certaines anomalies sont des dérives, pas des ruptures nettes"
+    subset: null
+    contact_needed: false
+  - id: mocap
+    registry: motion_misc.yaml
+    domain: mocap_surgery_assembly
+    task: cpd
+    label_type: cps
+    license: "CMU MoCap terms (libre, pas de revente)"
+    license_tier: B
+    why: "version complétée : 14 essais Barbič, 62 DOF, CP à tolérance (tôt/meilleur/tard)"
+    risks: "labels Barbič sans licence (3 coquilles) ; désaccord avec labels Time2State sur 11 et 14"
+    subset: null
+    contact_needed: true
+  # ---------------- lot 2 : JIGSAWS (inclus d'office, niveau D) + physio ----------------
+  - id: sleep-edfx
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: ODC-By-1.0
+    license_tier: A
+    why: "référence du sleep staging (197 nuits), stades récurrents, séries très longues"
+    risks: "fréquences mixtes (100 Hz / 1 Hz) ; 8 Go ; sous-échantillonner (époques de 30 s)"
+    subset: "SC seul (153) ou canaux EEG/EOG à 100 Hz"
+    contact_needed: false
+  - id: dreem-dod-h
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: multi_track
+    license: MIT
+    license_tier: A
+    why: "5 scoreurs indépendants : référence multi-annotateurs du sommeil, licence A"
+    risks: "22 Go ; 25 sujets seulement ; fréquence à confirmer"
+    subset: "EEG/EOG frontaux, sous-échantillonnés"
+    contact_needed: false
+  - id: mitdb
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: multi_track
+    license: ODC-By-1.0
+    license_tier: A
+    why: "référence ECG, changements de rythme annotés, états récurrents, petit"
+    risks: "beaucoup d'enregistrements à un seul rythme : filtrer ≥ 2 segments"
+    subset: "enregistrements à ≥ 2 rythmes"
+    contact_needed: false
+  - id: afdb
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: ODC-By-1.0
+    license_tier: A
+    why: "10 h par série, alternance AFIB/AFL/J/N : SD/CPD sur séries très longues"
+    risks: "9,2 M points par série : sous-échantillonnage ; 2 enregistrements sans signal"
+    subset: null
+    contact_needed: false
+  - id: helsinki-neonatal-eeg
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: multi_track
+    license: CC-BY-4.0
+    license_tier: A
+    why: "crises néonatales annotées par 3 experts : CPD/SD multi-annotateurs (pilote prévu)"
+    risks: "états rares (crises) ; 22 nouveau-nés sans crise (≥ 2 segments non garanti)"
+    subset: "39 enregistrements avec crises par consensus"
+    contact_needed: false
+  # ---------------- lot 3 : physio + HAR ----------------
+  - id: noneeg
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: ODC-By-1.0
+    license_tier: A
+    why: "protocole relaxation/stress alterné (états récurrents), minuscule, faible fréquence (8 Hz)"
+    risks: "20 séries ; deux fréquences (8 Hz / 1 Hz) à aligner"
+    subset: null
+    contact_needed: false
+  - id: ppg-dalia
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "~2,5 h par sujet en conditions quasi réelles, activités enchaînées, physio + ACC"
+    risks: "fréquences mixtes (4–700 Hz) ; 2,7 Go"
+    subset: "capteur poignet seul"
+    contact_needed: false
+  - id: eegmmidb
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: ODC-By-1.0
+    license_tier: A
+    why: "64 canaux, 1 526 runs, alternance repos/tâche : cas très multivarié à segments courts"
+    risks: "segments de ~4 s ; signal EEG faible pour la tâche ; runs 1-2 à un seul état (exclure)"
+    subset: "runs 3-14"
+    contact_needed: false
+  - id: daphnet-fog
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "épisodes de freezing parkinsonien courts et récurrents dans de longues marches"
+    risks: "doublon har.yaml/physio.yaml ; états rares ; parties hors expérience à marquer null"
+    subset: null
+    contact_needed: false
+  - id: mosad
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: CC-BY-SA-3.0
+    license_tier: B
+    why: "conçu pour la segmentation (ClaSP, ESPRESSO), routines de 3 à 13 activités, prêt à l'emploi"
+    risks: "même groupe que HAS (recouvrement de protocole) ; 14 enregistrements"
+    subset: null
+    contact_needed: false
+  - id: opportunity
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: multi_track
+    license: CC-BY-4.0
+    license_tier: A
+    why: "référence HAR, ADL naturelles, labels hiérarchiques multi-pistes, 242 canaux"
+    risks: "NaN nombreux (capteurs perdus) ; choix des canaux à documenter"
+    subset: "capteurs corporels ; runs ADL (drill à part)"
+    contact_needed: false
+  - id: hapt
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "signaux bruts continus de UCI HAR + transitions posturales labellisées (segments courts)"
+    risks: "régions non labellisées entre activités (null) ; protocole très régulier"
+    subset: null
+    contact_needed: false
+  - id: harth
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "vie libre (~2 h/sujet), annotation vidéo image par image, états récurrents"
+    risks: "~300 k points par série : sous-échantillonnage pour les méthodes quadratiques"
+    subset: null
+    contact_needed: false
+  # ---------------- lot 4 : HAR, éthologie, industrie/énergie ----------------
+  - id: capture24
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: hierarchical
+    license: CC-BY-4.0
+    license_tier: A
+    why: "plus grand jeu ouvert en vie libre (151 × 24 h), labels hiérarchiques"
+    risks: "très gros (6,4 Go, 8,6 M points/série) ; clause de non-réidentification"
+    subset: "sous-ensemble de sujets, agrégé à 1–10 Hz ou par fenêtres"
+    contact_needed: false
+  - id: mhealth
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "un log continu par sujet, 3 IMU + ECG, classe nulle entre activités ; utilisé par ClaSS"
+    risks: "protocole fixe (même ordre d'activités)"
+    subset: null
+    contact_needed: false
+  - id: casas-aruba-milan-tulum-cairo
+    registry: har.yaml
+    domain: har
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "seule maison intelligente retenue : mois de vie réelle annotés, activités très récurrentes"
+    risks: "format événementiel (capteurs binaires) à ré-échantillonner ; multi-résidents (Cairo, Tulum)"
+    subset: "Aruba (1 résidente) d'abord"
+    contact_needed: false
+  - id: bebe
+    registry: har.yaml
+    domain: ethology
+    task: sd
+    label_type: states
+    license: "CC-BY-4.0 (dépôt) ; licences propres par espèce"
+    license_tier: A
+    why: "seul benchmark multi-espèces d'éthogrammes continus (9 taxons, 1 654 h)"
+    risks: "~7 Go ; tortues sans mention de licence (exclure ou vérifier) ; hétérogène par espèce"
+    subset: "version « formatted » (~1,9 Go), sans les tortues"
+    contact_needed: false
+  - id: dog-behaviour-vehkaoja
+    registry: har.yaml
+    domain: ethology
+    task: sd
+    label_type: multi_track
+    license: CC-BY-4.0
+    license_tier: A
+    why: "2 IMU à 100 Hz, deux pistes (tâche + comportement vidéo), 63 tests"
+    risks: "~2 Go ; comportements simultanés (jusqu'à 3) : choisir une piste exclusive"
+    subset: null
+    contact_needed: false
+  - id: bee-dance
+    registry: cpd_benchmarks.yaml
+    domain: ethology
+    task: sd
+    label_type: states
+    license: "aucune ; citation demandée"
+    license_tier: C
+    why: "benchmark SD/CPD historique (SLDS, sticky HDP-HMM, KL-CPD, TS-CP2), états récurrents"
+    risks: "6 séries courtes ; licence absente (copie KL-CPD BSD ne vaut pas pour les données)"
+    subset: null
+    contact_needed: true
+  - id: petrobras-3w
+    registry: industry_energy.yaml
+    domain: industry_energy
+    task: sd
+    label_type: multi_track
+    license: CC-BY-4.0
+    license_tier: A
+    why: "industriel réel, 1 119 instances labellisées par experts, deux pistes d'états"
+    risks: "mélange réel / simulé OLGA / dessiné : garder le réel seul ; NaN"
+    subset: "instances réelles (1 119)"
+    contact_needed: false
+  - id: cnc-mill-umich
+    registry: industry_energy.yaml
+    domain: industry_energy
+    task: sd
+    label_type: states
+    license: CC0-1.0
+    license_tier: A
+    why: "phases d'usinage par pas de temps, 48 canaux, petit et propre"
+    risks: "Kaggle seule source (laboratoire d'origine nommé) ; 18 séries"
+    subset: null
+    contact_needed: false
+  - id: uci-gas-dynamic-mixtures
+    registry: industry_energy.yaml
+    domain: industry_energy
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "12 h continues, ~400 CP exacts (consignes), 16 capteurs MOX"
+    risks: "2 séries de 2,1 M points : découper ou sous-échantillonner ; réponse capteur lente (CP décalés)"
+    subset: "découpage en fenêtres de quelques heures"
+    contact_needed: false
+  - id: pneumatic-eol-strzinar
+    registry: industry_energy.yaml
+    domain: industry_energy
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "atelier réel, état de l'automate (24 étapes récurrentes), 468 CSV bruts"
+    risks: "labels événementiels à densifier ; 2 canaux seulement"
+    subset: null
+    contact_needed: false
+  - id: deddiag
+    registry: industry_energy.yaml
+    domain: industry_energy
+    task: sd
+    label_type: multi_track
+    license: CC-BY-4.0
+    license_tier: A
+    why: "seul jeu énergie à annotations manuelles début/fin d'usage d'appareils"
+    risks: "~15 Go (dump SQL) ; séries de plusieurs années"
+    subset: "appareils annotés, fenêtres autour des annotations"
+    contact_needed: false
+  # ---------------- lot 5 : mocap/chirurgie/assemblage, CPD génériques, synthétique ----------------
+  - id: andy-lab-oneperson
+    registry: motion_misc.yaml
+    domain: mocap_surgery_assembly
+    task: sd
+    label_type: multi_track
+    license: CC-BY-4.0
+    license_tier: A
+    why: "3 annotateurs, mocap optique + inertielle, actions élémentaires multi-pistes"
+    risks: "xsens_csv 15,6 Go ; annotations faites sur un avatar rejoué"
+    subset: "Xsens seul, sous-ensemble de canaux"
+    contact_needed: false
+  - id: ha4m
+    registry: motion_misc.yaml
+    domain: mocap_surgery_assembly
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "217 assemblages, squelette 32 articulations, 12 actions + don't care, 2 annotateurs"
+    risks: "3,2 To au total : vérifier que le squelette se télécharge seul"
+    subset: "squelettes seuls"
+    contact_needed: false
+  - id: rosmag40
+    registry: motion_misc.yaml
+    domain: mocap_surgery_assembly
+    task: sd
+    label_type: hierarchical
+    license: CC-BY-4.0
+    license_tier: A
+    why: "seul jeu chirurgical robotique à gestes annotés sous licence A (alternative à JIGSAWS)"
+    risks: "labels sur vidéo, cinématique dans ROSMA à aligner ; 22 séries"
+    subset: null
+    contact_needed: false
+  - id: bimacs
+    registry: motion_misc.yaml
+    domain: mocap_surgery_assembly
+    task: sd
+    label_type: multi_track
+    license: "annotations et données dérivées CC0-1.0 ; RGB-D usage scientifique"
+    license_tier: A
+    why: "une piste d'actions par main, 540 enregistrements, tâches procédurales"
+    risks: "séries courtes (~410 images) ; signaux dérivés de la vidéo (pose 2D / objets 3D)"
+    subset: "pose + objets, sans RGB-D"
+    contact_needed: false
+  - id: lund2013-eye
+    registry: motion_misc.yaml
+    domain: mocap_surgery_assembly
+    task: sd
+    label_type: states
+    license: GPL-3.0
+    license_tier: B
+    why: "oculométrie 500 Hz étiquetée échantillon par échantillon par deux experts"
+    risks: "2 canaux, segments très courts (saccades) ; domaine marginal"
+    subset: "34 enregistrements à double annotation"
+    contact_needed: false
+  - id: swimming-smartwatch
+    registry: motion_misc.yaml
+    domain: mocap_surgery_assembly
+    task: sd
+    label_type: states
+    license: MIT
+    license_tier: A
+    why: "séances de natation complètes, labels par échantillon, sport (domaine absent ailleurs)"
+    risks: "données déjà prétraitées (30 Hz) ; nombre de fichiers à recompter"
+    subset: null
+    contact_needed: false
+  - id: tcpd
+    registry: cpd_benchmarks.yaml
+    domain: generic_cpd
+    task: cpd
+    label_type: cps
+    license: "mixte par série (CC BY, CC0, GPL-2.0, OGL, MIT, PD US ; 9 non redistribuables)"
+    license_tier: C
+    why: "référence CPD réelle à 5 annotateurs par série ; valeur exceptionnelle"
+    risks: "licence série par série ; 9 séries à récupérer à la source (builder) ; séries courtes"
+    subset: null
+    contact_needed: true
+  - id: mozilla-perf-cpd-annotations
+    registry: cpd_benchmarks.yaml
+    domain: generic_cpd
+    task: cpd
+    label_type: cps
+    license: CC-BY-4.0
+    license_tier: A
+    why: "174 séries, 11 annotateurs, CP typés : second jeu CPD multi-annotateurs (pilote)"
+    risks: "échantillonnage irrégulier (une mesure par build)"
+    subset: null
+    contact_needed: false
+  - id: rtt-ripe-atlas-labelled
+    registry: cpd_benchmarks.yaml
+    domain: generic_cpd
+    task: cpd
+    label_type: cps
+    license: "MIT (dépôt) ; mesures RIPE Atlas sous conditions RIPE NCC"
+    license_tier: A
+    why: "50 séries réelles longues, 1 047 CP annotés à la main (réseau)"
+    risks: "conditions RIPE Atlas sur les mesures brutes non lues ; fréquence à confirmer"
+    subset: "séries réelles (synthétiques à part)"
+    contact_needed: false
+    license_check: "2026-10-17 : pages de conditions RIPE Atlas (ripe.net 404, atlas.ripe.net/legal vide au rendu) — non concluant, reste ouvert ; MIT du dépôt inchangé"
+  - id: neuroblastoma-cnv
+    registry: cpd_benchmarks.yaml
+    domain: generic_cpd
+    task: cpd
+    label_type: cps
+    license: GPL-3.0
+    license_tier: B
+    why: "benchmark CPD réel de référence en statistique (génomique, apprentissage de pénalité)"
+    risks: "labels par région (0 CP / ≥ 1 CP), pas des positions exactes : métrique dédiée nécessaire"
+    subset: null
+    contact_needed: false
+  - id: time2state-synthetic
+    registry: cpd_benchmarks.yaml
+    domain: synthetic
+    task: sd
+    label_type: states
+    license: MIT
+    license_tier: A
+    why: "synthétique SD de référence (Time2State, E2USD), états récurrents"
+    risks: "générateur TSAGen sans licence (données MIT via le dépôt)"
+    subset: null
+    contact_needed: false
+  - id: patss-synthetic
+    registry: cpd_benchmarks.yaml
+    domain: synthetic
+    task: sd
+    label_type: states
+    license: Apache-2.0
+    license_tier: A
+    why: "seul jeu à transitions graduelles annotées, générateur fourni"
+    risks: "535 Mo, 1 010 séries : sous-ensemble test (500) suffit"
+    subset: "500 séries test"
+    contact_needed: false
+  # ---------------- lot 6 : passe ciblée (registry/gaps.yaml), ajout du 2026-10-17 ----------------
+  - id: calms21
+    registry: gaps.yaml
+    domain: ethology
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "poses de souris, comportements image par image qui se répètent ; tâche 2 multi-annotateurs"
+    risks: "nombre de séquences rempli de mémoire, à vérifier"
+    subset: "tâche 1 (poses, ~0,5 Go) ; tâche 2 pour l'axe multi-annotateurs"
+    contact_needed: false
+  - id: fly-vs-fly
+    registry: gaps.yaml
+    domain: ethology
+    task: sd
+    label_type: states
+    license: CC0-1.0
+    license_tier: A
+    why: "trajectoires de mouches, comportements récurrents annotés, CC0"
+    risks: "~3,7 Go sans films ; classe nulle majoritaire probable"
+    subset: "caractéristiques de suivi seulement (sans films)"
+    contact_needed: false
+  - id: ais-fishing-semseg
+    registry: gaps.yaml
+    domain: maritime
+    task: sd
+    label_type: states
+    license: CC-BY-4.0
+    license_tier: A
+    why: "nouveau domaine : traces AIS (128) à activité de pêche segmentée, états probablement récurrents"
+    risks: "échantillonnage AIS irrégulier : rééchantillonnage à documenter"
+    subset: null
+    contact_needed: false
+  - id: ami-meeting-corpus
+    registry: gaps.yaml
+    domain: audio_speech
+    task: sd
+    label_type: multi_track
+    license: CC-BY-4.0
+    license_tier: A
+    why: "volet caractéristiques dérivées : diarisation, mêmes 4 locuteurs récurrents ; caractéristiques redistribuables"
+    risks: "série = sortie d'un extracteur (MFCC/plongements) à figer ; chevauchements de parole (multi-piste)"
+    subset: "réunions headset-mix, caractéristiques à basse fréquence (~10–100 Hz)"
+    contact_needed: false
+  - id: rsdf-china-forest
+    registry: gaps.yaml
+    domain: remote_sensing
+    task: cpd
+    label_type: cps
+    license: CC-BY-4.0
+    license_tier: A
+    why: "nouveau domaine : 12 991 séries Landsat à dates de perturbation, ~80 % sans rupture (test des fausses alarmes)"
+    risks: "séries courtes et irrégulières (annuelles/infra-annuelles) ; pas d'états récurrents"
+    subset: "échantillon stratifié avec/sans rupture"
+    contact_needed: false
+
+runners_up:
+  - {id: dreem-dod-o, registry: physio.yaml, reason: "jumeau patients de dod-h (5 scoreurs, MIT) ; à ajouter si le sommeil multi-annotateurs devient un axe"}
+  - {id: psg-ipa, registry: physio.yaml, reason: "12 scoreurs × 2 modes, CC BY ; seulement 20 nuits"}
+  - {id: hmc-sleep-staging, registry: physio.yaml, reason: "AASM CC BY 151 patients ; redondant avec sleep-edfx"}
+  - {id: chbmit, registry: physio.yaml, reason: "référence crises EEG mais 45,8 Go ; helsinki retenu à la place"}
+  - {id: oxford-mouse-psg, registry: physio.yaml, reason: "vigilance de souris, 4 à 10 annotateurs ; pont physio/éthologie"}
+  - {id: edb, registry: physio.yaml, reason: "épisodes ST annotés par deux cardiologues ; ECG déjà couvert"}
+  - {id: wesad, registry: physio.yaml, reason: "référence stress porté mais niveau C (CGU Siegen) ; ppg-dalia couvre"}
+  - {id: hangtime-har, registry: har.yaml, reason: "basket multi-pistes CC BY ; 3 canaux seulement"}
+  - {id: wear, registry: har.yaml, reason: "sport extérieur, NULL récurrent ; NC, recouvre HAR déjà dense"}
+  - {id: sphere-challenge, registry: har.yaml, reason: "labels multi-annotateurs probabilistes ; licence gouvernementale NC"}
+  - {id: tep-rieth, registry: industry_energy.yaml, reason: "CPD pur à CP exacts mais simulé (TEP) : compterait comme 4e générateur"}
+  - {id: care-to-compare, registry: industry_energy.yaml, reason: "SCADA éolien réel (B) ; labels de statut dérivés"}
+  - {id: blued, registry: industry_energy.yaml, reason: "2 482 événements on/off (CPD dense) ; licence incohérente (C), 12 kHz"}
+  - {id: gaze-in-wild, registry: motion_misc.yaml, reason: "œil + tête, 5 annotateurs, CC BY ; effort moyen, oculométrie déjà couverte"}
+  - {id: andi2-benchmark, registry: cpd_benchmarks.yaml, reason: "segmentation de diffusion simulée (CC BY) ; quota de générateurs atteint"}

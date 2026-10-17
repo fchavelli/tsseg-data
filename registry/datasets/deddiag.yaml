@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+id: deddiag
+name: "DEDDIAG — Domestic Electricity Demand Dataset of Individual Appliances in Germany"
+domain: energy
+task: both
+source_url: https://doi.org/10.6084/m9.figshare.13615073.v1
+doi: 10.6084/m9.figshare.13615073.v1
+citation: "Wenninger, Maier & Schmidt, Scientific Data 8, 176, 2021"
+license: CC-BY-4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_tier: A
+license_verified: "2026-10-17, API figshare (champ license + fichier LICENSE)"
+n_series: 15
+length: {min: null, median: null, max: null}
+n_channels: 1
+sampling_rate_hz: 1
+label_type: multi_track
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui : annotations pour 14 des 50 appareils seulement"
+continuous: true
+access: direct
+size: "~15 Go (zips par maison, dump SQL)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "rare : annotations manuelles début/fin d'usage pour 14 appareils (lave-vaisselle, lave-linge, sèche-linge...) sur des enregistrements de plusieurs années à 1 Hz"
+effort: medium
+confidence: medium
+notes: >-
+  15 maisons, jusqu'à 3,5 ans, 50 appareils à 1 Hz ; une maison avec secteur
+  triphasé (désagrégation). Les intervalles annotés font une piste d'états
+  d'usage (programme en cours / arrêt) par appareil : SD sur la puissance de
+  l'appareil (cycles de programmes) ou CPD. Format : base TimescaleDB
+  (import.sh + SQL) — builder plus lourd.
+rejected: null

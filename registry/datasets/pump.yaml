@@ -1,0 +1,36 @@
+# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+id: pump
+name: "Hydraulic End-of-Line Testing (Bosch) — PUMP"
+domain: industry
+task: both
+source_url: https://github.com/boschresearch/Hydraulic-EoL-Testing
+doi: null
+citation: "Gaugel & Reichert, PrecTime, 2023 (+ Gaugel et al. 2023, 2024)"
+license: CC-BY-4.0
+license_url: https://github.com/boschresearch/Hydraulic-EoL-Testing
+license_tier: A
+license_verified: "2026-10-17, README du dépôt (section License ; pas de fichier LICENSE)"
+n_series: 120
+length: {min: 20000, median: null, max: 41000}
+n_channels: 9
+sampling_rate_hz: 100
+label_type: states
+n_states: 52
+n_annotators: 1
+label_origin: human
+unlabeled_regions: "non (états spéciaux début/fin/empty labellisés)"
+continuous: true
+access: direct
+size: null
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: high
+value_reason: "seul jeu industriel à états fins et récurrents de TSB-SEG ; labels opérateur bruités (segments d'1 échantillon)"
+effort: low
+confidence: high
+notes: >-
+  TSB-SEG utilise 120 cycles (Génération A DC V35/V36/V38). La source contient
+  ~280 cycles de plus, même licence (Génération A SC V12 : 38, PC V23 : 40 ;
+  Génération B DC : 202) : version plus complète à intégrer. Signification des
+  entiers d'état confidentielle. z-normalisé par cycle à la source.
+rejected: null

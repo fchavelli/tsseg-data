@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: hapt
+name: "Smartphone-Based Recognition of Human Activities and Postural Transitions (HAPT)"
+domain: har
+task: both
+source_url: "https://archive.ics.uci.edu/dataset/341/smartphone+based+recognition+of+human+activities+and+postural+transitions"
+doi: "10.24432/C54G7M"
+citation: "Reyes-Ortiz, Oneto, Samà, Parra, Anguita, Neurocomputing 171, 2016"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/legalcode"
+license_verified: "2026-10-17, page UCI"
+license_tier: A
+n_series: 61
+length: {min: null, median: null, max: null}
+n_channels: 6
+sampling_rate_hz: 50
+label_type: states
+n_states: 12
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui : échantillons hors des intervalles de labels.txt"
+continuous: true
+access: direct
+size: "~90 Mo (zip)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "signaux bruts continus de UCI HAR + transitions posturales labellisées (segments courts), 30 sujets"
+effort: low
+confidence: medium
+notes: "RawData : acc_expXX_userYY.txt + gyro + labels.txt (exp, user, activité, début, fin) ; labels posés à partir de la vidéo. 6 activités de base + 6 transitions posturales. n_series = 61 expériences de mémoire (à confirmer). Remplace UCI HAR (fenêtré)."
+rejected: null

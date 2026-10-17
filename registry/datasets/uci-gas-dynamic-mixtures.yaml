@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+id: uci-gas-dynamic-mixtures
+name: "Gas sensor array under dynamic gas mixtures (UCI 322)"
+domain: industry
+task: both
+source_url: https://archive.ics.uci.edu/dataset/322/gas+sensor+array+under+dynamic+gas+mixtures
+doi: 10.24432/C5WP4C
+citation: "Fonollosa, Sheik, Huerta & Marco, Sensors and Actuators B 215, 2015"
+license: CC-BY-4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_tier: A
+license_verified: "2026-10-17, page UCI"
+n_series: 2
+length: {min: 2089252, median: 2089252, max: 2089252}
+n_channels: 16
+sampling_rate_hz: 100
+label_type: states
+n_states: null
+n_annotators: null
+label_origin: protocol
+unlabeled_regions: "non"
+continuous: true
+access: direct
+size: "352 Mo (zip), 1,2 Go décompressé"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "12 h continues par mélange, consigne de concentration changée à instants aléatoires (80-120 s) : ~400 CP exacts par série, niveaux récurrents"
+effort: low
+confidence: high
+notes: >-
+  Deux séries (éthylène + CO, éthylène + méthane), 16 capteurs MOX. Label par
+  pas de temps = consignes (ppm) des deux gaz → état = couple de niveaux
+  (récurrent). Les capteurs ont une réponse lente : les CP vrais
+  (consigne) précèdent la réponse du signal (délai physique). length = moitié
+  des 4 178 504 instances (approx.). Peut être découpé en sous-séries.
+rejected: null

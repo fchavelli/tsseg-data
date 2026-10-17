@@ -1,0 +1,36 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: tssb
+name: "Time Series Segmentation Benchmark (TSSB)"
+domain: generic_cpd
+task: both
+source_url: https://github.com/ermshaua/time-series-segmentation-benchmark
+doi: "10.1007/s10618-023-00923-x"
+citation: "Ermshaus, Schäfer & Leser, ClaSP: parameter-free time series segmentation, DMKD 37, 2023 ; Schäfer, Ermshaus & Leser, ClaSP, CIKM 2021"
+license: BSD-3-Clause
+license_url: https://github.com/ermshaua/time-series-segmentation-benchmark/blob/main/LICENSE
+license_tier: A
+license_verified: "2026-10-17, dépôt TSSB (BSD-3) ; séries issues des archives UCR/UEA, sans licence formelle (citation demandée) — cf. audit 2026-10-08"
+n_series: 75
+length: {min: 240, median: null, max: 20700}
+n_channels: 1
+sampling_rate_hz: null
+label_type: states
+n_states: "1 à 7 par série (1 à 9 segments)"
+n_annotators: null
+label_origin: concatenation
+unlabeled_regions: non
+continuous: false
+access: direct
+size: "~10 Mo"
+in_tsseg_bench: true
+fm_pretraining: "probable (archives UCR/UEA présentes dans plusieurs corpus de préentraînement) ; non vérifié"
+value: high
+value_reason: "benchmark de référence du CPD univarié récent ; déjà dans TSB-SEG"
+effort: low
+confidence: high
+notes: >-
+  Segments = classes UCR/UEA concaténées (frontières artificielles), avec
+  rééchantillonnage et taille de fenêtre choisie à la main. 65/75 séries sans
+  état récurrent (audit). Longueurs min/max d'après la copie CLaP de tsseg-exp
+  (audit : 0,2–21 k) ; à recalculer en phase 2.
+rejected: null

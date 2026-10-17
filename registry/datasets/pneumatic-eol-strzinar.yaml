@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+id: pneumatic-eol-strzinar
+name: "Pneumatic Pressure and Electrical Current Time Series in Manufacturing (end-of-line test station)"
+domain: industry
+task: both
+source_url: https://data.mendeley.com/datasets/ypzswhhzh9
+doi: 10.17632/ypzswhhzh9.2
+citation: "Stržinar, Pregelj, Petrovčič, Škrjanc & Dolanc, Time series insights from the shopfloor, Data in Brief 55, 110619, 2024"
+license: CC-BY-4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_tier: A
+license_verified: "2026-10-17, API Mendeley Data (version 3)"
+n_series: 468
+length: {min: null, median: null, max: null}
+n_channels: 2
+sampling_rate_hz: 100
+label_type: states
+n_states: 24
+n_annotators: null
+label_origin: protocol
+unlabeled_regions: null
+continuous: true
+access: direct
+size: null
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "atelier réel : 7 jours de banc de test de fin de ligne, état de l'automate (24 étapes par pièce, récurrentes) synchronisé avec pression pneumatique et courant ; ~150 pièces, 3 674 segments"
+effort: low
+confidence: medium
+notes: >-
+  Labels = journal d'état de l'automate (événementiel, horodaté) → états
+  denses par pas de temps. 468 CSV bruts + pickles pré-segmentés : partir des
+  CSV bruts (continus) et du journal d'états. Structure très proche de PUMP
+  (cycles de test multi-étapes) mais autre usine : bon complément. Version
+  Mendeley : la v3 existe (le papier cite la v2).
+rejected: null

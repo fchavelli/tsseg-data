@@ -1,0 +1,39 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: mozilla-perf-cpd-annotations
+name: "Mozilla performance time series with multi-annotator change points (Besbes & Costa)"
+domain: software_performance
+task: cpd
+source_url: https://zenodo.org/records/20382322
+doi: "10.5281/zenodo.20382322"
+citation: "Besbes, Mierzwinski, Mujahid, Leitner, Serebrenik, Hunt & Costa, Exploring Statistical Change Point Detection Techniques for Performance Anomaly Detection at Mozilla, arXiv:2606.18377, 2026"
+license: CC-BY-4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_tier: A
+license_verified: "2026-10-17, fiche Zenodo"
+n_series: 174
+length: {min: null, median: null, max: null}
+n_channels: 1
+sampling_rate_hz: "irrégulier (une mesure par build/push)"
+label_type: "cps (typés : mean, variance, mean_variance)"
+n_states: null
+n_annotators: "11 ingénieurs performance de Mozilla (plusieurs par série) ; 5 781 CP annotés au total"
+label_origin: human
+unlabeled_regions: non
+continuous: true
+access: direct
+size: "3,4 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "second jeu CPD réel multi-annotateurs après TCPD, plus grand (174 séries), domaine nouveau (régressions de performance logicielle), licence A, type de changement annoté"
+effort: low
+confidence: medium
+notes: >-
+  Accord (rayon 5 points) : 22 % des CP sans aucun accord, 24 % avec accord
+  unanime ; F1 un-contre-tous moyen 0,76. 25 méthodes CPD et 15 ensembles
+  évalués. Tâches d'annotation (difficulté ressentie, temps passé) et réponses à un
+  questionnaire incluses. Les annotations « variance » ont été écartées par les
+  auteurs (faible accord). Séries tirées du « Mozilla performance time series
+  dataset » (Zenodo 10.5281/zenodo.15465568, CC-BY-4.0, mai 2023 – mai 2024,
+  avec alertes et bugs). Échantillonnage irrégulier : traiter comme séquence.
+rejected: null

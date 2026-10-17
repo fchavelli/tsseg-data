@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: mitdb
+name: "MIT-BIH Arrhythmia Database"
+domain: "physio"
+task: "both"
+source_url: "https://physionet.org/content/mitdb/1.0.0/"
+doi: "10.13026/C2F305"
+citation: "Moody & Mark, IEEE EMB Mag 20(3):45-50, 2001"
+license: "ODC-By-1.0"
+license_url: "https://opendatacommons.org/licenses/by/1-0/"
+license_tier: "A"
+license_verified: "2026-10-17, API + page PhysioNet (access_policy: Open)"
+n_series: 48
+length: {min: 650000, median: 650000, max: 650000}
+n_channels: 2
+sampling_rate_hz: 360
+label_type: "multi_track"
+n_states: 15
+n_annotators: 2
+label_origin: "human"
+unlabeled_regions: "non (rythme défini partout ; épisodes de bruit annotés)"
+continuous: true
+access: "direct"
+size: "109.3 MB"
+in_tsseg_bench: false
+fm_pretraining: "probable : MITDB/SVDB font partie de TSB-UAD, intégré au Time-Series Pile (MOMENT)"
+value: "high"
+value_reason: "référence historique ; changements de rythme annotés (N, AFIB, AFL, B, T, SVTA, VT, NOD, P…), états récurrents dans une même série"
+effort: "low"
+confidence: "high"
+notes: "En-têtes lus : 650 000 points à 360 Hz (30 min). Rythmes dans le champ aux des .atr (ex. 201 : 35 changements, (N/(T/(AFIB/(NOD/(SVTA). Beaucoup d'enregistrements restent en rythme sinusal : ≥ 2 segments seulement pour une partie. Annotation par deux cardiologues ou plus, désaccords résolus."
+rejected: null

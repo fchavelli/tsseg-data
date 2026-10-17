@@ -1,0 +1,36 @@
+# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+id: lund2013-eye
+name: "Lund 2013 hand-labelled eye-movement data (EyeMovementDetectorEvaluation)"
+domain: eye_tracking
+task: both
+source_url: "https://github.com/richardandersson/EyeMovementDetectorEvaluation"
+doi: "10.3758/s13428-016-0738-9"
+citation: "Andersson, Larsson, Holmqvist, Stridh, Nyström, One algorithm to rule them all? Behavior Research Methods 49(2):616–637, 2017"
+license: GPL-3.0
+license_url: "https://github.com/richardandersson/EyeMovementDetectorEvaluation"
+license_tier: B
+license_verified: "2026-10-17, API GitHub (GPL-3.0) ; le dépôt contient code ET données"
+n_series: 34
+length: {min: null, median: null, max: null}
+n_channels: 2
+sampling_rate_hz: 500
+label_type: states
+n_states: 6
+n_annotators: 2
+label_origin: human
+unlabeled_regions: "classe « undefined »"
+continuous: true
+access: direct
+size: "~quelques Mo (.mat)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "regard monoculaire SMI Hi-Speed 1250 à 500 Hz étiqueté échantillon par échantillon par DEUX experts (MN, RA) en fixation, saccade, PSO, poursuite lente, clignement, indéfini : SD à états très récurrents et segments très courts, désaccord inter-annotateurs mesurable ; stimuli images, points mobiles, vidéos"
+effort: low
+confidence: medium
+notes: >
+  n_series = 34 enregistrements à double annotation du dossier « data used in the
+  article » (68 fichiers) ; un dossier « originally uploaded data » (96 fichiers, une
+  partie à un seul annotateur) et un correctif de Zemblys 2018. n_channels = x, y en
+  pixels (à confirmer dans les .mat). Séries courtes (quelques secondes). Format MATLAB.
+rejected: null

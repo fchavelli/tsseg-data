@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: has
+name: "Human Activity Segmentation Challenge 2023 (ECML/PKDD)"
+domain: har
+task: both
+source_url: "https://github.com/patrickzib/human_activity_segmentation_challenge"
+doi: null
+citation: "Ermshaus, Schäfer, Leser et al., Human Activity Segmentation Challenge @ ECML/PKDD 2023 (AALTD)"
+license: CC-BY-NC-SA-4.0
+license_url: "https://github.com/patrickzib/human_activity_segmentation_challenge/blob/main/LICENSE"
+license_verified: "2026-10-08, fichier LICENSE du dépôt (audit)"
+license_tier: B
+n_series: 250
+length: {min: 300, median: null, max: 41000}
+n_channels: 9
+sampling_rate_hz: 50
+label_type: states
+n_states: 12
+n_annotators: null
+label_origin: human
+unlabeled_regions: null
+continuous: true
+access: direct
+size: "~240 Mo (dépôt)"
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: high
+value_reason: "smartphone en conditions réelles (intérieur/extérieur), 250 séries, CPD et SD"
+effort: low
+confidence: medium
+notes: "Aussi recensé dans cpd_benchmarks.yaml. Complet dans le banc (125 public + 125 private). Canaux : 9 (acc+gyr+mag) intérieur, 6 (acc+mag) extérieur dans le banc ; la source contient latitude, longitude, vitesse (GPS) à retirer. preprocess_has.py renumérote les activités : garder les noms. 83/250 séries à états récurrents. 50 Hz : à confirmer."
+rejected: null

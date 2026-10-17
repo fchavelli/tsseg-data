@@ -1,0 +1,49 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: tcpd
+name: "Turing Change Point Dataset (TCPD)"
+domain: generic_cpd
+task: cpd
+source_url: https://github.com/alan-turing-institute/TCPD
+doi: "10.5281/zenodo.3713242 (v1.0.0, licence Zenodo « other-at »)"
+citation: "van den Burg & Williams, An Evaluation of Change Point Detection Algorithms, arXiv:2003.06222, 2020"
+license: "mixte : code MIT ; données série par série (CC-BY-4.0, CC0, GPL-2.0, CC-BY-SA-3.0, OGL-UK-3.0, MIT, domaine public US, et 9 séries non redistribuables)"
+license_url: https://github.com/alan-turing-institute/TCPD/tree/master/datasets
+license_tier: C
+license_verified: "2026-10-17, README de chacune des 42 séries (dépôt TCPD)"
+n_series: 42
+length: {min: 15, median: null, max: 816}
+n_channels: "1 (run_log : 2 ; occupancy : 4 ; apple : 2 ; bee_waggle_6 : 3)"
+sampling_rate_hz: null
+label_type: cps
+n_states: null
+n_annotators: 5
+label_origin: human
+unlabeled_regions: "non (annotation de CP seulement ; l'annotateur peut ne mettre aucun CP)"
+continuous: true
+access: script
+size: "< 5 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "seul jeu CPD réel à 5 annotateurs par série (8 annotateurs au total) ; référence incontournable de la littérature CPD ; métriques F1/Covering multi-annotateurs déjà dans tsseg"
+effort: medium
+confidence: high
+notes: >-
+  37 séries réelles + 5 « quality_control » simulées (CP connu). Longueurs
+  mesurées sur les 28 JSON du dépôt (15 à 816) ; les 9 séries téléchargées à la
+  volée (apple, bitcoin, iceland_tourism, measles, occupancy, ratner_stock,
+  robocalls, scanline_42049, scanline_126007) non mesurées. Annotateurs souvent
+  en désaccord (ex. bee_waggle_6 : 0/0/0/2/0 CP). Licences : CC-BY-4.0
+  (Banque mondiale : gdp_*, rail_lines ; Gapminder : children_per_woman,
+  co2_canada ; OWID : ozone ; global_co2 CC-BY-3.0 supposé par les auteurs) ;
+  CC0 (Kaggle : jfk/lga_passengers, shanghai_license) ; GPL-2 (R datasets :
+  nile, seatbelts) ; CC-BY-SA-3.0 (homeruns) ; OGL-UK-3.0 (uk_coal_employ) ;
+  MIT (bank, run_log, well_log via bocpdms) ; domaine public US (brent_spot
+  EIA, businv/construction/us_population Census) ; Eurostat (usd_isk,
+  debt_ireland) réutilisation avec citation ; centralia (Wikipedia, CC-BY-SA
+  implicite) ; non redistribuables (Yahoo Finance, blockchain.com, office du
+  tourisme islandais, Bolker, UCI occupancy jugé incertain, RoboCallIndex,
+  BSD300). Annotations : dans le dépôt MIT. Stratégie possible : niveau A/B pour
+  ~31 séries, builder pooch pour les 9 autres (niveau C).
+rejected: null
+overlap_with: [bee-dance (bee_waggle_6), uci-occupancy (occupancy)]

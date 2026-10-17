@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: harth
+name: "HARTH — Human Activity Recognition Trondheim"
+domain: har
+task: both
+source_url: "https://archive.ics.uci.edu/dataset/779/harth"
+doi: "10.24432/C5NC90"
+citation: "Logacjov, Bach, Kongsvold, Bårdstu, Mork, Sensors 21(23), 2021"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/legalcode"
+license_verified: "2026-10-17, page UCI"
+license_tier: A
+n_series: 22
+length: {min: null, median: 360000, max: null}
+n_channels: 6
+sampling_rate_hz: 50
+label_type: states
+n_states: 12
+n_annotators: null
+label_origin: human
+unlabeled_regions: null
+continuous: true
+access: direct
+size: "~150 Mo (6,46 M lignes)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "vie libre (~2 h par sujet), annotation image par image sur vidéo, états récurrents nombreux, format CSV propre"
+effort: low
+confidence: high
+notes: "2 Axivity AX3 (cuisse droite, bas du dos). Médiane ≈ 2 h × 50 Hz (ordre de grandeur ; 6,46 M lignes / 22 = 294 k en moyenne). Classes : marche, course, piétinement, escaliers ↑↓, debout, assis, allongé, vélo (assis/debout, actif/inactif)."
+rejected: null

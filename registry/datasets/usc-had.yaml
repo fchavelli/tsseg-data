@@ -1,0 +1,36 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: usc-had
+name: "USC-HAD: USC Human Activity Dataset"
+domain: har
+task: both
+source_url: "https://sipi.usc.edu/had/"
+doi: "10.1145/2370216.2370438"
+citation: "Zhang & Sawchuk, UbiComp 2012 (SAGAware workshop)"
+license: "aucune licence (page : téléchargement + citation demandée)"
+license_url: null
+license_verified: "2026-10-08, page sipi (audit ; site en panne HTTP 526 ce jour-là)"
+license_tier: C
+n_series: 70
+length: {min: 25000, median: null, max: 56000}
+n_channels: 6
+sampling_rate_hz: 100
+label_type: states
+n_states: 12
+n_annotators: null
+label_origin: concatenation
+unlabeled_regions: "non"
+continuous: false
+access: direct
+size: "~40 Mo"
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: medium
+value_reason: "déjà au banc ; mais concaténation artificielle, ordre a1→a12 identique pour les 70 séries, aucun état récurrent"
+effort: low
+confidence: medium
+notes: "14 sujets × 12 activités × 5 essais = 840 fichiers .mat enregistrés isolément ; les séries du banc concatènent les 12 activités d'un essai. Le .mat contient âge, taille, poids : à retirer. Contact Mi Zhang pour la redistribution. Une concaténation en ordre aléatoire, avec répétitions, serait plus informative."
+rejected: null
+
+  # ------------------------------------------------------------------
+  # Candidats de segmentation déjà publiés par la communauté TSS
+  # ------------------------------------------------------------------

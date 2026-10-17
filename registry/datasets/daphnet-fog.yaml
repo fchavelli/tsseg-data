@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: daphnet-fog
+name: "Daphnet Freezing of Gait"
+domain: "physio"
+task: "both"
+source_url: "https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait"
+doi: "10.24432/C56K78"
+citation: "Bächlin et al., IEEE TITB 14(2):436-446, 2010"
+license: "CC-BY-4.0"
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_tier: "A"
+license_verified: "2026-10-17, page UCI 245"
+n_series: null
+length: {min: null, median: null, max: null}
+n_channels: 9
+sampling_rate_hz: 64
+label_type: "states"
+n_states: 2
+n_annotators: null
+label_origin: "human"
+unlabeled_regions: "oui : label 0 = hors protocole (pose des capteurs, débriefing)"
+continuous: true
+access: "direct"
+size: "20.5 MB (zip)"
+in_tsseg_bench: false
+fm_pretraining: "probable : Daphnet fait partie de TSB-UAD (Time-Series Pile, MOMENT)"
+value: "high"
+value_reason: "épisodes de freezing (FoG) annotés sur vidéo pendant la marche de patients parkinsoniens : événements cliniques de durée non nulle, récurrents"
+effort: "low"
+confidence: "medium"
+notes: "10 patients, 3 accéléromètres 3 axes (cheville, cuisse, tronc). Fichiers SxxRyy (≈ 17 enregistrements d'après le papier, 29 fichiers dans l'archive). 64 Hz d'après le papier."
+rejected: null

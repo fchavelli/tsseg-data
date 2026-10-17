@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
+id: fly-vs-fly
+name: "Fly vs. Fly (Boy meets boy, Aggression, Courtship)"
+domain: animal_behavior
+task: sd
+source_url: https://data.caltech.edu/records/1893
+doi: 10.22002/D1.1893
+citation: "Eyjolfsdottir et al., ECCV 2014"
+license: CC0-1.0
+license_url: https://creativecommons.org/publicdomain/zero/1.0/
+license_tier: A
+license_verified: "2026-10-17, page CaltechDATA (droits « cc-zero »)"
+n_series: null
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: 30
+label_type: states
+n_states: 10
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui, hors actions annotées (classe implicite « aucune »)"
+continuous: true
+access: direct
+size: "~3,7 Go sans films (zip Aggression + BoyMeetsBoy_wo_movies + Courtship) ; 44 Go avec"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "CC0, trajectoires de pose articulée par image pour 2 mouches, 10 actions sociales annotées par experts, 22 h de vidéo"
+effort: medium
+confidence: medium
+notes: "États récurrents : oui (lunge, wing threat, tussle, wing extension, circling, copulation… se répètent dans chaque vidéo). Actions = intervalles (bouts) potentiellement chevauchants entre mouches : à rendre denses par mouche. Fréquence 30 Hz de mémoire, à vérifier."
+rejected: null

@@ -1,0 +1,36 @@
+# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+id: bimacs
+name: "KIT Bimanual Actions Dataset (Bimacs)"
+domain: procedural_cooking
+task: sd
+source_url: "https://bimanual-actions.humanoids.kit.edu/"
+doi: "10.1109/LRA.2019.2949221"
+citation: "Dreher, Wächter, Asfour, Learning Object-Action Relations from Bimanual Human Demonstration Using Graph Networks, IEEE RA-L 5(1), 2020"
+license: "annotations et données dérivées (pose 2D, objets 3D) : CC0-1.0 ; images RGB-D : usage scientifique seulement"
+license_url: "https://bimanual-actions.humanoids.kit.edu/terms-of-use"
+license_tier: A
+license_verified: "2026-10-17, page Terms of Use du site KIT"
+n_series: 540
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: 30
+label_type: multi_track
+n_states: 14
+n_annotators: null
+label_origin: human
+unlabeled_regions: "non : « idle » est une classe"
+continuous: true
+access: direct
+size: "vérité terrain d'actions + pose 2D : petits fichiers (vidéos RGB-D ~95 Go non nécessaires)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "6 sujets × 9 tâches (cuisine, atelier) × 10 répétitions ; une piste d'actions par main (idle, approach, retreat, lift, place, hold, stir, pour, cut, drink, wipe, hammer…) ; séries signal = pose 2D OpenPose et trajectoires 3D d'objets, sous CC0 ; extension « Bimanual Categories » (120 enregistrements)"
+effort: medium
+confidence: medium
+notes: >
+  2 h 18 min en tout, 221 000 images : ~410 images par enregistrement en moyenne
+  (séries courtes). 83 enregistrements à 15 fps. Les signaux sont dérivés de la vidéo
+  (pose OpenPose 2D, boîtes 3D d'objets) : qualité de signal à évaluer. Sommes SHA-256
+  publiées sur la page de téléchargement (pratique pour pooch).
+rejected: null

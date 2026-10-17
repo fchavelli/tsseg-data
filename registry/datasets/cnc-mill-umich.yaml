@@ -1,0 +1,38 @@
+# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+id: cnc-mill-umich
+name: "CNC Mill Tool Wear (University of Michigan SMART testbed)"
+domain: industry
+task: both
+source_url: https://www.kaggle.com/datasets/shasun/tool-wear-detection-in-cnc-mill
+doi: null
+citation: "Sun, CNC Mill Tool Wear, Kaggle 2018 (System-level Manufacturing and Automation Research Testbed, U. Michigan)"
+license: CC0-1.0
+license_url: https://creativecommons.org/publicdomain/zero/1.0/
+license_tier: A
+license_verified: "2026-10-17, API Kaggle (licenseName « CC0: Public Domain ») ; Kaggle = seule source, laboratoire d'origine nommé"
+n_series: 18
+length: {min: null, median: null, max: null}
+n_channels: 48
+sampling_rate_hz: 10
+label_type: states
+n_states: 10
+n_annotators: null
+label_origin: protocol
+unlabeled_regions: "non"
+continuous: true
+access: direct
+size: "12 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "phases d'usinage labellisées par pas de temps (colonne Machining_Process : Prep, Layer 1 Up/Down, Repositioning, Layer 2..., End), récurrentes, 18 expériences à avance/serrage/usure variés ; petit et propre"
+effort: low
+confidence: medium
+notes: >-
+  Phases issues du programme CNC (protocole). Nombre de canaux (48, 4
+  moteurs X/Y/Z/broche × positions, vitesses, accélérations, courants,
+  tensions...) et n_states (~10) de mémoire : à recompter. Certaines
+  expériences s'arrêtent avant la fin (inspection visuelle échouée). Kaggle
+  seul hébergeur : vérifier si le laboratoire SMART a une page primaire,
+  sinon garder Kaggle (licence et source explicites, conforme à la consigne).
+rejected: null

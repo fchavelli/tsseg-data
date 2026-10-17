@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
+id: calms21
+name: "Caltech Mouse Social Interactions (CalMS21)"
+domain: animal_behavior
+task: sd
+source_url: https://data.caltech.edu/records/s0vdx-0k302
+doi: 10.22002/D1.1991
+citation: "Sun et al., NeurIPS Datasets & Benchmarks 2021"
+license: CC-BY-4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_tier: A
+license_verified: "2026-10-17, page CaltechDATA (champ licence CC BY 4.0 ; des sources secondaires disent CC BY-NC-SA : la source primaire prime)"
+n_series: null
+length: {min: null, median: null, max: null}
+n_channels: 28
+sampling_rate_hz: 30
+label_type: states
+n_states: 4
+n_annotators: 6
+label_origin: human
+unlabeled_regions: "non : classe « other » dense"
+continuous: true
+access: direct
+size: "~0,5 Go (tâche 1, poses) ; 110 Go avec vidéos (inutiles)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "poses 2 souris × 7 points, labels image par image d'experts ; tâche 2 = même comportement annoté par plusieurs annotateurs (styles différents)"
+effort: low
+confidence: medium
+notes: "États récurrents : oui (attack / investigation / mount / other alternent de nombreuses fois dans chaque vidéo de ~10 min). JSON (keypoints, scores, annotations) par séquence ; tâche 1 : 4 classes, tâche 2 : 5 annotateurs, tâche 3 : 7 comportements rares (binaires). Nombre de séquences (~70 train + 19 test en tâche 1) et 30 Hz de mémoire, à vérifier. Classe « other » dominante."
+rejected: null

@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: pamap2
+name: "PAMAP2 Physical Activity Monitoring"
+domain: har
+task: both
+source_url: "https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring"
+doi: "10.24432/C5NW2H"
+citation: "Reiss & Stricker, ISWC 2012"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/legalcode"
+license_verified: "2026-10-08, page UCI (audit)"
+license_tier: A
+n_series: 9
+length: {min: 8000, median: null, max: 447000}
+n_channels: 52
+sampling_rate_hz: 100
+label_type: states
+n_states: 18
+n_annotators: null
+label_origin: protocol
+unlabeled_regions: "oui : activityID 0 (« transient », 25-34 % des points) à exclure d'après le readme"
+continuous: true
+access: direct
+size: "~650 Mo décompressé"
+in_tsseg_bench: true
+fm_pretraining: unknown
+value: high
+value_reason: "longues séries multi-IMU, états récurrents, déjà connu de la communauté"
+effort: low
+confidence: medium
+notes: "Banc : 9 séries Protocol, 3 accéléromètres (9 canaux), classe 0 traitée comme un état (à corriger). Version plus complète : dossier Optional (6 activités supplémentaires, 6 sujets), 3 IMU complètes (acc ±16g et ±6g, gyr, mag, orientation) + fréquence cardiaque (9 Hz) = 52 colonnes. NaN (paquets perdus). Protocole scripté : 12 activités + 6 optionnelles."
+rejected: null

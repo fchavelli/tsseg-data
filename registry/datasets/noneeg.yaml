@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: noneeg
+name: "Non-EEG Dataset for Assessment of Neurological Status"
+domain: "physio"
+task: "both"
+source_url: "https://physionet.org/content/noneeg/1.0.0/"
+doi: "10.13026/C26Q2Z"
+citation: "Birjandtalab et al., IEEE EMBC 2016"
+license: "ODC-By-1.0"
+license_url: "https://opendatacommons.org/licenses/by/1-0/"
+license_tier: "A"
+license_verified: "2026-10-17, API + page PhysioNet (access_policy: Open)"
+n_series: 20
+length: {min: 18191, median: 18240, max: 18343}
+n_channels: 7
+sampling_rate_hz: 8
+label_type: "states"
+n_states: 5
+n_annotators: null
+label_origin: "protocol"
+unlabeled_regions: "non"
+continuous: true
+access: "direct"
+size: "3.9 MB"
+in_tsseg_bench: false
+fm_pretraining: "unknown"
+value: "high"
+value_reason: "protocole relaxation → stress physique → relaxation → stress cognitif → relaxation → stress émotionnel → relaxation : état « relaxation » récurrent 4 fois, rare et précieux pour SD"
+effort: "low"
+confidence: "high"
+notes: "Deux enregistrements par sujet : acc + température + EDA à 8 Hz (≈ 18 200 points, 38 min) et SpO2 + FC à 1 Hz. Étapes marquées dans les annotations WFDB."
+rejected: null

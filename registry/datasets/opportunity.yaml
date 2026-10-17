@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+id: opportunity
+name: "OPPORTUNITY Activity Recognition"
+domain: har
+task: both
+source_url: "https://archive.ics.uci.edu/dataset/226/opportunity+activity+recognition"
+doi: "10.24432/C5M027"
+citation: "Roggen et al., INSS 2010 ; Chavarriaga et al., Pattern Recognition Letters 2013"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/legalcode"
+license_verified: "2026-10-17, page UCI"
+license_tier: A
+n_series: 24
+length: {min: null, median: null, max: null}
+n_channels: 242
+sampling_rate_hz: 30
+label_type: multi_track
+n_states: 18
+n_annotators: null
+label_origin: human
+unlabeled_regions: "oui : classe NULL dans chaque piste (locomotion, gestes)"
+continuous: true
+access: direct
+size: "~300 Mo (zip)"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "référence HAR, ADL naturelles, labels hiérarchiques (locomotion 4, gestes 17, haut niveau 5, actions bas niveau), NULL récurrent, états récurrents"
+effort: medium
+confidence: medium
+notes: "4 sujets × 6 runs (5 ADL + 1 drill de 20 répétitions). Capteurs corps (7 IMU, 12 acc), objets (12) et ambiants (13 interrupteurs, 8 acc) : 242 attributs capteurs + 7 colonnes de labels. NaN fréquents (paquets perdus) malgré « no missing values » sur UCI. n_states = 17 gestes + NULL (piste gestes). Fréquence 30 Hz de mémoire, à confirmer ; longueurs non relevées (runs ADL de l'ordre de 15-30 min). Le jeu Opportunity++ (IEEE DataPort) ajoute vidéo et squelettes."
+rejected: null

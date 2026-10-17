@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: sleep-edfx
+name: "Sleep-EDF Database Expanded"
+domain: physio
+task: both
+source_url: "https://physionet.org/content/sleep-edfx/1.0.0/"
+doi: "10.13026/C2X676"
+citation: "Kemp et al., IEEE TBME 47(9):1185-1194, 2000 ; Goldberger et al., Circulation 2000 (PhysioNet)"
+license: ODC-By-1.0
+license_url: "https://opendatacommons.org/licenses/by/1-0/"
+license_tier: A
+license_verified: "2026-10-17, API + page PhysioNet"
+n_series: 197
+length: {min: 3000000, median: 7900000, max: 8600000}
+n_channels: 7
+sampling_rate_hz: 100
+label_type: states
+n_states: 6
+n_annotators: 1
+label_origin: human
+unlabeled_regions: "oui : « ? » (non scoré) et M (mouvement) ; SC = ~20 h dont de longues phases d'éveil de jour"
+continuous: true
+access: direct
+size: "8.1 GB"
+in_tsseg_bench: false
+fm_pretraining: "probable : « SleepEEG » (= sleep-edfx) sert au pré-entraînement de TF-C ; inconnu pour les TSFM"
+value: high
+value_reason: "référence du sleep staging, stades R&K récurrents (W,1,2,3,4,R), 153 SC + 44 ST, très cité"
+effort: medium
+confidence: high
+notes: "EEG Fpz-Cz, Pz-Oz et EOG à 100 Hz ; EMG, respiration, température à 1 Hz (fréquences mixtes). SC ≈ 20 h, ST ≈ 9 h. Hypnogrammes EDF+ par époques de 30 s (R&K). Longueurs estimées à 100 Hz depuis les durées de la page. Remplace sleep-edf (2002)."
+rejected: null

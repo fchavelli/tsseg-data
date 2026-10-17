@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+id: ha4m
+name: "HA4M — Human Action Multi-Modal Monitoring in Manufacturing (epicyclic gear train assembly)"
+domain: procedural_cooking
+task: sd
+source_url: "https://doi.org/10.57760/sciencedb.01872"
+doi: "10.57760/sciencedb.01872"
+citation: "Cicirelli et al., The HA4M dataset: Multi-Modal Monitoring of an assembly task for Human Action recognition in Manufacturing, Scientific Data 9:745, 2022 (doi 10.1038/s41597-022-01843-z)"
+license: CC-BY-4.0
+license_url: "https://creativecommons.org/licenses/by/4.0/legalcode"
+license_tier: A
+license_verified: "2026-10-17, métadonnées DataCite du DOI ScienceDB (rightsList)"
+n_series: 217
+length: {min: null, median: null, max: null}
+n_channels: 96
+sampling_rate_hz: 30
+label_type: states
+n_states: 13
+n_annotators: 2
+label_origin: human
+unlabeled_regions: "classe « don't care » (ID 0) pour transitions et imprévus"
+continuous: true
+access: direct
+size: "3,2 To en tout (vidéos, nuages de points) ; squelette seul : petit, à extraire"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "217 assemblages par 41 sujets, squelette Azure Kinect 32 articulations à 30 fps, 12 actions + don't care annotées image par image (contrôlées par 2 chercheurs) ; ordre partiellement libre, actions répétées (2, 3, 11) ; 4 124 actions annotées ; licence A"
+effort: medium
+confidence: medium
+notes: >
+  n_channels = 32 × 3 positions (orientations en plus). Fichier Labels.txt par vidéo
+  (image, action, indice de répétition). Vérifier si le squelette peut se télécharger
+  sans les 3,2 To (miroir baltig.cnr.it/ISP/ha4m). n_annotators = 2 au sens « vérifié
+  par deux chercheurs » (une seule vérité publiée). Dérivé HA4M-THMS (Zenodo
+  18363094, CC BY 4.0) : mouvements d'atteinte extraits, pas une segmentation.
+rejected: null

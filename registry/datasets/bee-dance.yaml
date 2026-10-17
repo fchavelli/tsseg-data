@@ -1,0 +1,37 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: bee-dance
+name: "Honey Bee Dance (PS-SLDS, Oh et al.)"
+domain: animal_behavior
+task: both
+source_url: https://www.cc.gatech.edu/~borg/ijcv_psslds/
+doi: "10.1007/s11263-007-0062-z"
+citation: "Oh, Rehg, Balch & Dellaert, Learning and inferring motion patterns using parametric segmental switching linear dynamic systems, IJCV 77, 2008"
+license: "aucune ; citation demandée (« please cite our IJCV paper if possible »)"
+license_url: null
+license_tier: C
+license_verified: "2026-10-17, page Georgia Tech"
+n_series: 6
+length: {min: null, median: null, max: null}
+n_channels: "3 (x, y, cap θ) ; 4 dans KL-CPD (x, y, sin θ, cos θ)"
+sampling_rate_hz: 30
+label_type: states
+n_states: 3
+n_annotators: 1
+label_origin: human
+unlabeled_regions: non
+continuous: true
+access: direct
+size: "< 1 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "benchmark SD/CPD historique (SLDS, sticky HDP-HMM, KL-CPD, TS-CP2, TIRE), états récurrents (gauche, droite, frétillement) très fréquents, multivarié"
+effort: low
+confidence: medium
+notes: >-
+  Trajectoires issues d'un suivi vidéo automatique, labels « ground truth »
+  d'expert. Copie dans KL-CPD (BSD-3, reconditionnement : ne vaut pas pour les
+  données). bee_waggle_6 est dans TCPD (annotation CPD indépendante, 5
+  annotateurs). Fréquence 30 Hz non vérifiée à la source (vidéo).
+rejected: null
+overlap_with: [tcpd]

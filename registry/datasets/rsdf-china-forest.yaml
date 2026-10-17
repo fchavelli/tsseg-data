@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
+id: rsdf-china-forest
+name: "RSDF — Reference samples of Stable, Disturbed and Forestated forests over China (1986–2025)"
+domain: remote_sensing
+task: cpd
+source_url: https://doi.org/10.6084/m9.figshare.33313359
+doi: 10.6084/m9.figshare.33313359
+citation: "Shang et al., ESSD preprint essd-2026-705 (v3) ; v1 Shang et al. 2023"
+license: CC-BY-4.0
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_tier: A
+license_verified: "2026-10-17, API figshare (article 33313359)"
+n_series: 12991
+length: {min: null, median: null, max: null}
+n_channels: 6
+sampling_rate_hz: null
+label_type: cps
+n_states: null
+n_annotators: null
+label_origin: human
+unlabeled_regions: "non"
+continuous: true
+access: direct
+size: "340 Mo (réflectances) + 0,7 Mo (CSV) ; 1,2 Go de figures PDF inutiles"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: high
+value_reason: "CP datés au jour (année + DOY) et typés (coupe, feu, autre, reboisement) par interprétation visuelle, avec les séries Landsat de réflectance incluses ; échantillonnage aléatoire stratifié → ~80 % de séries sans CP (vraie évaluation des faux positifs)"
+effort: medium
+confidence: medium
+notes: "États récurrents : non en général (CPD : 16 % un événement, 4,4 % deux ou plus ; forêt → perturbée → repousse peut revenir à l'état forêt). Séries Landsat irrégulières (nuages), 6 bandes ; longueur ~40 ans × quelques dizaines d'acquisitions/an, à mesurer. Confiance de l'annotation fournie par échantillon. ESSD en révision : figer la version figshare."
+rejected: null

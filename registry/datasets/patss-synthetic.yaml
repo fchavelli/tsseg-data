@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+id: patss-synthetic
+name: "PaTSS replication data — synthetic series with gradual state transitions (+ Google Trends)"
+domain: synthetic
+task: both
+source_url: https://doi.org/10.48804/G2YRDR
+doi: "10.48804/G2YRDR"
+citation: "Carpentier, Feremans, Meert & Verbeke, Pattern-based Time Series Semantic Segmentation with Gradual State Transitions, SDM 2024 ; données KU Leuven RDR 2024"
+license: Apache-2.0
+license_url: https://www.apache.org/licenses/LICENSE-2.0
+license_tier: A
+license_verified: "2026-10-17, API Dataverse KU Leuven RDR (licence SPDX Apache-2.0)"
+n_series: 1010
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: null
+label_type: "states avec transitions graduelles annotées"
+n_states: null
+n_annotators: null
+label_origin: simulated
+unlabeled_regions: "transitions graduelles (zones intermédiaires annotées comme mélange)"
+continuous: true
+access: direct
+size: "535 Mo"
+in_tsseg_bench: false
+fm_pretraining: unknown
+value: medium
+value_reason: "seul jeu recensé à transitions graduelles annotées ; licence A ; générateur fourni ; teste l'hypothèse « changement abrupt » de TSB-SEG"
+effort: low
+confidence: medium
+notes: "500 séries test + 510 validation ; + 1 série Google Trends (mail_week.csv, plus téléchargeable chez Google ; labels non vérifiés). PaTSS est déjà un détecteur de tsseg."
+rejected: null

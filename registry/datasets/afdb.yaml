@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: afdb
+name: "MIT-BIH Atrial Fibrillation Database"
+domain: "physio"
+task: "both"
+source_url: "https://physionet.org/content/afdb/1.0.0/"
+doi: "10.13026/C2MW2D"
+citation: "Moody & Mark, Computers in Cardiology 10:227-230, 1983"
+license: "ODC-By-1.0"
+license_url: "https://opendatacommons.org/licenses/by/1-0/"
+license_tier: "A"
+license_verified: "2026-10-17, API + page PhysioNet (access_policy: Open)"
+n_series: 23
+length: {min: 9205760, median: 9205760, max: 9205760}
+n_channels: 2
+sampling_rate_hz: 250
+label_type: "states"
+n_states: 4
+n_annotators: null
+label_origin: "human"
+unlabeled_regions: "non"
+continuous: true
+access: "direct"
+size: "635.4 MB"
+in_tsseg_bench: false
+fm_pretraining: "unknown"
+value: "high"
+value_reason: "10 h par série, alternance AFIB / AFL / J / N récurrente : SD et CPD sur séries très longues"
+effort: "low"
+confidence: "high"
+notes: "25 enregistrements dont 23 avec signal (00735 et 03665 : annotations seules). 9 205 760 points (10,2 h) à 250 Hz. Rythmes dans .atr ; .qrs non audités (07859 décalé de 2 569 échantillons, corrigé)."
+rejected: null

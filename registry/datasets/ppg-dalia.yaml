@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: ppg-dalia
+name: "PPG-DaLiA: PPG dataset for motion compensation and heart rate estimation in Daily Life Activities"
+domain: "physio"
+task: "both"
+source_url: "https://archive.ics.uci.edu/dataset/495/ppg+dalia"
+doi: "10.24432/C53890"
+citation: "Reiss et al., Sensors 19(14):3079, 2019"
+license: "CC-BY-4.0"
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+license_tier: "A"
+license_verified: "2026-10-17, page UCI 495 (« licensed under CC BY 4.0 »)"
+n_series: 15
+length: {min: null, median: null, max: null}
+n_channels: null
+sampling_rate_hz: 64
+label_type: "states"
+n_states: 8
+n_annotators: null
+label_origin: "protocol"
+unlabeled_regions: "oui : transitions entre activités (label 0)"
+continuous: true
+access: "direct"
+size: "2.7 GB (zip)"
+in_tsseg_bench: false
+fm_pretraining: "unknown"
+value: "high"
+value_reason: "~2,5 h par sujet en conditions quasi réelles : assis, escaliers, baby-foot, vélo, voiture, déjeuner, marche, travail ; PPG + ECG + ACC"
+effort: "low"
+confidence: "medium"
+notes: "Poignet : BVP 64 Hz, EDA/TEMP 4 Hz, ACC 32 Hz ; poitrine : ECG/RESP/ACC 700 Hz (fréquences mixtes). Durées d'après le papier (non relues). Hébergement UCI déposé par les auteurs (même équipe Siegen que WESAD, mais licence CC BY ici). Peut figurer dans har.yaml."
+rejected: null

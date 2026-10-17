@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+id: eegmmidb
+name: "EEG Motor Movement/Imagery Dataset"
+domain: "physio"
+task: "both"
+source_url: "https://physionet.org/content/eegmmidb/1.0.0/"
+doi: "10.13026/C28G6P"
+citation: "Schalk et al., IEEE TBME 51(6):1034-1043, 2004"
+license: "ODC-By-1.0"
+license_url: "https://opendatacommons.org/licenses/by/1-0/"
+license_tier: "A"
+license_verified: "2026-10-17, API + page PhysioNet (access_policy: Open)"
+n_series: 1526
+length: {min: 9600, median: 19680, max: null}
+n_channels: 64
+sampling_rate_hz: 160
+label_type: "states"
+n_states: 3
+n_annotators: null
+label_origin: "protocol"
+unlabeled_regions: "non"
+continuous: true
+access: "direct"
+size: "3.6 GB"
+in_tsseg_bench: false
+fm_pretraining: "probable : corpus de pré-entraînement de modèles EEG (BENDR, LaBraM…)"
+value: "medium"
+value_reason: "109 sujets × 14 runs ; alternance repos T0 / tâche T1 / tâche T2 (~4 s) dans chaque run de 2 min : SD à états récurrents, labels exacts"
+effort: "low"
+confidence: "medium"
+notes: "Runs 1-2 = ligne de base yeux ouverts / fermés d'1 min (un seul état). Runs 3-14 ≈ 2 min (≈ 19 680 points, valeur usuelle, non relue). Segments courts (~4 s = 640 points)."
+rejected: null
