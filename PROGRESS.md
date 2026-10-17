@@ -5,6 +5,18 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / PAMAP2: complete UCI archive (CC BY 4.0 verified 2026-10-18),
+  SHA256 `76b3580bd5a804121f507717cb498c66a312ef5c774f4a78ac470e6558add352`.
+  **14 sessions** (9 Protocol + 5 Optional, correcting the registry's six-subject
+  Optional claim), 3,850,505 samples, lengths 8,477 / 316,475.5 median / 447,000;
+  240 segments including missing spans, recurrence in 9/14. Source readme II.2
+  explicitly excludes activity 0: mapped to -1 in place (**29.2313%** unscored),
+  without reconnecting labelled intervals. Default 9 recommended +/-16g axes
+  (105 MiB), full all 52 attributes (500 MiB), nominal 100 Hz; sparse ~9 Hz HR
+  readings and wireless-loss NaNs preserved, source-invalid orientations flagged.
+  Demographic PDF excluded from output. Validation 0 errors / 0 warnings,
+  including full/default identity and chunk reassembly. Archive cached locally.
+
 - [x] Batch 1 / HAS: all 250 labelled master CSV series (125 public / 125 private),
   1,929,951 samples, 1,035 segments, recurrence in 83/250, no missing labels,
   lengths 340 / 4,985.5 median / 41,465. Nine inertial columns, six present for
