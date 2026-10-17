@@ -152,7 +152,6 @@ def main() -> None:
     ag = pd.DataFrame(agree_rows)
     lengths = np.array([len(v[0]) for v in series.values()])
     types = pd.Series([t for v in cps.values() for _, t in v]).value_counts().to_dict()
-    n_cps_default = [len(v) for k, v in cps.items()]
     agreement = {
         "margin_points": MARGIN,
         "change_types": DEFAULT_TYPES,

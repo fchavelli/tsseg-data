@@ -104,7 +104,7 @@ def _structure(info: dict, spec: DatasetSpec) -> str:
     for c in spec.label_columns:
         out.append(f"| `{c}` | list<{spec.label_columns[c]}> | "
                    f"{info['label_descriptions'].get(c, 'dense labels')} |")
-    for a in spec.cp_annotators[:1]:
+    if spec.cp_annotators:
         out.append("| `cps_<annotator>` | list<int32> | change points of one annotator "
                    "(null = series not annotated by them, empty = no change) |")
         out.append("| `cp_types_<annotator>` | list<string> | type of each change point |")

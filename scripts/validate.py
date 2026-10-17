@@ -276,7 +276,7 @@ def check_data(root: Path, info: dict, r: Report) -> None:
                     if col.startswith(("cps_", "cp_types_")):
                         continue
                     lens = pc.list_value_length(t[col]).to_numpy(zero_copy_only=False)
-                    bad = [m["series_id"] for m, n in zip(meta_rows, lens) if n != m["length"]]
+                    bad = [m["series_id"] for m, n in zip(meta_rows, lens, strict=True) if n != m["length"]]
                     r.check(not bad, f"{f}: {col} length != length for {bad[:3]}")
                 for m in meta_rows:
                     chunks[m["series_id"]].append(
@@ -284,7 +284,7 @@ def check_data(root: Path, info: dict, r: Report) -> None:
                     files_of[m["series_id"]].add(f)
                 for c in label_cols:
                     vals = _lists(t, c)
-                    for m, v in zip(meta_rows, vals):
+                    for m, v in zip(meta_rows, vals, strict=True):
                         sid = m["series_id"]
                         u = set(np.unique(v).tolist())
                         r.check(u <= states.get(c, set()) | {MISSING_LABEL},
@@ -298,12 +298,12 @@ def check_data(root: Path, info: dict, r: Report) -> None:
                         digests[(cfg, sid, m["chunk_idx"], c)] = hashlib.sha1(
                             np.ascontiguousarray(v).tobytes()).hexdigest()
                 for c in info["configs"][cfg]["channels"]:
-                    for m, v in zip(meta_rows, _lists(t, c)):
+                    for m, v in zip(meta_rows, _lists(t, c), strict=True):
                         digests[(cfg, m["series_id"], m["chunk_idx"], c)] = hashlib.sha1(
                             np.ascontiguousarray(v).tobytes()).hexdigest()
                 for a in cp_ann:
                     cps, types = _lists(t, f"cps_{a}"), _lists(t, f"cp_types_{a}")
-                    for m, c, ty in zip(meta_rows, cps, types):
+                    for m, c, ty in zip(meta_rows, cps, types, strict=True):
                         sid = m["series_id"]
                         if m["chunk_idx"] > 0:
                             r.check(c is None, f"{sid}: cps_{a} on chunk {m['chunk_idx']}")

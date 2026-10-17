@@ -167,7 +167,7 @@ def main() -> None:
         with h5py.File(h5p, "r") as f:
             desc = json.loads(f.attrs["description"])
             cols = [d["path"].split("/")[-1] for d in desc]
-            for d, c in zip(desc, cols):
+            for d, c in zip(desc, cols, strict=True):
                 assert d["fs"] == FS
                 units[c] = d["unit"]
                 ch_meta[c] = {"name": d["name"], "domain": d["domain"],
@@ -247,7 +247,7 @@ def main() -> None:
             with h5py.File(nt["h5"], "r") as f:
                 desc = json.loads(f.attrs["description"])
                 sig = {c: f[d["path"]][...].astype(np.float32)
-                       for c, d in zip(channels, desc)}
+                       for c, d in zip(channels, desc, strict=True)}
                 hyp_h5 = f["hypnogram"][...].astype(np.int64)
             labs = {f"label_{s}": np.repeat(hyps[rec][s][a:b], SPE) for s in SCORERS}
             labs["label_consensus"] = np.repeat(cons_all[rec][a:b], SPE)

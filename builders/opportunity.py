@@ -88,9 +88,9 @@ def channel_names(lines: list[str]) -> tuple[list[str], dict, dict, list[dict]]:
             i += 1
     names = [slug(d) for _, d in descs_fixed]
     assert len(set(names)) == len(names), "duplicated channel names remain"
-    unit_map = dict(zip(names, units))
+    unit_map = dict(zip(names, units, strict=True))
     source = {n: {"source_column": c, "source_description": d0}
-              for n, (c, d0) in zip(names, descs)}
+              for n, (c, d0) in zip(names, descs, strict=True)}
     return names, unit_map, source, fixes
 
 
@@ -217,7 +217,7 @@ def main() -> None:
         "state_names": state_names,
         "state_source_codes": state_codes,
         "label_descriptions": {c: f"track {t}: state id (names in tsseg.json), 0 = Null"
-                               for c, t in zip(label_cols, TRACKS)},
+                               for c, t in zip(label_cols, TRACKS, strict=True)},
         "label_origin": "human",
         "splits": {"train": "all runs except the test runs",
                    "test": "ADL4 and ADL5 of S2, S3, S4 (Opportunity challenge, "
