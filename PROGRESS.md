@@ -5,6 +5,19 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / PUMP: source revision `2e1765e35f37a214b371ebba18b5e66d104fca9f`,
+  CC BY 4.0 verified at the primary Bosch README on 2026-10-18 (URL recorded in
+  the card and Croissant). All 400 cycles: 12,937,489 samples, 9 channels at 100 Hz,
+  lengths 20,365 / 33,225 median / 43,870; 22,686 segments, recurrent states in
+  400/400 series, no unlabelled samples, shortest segment 1 sample. Source PC
+  states include **17.5**, so codes are categorically encoded with a reversible
+  `state_source_codes` mapping; never truncated. Generation B model predictions
+  are excluded from ground truth. Original time stamps and source normalisation
+  retained; no smoothing. The 120 TSB-SEG DC cycles are flagged in the index.
+  SHA256-pinned archive (879 MiB), Parquet 266 MiB. Validation: full Parquet,
+  SHA256SUMS, Croissant 1.1 + RAI, and one-row record excerpt pass with 0 errors /
+  0 warnings. Source archive retained in `raw/pump/` for reproducibility.
+
 - [x] 1. Skeleton: `pyproject.toml`, MIT `LICENSE`, `.gitignore` (`build/`, `raw/`,
   `.venv/`), `tsseg_data/` (sources, format writer, Croissant, labels, reader,
   build steps), `cards/` templates, `registry/` (shortlist + 50 retained entries,

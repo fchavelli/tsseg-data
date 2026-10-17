@@ -59,7 +59,7 @@ the authors allow re-hosting.
 | `actrectut`: ActRecTut — Human Activity Recognition Tutorial dataset (Bulling et al.) | har | SD | GPL-3.0-or-later (B) | planned |
 | `pamap2`: PAMAP2 Physical Activity Monitoring | har | SD | CC-BY-4.0 (A) | planned |
 | `usc-had`: USC-HAD: USC Human Activity Dataset | har | SD | none at the source (C) | planned; source-only builder until the authors allow re-hosting |
-| `pump`: Hydraulic End-of-Line Testing (Bosch) — PUMP | industry_energy | SD | CC-BY-4.0 (A) | planned |
+| `pump`: Hydraulic End-of-Line Testing (Bosch) — PUMP | industry_energy | SD | CC-BY-4.0 (A) | builder + validated build (400 cycles) |
 | `skab`: Skoltech Anomaly Benchmark (SKAB) | industry_energy | CPD | GPL-3.0 (B) | planned |
 | `mocap`: CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004) | mocap_surgery_assembly | CPD | CMU MoCap terms (free use, no resale) (B) | planned; author contact planned |
 | `sleep-edfx`: Sleep-EDF Database Expanded | physio | SD | ODC-By-1.0 (A) | planned |

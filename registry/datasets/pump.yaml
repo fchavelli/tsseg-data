@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+# Source-verified and measured by builders/pump.py on 2026-10-18.
 id: pump
 name: "Hydraulic End-of-Line Testing (Bosch) — PUMP"
 domain: industry
@@ -9,13 +9,13 @@ citation: "Gaugel & Reichert, PrecTime, 2023 (+ Gaugel et al. 2023, 2024)"
 license: CC-BY-4.0
 license_url: https://github.com/boschresearch/Hydraulic-EoL-Testing
 license_tier: A
-license_verified: "2026-10-17, README du dépôt (section License ; pas de fichier LICENSE)"
-n_series: 120
-length: {min: 20000, median: null, max: 41000}
+license_verified: "2026-10-18, https://github.com/boschresearch/Hydraulic-EoL-Testing/blob/2e1765e35f37a214b371ebba18b5e66d104fca9f/README.md#license"
+n_series: 400
+length: {min: 20365, median: 33225, max: 43870}
 n_channels: 9
 sampling_rate_hz: 100
 label_type: states
-n_states: 52
+n_states: null  # vocabularies differ by generation/control; exact codes in tsseg.json
 n_annotators: 1
 label_origin: human
 unlabeled_regions: "non (états spéciaux début/fin/empty labellisés)"
@@ -29,8 +29,9 @@ value_reason: "seul jeu industriel à états fins et récurrents de TSB-SEG ; la
 effort: low
 confidence: high
 notes: >-
-  TSB-SEG utilise 120 cycles (Génération A DC V35/V36/V38). La source contient
-  ~280 cycles de plus, même licence (Génération A SC V12 : 38, PC V23 : 40 ;
-  Génération B DC : 202) : version plus complète à intégrer. Signification des
-  entiers d'état confidentielle. z-normalisé par cycle à la source.
+  All 400 source cycles integrated: A DC 120, A SC 38, A PC 40, B DC 202.
+  State code 17.5 occurs in PC; codes map reversibly to categorical IDs.
+  Generation B predicted_states columns are model output, excluded from labels.
+  12937489 samples; 22686 segments; recurrent states in 400/400 series.
+  No missing labels; minimum segment length 1. Standard-score normalised at source.
 rejected: null
