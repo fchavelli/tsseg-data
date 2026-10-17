@@ -1,17 +1,17 @@
-# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+# Primary archive and licence checked, build measured on 2026-10-18.
 id: usc-had
 name: "USC-HAD: USC Human Activity Dataset"
 domain: har
-task: both
+task: cpd
 source_url: "https://sipi.usc.edu/had/"
 doi: "10.1145/2370216.2370438"
 citation: "Zhang & Sawchuk, UbiComp 2012 (SAGAware workshop)"
 license: "aucune licence (page : téléchargement + citation demandée)"
 license_url: null
-license_verified: "2026-10-08, page sipi (audit ; site en panne HTTP 526 ce jour-là)"
+license_verified: "2026-10-18, https://sipi.usc.edu/had/ and primary archive Readme.txt: download/citation, no explicit data licence"
 license_tier: C
 n_series: 70
-length: {min: 25000, median: null, max: 56000}
+length: {min: 25356, median: 39963, max: 56251}
 n_channels: 6
 sampling_rate_hz: 100
 label_type: states
@@ -28,7 +28,14 @@ value: medium
 value_reason: "déjà au banc ; mais concaténation artificielle, ordre a1→a12 identique pour les 70 séries, aucun état récurrent"
 effort: low
 confidence: medium
-notes: "14 sujets × 12 activités × 5 essais = 840 fichiers .mat enregistrés isolément ; les séries du banc concatènent les 12 activités d'un essai. Le .mat contient âge, taille, poids : à retirer. Contact Mi Zhang pour la redistribution. Une concaténation en ordre aléatoire, avec répétitions, serait plus informative."
+notes: >-
+  All 840 primary MAT files build into 70 explicit artificial filename-ordered
+  activity concatenations. 2811490 samples; 840 filename-label segments, 839
+  declared-metadata segments, no recurrent states in either track (CPD only).
+  Subject14/a3t2 internally declares activity 2/walking-left; one activity number
+  missing, two trial fields wrong. Both filename and declared labels preserved,
+  four discrepancies documented. Demographics excluded; native offsets retained
+  in recordings.parquet. Source-only pending written author permission.
 rejected: null
 
   # ------------------------------------------------------------------

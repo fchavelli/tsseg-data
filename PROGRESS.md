@@ -5,6 +5,30 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 final gate: all **12** local builds (3 pilots + 9 batch-1 datasets)
+  pass full `scripts/validate.py` with **0 errors / 0 warnings**, including
+  SHA256SUMS, Parquet, chunks, labels/CPs, configuration identity and Croissant
+  record excerpts. Log retained locally at `raw/batch1-validation.log`.
+  `ruff check .` passes; all nine new builders and the shared reporting module
+  pass `ruff format --check`. Repository-wide formatting still flags ten
+  pre-existing files: verified against baseline `6d77225` (all ten already fail
+  there). No unrelated formatting rewrite applied. Builds total 2.1 GiB, raw
+  cache 1.9 GiB; 81 GiB filesystem space remains. No remote/push/publication.
+
+- [x] Batch 1 / USC-HAD: primary archive and existing TSB-SEG SHA256 pin verified;
+  no explicit data licence at primary page/readme on 2026-10-18, **source-only**.
+  All 840 native recordings represented in 70 explicitly artificial subject/trial
+  concatenations, 2,811,490 samples, lengths 25,356 / 39,963 median / 56,251,
+  six channels at 100 Hz. No recurrent state in either label representation:
+  classified CPD. Default filename labels give 840 segments; separate MAT-declared
+  activity track gives 839. **Four source metadata anomalies** retained/documented:
+  Subject14/a3t2 internally declares activity 2/walking-left rather than filename
+  activity 3; Subject13/a11t4 lacks activity_number (recovered from explicit
+  elevator-up string); two trial fields disagree with filenames. No silent
+  decision between contradictory source claims. Native recording offsets, names
+  and flags in recordings.parquet; age/height/weight/date excluded. Build 43 MiB,
+  validation passes 0 errors / 0 warnings.
+
 - [x] Batch 1 / UTSA: all 32 source-only series using the exact CLaP transport
   revision/per-file SHA256 pins from the frozen TSB-SEG downloader. All 34 files
   reused from local cache only after hash verification; no download needed.
@@ -152,8 +176,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 (below), then the remaining 47 builders (phase 5), starting
-  with the TSB-SEG datasets and the tier C author contacts.
+- [ ] Decision 7 (below) remains for user review; 38 builders remain after the
+  three pilots and nine completed batch-1 source builders. Next: batch 2 and
+  tier C author contacts; TSSB upstream rights now also require clarification.
 - [ ] Dreem: the 22 other nights (`--all-records`, ~20 GB download, ~7 GB of
   Parquet `full`); the record_id of `63b799f6...` (lights off at 60) is unknown
   until its h5 is read.

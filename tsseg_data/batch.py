@@ -111,8 +111,11 @@ def finish(
         "dataLimitations": limitations,
         "dataBiases": biases,
         "personalSensitiveInformation": personal,
-        "dataUseCases": "Change point detection and state detection; recurrence counts "
-        "are reported separately for each label track.",
+        "dataUseCases": info.get(
+            "use_cases",
+            "Change point detection and state detection; "
+            "recurrence counts are reported separately for each label track.",
+        ),
         "dataSocialImpact": "Research use; evaluate generalisation before operational use.",
         "hasSyntheticData": synthetic,
         "dataReleaseMaintenancePlan": "Versioned source builder in tsseg-data; no publication yet.",

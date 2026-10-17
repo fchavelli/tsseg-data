@@ -79,7 +79,7 @@ datasets:
   - id: usc-had
     registry: har.yaml
     domain: har
-    task: sd
+    task: cpd
     label_type: states
     license: "aucune licence"
     license_tier: C
