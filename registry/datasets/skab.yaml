@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+# Source-verified and measured by builders/skab.py on 2026-10-18.
 id: skab
 name: "Skoltech Anomaly Benchmark (SKAB)"
 domain: industry
@@ -9,9 +9,9 @@ citation: "Katser & Kozitsin, SKAB, Kaggle 2020"
 license: GPL-3.0
 license_url: https://github.com/waico/SKAB/blob/master/LICENSE
 license_tier: B
-license_verified: "2026-10-17, dépôt GitHub (LICENSE GPL-3.0)"
+license_verified: "2026-10-18, https://github.com/waico/SKAB/blob/b2c0d46c2971dcbfe71e26087b6d231998bb91c2/LICENSE"
 n_series: 34
-length: {min: 700, median: null, max: 1300}
+length: {min: 745, median: 1140.5, max: 1327}
 n_channels: 8
 sampling_rate_hz: 1
 label_type: states
@@ -29,11 +29,9 @@ value_reason: "banc d'essai physique (pompe à eau) à anomalie collective injec
 effort: low
 confidence: high
 notes: >-
-  Anomalies = intervalles de régime (injection protocolaire : vannes fermées,
-  fuites, cavitation...), pas des points. Version plus complète à la source :
-  la colonne `changepoint` pose 4 marques par anomalie (début/fin des phases de
-  transition) → version 5 segments (normal, montée, anomalie, descente, normal)
-  possible. Le README annonce une v1.0 avec « 300+ fichiers » (non publiée au
-  2026-10-17, à surveiller). Fichier anomaly-free non utilisé. Fréquence 1 Hz
-  selon le papier (non relu ici).
+  37401 samples, 100 binary anomaly segments, recurrence in 32/34 series.
+  Source changepoint track preserves 129 markers: 29 series have four, three
+  have three, two have two. No semantic phases or missing markers inferred.
+  Nominal 1 Hz verified from timestamps; maximum gap stored per series.
+  Separate anomaly-free training file has no annotations and is excluded.
 rejected: null

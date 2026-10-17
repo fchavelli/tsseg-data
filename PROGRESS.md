@@ -5,6 +5,16 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / SKAB: 34 labelled v0.9 experiments, 37,401 samples, eight channels
+  nominally at 1 Hz (timestamps and maximum gap retained), 100 binary-label
+  segments, recurrence in 32/34 series, no unlabelled points. The CP track retains
+  **all 129 source markers**: 29 series have four markers, three have three, two
+  have two; no phase semantics or absent markers are invented. The separate
+  anomaly-free training CSV has no labels and is excluded. GPL-3.0 verified in
+  source LICENSE on 2026-10-18; revision `b2c0d46c2971dcbfe71e26087b6d231998bb91c2`
+  and archive SHA256 pinned. Build 768 KiB; validation passes with 0 errors /
+  0 warnings, including every source CP and Croissant record excerpts.
+
 - [x] Batch 1 / PUMP: source revision `2e1765e35f37a214b371ebba18b5e66d104fca9f`,
   CC BY 4.0 verified at the primary Bosch README on 2026-10-18 (URL recorded in
   the card and Croissant). All 400 cycles: 12,937,489 samples, 9 channels at 100 Hz,

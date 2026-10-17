@@ -19,6 +19,7 @@ import yaml
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
     "pump": "builder + validated build (400 cycles)",
+    "skab": "builder + validated build (all 129 source CP markers)",
     "mozilla-perf-cpd-annotations": "builder + validated build",
     "opportunity": "builder + validated build",
     "dreem-dod-h": "builder + validated build (3 of 25 nights)",
