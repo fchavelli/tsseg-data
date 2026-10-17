@@ -68,7 +68,7 @@ def fetch(
                 f"sha256 mismatch for cached {dest}: {digest} != {expected_sha256}"
             )
         return dest
-    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest.parent.mkdir(parents=True, exist_ok=True)
     try:
         import pooch
     except ImportError:  # pragma: no cover - fallback without pooch
@@ -85,8 +85,8 @@ def fetch(
     pooch.retrieve(
         url,
         known_hash=f"sha256:{expected_sha256}",
-        fname=fname,
-        path=dest_dir,
+        fname=dest.name,
+        path=dest.parent,
         downloader=pooch.HTTPDownloader(headers=USER_AGENT),
     )
     return dest

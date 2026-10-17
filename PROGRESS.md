@@ -10,10 +10,15 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
   build steps), `cards/` templates, `registry/` (shortlist + 50 retained entries,
   `scripts/sync_registry.py`).
 
+- [x] 2. Builders ported to format 1.0 (`builders/<id>.py`) and built in `build/`
+  from the pilot raw cache (`--raw-dir .../pilot/raw`, sha256 checked):
+  mozilla-perf-cpd-annotations (0.75 MB), opportunity (default 17 MB, full 193 MB),
+  dreem-dod-h, 3 nights (default 231 MB, full 4 files, 930 MB). Pilot fixes: Dreem
+  aligned by `record_id` (window rule reproduces every h5 length exactly, no
+  agreement search); Opportunity's 24 repeated `accX` renamed X/Y/Z by position.
+
 ## To do
 
-- [ ] 2. Builders ported to format 1.0: mozilla-perf-cpd-annotations, opportunity,
-  dreem-dod-h; built in `build/`.
 - [ ] 3. `scripts/validate.py` (mlcroissant, Parquet schema, CP/label coherence);
   all three valid.
 - [ ] 4. README (collection, one line per dataset), CONTRIBUTING.

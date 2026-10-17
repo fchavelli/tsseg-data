@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import json
 import math
+import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -64,7 +65,7 @@ MISSING_LABEL = -1
 CHUNK_SECONDS = 3600
 HIGH_FREQ_HZ = 10.0
 TARGET_FILE_BYTES = 256 * 2**20
-ROW_GROUP_BYTES = 64 * 2**20
+ROW_GROUP_BYTES = 32 * 2**20
 RESERVED_COLUMNS = ("series_id", "chunk_idx", "chunk_start", "length")
 
 
@@ -161,17 +162,23 @@ def _list_column(arrays: list[np.ndarray], typ: pa.DataType) -> pa.Array:
 
 
 class _PartWriter:
-    """Rolls Parquet part files over at ~TARGET_FILE_BYTES, buffers row groups."""
+    """Writes row groups of ~ROW_GROUP_BYTES (uncompressed) and rolls part files
+    over before they exceed ~TARGET_FILE_BYTES on disk (compression ratio estimated
+    from the row groups already written)."""
 
     def __init__(self, root: Path, config: str, schema: pa.Schema, float_cols: list[str]):
+        self.root = root
         self.dir = root / "data" / config
         self.dir.mkdir(parents=True, exist_ok=True)
         self.config, self.schema = config, schema
         self.float_cols = float_cols
         self.part, self.writer, self.path = -1, None, None
+        self.groups_in_file = 0
         self.buf: list[dict] = []
         self.buf_bytes = 0
+        self.raw_written, self.disk_written = 0, 0
         self.files: list[str] = []
+        self.series_files: dict[str, list[str]] = {}
 
     def _open(self):
         self.part += 1
@@ -185,22 +192,29 @@ class _PartWriter:
             use_byte_stream_split=[f"{c}.list.element" for c in self.float_cols],
             write_statistics=["series_id", "chunk_idx", "chunk_start", "length"],
         )
-        self.files.append(self.path.relative_to(self.dir.parents[1]).as_posix())
+        self.groups_in_file = 0
+        self.files.append(self.path.relative_to(self.root).as_posix())
 
-    def add(self, row: dict, nbytes: int) -> str:
-        """Buffer one row; return the relative path of the part file it goes to."""
-        if self.writer is None:
-            self._open()
+    def _close_file(self):
+        if self.writer is not None:
+            self.writer.close()
+            self.writer = None
+
+    def add(self, row: dict, nbytes: int) -> None:
         self.buf.append(row)
         self.buf_bytes += nbytes
-        target = self.files[-1]
         if self.buf_bytes >= ROW_GROUP_BYTES:
             self.flush()
-        return target
 
     def flush(self):
         if not self.buf:
             return
+        ratio = self.disk_written / self.raw_written if self.raw_written else 1.0
+        if self.writer is not None and self.groups_in_file and (
+                self.path.stat().st_size + ratio * self.buf_bytes > TARGET_FILE_BYTES):
+            self._close_file()
+        if self.writer is None:
+            self._open()
         cols = {}
         for f in self.schema:
             vals = [r[f.name] for r in self.buf]
@@ -208,17 +222,20 @@ class _PartWriter:
                 cols[f.name] = _list_column(vals, f.type.value_type)
             else:
                 cols[f.name] = pa.array(vals, type=f.type)
+        before = self.path.stat().st_size
         self.writer.write_table(pa.table(cols, schema=self.schema))
+        self.groups_in_file += 1
+        self.raw_written += self.buf_bytes
+        self.disk_written += max(self.path.stat().st_size - before, 0)
+        for r in self.buf:
+            fl = self.series_files.setdefault(r["series_id"], [])
+            if self.files[-1] not in fl:
+                fl.append(self.files[-1])
         self.buf, self.buf_bytes = [], 0
-        if self.path.stat().st_size >= TARGET_FILE_BYTES:
-            self.writer.close()
-            self.writer = None
 
     def close(self):
         self.flush()
-        if self.writer is not None:
-            self.writer.close()
-            self.writer = None
+        self._close_file()
 
 
 class DatasetWriter:
@@ -229,6 +246,8 @@ class DatasetWriter:
 
     def __init__(self, out_dir: Path, spec: DatasetSpec):
         self.root, self.spec = Path(out_dir), spec
+        if (self.root / "data").exists():  # stale parts of a previous build
+            shutil.rmtree(self.root / "data")
         self.root.mkdir(parents=True, exist_ok=True)
         float_cols = list(spec.channels)
         self.parts = {
@@ -279,7 +298,6 @@ class DatasetWriter:
         bounds = [(0, n)] if clen is None else [
             (s, min(s + clen, n)) for s in range(0, n, clen)
         ]
-        files = {cfg: [] for cfg in spec.configs}
         for k, (s, e) in enumerate(bounds):
             base = {"series_id": series_id, "chunk_idx": k, "chunk_start": s,
                     "length": e - s}
@@ -302,9 +320,8 @@ class DatasetWriter:
                     nbytes += arr.nbytes
                 row.update(lab)
                 row.update(cp_cols)
-                f = self.parts[cfg].add(row, nbytes)
-                if f not in files[cfg]:
-                    files[cfg].append(f)
+                nbytes += sum(v.nbytes for v in lab.values())
+                self.parts[cfg].add(row, nbytes)
 
         irow = {
             "series_id": series_id,
@@ -320,8 +337,6 @@ class DatasetWriter:
         for a in spec.cp_annotators:
             val = cps.get(a)
             irow[f"n_cps_{a}"] = None if val is None else len(val[0])
-        for cfg in spec.configs:
-            irow[f"files_{cfg}"] = files[cfg]
         for k in spec.meta_columns:
             irow[k] = (meta or {}).get(k)
         self.index_rows.append(irow)
@@ -329,6 +344,9 @@ class DatasetWriter:
     def close(self) -> None:
         for p in self.parts.values():
             p.close()
+        for irow in self.index_rows:
+            for cfg, p in self.parts.items():
+                irow[f"files_{cfg}"] = p.series_files[irow["series_id"]]
         schema = self.spec.index_schema()
         table = pa.Table.from_pylist(self.index_rows, schema=schema)
         pq.write_table(table, self.root / "index.parquet", compression="zstd")

@@ -26,8 +26,10 @@ REPO_URL = "https://github.com/fchavelli/tsseg-data"  # planned, not created yet
 HF_NAMESPACE = "fchavelli"  # planned Hugging Face account, one repo per dataset
 
 
-def parse_args(dataset_id: str, argv=None) -> argparse.Namespace:
+def parse_args(dataset_id: str, argv=None, extra=None) -> argparse.Namespace:
     p = argparse.ArgumentParser(description=f"Build {dataset_id} in the tsseg-data format.")
+    if extra is not None:
+        extra(p)
     p.add_argument("--raw-dir", type=Path, default=REPO / "raw",
                    help="cache of source files, <raw-dir>/<id>/ (default: ./raw)")
     p.add_argument("--out", type=Path, default=REPO / "build",
