@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/cpd_benchmarks.yaml (phase-1 registry entry), not edited here.
+# Primary licence rechecked and source-only conversion measured on 2026-10-18.
 id: utsa
 name: "UCR Time Series Semantic Segmentation Archive (UTSA, jeux FLOSS)"
 domain: generic_cpd
@@ -9,9 +9,9 @@ citation: "Gharghabi, Ding, Yeh, Kamgar, Ulanova & Keogh, Matrix Profile VIII: D
 license: "aucune à la source (site Google + liens Google Drive)"
 license_url: null
 license_tier: C
-license_verified: "2026-10-17, page Google Sites : aucune mention de licence ; le BSD-3 est celui du dépôt CLaP qui reconditionne"
+license_verified: "2026-10-18, https://sites.google.com/site/onlinesemanticsegmentation/ : no explicit data licence; CLaP mirror BSD is not upstream permission"
 n_series: 32
-length: {min: 2000, median: null, max: 40000}
+length: {min: 2000, median: 12000.5, max: 40000}
 n_channels: 1
 sampling_rate_hz: "variable selon la série"
 label_type: cps
@@ -29,7 +29,9 @@ value_reason: "benchmark historique du CPD univarié (FLUSS, ClaSP, ClaSS, CLaP)
 effort: low
 confidence: medium
 notes: >-
-  Le site distribue aussi un jeu « PRCP_experiment » (non inspecté) et le jeu
-  de comparaison avec AutoPlait. 31/32 séries sans état récurrent (audit).
-  Contact Keogh envisageable pour une licence explicite.
+  Local source-only build: 422320 samples, 71 segments, recurrence 1/32
+  (SimpleSynthetic only), no missing labels. Exact TSB-SEG transport revision
+  and 34 SHA256 file pins reused; all local source files hash-verified.
+  Mirror properties.txt state IDs are CLaP labels, not original semantic labels.
+  No redistribution until author permission; contact Keogh remains necessary.
 rejected: null

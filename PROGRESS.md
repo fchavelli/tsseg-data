@@ -5,6 +5,16 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / UTSA: all 32 source-only series using the exact CLaP transport
+  revision/per-file SHA256 pins from the frozen TSB-SEG downloader. All 34 files
+  reused from local cache only after hash verification; no download needed.
+  422,320 samples, lengths 2,000 / 12,000.5 median / 40,000, 71 segments,
+  recurrence only in SimpleSynthetic (1/32), no unlabelled points. CPs from
+  desc.txt, state IDs explicitly attributed to CLaP properties.txt, not claimed
+  as original semantic labels. No physical rate asserted. Primary Google Sites
+  licence check on 2026-10-18 found no explicit data licence: tier C, no
+  redistribution. Manifest and all per-file digests retained. Validation 0/0.
+
 - [x] Batch 1 / MoCap: all 14 primary Barbič trials, 62 DOFs at 120 Hz,
   109,052 frames, lengths 4,579 / 8,370.5 median / 10,617, 124 action segments,
   recurrence in 14/14 after explicit walk/walking alias. Source transition

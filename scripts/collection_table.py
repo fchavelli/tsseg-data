@@ -25,6 +25,7 @@ STATUS = {  # id -> status text, for datasets beyond "planned"
     "has": "builder + validated build (250 series, GPS removed)",
     "pamap2": "builder + validated build (Protocol + Optional; 0 unscored)",
     "mocap": "builder + validated local build (14 Barbič trials)",
+    "utsa": "builder + validated local build (32 series; 1 recurrent)",
     "mozilla-perf-cpd-annotations": "builder + validated build",
     "opportunity": "builder + validated build",
     "dreem-dod-h": "builder + validated build (3 of 25 nights)",
