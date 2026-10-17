@@ -5,6 +5,19 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 1 / ActRecTut: all four walk/gesture matrices from primary Codeberg
+  revision `6d65a5a646f9d12ac45509db9dfe59c01f3183e4`, GPL-3.0-or-later verified in
+  settings.m on 2026-10-18; SHA256-pinned archive. 197,227 samples, lengths
+  31,392 / 47,528.5 median / 70,778, 1,232 segments, recurrent states in 4/4,
+  no missing labels, shortest segment 8. settings.m confirms 32 Hz and **does
+  document walk classes**, correcting the earlier audit. Walk has 24 actual
+  columns but only 20 names in settings.m: preserve all columns by source index.
+  Gesture has 15 columns (documented names in tsseg.json), with nine NaN padding
+  columns in the shared schema; n_source_channels distinguishes the counts.
+  Subset positions are not physically aligned sensors. Class IDs are scoped to
+  subset (walk 1..6, gesture 101..112); NULL remains ordinary state in both.
+  Validation passes with 0 errors / 0 warnings.
+
 - [x] Batch 1 / SKAB: 34 labelled v0.9 experiments, 37,401 samples, eight channels
   nominally at 1 Hz (timestamps and maximum gap retained), 100 binary-label
   segments, recurrence in 32/34 series, no unlabelled points. The CP track retains

@@ -1,18 +1,18 @@
-# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+# Verified against the primary Codeberg archive on 2026-10-18.
 id: actrectut
 name: "ActRecTut — Human Activity Recognition Tutorial dataset (Bulling et al.)"
 domain: har
 task: both
-source_url: "https://github.com/andreas-bulling/ActRecTut"
+source_url: "https://codeberg.org/andreas-bulling/ActRecTut"
 doi: "10.1145/2499621"
 citation: "Bulling, Blanke, Schiele, ACM Computing Surveys 46(3), 2014"
 license: GPL-3.0-or-later
-license_url: "https://github.com/andreas-bulling/ActRecTut/blob/master/LICENSE"
-license_verified: "2026-10-08 (audit) + 2026-10-17, API GitHub (GPL-3.0)"
+license_url: "https://codeberg.org/andreas-bulling/ActRecTut/src/commit/6d65a5a646f9d12ac45509db9dfe59c01f3183e4/settings.m"
+license_verified: "2026-10-18, GPL-3.0-or-later source header and bundled LICENSE"
 license_tier: B
 n_series: 4
-length: {min: 31000, median: 47000, max: 70778}
-n_channels: 15
+length: {min: 31392, median: 47528.5, max: 70778}
+n_channels: "24 walk / 15 gesture"
 sampling_rate_hz: 32
 label_type: states
 n_states: 12
@@ -28,5 +28,9 @@ value: high
 value_reason: "le sous-ensemble gesture (2 × 62-71 k points, 572 CP, NULL récurrent) manque au banc ; états récurrents"
 effort: low
 confidence: medium
-notes: "Banc : seulement subject{1,2}_walk, colonnes 0-9 sur 24 (choix Time2State, coupe un capteur). Version plus complète à la source : subject{1,2}_gesture, 3 IMU (acc xyz + gyr xy) = 15 canaux, NULL + 11 gestes, 26 répétitions. Le « walk » (6 classes) n'est documenté nulle part. Fréquence 32 Hz : de mémoire, à confirmer. Dépôt migré sur Codeberg."
+notes: >-
+  All four source matrices integrated, preserving all columns. settings.m confirms
+  32 Hz and names both walk and gesture classes. Walk has 24 matrix columns but
+  only 20 channel names in settings.m; builder uses source column indices.
+  197227 samples, 1232 segments, recurrence in all four series, no missing labels.
 rejected: null
