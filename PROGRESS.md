@@ -136,7 +136,8 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
   agreement search); Opportunity's 24 repeated `accX` renamed X/Y/Z by position.
 
 - [x] 3. `scripts/validate.py`: files + SHA256SUMS, Croissant (mlcroissant 1.1.1 of
-  `pilot/.venv`, required RAI, DOI in `prov:wasDerivedFrom`, three
+  `pilot/.venv`, required RAI, explicit primary source URI in `prov:wasDerivedFrom`
+  (DOI when established; no future collection destination as sole provenance), three
   `prov:wasGeneratedBy` activities, record-set fields = Parquet columns, records
   read from a 1-row excerpt), Parquet schema, chunks, labels, change points,
   identity across configs. The three datasets pass (10 s, 1 GB RAM); a corrupted

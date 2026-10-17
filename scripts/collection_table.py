@@ -23,7 +23,7 @@ STATUS = {  # id -> status text, for datasets beyond "planned"
     "actrectut": "builder + validated build (walk + gesture)",
     "tssb": "builder + validated local build (10/75 recurrent)",
     "has": "builder + validated build (250 series, GPS removed)",
-    "pamap2": "builder + validated build (Protocol + Optional; 0 unscored)",
+    "pamap2": "builder + validated build (Protocol + Optional; activityID=0 excluded, ~29% unscored)",
     "mocap": "builder + validated local build (14 Barbič trials)",
     "utsa": "builder + validated local build (32 series; 1 recurrent)",
     "usc-had": "builder + validated local build (70 artificial CPD series)",
