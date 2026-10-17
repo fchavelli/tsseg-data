@@ -15,7 +15,7 @@ progress:
     - "lot 5 (8) : mocap/chirurgie/assemblage, CPD génériques, synthétique"
     - "vérification de licence : aucun jeu retenu avec license_verified vide ; contrôle ouvert RIPE Atlas tenté (non concluant)"
     - runners_up
-    - "2026-10-17, décision utilisateur : JIGSAWS ×3 (D) retirés de la nouvelle collection (rosmag40 suffit pour la chirurgie) ; restent dans TSB-SEG v1.0 seulement. Jeux à contact auteur (tcpd, mocap, bee-dance, utsa, usc-had) gardés."
+    - "2026-10-17, décision utilisateur : JIGSAWS ×3 (D) retirés de la nouvelle collection (rosmag40 suffit pour la chirurgie) ; (correction 2026-10-18 : JIGSAWS ne figure PAS dans TSB-SEG, seulement dans tsseg-exp ; donc simplement exclus). Jeux à contact auteur (tcpd, mocap, bee-dance, utsa, usc-had) gardés."
     - "2026-10-17 : +5 jeux de la passe ciblée (calms21, fly-vs-fly, ais-fishing-semseg, ami-meeting-corpus, rsdf-china-forest) → 50 jeux"
   todo: []
 
