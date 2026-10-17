@@ -10,10 +10,10 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
   build steps), `cards/` templates, `registry/` (shortlist + 50 retained entries,
   `scripts/sync_registry.py`).
 
-- [x] 2. Builders ported to format 1.0 (`builders/<id>.py`) and built in `build/`
+- [x] 2. Builders ported to format 1.0 (now 1.1) (`builders/<id>.py`) and built in `build/`
   from the pilot raw cache (`--raw-dir .../pilot/raw`, sha256 checked):
   mozilla-perf-cpd-annotations (0.75 MB), opportunity (default 17 MB, full 193 MB),
-  dreem-dod-h, 3 nights (default 231 MB, full 4 files, 930 MB). Pilot fixes: Dreem
+  dreem-dod-h, 3 nights (default 231 MB at 250 Hz then, full 4 files, 930 MB). Pilot fixes: Dreem
   aligned by `record_id` (window rule reproduces every h5 length exactly, no
   agreement search); Opportunity's 24 repeated `accX` renamed X/Y/Z by position.
 
@@ -33,19 +33,32 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
   guidelines with status and location, tier C datasets needing an author contact,
   collection website. `ruff check .` passes.
 
+- [x] 6. Decisions 1-6 applied (2026-10-18, see "Decisions"). Format 1.1: a
+  sampling rate per config (`DatasetSpec.config_rates`; `tsseg.json`
+  `configs.<cfg>.sampling_rate_hz`; `index.parquet` `length_<cfg>`,
+  `n_chunks_<cfg>` when the rates differ; Croissant `tsseg:configSamplingRateHz`,
+  per-config field descriptions; card "Rate" column). Dreem `default` resampled
+  to 100 Hz (`resample_poly(x, 2, 5)` in float64, cast to float32, documented in
+  the `preprocessing` activity and `rai:dataPreprocessingProtocol`). Croissant
+  1.1 (`isArray` / `arrayShape` instead of the deprecated `repeated`, 1.1 context
+  keys of mlcroissant 1.1.1). `validate.py`: identity across configs by
+  per-epoch labels and durations when the rates differ (raw values only between
+  configs at the same rate); a shifted label is caught. The 3 datasets rebuilt
+  from the pilot raw cache and valid (0 error, 0 warning, 7 s, 1.2 GB RAM).
+
 ## Sizes (build/ vs pilot/out)
 
 | Dataset | build/ | pilot/out |
 |---|---|---|
 | mozilla-perf-cpd-annotations | 0.8 MB (1 part) | 3.8 MB (174 files) |
-| opportunity | 17 MB default + 185 MB full | 235 MB |
-| dreem-dod-h (3 nights) | 221 MB default + 888 MB full (4 parts) | 1.3 GB |
+| opportunity | 16 MiB default + 184 MiB full | 235 MB |
+| dreem-dod-h (3 nights) | 89 MiB default (100 Hz) + 888 MiB full (4 parts) | 1.3 GB |
 
 Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decisions (see below), then the remaining 47 builders (phase 5), starting
+- [ ] Decision 7 (below), then the remaining 47 builders (phase 5), starting
   with the TSB-SEG datasets and the tier C author contacts.
 - [ ] Dreem: the 22 other nights (`--all-records`, ~20 GB download, ~7 GB of
   Parquet `full`); the record_id of `63b799f6...` (lights off at 60) is unknown
@@ -57,19 +70,27 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
   make `contentUrl` absolute, run the online Croissant checker.
 - [ ] Collection website (GitHub Pages) generated from the cards.
 
-## Decisions to validate
+## Decisions
+
+Decided by the user on 2026-10-18:
 
 1. Opportunity: the 24 repeated `accX` object-sensor columns renamed
    `accx`/`accy`/`accz` by position (documented, source columns recorded).
 2. Opportunity split = challenge split of Chavarriaga et al. 2013 (test = ADL4-5
    of S2, S3, S4), not the S2-S3-only variant common in deep learning papers.
-3. Configs: Opportunity default = 15 IMU accelerometers; Dreem default =
-   C3-M2, F3-F4, EOG1, EMG at 250 Hz (no feature view).
+3. Configs: Opportunity default = 15 IMU accelerometers (unchanged); Dreem
+   default = C3-M2, F3-F4, EOG1, EMG **resampled to 100 Hz** (usual sleep staging
+   rate, as Sleep-EDFx; anti-aliasing + `scipy.signal.resample_poly(x, 2, 5)` in
+   float64, then float32; a 30-s epoch = 3 000 samples), `full` = 16 channels at
+   250 Hz (no feature view). Required a sampling rate per config (format 1.1).
 4. Dreem: consensus computed on the evaluation window only (outside: -1 in
    `epochs.parquet`); `label_h5` kept beside the 5 scorers and the consensus.
 5. Mozilla: all change types stored with their type; default evaluation types =
    mean, mean_variance (as the authors).
-6. Croissant `conformsTo` 1.0 (as asked) vs 1.1 (2026 example); HF
-   `task_categories: other` + tags.
+6. Croissant `conformsTo` **1.1** (`http://mlcommons.org/croissant/1.1`) + RAI
+   1.0; HF `task_categories: other` + tags.
+
+To validate:
+
 7. mlcroissant record reading is done on a one-row excerpt (full files are
    checked by `validate.py` itself).

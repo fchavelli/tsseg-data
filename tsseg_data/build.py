@@ -77,11 +77,13 @@ def _hf_yaml(info: dict, card: dict) -> str:
 
 
 def _configs_table(info: dict) -> str:
-    rows = ["| Config | Channels | Size | Files | Content |", "|---|---|---|---|---|"]
+    rows = ["| Config | Channels | Rate | Size | Files | Content |",
+            "|---|---|---|---|---|---|"]
     for name, c in info["configs"].items():
+        rate = f"{c['sampling_rate_hz']:g} Hz" if c.get("sampling_rate_hz") else "irregular"
         rows.append(f"| `{name}`{' (default)' if name == info['default_config'] else ''} "
-                    f"| {len(c['channels'])} | {human_bytes(c['bytes'])} | {len(c['files'])} "
-                    f"| {c['description']} |")
+                    f"| {len(c['channels'])} | {rate} | {human_bytes(c['bytes'])} "
+                    f"| {len(c['files'])} | {c['description']} |")
     return "\n".join(rows)
 
 
@@ -113,7 +115,11 @@ def _structure(info: dict, spec: DatasetSpec) -> str:
         "`index.parquet` has one row per series: `series_id`, `length`, `n_channels`, "
         "`n_chunks`, `split`, `label_columns`, `annotators`, the number of label "
         "changes per label column (`n_changes_*`) or of change points per annotator "
-        "(`n_cps_*`), the part files of each config (`files_*`) and series metadata.",
+        "(`n_cps_*`), the part files of each config (`files_*`) and series metadata."
+        + (" Configs have different sampling rates: `length` and `n_chunks` are those "
+           "of the default config, `length_<config>` and `n_chunks_<config>` those of "
+           "each config; lengths, chunks and labels of a config are at its own rate "
+           "(see the Configs table)." if spec.multi_rate else ""),
         "",
         "Conventions:",
         f"- `{MISSING_LABEL}` marks only the absence of ground truth (not scored, outside "
@@ -151,10 +157,13 @@ def finalize(
         "id": spec.id,
         "format_version": FORMAT_VERSION,
         "task": spec.task,
-        "sampling_rate_hz": spec.sampling_rate_hz,
+        # rate of the default config; each config has its own below
+        "sampling_rate_hz": spec.rate(next(iter(spec.configs))),
+        "native_sampling_rate_hz": spec.sampling_rate_hz,
         "default_config": next(iter(spec.configs)),
         "configs": {
-            cfg: {"channels": chans, "description": config_descriptions[cfg],
+            cfg: {"channels": chans, "sampling_rate_hz": spec.rate(cfg),
+                  "description": config_descriptions[cfg],
                   "files": summary[cfg]["files"], "bytes": summary[cfg]["bytes"]}
             for cfg, chans in spec.configs.items()
         },
@@ -175,6 +184,8 @@ def finalize(
         "missingLabel": MISSING_LABEL,
         "nullStates": info.get("null_states", {}),
         "loaderMetadata": "tsseg.json",
+        "configSamplingRateHz": ({cfg: spec.rate(cfg) for cfg in spec.configs}
+                                 if spec.sampling_rate_hz else None),
         **meta.tsseg,
     }
     meta.record_set_descriptions = {

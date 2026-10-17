@@ -22,7 +22,13 @@ code 1 if any dataset has an error. Checks:
    format rule says so; lengths, chunk counts, label change counts and change point
    counts match ``index.parquet``; labels are declared states or -1; ``null_states``
    are declared states; change points are sorted, unique, in (0, n), on chunk 0
-   only, with one type each; labels and shared channels are identical across configs.
+   only, with one type each;
+5. identity across configs: configs at the same sampling rate have identical labels
+   and shared channels (chunk by chunk); configs at different rates have the same
+   duration (lengths equal once divided by the rate, to one sample) and the same
+   labels per epoch (``epoch_seconds`` of ``tsseg.json``; each epoch constant), or
+   at the nearest sample when no epoch is defined. Raw values are not compared
+   across rates (they were resampled).
 """
 
 from __future__ import annotations
@@ -115,9 +121,14 @@ def check_croissant(root: Path, info: dict, r: Report, n_records: int) -> None:
     for k in ["rai:dataAnnotationProtocol", "rai:dataAnnotationAnalysis",
               "rai:dataCollection"]:
         r.check(bool(doc.get(k)), f"croissant: {k} missing (annotation documentation)")
-    r.check("http://mlcommons.org/croissant/1.0" in (
-        doc["conformsTo"] if isinstance(doc["conformsTo"], list) else [doc["conformsTo"]]),
-        "croissant: does not declare Croissant 1.0")
+    conforms = (doc["conformsTo"] if isinstance(doc["conformsTo"], list)
+                else [doc["conformsTo"]])
+    for v in ["http://mlcommons.org/croissant/1.1", "http://mlcommons.org/croissant/RAI/1.0"]:
+        r.check(v in conforms, f"croissant: conformsTo does not declare {v}")
+    rates = doc.get("tsseg:configSamplingRateHz")
+    if info.get("sampling_rate_hz"):
+        r.check(rates == {c: v.get("sampling_rate_hz") for c, v in info["configs"].items()},
+                f"croissant: tsseg:configSamplingRateHz {rates} != tsseg.json")
     r.check(str(doc.get("license", "")).startswith("http"), "croissant: license is not a URL")
 
     # record-set fields == Parquet columns
@@ -233,7 +244,19 @@ def check_data(root: Path, info: dict, r: Report) -> None:
     ids = [x["series_id"] for x in idx]
     r.check(len(ids) == len(set(ids)), "index: duplicated series_id")
     by_id = {x["series_id"]: x for x in idx}
-    fs = info.get("sampling_rate_hz")
+    rate = {cfg: c.get("sampling_rate_hz", info.get("sampling_rate_hz"))
+            for cfg, c in info["configs"].items()}
+    multi_rate = len(set(rate.values())) > 1
+    r.check(rate[info["default_config"]] == info.get("sampling_rate_hz"),
+            "tsseg.json: sampling_rate_hz != rate of the default config")
+    if multi_rate:
+        for cfg in info["configs"]:
+            for k in (f"length_{cfg}", f"n_chunks_{cfg}"):
+                r.check(all(k in x for x in idx), f"index: multi-rate dataset lacks {k}")
+        r.check(not info.get("cp_annotators"), "change point columns in a multi-rate dataset")
+    epoch_s = info.get("epoch_seconds")
+    # per (cfg, sid, chunk, label column): labels per epoch, or the labels themselves
+    reduced: dict[tuple, np.ndarray] = {}
     states = {c: {int(k) for k in v} for c, v in info.get("state_names", {}).items()}
     for c, nulls in info.get("null_states", {}).items():
         r.check(set(nulls) <= states.get(c, set()), f"null_states of {c} not declared")
@@ -242,6 +265,10 @@ def check_data(root: Path, info: dict, r: Report) -> None:
     digests: dict[tuple, str] = {}
 
     for cfg in info["configs"]:
+        fs = rate[cfg]
+        len_col = f"length_{cfg}" if multi_rate else "length"
+        nch_col = f"n_chunks_{cfg}" if multi_rate else "n_chunks"
+        spe = (round(epoch_s * fs) if multi_rate and epoch_s and fs else None)
         exp = expected_columns(info, cfg)
         files = info["configs"][cfg]["files"]
         r.check(sorted(files) == sorted(p.relative_to(root).as_posix()
@@ -297,6 +324,16 @@ def check_data(root: Path, info: dict, r: Report) -> None:
                             last_label[(sid, m["chunk_idx"], c)] = v[-1]
                         digests[(cfg, sid, m["chunk_idx"], c)] = hashlib.sha1(
                             np.ascontiguousarray(v).tobytes()).hexdigest()
+                        if not multi_rate:
+                            continue
+                        if spe and m["chunk_start"] % spe == 0 and len(v) % spe == 0:
+                            e = v.reshape(-1, spe)
+                            r.check(bool(np.all(e == e[:, :1])),
+                                    f"{sid}/{c}: labels not constant per {epoch_s}-s epoch")
+                            reduced[(cfg, sid, m["chunk_idx"], c)] = e[:, 0].copy()
+                        else:
+                            r.check(not spe, f"{sid}/{c}: chunk not aligned on epochs")
+                            reduced[(cfg, sid, m["chunk_idx"], c)] = np.array(v, copy=True)
                 for c in info["configs"][cfg]["channels"]:
                     for m, v in zip(meta_rows, _lists(t, c), strict=True):
                         digests[(cfg, m["series_id"], m["chunk_idx"], c)] = hashlib.sha1(
@@ -339,9 +376,9 @@ def check_data(root: Path, info: dict, r: Report) -> None:
             for _, s, n in ch:
                 r.check(s == pos, f"{sid}: chunk starts at {s}, expected {pos}")
                 pos += n
-            r.check(pos == row["length"], f"{sid}: {cfg} length {pos} != index {row['length']}")
-            r.check(len(ch) == row["n_chunks"], f"{sid}: {len(ch)} chunks != index")
-            clen = chunk_length(row["length"], fs)
+            r.check(pos == row[len_col], f"{sid}: {cfg} length {pos} != index {row[len_col]}")
+            r.check(len(ch) == row[nch_col], f"{sid}: {len(ch)} chunks != index")
+            clen = chunk_length(row[len_col], fs)
             if clen is None:
                 r.check(len(ch) == 1, f"{sid}: chunked but the rule says no")
             else:
@@ -354,12 +391,40 @@ def check_data(root: Path, info: dict, r: Report) -> None:
                 r.check(changes[(sid, c)] == exp_c,
                         f"{sid}: {c} has {changes[(sid, c)]} changes, index says {exp_c}")
 
-    # identical labels and shared channels across configs
+    # identity across configs (see the module docstring)
     cfgs = list(info["configs"])
+    first = cfgs[0]
     for other in cfgs[1:]:
-        shared = [k for k in digests if k[0] == cfgs[0]]
-        diff = [k for k in shared if digests.get((other, *k[1:])) not in (None, digests[k])]
-        r.check(not diff, f"{cfgs[0]} vs {other}: {len(diff)} differing columns {diff[:3]}")
+        if rate[other] == rate[first]:
+            shared = [k for k in digests if k[0] == first]
+            diff = [k for k in shared
+                    if digests.get((other, *k[1:])) not in (None, digests[k])]
+            r.check(not diff, f"{first} vs {other}: {len(diff)} differing columns {diff[:3]}")
+            continue
+        for x in idx:
+            sid = x["series_id"]
+            n1, n2 = x[f"length_{first}"], x[f"length_{other}"]
+            r.check(abs(n1 / rate[first] - n2 / rate[other]) * min(rate[first], rate[other])
+                    < 1, f"{sid}: duration {first} {n1 / rate[first]:.3f} s != {other} "
+                    f"{n2 / rate[other]:.3f} s")
+            for c in label_cols:
+                a, b = (np.concatenate([reduced[(g, sid, k, c)]
+                                        for k in range(x[f"n_chunks_{g}"])
+                                        if (g, sid, k, c) in reduced] or [np.array([])])
+                        for g in (first, other))
+                if epoch_s:
+                    r.check(np.array_equal(a, b),
+                            f"{sid}/{c}: per-epoch labels differ between {first} and {other}")
+                    continue
+                coarse, fine = (a, b) if len(a) <= len(b) else (b, a)
+                pos = np.minimum(((np.arange(len(coarse)) + 0.5) * len(fine)
+                                  / max(len(coarse), 1)).astype(np.int64), len(fine) - 1)
+                agree = float(np.mean(coarse == fine[pos])) if len(coarse) else 1.0
+                r.check(agree >= 0.99, f"{sid}/{c}: {first} vs {other} labels agree on "
+                        f"{agree:.2%} of samples (nearest sample)")
+        r.note(f"{first} ({rate[first]:g} Hz) vs {other} ({rate[other]:g} Hz): durations "
+               + ("and per-epoch labels" if epoch_s else "and labels (nearest sample)")
+               + " compared; raw values not compared across rates")
     r.note(f"{len(ids)} series, configs {cfgs}, "
            f"{sum(len(info['configs'][c]['files']) for c in cfgs)} part files checked")
 

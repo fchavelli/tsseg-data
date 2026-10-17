@@ -1,9 +1,11 @@
-"""On-disk format of a tsseg-data dataset (format version 1.0, validated 2026-10-18).
+"""On-disk format of a tsseg-data dataset (format version 1.1).
+
+1.0 validated 2026-10-18; 1.1 (same day) adds a sampling rate per config.
 
 Layout of a built dataset ``build/<id>/``::
 
     README.md              dataset card (Hugging Face format, YAML header)
-    croissant.json         Croissant 1.0 core + RAI metadata
+    croissant.json         Croissant 1.1 core + RAI 1.0 metadata
     tsseg.json             loader metadata (channels, labels, states, configs)
     index.parquet          one row per series
     data/<config>/part-00000.parquet, part-00001.parquet, ...
@@ -28,6 +30,15 @@ Rows of ``data/<config>/*.parquet`` (one row per series, or per chunk):
 Several annotators of the same labels: ``label_<annotator>`` + ``label_consensus``
 when the source defines one. Several label semantics (tracks): ``label_<track>``.
 ``tsseg.json`` keeps the two notions apart (``annotators`` vs ``tracks``).
+
+Configs may differ in sampling rate (``DatasetSpec.config_rates``, e.g. a light
+``default`` resampled from the native ``full``). Then every row length, chunk and
+label column of a config is at that config's rate, ``tsseg.json`` gives
+``configs.<cfg>.sampling_rate_hz``, and ``index.parquet`` has ``length_<cfg>`` and
+``n_chunks_<cfg>`` for every config (``length`` and ``n_chunks`` are those of the
+default config). Label changes (``n_changes_*``) must be the same in every config,
+so the label segments of the source must fall on whole samples at every rate.
+Change point columns require a single rate.
 
 Series longer than ``CHUNK_SECONDS`` sampled at ``HIGH_FREQ_HZ`` or more are cut
 into chunks of exactly ``CHUNK_SECONDS * fs`` samples (the last one shorter); the
@@ -60,7 +71,7 @@ __all__ = [
     "n_changes",
 ]
 
-FORMAT_VERSION = "1.0"
+FORMAT_VERSION = "1.1"
 MISSING_LABEL = -1
 CHUNK_SECONDS = 3600
 HIGH_FREQ_HZ = 10.0
@@ -88,7 +99,9 @@ class DatasetSpec:
     """Column layout of a dataset (shared by all its configs).
 
     ``configs`` maps a config name to the channels it contains, in order; the
-    first config is the default one.
+    first config is the default one. ``sampling_rate_hz`` is the native rate;
+    ``config_rates`` overrides it for configs stored at another rate (their signals
+    and labels are passed to :meth:`DatasetWriter.add_series` in ``resampled``).
     """
 
     id: str
@@ -101,6 +114,15 @@ class DatasetSpec:
     label_columns: dict[str, pa.DataType] = field(default_factory=dict)
     cp_annotators: list[str] = field(default_factory=list)
     meta_columns: dict[str, pa.DataType] = field(default_factory=dict)
+    config_rates: dict[str, float] = field(default_factory=dict)
+
+    def rate(self, config: str) -> float | None:
+        """Sampling rate of a config (Hz), ``None`` for irregular series."""
+        return self.config_rates.get(config, self.sampling_rate_hz)
+
+    @property
+    def multi_rate(self) -> bool:
+        return len({self.rate(c) for c in self.configs}) > 1
 
     def __post_init__(self):
         assert self.task in ("cpd", "sd"), self.task
@@ -115,6 +137,11 @@ class DatasetSpec:
             assert c.startswith("label_"), c
         for cfg, chans in self.configs.items():
             assert set(chans) <= set(self.channels), cfg
+        assert set(self.config_rates) <= set(self.configs), "config_rates: unknown config"
+        if self.config_rates:
+            assert self.sampling_rate_hz, "config_rates needs a native sampling_rate_hz"
+        if self.multi_rate:
+            assert not self.cp_annotators, "change point columns need a single rate"
 
     def row_schema(self, config: str) -> pa.Schema:
         fields = [
@@ -147,6 +174,10 @@ class DatasetSpec:
         fields += [pa.field(f"n_changes_{c[len('label_'):]}", pa.int32())
                    for c in self.label_columns]
         fields += [pa.field(f"n_cps_{a}", pa.int32()) for a in self.cp_annotators]
+        if self.multi_rate:
+            for cfg in self.configs:
+                fields += [pa.field(f"length_{cfg}", pa.int64()),
+                           pa.field(f"n_chunks_{cfg}", pa.int32())]
         fields += [pa.field(f"files_{cfg}", pa.list_(pa.string())) for cfg in self.configs]
         fields += [pa.field(k, t) for k, t in self.meta_columns.items()]
         return pa.schema(fields)
@@ -275,10 +306,20 @@ class DatasetWriter:
         split: str | None = None,
         annotators: list[str] | None = None,
         meta: dict | None = None,
+        resampled: dict[str, dict] | None = None,
     ) -> None:
+        """Add one series.
+
+        ``signals``, ``labels`` and ``time`` are at the native rate. Each config of
+        ``spec.config_rates`` whose rate differs from the native one needs
+        ``resampled[cfg] = {"signals": {channel: array}, "labels": {col: array}}``
+        (``"time"`` too if the dataset has a time column), with the channels of
+        that config.
+        """
         spec = self.spec
         labels = labels or {}
         cps = cps or {}
+        resampled = resampled or {}
         assert list(signals) == spec.channels, "signals must follow spec.channels"
         assert set(labels) == set(spec.label_columns), set(labels) ^ set(spec.label_columns)
         assert set(cps) <= set(spec.cp_annotators)
@@ -294,40 +335,65 @@ class DatasetWriter:
                 assert np.all((c > 0) & (c < n)), (series_id, a)
                 assert np.all(np.diff(c) > 0), (series_id, a, "cps must be sorted, unique")
 
-        clen = chunk_length(n, spec.sampling_rate_hz)
-        bounds = [(0, n)] if clen is None else [
-            (s, min(s + clen, n)) for s in range(0, n, clen)
-        ]
-        for k, (s, e) in enumerate(bounds):
-            base = {"series_id": series_id, "chunk_idx": k, "chunk_start": s,
-                    "length": e - s}
-            if spec.time_column:
-                base[spec.time_column[0]] = np.asarray(time[s:e])
-            lab = {c: np.ascontiguousarray(labels[c][s:e]).astype(
-                spec.label_columns[c].to_pandas_dtype(), copy=False) for c in spec.label_columns}
-            cp_cols = {}
-            for a in spec.cp_annotators:
-                val = cps.get(a) if k == 0 else None
-                cp_cols[f"cps_{a}"] = None if val is None else [int(x) for x in val[0]]
-                cp_cols[f"cp_types_{a}"] = None if val is None else list(val[1])
-            for cfg, chans in spec.configs.items():
-                row = dict(base)
+        # data of each config: (signals, labels, time, length)
+        native = (signals, labels, time, n)
+        per_cfg = {}
+        for cfg, chans in spec.configs.items():
+            if spec.rate(cfg) == spec.sampling_rate_hz:
+                assert cfg not in resampled, (series_id, cfg, "config at native rate")
+                per_cfg[cfg] = native
+                continue
+            rs = resampled[cfg]
+            sig, lab, tim = rs["signals"], rs["labels"], rs.get("time")
+            assert set(sig) == set(chans), (series_id, cfg, set(sig) ^ set(chans))
+            assert set(lab) == set(spec.label_columns), (series_id, cfg)
+            assert (tim is None) == (spec.time_column is None), (series_id, cfg)
+            m = len(next(iter(sig.values())))
+            for k, v in {**sig, **lab}.items():
+                assert len(v) == m, (series_id, cfg, k, len(v), m)
+            assert abs(m / spec.rate(cfg) - n / spec.sampling_rate_hz) * spec.rate(cfg) < 1, (
+                series_id, cfg, "duration differs from the native series")
+            for c in spec.label_columns:
+                assert n_changes(lab[c]) == n_changes(labels[c]), (
+                    series_id, cfg, c, "label changes differ from the native labels")
+            per_cfg[cfg] = (sig, lab, tim, m)
+
+        n_chunks = {}
+        for cfg, chans in spec.configs.items():
+            sig, lab_all, tim, m = per_cfg[cfg]
+            clen = chunk_length(m, spec.rate(cfg))
+            bounds = [(0, m)] if clen is None else [
+                (s, min(s + clen, m)) for s in range(0, m, clen)
+            ]
+            n_chunks[cfg] = (m, len(bounds))
+            for k, (s, e) in enumerate(bounds):
+                row = {"series_id": series_id, "chunk_idx": k, "chunk_start": s,
+                       "length": e - s}
+                if spec.time_column:
+                    row[spec.time_column[0]] = np.asarray(tim[s:e])
                 nbytes = 0
                 for ch in chans:
-                    arr = np.ascontiguousarray(signals[ch][s:e]).astype(
+                    arr = np.ascontiguousarray(sig[ch][s:e]).astype(
                         spec.channel_type.to_pandas_dtype(), copy=False)
                     row[ch] = arr
                     nbytes += arr.nbytes
-                row.update(lab)
-                row.update(cp_cols)
-                nbytes += sum(v.nbytes for v in lab.values())
+                for c, t in spec.label_columns.items():
+                    arr = np.ascontiguousarray(lab_all[c][s:e]).astype(
+                        t.to_pandas_dtype(), copy=False)
+                    row[c] = arr
+                    nbytes += arr.nbytes
+                for a in spec.cp_annotators:
+                    val = cps.get(a) if k == 0 else None
+                    row[f"cps_{a}"] = None if val is None else [int(x) for x in val[0]]
+                    row[f"cp_types_{a}"] = None if val is None else list(val[1])
                 self.parts[cfg].add(row, nbytes)
 
+        default = next(iter(spec.configs))
         irow = {
             "series_id": series_id,
-            "length": n,
+            "length": n_chunks[default][0],
             "n_channels": len(spec.channels),
-            "n_chunks": len(bounds),
+            "n_chunks": n_chunks[default][1],
             "split": split,
             "label_columns": list(spec.label_columns) or None,
             "annotators": annotators,
@@ -337,6 +403,9 @@ class DatasetWriter:
         for a in spec.cp_annotators:
             val = cps.get(a)
             irow[f"n_cps_{a}"] = None if val is None else len(val[0])
+        if spec.multi_rate:
+            for cfg, (m, k) in n_chunks.items():
+                irow[f"length_{cfg}"], irow[f"n_chunks_{cfg}"] = m, k
         for k in spec.meta_columns:
             irow[k] = (meta or {}).get(k)
         self.index_rows.append(irow)

@@ -20,6 +20,13 @@ Run from the repository root (isolated mode, the sources are downloads)::
 
 Without ``--all-records``, signals are built for the 3 nights of the pilot (the
 labels-only table always covers the 25 nights).
+
+Configs (decided 2026-10-18): ``default`` = C3-M2, F3-F4, EOG1, EMG resampled to
+100 Hz (the usual sleep staging rate, as Sleep-EDFx): ``scipy.signal.resample_poly(x,
+2, 5)`` on the whole night in float64 (polyphase FIR anti-aliasing low-pass, Kaiser
+window, cut-off at the new Nyquist frequency 50 Hz), then cast to float32; a 30-s
+epoch is exactly 3 000 samples. ``full`` = the 16 channels at the native 250 Hz,
+values unchanged.
 """
 
 from __future__ import annotations
@@ -34,6 +41,8 @@ import h5py  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 import pyarrow as pa  # noqa: E402
+import scipy  # noqa: E402
+from scipy.signal import resample_poly  # noqa: E402
 
 from tsseg_data.build import HF_NAMESPACE, finalize, parse_args  # noqa: E402
 from tsseg_data.croissant import Activity, DatasetMetadata  # noqa: E402
@@ -85,6 +94,14 @@ EPOCH_S = 30
 FS = 250
 SPE = FS * EPOCH_S
 DEFAULT_CHANNELS = ["C3_M2", "F3_F4", "EOG1", "EMG"]
+DEFAULT_FS = 100  # default config: resampled 250 -> 100 Hz
+UP, DOWN = 2, 5  # DEFAULT_FS / FS
+DEFAULT_SPE = DEFAULT_FS * EPOCH_S
+RESAMPLING = (f"scipy.signal.resample_poly(x, {UP}, {DOWN}) (scipy {scipy.__version__}) "
+              "on the whole night in float64: polyphase FIR anti-aliasing low-pass "
+              "(Kaiser window, beta 5, cut-off at the new Nyquist frequency 50 Hz), "
+              "then cast to float32")
+assert FS * UP == DEFAULT_FS * DOWN
 
 
 def soft_agreement(h, others):
@@ -230,7 +247,8 @@ def main() -> None:
     spec = DatasetSpec(
         id=ID, task="sd", channels=channels,
         configs={"default": DEFAULT_CHANNELS, "full": channels},
-        sampling_rate_hz=FS, channel_type=pa.float32(), label_columns=label_cols,
+        sampling_rate_hz=FS, config_rates={"default": DEFAULT_FS},
+        channel_type=pa.float32(), label_columns=label_cols,
         meta_columns={"record_id": pa.string(), "start_time_unix": pa.float64(),
                       "window_first_epoch": pa.int32(), "window_end_epoch": pa.int32(),
                       "n_epochs_scored": pa.int32(),
@@ -249,11 +267,18 @@ def main() -> None:
                 sig = {c: f[d["path"]][...].astype(np.float32)
                        for c, d in zip(channels, desc, strict=True)}
                 hyp_h5 = f["hypnogram"][...].astype(np.int64)
-            labs = {f"label_{s}": np.repeat(hyps[rec][s][a:b], SPE) for s in SCORERS}
-            labs["label_consensus"] = np.repeat(cons_all[rec][a:b], SPE)
-            labs["label_h5"] = np.repeat(hyp_h5, SPE)
+            ep = {f"label_{s}": hyps[rec][s][a:b] for s in SCORERS}
+            ep["label_consensus"] = cons_all[rec][a:b]
+            ep["label_h5"] = hyp_h5
+            labs = {c: np.repeat(v, SPE) for c, v in ep.items()}
+            low = {c: resample_poly(sig[c].astype(np.float64), UP, DOWN).astype(np.float32)
+                   for c in DEFAULT_CHANNELS}
+            assert all(len(v) == (b - a) * DEFAULT_SPE for v in low.values()), rec
             agree_h5 = float((hyp_h5 == cons_all[rec][a:b]).mean())
-            w.add_series(rec, sig, labels=labs, annotators=SCORERS, meta={
+            w.add_series(rec, sig, labels=labs, annotators=SCORERS, resampled={
+                "default": {"signals": low,
+                            "labels": {c: np.repeat(v, DEFAULT_SPE) for c, v in ep.items()}}},
+                meta={
                 "record_id": nt["record_id"], "start_time_unix": nt["start_time"],
                 "window_first_epoch": a, "window_end_epoch": b,
                 "n_epochs_scored": len(hyps[rec]["s1"]),
@@ -263,7 +288,7 @@ def main() -> None:
                               "unscored_share": float((labs["label_consensus"] < 0).mean()),
                               "h5_agreement": agree_h5}
             print(rec, per_night[rec], flush=True)
-            del sig, labs
+            del sig, labs, low
     summary = w.summary()
     epochs.to_parquet(args.out_dir / "epochs.parquet", index=False, compression="zstd")
 
@@ -272,7 +297,9 @@ def main() -> None:
     info = {
         "label_type": "multi_annotator",
         "domain": "sleep (polysomnography)",
-        "sampling": "regular, 250 Hz; labels on 30-s epochs repeated per sample",
+        "sampling": "regular; default config 100 Hz (resampled), full config 250 Hz "
+                    "(native); labels on 30-s epochs repeated per sample",
+        "resampling": {"default": RESAMPLING},
         "units": units,
         "channel_info": ch_meta,
         "tracks": None,
@@ -312,9 +339,10 @@ def main() -> None:
         "| Domain | sleep medicine, overnight polysomnography |",
         f"| Series | {len(nights)} nights with signals in this build (of 25; "
         "`--all-records` builds all); `epochs.parquet` has the labels of the 25 |",
-        f"| Length | {min(hrs):.1f} - {max(hrs):.1f} h at 250 Hz "
-        f"({min(v['hours'] for v in per_night.values()) * 3600 * FS:.2e} - "
-        f"{max(hrs) * 3600 * FS:.2e} samples), stored in 1-h chunks |",
+        f"| Length | {min(hrs):.1f} - {max(hrs):.1f} h: "
+        f"{min(hrs) * 3600 * DEFAULT_FS:.2e} - {max(hrs) * 3600 * DEFAULT_FS:.2e} "
+        f"samples at 100 Hz (`default`), {min(hrs) * 3600 * FS:.2e} - "
+        f"{max(hrs) * 3600 * FS:.2e} at 250 Hz (`full`), stored in 1-h chunks |",
         "| Channels | 16: 12 EEG derivations, 2 EOG, EMG, ECG (mV) |",
         "| Labels | 5 stages (Wake, N1, N2, N3, REM), 30-s epochs, 5 scorers + consensus |",
         f"| Segments per night | {min(seg_counts)} - {max(seg_counts)} (consensus) |",
@@ -334,9 +362,11 @@ def main() -> None:
         "dataCollectionTimeframe": "Recording dates are in the source (start_time); "
         "released 2020, Zenodo version 2025-07.",
         "dataPreprocessingProtocol": "Signals as released in the h5 files (already "
-        "filtered and resampled to 250 Hz by the providers), cast to float32 (the source "
-        "dtype), cut by the providers to lights off / on. Labels aligned to the signals "
-        "with the record_id-keyed cut table of dreem-learning-evaluation.",
+        "filtered and resampled to 250 Hz by the providers, float32), cut by the "
+        "providers to lights off / on; kept unchanged in the full config. Default "
+        "config: 4 channels (C3-M2, F3-F4, EOG1, EMG) resampled to 100 Hz with "
+        + RESAMPLING + "; a 30-s epoch is exactly 3 000 samples. Labels aligned to the "
+        "signals with the record_id-keyed cut table of dreem-learning-evaluation.",
         "dataAnnotationProtocol": "Each night scored independently by 5 sleep experts "
         "following the AASM rules, in 30-s epochs, into Wake, N1, N2, N3, REM (-1 = not "
         "scored). Consensus as in Guillot et al. (2020): majority vote, ties broken by "
@@ -386,8 +416,9 @@ def main() -> None:
         "healthy adults (12 EEG derivations, 2 EOG, EMG, ECG at 250 Hz), each night "
         "scored in 30-s epochs by 5 independent sleep experts (AASM), with the consensus "
         "of Guillot et al. (2020). Converted to the tsseg-data format (one Parquet row "
-        "per one-hour chunk, labels repeated per sample); per-epoch labels of all 25 "
-        "nights in epochs.parquet.",
+        "per one-hour chunk, labels repeated per sample): default config = 4 channels "
+        "resampled to 100 Hz, full config = the 16 channels at 250 Hz; per-epoch labels "
+        "of all 25 nights in epochs.parquet.",
         url=f"https://huggingface.co/datasets/{HF_NAMESPACE}/{ID}",
         license_url="https://spdx.org/licenses/MIT.html",
         license_spdx="MIT",
@@ -410,8 +441,10 @@ def main() -> None:
                      "Guillot et al. 2020"]),
             Activity("data annotation", rai["dataAnnotationProtocol"] + " "
                      + rai["dataAnnotationAnalysis"], agents=["5 sleep experts"]),
-            Activity("preprocessing", f"tsseg-data builders/{ID}.py: h5 -> Parquet "
-                     "(float32 values unchanged), one-hour chunks, scorer hypnograms "
+            Activity("preprocessing", f"tsseg-data builders/{ID}.py: h5 -> Parquet; "
+                     "full config: 16 channels at 250 Hz, float32 values unchanged; "
+                     "default config: 4 channels resampled 250 -> 100 Hz with "
+                     + RESAMPLING + "; one-hour chunks, scorer hypnograms "
                      "aligned with the record_id-keyed lights-off/on table of "
                      "dreem-learning-evaluation and repeated per sample, consensus "
                      "recomputed (port of build_consensus_hypnogram).",
@@ -422,6 +455,8 @@ def main() -> None:
         field_descriptions={
             **{c: f"{ch_meta[c]['domain']} {ch_meta[c]['name']} at 250 Hz ({units[c]})."
                for c in channels},
+            **{f"default/{c}": f"{ch_meta[c]['domain']} {ch_meta[c]['name']} resampled "
+               f"to 100 Hz ({units[c]})." for c in DEFAULT_CHANNELS},
             **{c: d for c, d in info["label_descriptions"].items()},
             "epoch": "Epoch number (30 s) from the start of the scorer hypnogram.",
             "in_window": "Epoch inside the evaluation window (scored by all scorers, "
@@ -445,7 +480,8 @@ def main() -> None:
         "size_category": "n<1K",
         "annotations_creators": ["expert-generated"],
         "summary": "Overnight polysomnography of 25 healthy adults, each night scored by 5 "
-        "independent sleep experts. Long multichannel series (5-8 h at 250 Hz) with "
+        "independent sleep experts. Long multichannel series (5-8 h at 100 Hz in the "
+        "default config, 250 Hz in the full one) with "
         "recurrent states (sleep cycles) and a measured inter-annotator variability: a "
         "demanding state detection benchmark.",
         "facts": facts,
@@ -453,7 +489,8 @@ def main() -> None:
         "not scored (absence of ground truth). Columns: `label_s1` ... `label_s5` (one "
         "per scorer), `label_consensus` (default ground truth) and `label_h5` (the "
         "hypnogram shipped in the h5 file, kept for reference). No null state. Labels "
-        "are defined per 30-s epoch (7 500 samples) and repeated per sample.",
+        "are defined per 30-s epoch (3 000 samples at 100 Hz in `default`, 7 500 at "
+        "250 Hz in `full`) and repeated per sample.",
         "annotation": rai["dataAnnotationProtocol"] + "\n\n" + rai["dataAnnotationAnalysis"]
         + " Label origin: `human`.",
         "conversion": "\n".join([
@@ -471,7 +508,11 @@ def main() -> None:
             "+ 1, lights_on))` reproduces the h5 length exactly for every built night "
             "(checked; the build fails otherwise). In `epochs.parquet`, the lights cut "
             "is applied only to nights whose h5 was read (`lights_cut_known`).",
-            "- Values unchanged (float32); 1-h chunks of 900 000 samples.",
+            "- `full`: values unchanged (float32, 250 Hz); 1-h chunks of 900 000 "
+            "samples.",
+            "- `default`: C3-M2, F3-F4, EOG1, EMG resampled to 100 Hz (the usual sleep "
+            "staging rate, as Sleep-EDFx) with " + RESAMPLING + "; 1-h chunks of "
+            "360 000 samples, labels repeated over 3 000 samples per epoch.",
             f"- Rebuild: `python -I builders/{ID}.py [--all-records]` in tsseg-data.",
         ]),
         "license": "MIT (Zenodo record and dreem-learning-evaluation repository). "
@@ -479,7 +520,8 @@ def main() -> None:
         "citation": "```bibtex\n" + cite + "\n```",
     }
     finalize(args.out_dir, spec, info, meta, card, summary, {
-        "default": "4 channels (C3-M2 and F3-F4 EEG, EOG, EMG) at 250 Hz, all labels.",
+        "default": "4 channels (C3-M2 and F3-F4 EEG, EOG, EMG) resampled to 100 Hz, "
+        "all labels.",
         "full": "all 16 channels at 250 Hz, all labels.",
     })
     print(f"{ID}: {len(nights)} nights", {k: v["bytes"] for k, v in summary.items()},

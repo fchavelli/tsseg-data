@@ -1,4 +1,4 @@
-"""Croissant metadata (core 1.0 + Responsible AI) generated from a built dataset.
+"""Croissant metadata (core 1.1 + Responsible AI 1.0) generated from a built dataset.
 
 The record sets and fields are derived from the Parquet schemas actually written,
 so the metadata cannot drift from the files. Builders supply the descriptive part
@@ -32,16 +32,19 @@ __all__ = [
 ]
 
 CONFORMS_TO = [
-    "http://mlcommons.org/croissant/1.0",
+    "http://mlcommons.org/croissant/1.1",
     "http://mlcommons.org/croissant/RAI/1.0",
 ]
 
+# Standard Croissant 1.1 context (as written by mlcroissant 1.1.1) + prov, tsseg.
 CONTEXT = {
     "@language": "en",
     "@vocab": "https://schema.org/",
+    "arrayShape": "cr:arrayShape",
     "citeAs": "cr:citeAs",
     "column": "cr:column",
     "conformsTo": "dct:conformsTo",
+    "containedIn": "cr:containedIn",
     "cr": "http://mlcommons.org/croissant/",
     "rai": "http://mlcommons.org/croissant/RAI/",
     "prov": "http://www.w3.org/ns/prov#",
@@ -50,6 +53,7 @@ CONTEXT = {
     "dataType": {"@id": "cr:dataType", "@type": "@vocab"},
     "equivalentProperty": "cr:equivalentProperty",
     "dct": "http://purl.org/dc/terms/",
+    "description": {"@container": "@language"},
     "examples": {"@id": "cr:examples", "@type": "@json"},
     "extract": "cr:extract",
     "field": "cr:field",
@@ -58,10 +62,12 @@ CONTEXT = {
     "fileSet": "cr:fileSet",
     "format": "cr:format",
     "includes": "cr:includes",
+    "isArray": "cr:isArray",
     "isLiveDataset": "cr:isLiveDataset",
     "jsonPath": "cr:jsonPath",
     "key": "cr:key",
     "md5": "cr:md5",
+    "name": {"@container": "@language"},
     "parentField": "cr:parentField",
     "path": "cr:path",
     "recordSet": "cr:recordSet",
@@ -152,6 +158,7 @@ class DatasetMetadata:
     derived_from: list[dict]  # [{"@id": uri, "name": ...}]; primary source with DOI first
     activities: list[Activity]
     rai: dict  # keys without the "rai:" prefix
+    # column -> description, or "<record set>/<column>" for one record set only
     field_descriptions: dict[str, str] = field(default_factory=dict)
     record_set_descriptions: dict[str, str] = field(default_factory=dict)
     auxiliary: dict[str, str] = field(default_factory=dict)  # file -> description
@@ -185,12 +192,14 @@ def _fields(rs: str, src: dict, schema: pa.Schema, desc: dict[str, str]) -> list
             "@type": "cr:Field",
             "@id": f"{rs}/{f.name}",
             "name": f.name,
-            "description": desc.get(f.name) or _default_description(f.name),
+            "description": (desc.get(f"{rs}/{f.name}") or desc.get(f.name)
+                            or _default_description(f.name)),
             "dataType": dt,
             "source": {**src, "extract": {"column": f.name}},
         }
-        if repeated:
-            d["repeated"] = True
+        if repeated:  # Croissant 1.1: isArray + arrayShape ("repeated" deprecated)
+            d["isArray"] = True
+            d["arrayShape"] = "-1"
         out.append(d)
     return out
 

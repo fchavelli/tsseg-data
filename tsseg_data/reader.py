@@ -1,6 +1,8 @@
 """Minimal reader of a built dataset (reference for the tsseg loader).
 
-Chunks of a series are concatenated back by ``(series_id, chunk_idx)``.
+Chunks of a series are concatenated back by ``(series_id, chunk_idx)``. Configs may
+have different sampling rates (``tsseg.json`` ``configs.<cfg>.sampling_rate_hz``);
+lengths and labels are then those of the config read.
 """
 
 from __future__ import annotations
@@ -62,7 +64,8 @@ def load_series(
     config: str | None = None,
     channels: list[str] | None = None,
 ) -> dict:
-    """Load one series: ``X`` (n, c) float64, dense labels, time, change points."""
+    """Load one series: ``X`` (n, c) float64, dense labels, time, change points, at
+    the sampling rate of ``config`` (default config if ``None``)."""
     root = Path(root)
     info = load_info(root)
     config = config or info["default_config"]
@@ -74,7 +77,8 @@ def load_series(
     chans = channels or info["configs"][config]["channels"]
     tables = _rows(root, files, series_id)
     rows = sorted((r for t in tables for r in _to_numpy_rows(t)), key=lambda r: r["chunk_idx"])
-    n_chunks = row["n_chunks"][0].as_py()
+    nc_col = f"n_chunks_{config}" if f"n_chunks_{config}" in row.column_names else "n_chunks"
+    n_chunks = row[nc_col][0].as_py()
     if [r["chunk_idx"] for r in rows] != list(range(n_chunks)):
         raise ValueError(f"{series_id}: chunks {[r['chunk_idx'] for r in rows]}")
     pos = 0
@@ -83,7 +87,9 @@ def load_series(
             raise ValueError(f"{series_id}: chunk {r['chunk_idx']} starts at "
                              f"{r['chunk_start']}, expected {pos}")
         pos += r["length"]
-    out = {"series_id": series_id, "channels": chans, "length": pos}
+    rate = info["configs"][config].get("sampling_rate_hz", info.get("sampling_rate_hz"))
+    out = {"series_id": series_id, "config": config, "channels": chans, "length": pos,
+           "sampling_rate_hz": rate}
     out["X"] = np.column_stack(
         [np.concatenate([np.asarray(r[c], dtype=np.float64) for r in rows]) for c in chans]
     )

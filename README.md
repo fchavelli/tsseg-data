@@ -21,7 +21,7 @@ systems, with several annotators where they exist. Every dataset is converted to
 one format and documented the same way, including its license, provenance,
 annotation process and inter-annotator agreement.
 
-## Format (version 1.0)
+## Format (version 1.1)
 
 - One Parquet row per series, signals and labels as list columns; part files of
   about 256 MiB under `data/<config>/`; `index.parquet` with one row per series
@@ -33,8 +33,10 @@ annotation process and inter-annotator agreement.
 - Several annotators: `label_<annotator>` and `label_consensus` when the source
   defines one; several label semantics: `label_<track>`. `tsseg.json` keeps
   `annotators` and `tracks` apart. Pure CPD datasets: `cps_<annotator>`.
-- Heavy datasets have a light `default` config and a `full` config.
-- Per dataset: `croissant.json` (Croissant 1.0 core + Responsible AI fields,
+- Heavy datasets have a light `default` config and a `full` config. Configs may
+  differ in sampling rate (e.g. `dreem-dod-h`: `default` resampled to 100 Hz,
+  `full` at the native 250 Hz); each config's rate is in `tsseg.json`.
+- Per dataset: `croissant.json` (Croissant 1.1 core + Responsible AI 1.0 fields,
   provenance), a Hugging Face dataset card (`README.md`), `tsseg.json` (loader
   metadata), `SHA256SUMS`.
 
