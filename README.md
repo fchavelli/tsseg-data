@@ -88,7 +88,7 @@ the authors allow re-hosting.
 | `dog-behaviour-vehkaoja`: Movement Sensor Dataset for Dog Behavior Classification | ethology | SD | CC-BY-4.0 (A) | planned |
 | `bee-dance`: Honey Bee Dance (PS-SLDS, Oh et al.) | ethology | SD | none; citation requested (C) | planned; source-only builder until the authors allow re-hosting |
 | `petrobras-3w`: 3W Dataset 2.0.0 (undesirable events in offshore oil wells) | industry_energy | SD | CC-BY-4.0 (A) | planned |
-| `cnc-mill-umich`: CNC Mill Tool Wear (University of Michigan SMART testbed) | industry_energy | SD | CC0-1.0 (A) | planned |
+| `cnc-mill-umich`: CNC Mill Tool Wear (University of Michigan SMART testbed) | industry_energy | SD | CC0-1.0 (A) | builder + validated build (18 complete experiments; all 47 numeric channels) |
 | `uci-gas-dynamic-mixtures`: Gas sensor array under dynamic gas mixtures (UCI 322) | industry_energy | SD | CC-BY-4.0 (A) | planned |
 | `pneumatic-eol-strzinar`: Pneumatic Pressure and Electrical Current Time Series in Manufacturing (end-of-line test station) | industry_energy | SD | CC-BY-4.0 (A) | planned |
 | `deddiag`: DEDDIAG — Domestic Electricity Demand Dataset of Individual Appliances in Germany | industry_energy | SD | CC-BY-4.0 (A) | planned |

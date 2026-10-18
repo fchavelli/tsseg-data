@@ -5,6 +5,22 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / CNC Mill UMich: all 18 experiments, all 47 numeric channels
+  at 10 Hz; 25,286 samples, lengths 462 / 1,341 median / 2,332; 158
+  process segments, recurrence 14/18, no missing ground truth. All eleven
+  exact source state strings retained (End/end kept distinct); Starting, Prep
+  and Repositioning are ordinary protocol states. Original tool/clamp/feed/
+  inspection metadata retained; unavailable inspection remains metadata null.
+  Source known invalid-variable conditions and control-channel label leakage
+  risk documented; no silent repairs. Primary Sharon Sun/SMART Kaggle v4 CC0
+  verified 2026-10-18, version URL and SHA pinned. Validation 0/0.
+
+- [x] CASAS timestamp audit: independent datetime.fromisoformat over original
+  source lines reproduces largest backward jumps exactly (Aruba source row
+  1,571,287: 2011-05-23 23:39:59.215044 -> 00:02:56.715882; Milan row
+  124,569: 2009-11-24 17:21:24.000069 -> 00:00:09.000084). They are
+  source anomalies, not pandas date parsing or row alignment artefacts.
+
 - [x] Batch 2 / CASAS: five original event logs for four homes (both Tulum
   sessions distinct), 4,452,569 events, lengths 433,665 / 726,534 median /
   1,719,558; 42 sensor-ID columns with sparse updates, no regular rate or
@@ -279,8 +295,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 29 builders remain after the
-  three pilots, nine batch-1 and nine batch-2 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 28 builders remain after the
+  three pilots, nine batch-1 and ten batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
