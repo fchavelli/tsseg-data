@@ -5,6 +5,19 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / UCI Gas dynamic mixtures: both complete measured recordings,
+  all 16 sensor channels at nominal 100 Hz; **8,386,765** samples (CO:
+  4,208,261; methane: 4,178,504, correcting registry total/length). Reversible
+  concentration-pair labels, 178 mixture-scoped states, 725 segments, recurrence
+  2/2, no missing labels. Zero exposure is ordinary state; concentration
+  setpoints are labels, never input channels. Exact source timestamps retained,
+  including 122,672 / 104,950 duplicate steps and gaps up to 0.38 / 0.27 s,
+  no reversal. **Rights hold:** same primary UCI page displays CC BY 4.0 but
+  restricts use to research and excludes commercial purposes. Conservatively
+  tier C/source-only; docs/licenses/uci-gas-dynamic-mixtures.md records conflict.
+  Archive SHA256 pinned; raw 352 MiB/build 270 MiB. Build 25.16 s, peak
+  RSS 1.91 GiB; validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / Pneumatic EOL: all 468 CSV files form 156 triplets, not
   468 series. 4,751,340 native sensor samples and all 3,673 original PLC
   events retained; never unpickle source alternatives. Main two-channel stream
@@ -311,8 +324,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 27 builders remain after the
-  three pilots, nine batch-1 and eleven batch-2 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 26 builders remain after the
+  three pilots, nine batch-1 and twelve batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has

@@ -382,12 +382,12 @@ datasets:
     domain: industry_energy
     task: sd
     label_type: states
-    license: CC-BY-4.0
-    license_tier: A
+    license: "UCI CC BY 4.0; same primary description excludes commercial use"
+    license_tier: C
     why: "12 h continues, ~400 CP exacts (consignes), 16 capteurs MOX"
-    risks: "2 séries de 2,1 M points : découper ou sous-échantillonner ; réponse capteur lente (CP décalés)"
+    risks: "2026-10-18: conflicting primary licence statements, source-only pending clarification; 2 séries de 2,1 M points : découper ou sous-échantillonner ; réponse capteur lente (CP décalés)"
     subset: "découpage en fenêtres de quelques heures"
-    contact_needed: false
+    contact_needed: true
   - id: pneumatic-eol-strzinar
     registry: industry_energy.yaml
     domain: industry_energy
