@@ -5,6 +5,21 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / AIS fishing: full primary CSV has **123 released trips**, not
+  the 128 claimed in filename/title, from 84 vessel-ID prefixes. All 1,026,279
+  observations, ten numeric position/trajectory variables in float64, native
+  irregular second timestamps, lengths 901 / 5,610 median / 45,251. Five native
+  source-phase strings preserved reversibly; activity track strips only the
+  numeric prefix to keep literal sailing/fishing names. Both have 369 segments;
+  source phase recurrence 0/123, activity recurrence 121/123. No missing labels
+  or signals, no backward/duplicate timestamps, max gap 47,172 s. Group evaluation
+  by source vessel to avoid leakage. No interpolation, timezone inference,
+  speed-unit correction or invented missing trips. Primary author labels and
+  CC BY 4.0 verified at Zenodo 7283281 on 2026-10-18; primary MD5 checked for CSV
+  and README. CSV SHA256
+  `787bd946fadf0c114f4925dd3ee792e64034311fd4940ea47b91b4ddd804b8ad`.
+  Raw 162 MiB, build 55 MiB, 3.4 s / RSS 503 MiB. Validation 0/0.
+
 - [x] Batch 2 / Swimming smartwatch: all 206 sessions / 40 swimmers,
   1,962,177 observations at provider-resampled 30 Hz; lengths 1,321 / 6,442.5
   median / 53,421. Default all 11 measured sensor channels (74 MiB); full also
@@ -401,9 +416,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 21 builders remain after the
-  three pilots, nine batch-1 and seventeen batch-2 source builders. Next: batch 2
-  (ais-fishing-semseg onward), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 20 builders remain after the
+  three pilots, nine batch-1 and eighteen batch-2 source builders. Next: batch 2
+  (calms21 onward), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.

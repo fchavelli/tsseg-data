@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "ais-fishing-semseg": "builder + validated build (123 released trips; native phases + activity names)",
     "swimming-smartwatch": "builder + validated local build (206 sessions; seven classes; no source licence)",
     "lund2013-eye": "builder + validated build (34 trials / 39 native copies; both experts + correction)",
     "neuroblastoma-cnv": "builder + validated build (575 profiles; weak region constraints only)",
@@ -66,7 +67,7 @@ NAME_EN = {
     "utsa": "UCR Time Series Semantic Segmentation Archive (UTSA, FLOSS datasets)",
     "bebe": "BEBE: Bio-logger Ethogram Benchmark (collection of 9 datasets)",
     "rtt-ripe-atlas-labelled": "RTT change detection dataset (RIPE Atlas, manual labels), Shao et al.",
-    "ais-fishing-semseg": "Dataset for Semantic Segmentation of Fishing Trajectories (128 AIS trajectories)",
+    "ais-fishing-semseg": "Dataset for Semantic Segmentation of Fishing Trajectories (123 released AIS trips)",
     "ami-meeting-corpus": "AMI Meeting Corpus: diarisation, recurrent speakers (derived-feature track)",
 }
 

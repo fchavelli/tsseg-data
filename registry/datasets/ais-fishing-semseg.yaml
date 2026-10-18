@@ -10,9 +10,9 @@ license: CC-BY-4.0
 license_url: https://creativecommons.org/licenses/by/4.0/
 license_tier: A
 license_verified: "2026-10-17, API Zenodo"
-n_series: 128
+n_series: 123
 length: {min: null, median: null, max: null}
-n_channels: null
+n_channels: 10
 sampling_rate_hz: null
 label_type: states
 n_states: null
@@ -28,5 +28,5 @@ value: high
 value_reason: "segmentation sémantique manuelle de trajectoires de pêche complètes (sortie, pêche, retour) : tâche SD native, domaine absent du registre, licence A"
 effort: low
 confidence: medium
-notes: "États récurrents : oui probablement (alternance pêche / route au sein d'une marée ; à vérifier sur le CSV). Canaux AIS (lat, lon, vitesse, cap) à échantillonnage irrégulier : ré-échantillonner. Nombre de classes non lu (README de 0,6 Ko)."
+notes: "États récurrents : oui probablement (alternance pêche / route au sein d'une marée ; à vérifier sur le CSV). Canaux AIS (lat, lon, vitesse, cap) à échantillonnage irrégulier : native order and irregular timestamps retained without resampling. Nombre de classes non lu (README de 0,6 Ko)."
 rejected: null
