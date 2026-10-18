@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "casas-aruba-milan-tulum-cairo": "builder + validated build (5 event logs; simultaneous activity sets preserved)",
     "vfdb": "builder + validated build (22 two-lead ECG records; distinct rhythm/noise tracks)",
     "afdb": "builder + validated build (23 complete two-lead ECG records)",
     "mitdb": "builder + validated build (48 two-lead ECG records; rhythm + sparse beats)",

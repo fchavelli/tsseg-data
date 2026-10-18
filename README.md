@@ -83,7 +83,7 @@ the authors allow re-hosting.
 | `harth`: HARTH — Human Activity Recognition Trondheim | har | SD | CC-BY-4.0 (A) | builder + validated build (22 complete recordings; timestamps retained) |
 | `capture24`: CAPTURE-24: Activity tracker dataset for human activity recognition | har | SD | CC-BY-4.0 (A) | planned |
 | `mhealth`: MHEALTH (Mobile HEALTH) dataset | har | SD | CC-BY-4.0 (A) | builder + validated build (10 complete logs; null state retained) |
-| `casas-aruba-milan-tulum-cairo`: CASAS Smart Home dataset (aruba, cairo, milan, tulum) — labelled, with temperature | har | SD | CC-BY-4.0 (A) | planned |
+| `casas-aruba-milan-tulum-cairo`: CASAS Smart Home dataset (aruba, cairo, milan, tulum) — labelled, with temperature | har | SD | CC-BY-4.0 (A) | builder + validated build (5 event logs; simultaneous activity sets preserved) |
 | `bebe`: BEBE: Bio-logger Ethogram Benchmark (collection of 9 datasets) | ethology | SD | CC-BY-4.0 (repository); per-species licenses (A) | planned |
 | `dog-behaviour-vehkaoja`: Movement Sensor Dataset for Dog Behavior Classification | ethology | SD | CC-BY-4.0 (A) | planned |
 | `bee-dance`: Honey Bee Dance (PS-SLDS, Oh et al.) | ethology | SD | none; citation requested (C) | planned; source-only builder until the authors allow re-hosting |

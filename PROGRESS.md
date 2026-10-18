@@ -5,6 +5,19 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / CASAS: five original event logs for four homes (both Tulum
+  sessions distinct), 4,452,569 events, lengths 433,665 / 726,534 median /
+  1,719,558; 42 sensor-ID columns with sparse updates, no regular rate or
+  forward fill. 45,506 joint-state segments, recurrence 5/5, 52.1403%
+  unannotated/ambiguous. Simultaneous activities preserved as 182 reversible
+  activity sets plus exact markers and intervals; per-activity recurrence
+  counts also retained. All 51,291 timestamp reversals retained (Aruba up to
+  85,022 s, Milan 62,475 s); task explicitly uses original event order.
+  Five anomalous Tulum2 intervals mask 10,823 events; no marker spelling
+  correction. All 167 invalid sensor messages retained verbatim in auxiliary,
+  represented by signal NaN. CC BY 4.0 verified at official Cook/WSU Zenodo
+  deposit on 2026-10-18; primary MD5 and calculated SHA256 checked. Validation 0/0.
+
 - [x] Batch 2 / VFDB: all 22 original records, both calibrated ECG channels at
   250 Hz; 11,550,000 samples (525,000 each). Rhythm track: 488 segments,
   recurrence 17/22, 3.69281% unknown before first explicit cardiac rhythm.
@@ -266,8 +279,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 30 builders remain after the
-  three pilots, nine batch-1 and eight batch-2 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 29 builders remain after the
+  three pilots, nine batch-1 and nine batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
