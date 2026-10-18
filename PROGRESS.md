@@ -5,6 +5,17 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / VFDB: all 22 original records, both calibrated ECG channels at
+  250 Hz; 11,550,000 samples (525,000 each). Rhythm track: 488 segments,
+  recurrence 17/22, 3.69281% unknown before first explicit cardiac rhythm.
+  Quality track: 183 segments, recurrence 14/22, 0.12676% before first
+  annotation unscored. Primary provider explicitly says rhythm continues through
+  NOISE until next annotation: preserve that rhythm and encode noise separately,
+  never invent a noise cardiac state. If noise precedes a known rhythm, rhythm
+  remains -1. NSR/N and VFIB/VF aliases canonicalised with raw notes preserved.
+  ASYS remains ordinary clinical state. ODC-By-1.0 verified at PhysioNet on
+  2026-10-18; all 66 files SHA-pinned; validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / AFDB: all 23 source records with ECG signals (00735/03665
   annotation-only excluded), both channels at 250 Hz; 210,851,720 samples,
   lengths 8,325,000 / 9,205,760 median/max; 628 rhythm segments, recurrence
@@ -255,8 +266,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 31 builders remain after the
-  three pilots, nine batch-1 and seven batch-2 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 30 builders remain after the
+  three pilots, nine batch-1 and eight batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has

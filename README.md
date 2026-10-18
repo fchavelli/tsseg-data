@@ -69,7 +69,7 @@ the authors allow re-hosting.
 | `sleep-edfx`: Sleep-EDF Database Expanded | physio | SD | ODC-By-1.0 (A) | planned |
 | `dreem-dod-h`: Dreem Open Dataset — Healthy (DOD-H) | physio | SD | MIT (A) | builder + validated build (3 of 25 nights) |
 | `mitdb`: MIT-BIH Arrhythmia Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (48 two-lead ECG records; rhythm + sparse beats) |
-| `vfdb`: MIT-BIH Malignant Ventricular Ectopy Database | physio | SD | ODC-By-1.0 (A) | planned |
+| `vfdb`: MIT-BIH Malignant Ventricular Ectopy Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (22 two-lead ECG records; distinct rhythm/noise tracks) |
 | `afdb`: MIT-BIH Atrial Fibrillation Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (23 complete two-lead ECG records) |
 | `helsinki-neonatal-eeg`: A dataset of neonatal EEG recordings with seizure annotations (Helsinki) | physio | SD | CC-BY-4.0 (A) | planned |
 | `noneeg`: Non-EEG Dataset for Assessment of Neurological Status | physio | SD | ODC-By-1.0 (A) | builder + validated build (20 native 8-Hz records + native 1-Hz auxiliary) |
