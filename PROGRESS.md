@@ -5,6 +5,14 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Daphnet FoG: 17 actual sensor runs (not 29 archive entries),
+  ten subjects, nine acceleration axes at 64 Hz; 1,917,887 samples, lengths
+  38,774 / 109,886 median / 195,737; 561 segments, recurrence 16/17.
+  Source code 0 explicitly outside experiment -> -1 (40.5160%); codes 1/2
+  retained, timestamps and all rows preserved. Runs stay separate; subject-level
+  grouping recommended by provider. CC BY 4.0 verified at UCI on 2026-10-18;
+  archive SHA256 pinned. Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / HARTH: all 22 complete recordings, six accelerometer axes at
   nominal 50 Hz, 6,461,328 samples, lengths 137,646 / 329,936.5 median /
   418,989; 6,971 segments, recurrence 22/22, no missing labels. All twelve
