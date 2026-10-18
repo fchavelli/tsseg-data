@@ -68,7 +68,7 @@ the authors allow re-hosting.
 | `mocap`: CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004) | mocap_surgery_assembly | CPD | CMU motion terms; Barbič labels unlicensed (C) | builder + validated local build (14 Barbič trials); source-only builder until the authors allow re-hosting |
 | `sleep-edfx`: Sleep-EDF Database Expanded | physio | SD | ODC-By-1.0 (A) | planned |
 | `dreem-dod-h`: Dreem Open Dataset — Healthy (DOD-H) | physio | SD | MIT (A) | builder + validated build (3 of 25 nights) |
-| `mitdb`: MIT-BIH Arrhythmia Database | physio | SD | ODC-By-1.0 (A) | planned |
+| `mitdb`: MIT-BIH Arrhythmia Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (48 two-lead ECG records; rhythm + sparse beats) |
 | `vfdb`: MIT-BIH Malignant Ventricular Ectopy Database | physio | SD | ODC-By-1.0 (A) | planned |
 | `afdb`: MIT-BIH Atrial Fibrillation Database | physio | SD | ODC-By-1.0 (A) | planned |
 | `helsinki-neonatal-eeg`: A dataset of neonatal EEG recordings with seizure annotations (Helsinki) | physio | SD | CC-BY-4.0 (A) | planned |

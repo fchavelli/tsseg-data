@@ -5,6 +5,16 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / MITDB: all 48 source records, both calibrated ECG channels
+  at 360 Hz, 31,200,000 samples (650,000 each); 1,338 rhythm segments,
+  recurrence 29/48, 0.007913% before first explicit rhythm annotation left -1.
+  Dense rhythm states come only from parenthesised .atr notes; sparse beat,
+  quality and other annotations preserved intact in annotations.parquet, never
+  expanded into beat-state intervals. Variable lead names retained in index.
+  All 144 files SHA-pinned against primary PhysioNet manifest; ODC-By-1.0
+  verified 2026-10-18. Official public S3 transport bypasses primary host
+  throttling (100.dat: 0.84 s versus 110 s, identical SHA). Validation 0/0.
+
 - [x] Batch 2 / nonEEG: 20 native 8-Hz acceleration/temperature/EDA series,
   368,852 samples, lengths 18,175 / 18,247 median / 20,255; 180 segments,
   recurrence 20/20. Four semantic states (not five); mini-emotional instruction
@@ -234,8 +244,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 38 builders remain after the
-  three pilots and nine completed batch-1 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 32 builders remain after the
+  three pilots, nine batch-1 and six batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has

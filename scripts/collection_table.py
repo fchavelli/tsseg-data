@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "mitdb": "builder + validated build (48 two-lead ECG records; rhythm + sparse beats)",
     "noneeg": "builder + validated build (20 native 8-Hz records + native 1-Hz auxiliary)",
     "daphnet-fog": "builder + validated build (17 runs; outside-protocol 0 excluded)",
     "harth": "builder + validated build (22 complete recordings; timestamps retained)",
