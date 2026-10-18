@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+# Verified against primary Zenodo v4, all native EDF headers, CSV and MAT labels.
 id: helsinki-neonatal-eeg
 name: "A dataset of neonatal EEG recordings with seizure annotations (Helsinki)"
 domain: "physio"
@@ -9,16 +9,23 @@ citation: "Stevenson et al., Sci Data 6:190039, 2019"
 license: "CC-BY-4.0"
 license_url: "https://creativecommons.org/licenses/by/4.0/"
 license_tier: "A"
-license_verified: "2026-10-17, API Zenodo"
+license_verified: "2026-10-19, primary Zenodo record/API 4940267 (CC BY 4.0)"
 n_series: 79
-length: {min: null, median: null, max: null}
-n_channels: 19
-sampling_rate_hz: null
+length: {min: 802048, median: 1143808, max: 3946496}
+n_channels: 8
+n_channels_full: 21
+n_samples: 103123200
+native_seconds: 402825
+consensus_seizure_recordings: 39
+consensus_segments: 1793
+consensus_series_with_recurrence: 56
+consensus_unlabeled_share: 0.0858511760690126
+sampling_rate_hz: 256
 label_type: "multi_track"
 n_states: 2
 n_annotators: 3
 label_origin: "human"
-unlabeled_regions: "non"
+unlabeled_regions: "None in expert A/B/C tracks; strict derived unanimous consensus is -1 for the 34,583 disagreement seconds (8.5851%)."
 continuous: true
 access: "direct"
 size: "4.3 GB"
@@ -28,5 +35,5 @@ value: "high"
 value_reason: "crises néonatales annotées par 3 experts (≈ 460 crises par expert) : CPD/SD multi-annotateurs, désaccords documentés"
 effort: "low"
 confidence: "high"
-notes: "Durée médiane 74 min (IQR 64-96). 39 nouveau-nés avec crises par consensus, 22 sans. 256 Hz d'après le papier (non relu). Candidat pilote « CPD multi-annotateurs »."
+notes: "All 79 numbered neonatal recordings, 21 original channels (19 EEG, ECG, respiration), calibrated physical dimension uV in every native EDF header. Light default: Fp1/Fp2/C3/C4/T3/T4/O1/O2, preserving the full 21-channel reference as full; reduced context can hide focal seizures. Three native layouts (17/45/17) aligned by normalized names, never column position; original calibration headers retained. eeg4/eeg29/eeg50 declare EDF+C without an annotation channel: decode validated int16 records directly, preserve flags and record metadata, no invented missing durations or annotations. Decoder matches pyedflib float32 on all channels across three layouts (eeg1/2/3/5). All 83 files SHA-pinned and verified against primary MD5/size. Corrected A_fixed/B/C labels checked exactly against MAT over 402,825 seconds; native 1-Hz labels also retained. Expert seizure counts A/B/C: 402/429/548. Mean subject/pair kappa 0.68457; sample agreement 0.94228, constant agreeing pair kappa defined as 1. Patient text, dates, and clinical/demographic CSV excluded. Clinical source annotation used broader EEG context; no diagnostic claim."
 rejected: null

@@ -142,12 +142,17 @@ def finish(
     info=None,
     null_states=None,
     synthetic=False,
+    license_verified_date="2026-10-18",
 ):
     """Write card and Croissant from explicit source facts and measured counts."""
     measured = stats.summary()
     labels = list(spec.label_columns)
     null_states = null_states or {}
-    evidence = {"date": "2026-10-18", "url": license_evidence, "license": license_spdx}
+    evidence = {
+        "date": license_verified_date,
+        "url": license_evidence,
+        "license": license_spdx,
+    }
     if info and info.get("license_scope"):
         evidence["scope"] = info["license_scope"]
         evidence["rehosting_allowed"] = info.get("rehosting_allowed", False)
@@ -270,7 +275,7 @@ def finish(
             "means the source annotates no change. Per-series counts are in tsseg.json."
         )
     license_text = (
-        f"{license_spdx}. Verified at the primary source on 2026-10-18: "
+        f"{license_spdx}. Verified at the primary source on {license_verified_date}: "
         f"[{license_evidence}]({license_evidence}). Conversion code: MIT."
     )
     if info.get("license_scope"):

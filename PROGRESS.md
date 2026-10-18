@@ -5,6 +5,35 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 3 / Helsinki neonatal EEG: all 79 recordings, 103,123,200
+  samples at native 256 Hz (402,825 s); lengths 802,048 / 1,143,808 median /
+  3,946,496. Default: eight bilateral EEG electrodes
+  Fp1/Fp2/C3/C4/T3/T4/O1/O2; full: all 19 EEG plus ECG and respiration.
+  Every source channel has EDF physical dimension uV, including ECG and
+  respiration. Three native layouts (17/45/17) mapped by normalized names,
+  preserving original channel/calibration headers. eeg4/eeg29/eeg50 declare
+  EDF+C without an annotation channel; direct int16 decoding validates record
+  counters, one-second record durations and exact byte lengths. Calibrated
+  float32 values match pyedflib exactly for eeg1/2/3/5 across all three layouts.
+  Preserve record order and nominal 256-Hz grid; no invented gap durations.
+  Corrected v4 A_fixed/B/C CSV labels equal MAT throughout all actual durations;
+  no missing expert labels. Original 1-Hz labels retained auxiliary. Expert
+  seizure events A/B/C: 402/429/548, segments 875/928/1,161; recurrence
+  45/43/52 of 79. Strict derived unanimous consensus has 1,793 segments,
+  recurrence 56/79 and 34,583 unscored disagreement seconds (8.5851%); 39
+  recordings have unanimous seizures. Mean subject/pair kappa 0.68457 and
+  agreement 0.94228 (237 pairs; constant agreeing kappa defined as 1).
+  Clinical/demographic data, patient text and dates excluded. Reduced default
+  spatial context can hide focal seizures; full preserves all observation channels.
+  CC BY 4.0 verified at primary Zenodo v4 on 2026-10-19; all 83 sources
+  SHA256-pinned and checked against primary MD5/size. Shared card helper now
+  accepts an explicit licence verification date, preserving prior defaults.
+  Default/full 2.59/6.14 GB (37 parts); full validation: 42 files,
+  **0 errors / 0 warnings**. Three-layout sizing pilot justified the eight-channel
+  default and 18-GiB stop reserve; minimum free space stayed about 23 GiB.
+  Raw cache (4.1 GiB) deleted only after validation; 27 GiB remain available.
+  Pilot raw and completed builds untouched. No publication.
+
 - [x] Batch 3 / Sleep-EDFx: all 197 complete PSG/hypnogram pairs (153 SC,
   44 ST; 100 subjects), 1,385,653,000 samples at 100 Hz; lengths
   2,698,000 / 8,166,000 median / 8,640,000. Seven original R&K states,
@@ -530,8 +559,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 14 builders remain after the
-  three pilots, nine batch-1 and twenty-three batch-2 source builders. Next: batch 3
+- [ ] Decision 7 accepted on 2026-10-18; 13 builders remain after the
+  three pilots, nine batch-1, twenty-three batch-2 and two further batch-3
+  source builders. Next: batch 3
   (heavy datasets, one at a time), including WESAD source-only, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] TCPD: reconstruct the ten non-bundled measured native JSONs; default local
