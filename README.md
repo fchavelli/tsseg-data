@@ -72,7 +72,7 @@ the authors allow re-hosting.
 | `vfdb`: MIT-BIH Malignant Ventricular Ectopy Database | physio | SD | ODC-By-1.0 (A) | planned |
 | `afdb`: MIT-BIH Atrial Fibrillation Database | physio | SD | ODC-By-1.0 (A) | planned |
 | `helsinki-neonatal-eeg`: A dataset of neonatal EEG recordings with seizure annotations (Helsinki) | physio | SD | CC-BY-4.0 (A) | planned |
-| `noneeg`: Non-EEG Dataset for Assessment of Neurological Status | physio | SD | ODC-By-1.0 (A) | planned |
+| `noneeg`: Non-EEG Dataset for Assessment of Neurological Status | physio | SD | ODC-By-1.0 (A) | builder + validated build (20 native 8-Hz records + native 1-Hz auxiliary) |
 | `ppg-dalia`: PPG-DaLiA: PPG dataset for motion compensation and heart rate estimation in Daily Life Activities | physio | SD | CC-BY-4.0 (A) | planned |
 | `eegmmidb`: EEG Motor Movement/Imagery Dataset | physio | SD | ODC-By-1.0 (A) | planned |
 | `wesad`: WESAD: Wearable Stress and Affect Detection | physio | SD | Siegen scientific, non-commercial use; redistribution not granted (C) | planned; source-only builder until the authors allow re-hosting |

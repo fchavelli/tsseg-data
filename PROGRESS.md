@@ -5,6 +5,17 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / nonEEG: 20 native 8-Hz acceleration/temperature/EDA series,
+  368,852 samples, lengths 18,175 / 18,247 median / 20,255; 180 segments,
+  recurrence 20/20. Four semantic states (not five); mini-emotional instruction
+  phase shares EmotionalStress. WFDB zero-based annotation positions preserved: first
+  annotation at sample 1, leaving exactly one initial sample unlabelled per
+  record (0.00542%). All SpO2/HR samples retained separately at native 1 Hz in
+  physiology_1hz.parquet; device durations differ, no synthetic synchronisation.
+  Exact transitions retained in annotations.parquet. Demographics omitted.
+  ODC-By-1.0 verified at PhysioNet on 2026-10-18; source ZIP SHA256 pinned.
+  WFDB 4.3.1 added to build dependencies and tsseg-env. Validation 0/0.
+
 - [x] Batch 2 / Daphnet FoG: 17 actual sensor runs (not 29 archive entries),
   ten subjects, nine acceleration axes at 64 Hz; 1,917,887 samples, lengths
   38,774 / 109,886 median / 195,737; 561 segments, recurrence 16/17.
