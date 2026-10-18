@@ -5,6 +5,24 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / TCPD source-only builder: all **27 bundled measured signals**,
+  6,660 observations, lengths 15 / 205 median / 816; all native dimensions retained
+  (run_log two channels; absent dimensions NaN, native channel names in index).
+  Eight expert IDs, five expert lists per series, all 320 CP markers; absent
+  expert lists null versus scored no-change []. No semantic state/recurrence or
+  CP consensus invented. Exact pairwise CP-set Jaccard auxiliary; native full
+  calendar/numeric time structures remain auxiliary beside source integer index.
+  Two native missing values in uk_coal_employ retained. All 37 real-series labels
+  and per-source provenance retained even where signal pending; all five fully
+  synthetic quality_control inputs excluded. **Ten non-bundled measured signals
+  still require reconstruction**, listed in docs/licenses/tcpd.md and metadata.
+  --extra-json-dir accepts native files only with primary MD5; --require-complete
+  rejects missing signals. No downloaded collector executed. Primary README
+  explicitly distinguishes MIT code from mixed upstream data rights; tier C,
+  no rehosting. Source revision `e8f19a3635e3b7f1a8aff59ce7f4d9bea17525c0`, SHA256
+  `056787f65d2a2e838d82e278d439887bd2fc093cb4209120ff0e28fa38fc2941`;
+  checked 2026-10-18. Raw 4.7 MiB, build under 1 MiB. Validation 0/0.
+
 - [x] Batch 2 / MOSAD: 14 native recordings restored to all nine axes
   (accelerometer, gyroscope, magnetometer), rather than the 126 separate
   univariate benchmark views. All 481,056 samples at 50 Hz; lengths 11,131 /
@@ -465,10 +483,12 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 17 builders remain after the
-  three pilots, nine batch-1 and twenty-one batch-2 source builders. Next: batch 2
-  (source-only tcpd/bee-dance), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 16 builders remain after the
+  three pilots, nine batch-1 and twenty-two batch-2 source builders. Next: batch 2
+  (source-only bee-dance), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
+- [ ] TCPD: reconstruct the ten non-bundled measured native JSONs; default local
+  build is explicitly 27/37 and --require-complete fails until they are supplied.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.
   Do not treat method predictions or visually chosen changes as ground truth.
