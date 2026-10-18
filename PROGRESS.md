@@ -5,6 +5,17 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / AFDB: all 23 source records with ECG signals (00735/03665
+  annotation-only excluded), both channels at 250 Hz; 210,851,720 samples,
+  lengths 8,325,000 / 9,205,760 median/max; 628 rhythm segments, recurrence
+  21/23, 0.000937% before first explicit rhythm annotation unlabelled (-1).
+  N means other rhythms, not necessarily sinus rhythm. Source-inserted zero
+  blocks in 04043/08405/08434 preserved and documented; 06453 shorter duration
+  retained. Manual rhythm annotations kept sparse as well; automated unaudited
+  .qrs detections excluded from ground truth. ODC-By-1.0 verified at PhysioNet
+  2026-10-18; all signal/header/rhythm files SHA-pinned, official public S3
+  transport. Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / MITDB: all 48 source records, both calibrated ECG channels
   at 360 Hz, 31,200,000 samples (650,000 each); 1,338 rhythm segments,
   recurrence 29/48, 0.007913% before first explicit rhythm annotation left -1.
@@ -244,8 +255,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 32 builders remain after the
-  three pilots, nine batch-1 and six batch-2 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 31 builders remain after the
+  three pilots, nine batch-1 and seven batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
