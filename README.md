@@ -57,15 +57,15 @@ the authors allow re-hosting.
 <!-- datasets:start -->
 | Dataset | Domain | Task | License (tier) | Status |
 |---|---|---|---|---|
-| `tssb`: Time Series Segmentation Benchmark (TSSB) | generic_cpd | SD | BSD-3-Clause (TSSB repo); upstream UCR/UEA rights unresolved (C) | builder + validated local build (10/75 recurrent); source-only builder until the authors allow re-hosting |
-| `utsa`: UCR Time Series Semantic Segmentation Archive (UTSA, FLOSS datasets) | generic_cpd | CPD | none at the source (C) | builder + validated local build (32 series; 1 recurrent); source-only builder until the authors allow re-hosting |
+| `tssb`: Time Series Segmentation Benchmark (TSSB) | generic_cpd | SD | BSD-3-Clause (TSSB repo); upstream UCR/UEA rights unresolved (C) | builder + validated local build (10/75 recurrent); source-only builder until rights are clarified |
+| `utsa`: UCR Time Series Semantic Segmentation Archive (UTSA, FLOSS datasets) | generic_cpd | CPD | none at the source (C) | builder + validated local build (32 series; 1 recurrent); source-only builder until rights are clarified |
 | `has`: Human Activity Segmentation Challenge 2023 (ECML/PKDD) | har | SD | CC-BY-NC-SA-4.0 (B) | builder + validated build (250 series, GPS removed) |
 | `actrectut`: ActRecTut — Human Activity Recognition Tutorial dataset (Bulling et al.) | har | SD | GPL-3.0-or-later (B) | builder + validated build (walk + gesture) |
 | `pamap2`: PAMAP2 Physical Activity Monitoring | har | SD | CC-BY-4.0 (A) | builder + validated build (Protocol + Optional; activityID=0 excluded, ~29% unscored) |
-| `usc-had`: USC-HAD: USC Human Activity Dataset | har | CPD | none at the source (C) | builder + validated local build (70 artificial CPD series); source-only builder until the authors allow re-hosting |
+| `usc-had`: USC-HAD: USC Human Activity Dataset | har | CPD | none at the source (C) | builder + validated local build (70 artificial CPD series); source-only builder until rights are clarified |
 | `pump`: Hydraulic End-of-Line Testing (Bosch) — PUMP | industry_energy | SD | CC-BY-4.0 (A) | builder + validated build (400 cycles) |
 | `skab`: Skoltech Anomaly Benchmark (SKAB) | industry_energy | CPD | GPL-3.0 (B) | builder + validated build (all 129 source CP markers) |
-| `mocap`: CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004) | mocap_surgery_assembly | CPD | CMU motion terms; Barbič labels unlicensed (C) | builder + validated local build (14 Barbič trials); source-only builder until the authors allow re-hosting |
+| `mocap`: CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004) | mocap_surgery_assembly | CPD | CMU motion terms; Barbič labels unlicensed (C) | builder + validated local build (14 Barbič trials); source-only builder until rights are clarified |
 | `sleep-edfx`: Sleep-EDF Database Expanded | physio | SD | ODC-By-1.0 (A) | planned |
 | `dreem-dod-h`: Dreem Open Dataset — Healthy (DOD-H) | physio | SD | MIT (A) | builder + validated build (3 of 25 nights) |
 | `mitdb`: MIT-BIH Arrhythmia Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (48 two-lead ECG records; rhythm + sparse beats) |
@@ -75,21 +75,21 @@ the authors allow re-hosting.
 | `noneeg`: Non-EEG Dataset for Assessment of Neurological Status | physio | SD | ODC-By-1.0 (A) | builder + validated build (20 native 8-Hz records + native 1-Hz auxiliary) |
 | `ppg-dalia`: PPG-DaLiA: PPG dataset for motion compensation and heart rate estimation in Daily Life Activities | physio | SD | CC-BY-4.0 (A) | planned |
 | `eegmmidb`: EEG Motor Movement/Imagery Dataset | physio | SD | ODC-By-1.0 (A) | planned |
-| `wesad`: WESAD: Wearable Stress and Affect Detection | physio | SD | Siegen scientific, non-commercial use; redistribution not granted (C) | planned; source-only builder until the authors allow re-hosting |
+| `wesad`: WESAD: Wearable Stress and Affect Detection | physio | SD | Siegen scientific, non-commercial use; redistribution not granted (C) | planned; source-only builder until rights are clarified |
 | `daphnet-fog`: Daphnet Freezing of Gait | physio | SD | CC-BY-4.0 (A) | builder + validated build (17 runs; outside-protocol 0 excluded) |
 | `mosad`: MOSAD — Mobile Sensing Human Activity Data Set | har | SD | CC-BY-SA-3.0 (B) | planned |
 | `opportunity`: OPPORTUNITY Activity Recognition | har | SD | CC-BY-4.0 (A) | builder + validated build |
-| `hapt`: Smartphone-Based Recognition of Human Activities and Postural Transitions (HAPT) | har | SD | UCI CC BY 4.0; archive README prohibits commercial use (C) | builder + validated local build (61 raw experiments; licence conflict); source-only builder until the authors allow re-hosting |
+| `hapt`: Smartphone-Based Recognition of Human Activities and Postural Transitions (HAPT) | har | SD | UCI CC BY 4.0; archive README prohibits commercial use (C) | builder + validated local build (61 raw experiments; licence conflict); source-only builder until rights are clarified |
 | `harth`: HARTH — Human Activity Recognition Trondheim | har | SD | CC-BY-4.0 (A) | builder + validated build (22 complete recordings; timestamps retained) |
 | `capture24`: CAPTURE-24: Activity tracker dataset for human activity recognition | har | SD | CC-BY-4.0 (A) | planned |
 | `mhealth`: MHEALTH (Mobile HEALTH) dataset | har | SD | CC-BY-4.0 (A) | builder + validated build (10 complete logs; null state retained) |
 | `casas-aruba-milan-tulum-cairo`: CASAS Smart Home dataset (aruba, cairo, milan, tulum) — labelled, with temperature | har | SD | CC-BY-4.0 (A) | builder + validated build (5 event logs; simultaneous activity sets preserved) |
 | `bebe`: BEBE: Bio-logger Ethogram Benchmark (collection of 9 datasets) | ethology | SD | CC-BY-4.0 (repository); per-species licenses (A) | planned |
 | `dog-behaviour-vehkaoja`: Movement Sensor Dataset for Dog Behavior Classification | ethology | SD | CC-BY-4.0 (A) | planned |
-| `bee-dance`: Honey Bee Dance (PS-SLDS, Oh et al.) | ethology | SD | none; citation requested (C) | planned; source-only builder until the authors allow re-hosting |
+| `bee-dance`: Honey Bee Dance (PS-SLDS, Oh et al.) | ethology | SD | none; citation requested (C) | planned; source-only builder until rights are clarified |
 | `petrobras-3w`: 3W Dataset 2.0.0 (undesirable events in offshore oil wells) | industry_energy | SD + CPD | CC-BY-4.0 (A) | builder + validated build (all 1,119 measured instances; two label tracks) |
 | `cnc-mill-umich`: CNC Mill Tool Wear (University of Michigan SMART testbed) | industry_energy | SD | CC0-1.0 (A) | builder + validated build (18 complete experiments; all 47 numeric channels) |
-| `uci-gas-dynamic-mixtures`: Gas sensor array under dynamic gas mixtures (UCI 322) | industry_energy | SD | UCI CC BY 4.0; same primary description excludes commercial use (C) | builder + validated local build (both mixtures; source licence conflict); source-only builder until the authors allow re-hosting |
+| `uci-gas-dynamic-mixtures`: Gas sensor array under dynamic gas mixtures (UCI 322) | industry_energy | SD | UCI CC BY 4.0; same primary description excludes commercial use (C) | builder + validated local build (both mixtures; source licence conflict); source-only builder until rights are clarified |
 | `pneumatic-eol-strzinar`: Pneumatic Pressure and Electrical Current Time Series in Manufacturing (end-of-line test station) | industry_energy | SD | CC-BY-4.0 (A) | builder + validated build (156 CSV triplets; native clocks retained) |
 | `deddiag`: DEDDIAG — Domestic Electricity Demand Dataset of Individual Appliances in Germany | industry_energy | SD | CC-BY-4.0 (A) | planned |
 | `andy-lab-oneperson`: AndyData-lab-onePerson (AnDy industry-oriented human movement and ergonomics dataset) | mocap_surgery_assembly | SD | CC-BY-4.0 (A) | planned |
@@ -98,9 +98,9 @@ the authors allow re-hosting.
 | `bimacs`: KIT Bimanual Actions Dataset (Bimacs) | mocap_surgery_assembly | SD | CC0-1.0 (annotations, derived data); RGB-D for scientific use (A) | planned |
 | `lund2013-eye`: Lund 2013 hand-labelled eye-movement data (EyeMovementDetectorEvaluation) | mocap_surgery_assembly | SD | GPL-3.0 (B) | planned |
 | `swimming-smartwatch`: Swimming Style Recognition and Lap Counting Using a Smartwatch (40 swimmers) | mocap_surgery_assembly | SD | MIT (A) | planned |
-| `tcpd`: Turing Change Point Dataset (TCPD) | generic_cpd | CPD | mixed per series (CC BY, CC0, GPL-2.0, OGL, MIT, US PD; 9 not redistributable) (C) | planned; source-only builder until the authors allow re-hosting |
+| `tcpd`: Turing Change Point Dataset (TCPD) | generic_cpd | CPD | mixed per series (CC BY, CC0, GPL-2.0, OGL, MIT, US PD; 9 not redistributable) (C) | planned; source-only builder until rights are clarified |
 | `mozilla-perf-cpd-annotations`: Mozilla performance time series with multi-annotator change points (Besbes & Costa) | generic_cpd | CPD | CC-BY-4.0 (A) | builder + validated build |
-| `rtt-ripe-atlas-labelled`: RTT change detection dataset (RIPE Atlas, manual labels), Shao et al. | generic_cpd | CPD | MIT (repository); RIPE Atlas data under RIPE NCC terms (A) | planned |
+| `rtt-ripe-atlas-labelled`: RTT change detection dataset (RIPE Atlas, manual labels), Shao et al. | generic_cpd | CPD | MIT (repository); RIPE Atlas data under RIPE NCC terms (C) | builder + validated local build (50 measured traces; RIPE rights hold); source-only builder until rights are clarified |
 | `neuroblastoma-cnv`: Neuroblastoma copy number profiles with breakpoint annotations | generic_cpd | CPD | GPL-3.0 (B) | planned |
 | `calms21`: Caltech Mouse Social Interactions (CalMS21) | ethology | SD | CC-BY-4.0 (A) | planned |
 | `fly-vs-fly`: Fly vs. Fly (Boy meets boy, Aggression, Courtship) | ethology | SD | CC0-1.0 (A) | planned |

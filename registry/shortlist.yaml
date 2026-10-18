@@ -504,13 +504,13 @@ datasets:
     domain: generic_cpd
     task: cpd
     label_type: cps
-    license: "MIT (dépôt) ; mesures RIPE Atlas sous conditions RIPE NCC"
-    license_tier: A
+    license: "MIT (dépôt) ; mesures RIPE Atlas sous conditions RIPE NCC v3.5"
+    license_tier: C
     why: "50 séries réelles longues, 1 047 CP annotés à la main (réseau)"
-    risks: "conditions RIPE Atlas sur les mesures brutes non lues ; fréquence à confirmer"
+    risks: "conditions RIPE Atlas v3.5 art. 4.5 : usage commercial soumis à permission ; source-only. Horodatages irréguliers."
     subset: "séries réelles (synthétiques à part)"
-    contact_needed: false
-    license_check: "2026-10-17 : pages de conditions RIPE Atlas (ripe.net 404, atlas.ripe.net/legal vide au rendu) — non concluant, reste ouvert ; MIT du dépôt inchangé"
+    contact_needed: true
+    license_check: "2026-10-18 : dépôt primaire MIT, mais conditions RIPE Atlas v3.5 art. 4.5 (https://www.ripe.net/about-us/legal/ripe-atlas-service-terms-and-conditions/) : usage commercial seulement avec permission préalable. Tier C conservateur, pas de redistribution."
   - id: neuroblastoma-cnv
     registry: cpd_benchmarks.yaml
     domain: generic_cpd

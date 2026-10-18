@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "rtt-ripe-atlas-labelled": "builder + validated local build (50 measured traces; RIPE rights hold)",
     "petrobras-3w": "builder + validated build (all 1,119 measured instances; two label tracks)",
     "uci-gas-dynamic-mixtures": "builder + validated local build (both mixtures; source licence conflict)",
     "pneumatic-eol-strzinar": "builder + validated build (156 CSV triplets; native clocks retained)",
@@ -75,7 +76,7 @@ def main() -> None:
         name = NAME_EN.get(d["id"], str(entry.get("name", d["id"]))).replace("|", "/")
         status = STATUS.get(d["id"], "planned")
         if d.get("license_tier") == "C":
-            status += "; source-only builder until the authors allow re-hosting"
+            status += "; source-only builder until rights are clarified"
         elif d.get("contact_needed"):
             status += "; author contact planned"
         rows.append(f"| `{d['id']}`: {name} | {d['domain']} | {TASK.get(d['task'], d['task'])} "

@@ -54,6 +54,50 @@ class Statistics:
         return result
 
 
+class ChangePointStatistics:
+    """Count boundary annotations without inventing semantic state labels."""
+
+    def __init__(self):
+        self.rows = []
+
+    def add(self, series_id, length, cps):
+        self.rows.append(
+            {
+                "series_id": series_id,
+                "length": int(length),
+                "change_points": {
+                    annotator: None if values is None else len(values)
+                    for annotator, values in cps.items()
+                },
+            }
+        )
+
+    def summary(self):
+        lengths = [r["length"] for r in self.rows]
+        annotations = {}
+        for annotator in self.rows[0]["change_points"]:
+            counts = [
+                r["change_points"][annotator]
+                for r in self.rows
+                if r["change_points"][annotator] is not None
+            ]
+            annotations[annotator] = {
+                "annotated_series": len(counts),
+                "change_points": sum(counts),
+                "series_with_change_points": sum(c > 0 for c in counts),
+            }
+        return {
+            "n_series": len(lengths),
+            "samples": sum(lengths),
+            "length_min": min(lengths),
+            "length_median": float(np.median(lengths)),
+            "length_max": max(lengths),
+            "tracks": {},
+            "cp_annotations": annotations,
+            "state_recurrence": None,
+        }
+
+
 def finish(
     args,
     spec,
@@ -89,8 +133,8 @@ def finish(
         evidence["scope"] = info["license_scope"]
         evidence["rehosting_allowed"] = info.get("rehosting_allowed", False)
     info = {
-        "label_type": "states",
-        "default_label": labels[0],
+        "label_type": "states" if labels else "cps",
+        "default_label": labels[0] if labels else None,
         "label_origin": "human",
         "label_descriptions": {c: c for c in labels},
         "null_states": null_states,
@@ -104,9 +148,15 @@ def finish(
     rai = {
         "dataCollection": collection,
         "dataAnnotationProtocol": annotation,
-        "dataAnnotationAnalysis": "Measured segment counts, missing share and state recurrence "
-        "are reported per track and series. No independent annotator tracks are available; "
-        "inter-annotator agreement cannot be computed.",
+        "dataAnnotationAnalysis": (
+            "Measured segment counts, missing share and state recurrence "
+            "are reported per track and series. No independent annotator tracks are available; "
+            "inter-annotator agreement cannot be computed."
+            if labels
+            else "Boundary counts and annotation coverage are reported per series. Semantic "
+            "state recurrence is undefined for boundary-only labels. Independent annotator "
+            "tracks are not available; inter-annotator agreement cannot be computed."
+        ),
         "dataPreprocessingProtocol": conversion,
         "dataLimitations": limitations,
         "dataBiases": biases,
@@ -133,8 +183,8 @@ def finish(
         keywords=[
             "time series segmentation",
             "change point detection",
-            "state detection",
-        ],
+        ]
+        + (["state detection"] if labels else []),
         derived_from=[{"@id": source, "name": title}]
         + (
             [{"@id": info["reference_doi"], "name": "Source publication"}]
@@ -158,7 +208,7 @@ def finish(
         f"| Length min / median / max | {measured['length_min']} / "
         f"{measured['length_median']:g} / {measured['length_max']} |",
         f"| Channels | {len(spec.channels)} |",
-        f"| Sampling | {spec.sampling_rate_hz or 'not specified'} Hz |",
+        f"| Sampling | {f'{spec.sampling_rate_hz:g} Hz' if spec.sampling_rate_hz else 'irregular or unspecified'} |",
     ]
     track_table = [
         "| Track | Segments | Series with recurrent states | Unlabelled share |",
@@ -170,6 +220,27 @@ def finish(
             f"{v['series_with_recurrence']}/{measured['n_series']} | "
             f"{v['missing_share']:.3%} |"
         )
+    label_footer = (
+        "\n\nMissing ground truth uses -1. Null/transition classes stay ordinary "
+        "states unless the source explicitly excludes them. Recurrence counts "
+        "a state appearing in two or more separated segments within one series; "
+        "missing labels are excluded. Per-series statistics are in tsseg.json."
+    )
+    if not labels:
+        track_table = [
+            "| Annotator track | Annotated series | Change points |",
+            "|---|---|---|",
+        ]
+        for annotator, values in measured.get("cp_annotations", {}).items():
+            track_table.append(
+                f"| {annotator} | {values['annotated_series']} | {values['change_points']} |"
+            )
+        label_footer = (
+            "\n\nBoundaries are zero-based indices of the first sample of a new segment. "
+            "No semantic states, null states or recurrence claims are invented. "
+            "A null CP list means no exact annotation is available; an empty list "
+            "means the source annotates no change. Per-series counts are in tsseg.json."
+        )
     license_text = (
         f"{license_spdx}. Verified at the primary source on 2026-10-18: "
         f"[{license_evidence}]({license_evidence}). Conversion code: MIT."
@@ -179,18 +250,13 @@ def finish(
     card = {
         "pretty_name": title,
         "hf_license": info.get("hf_license", license_spdx.lower()),
-        "tags": ["time-series", "state-detection", "change-point-detection", "tsseg"],
+        "tags": ["time-series", "change-point-detection", "tsseg"]
+        + (["state-detection"] if labels else []),
         "size_category": "n<1K",
         "annotations_creators": ["expert-generated"],
         "summary": description,
         "facts": "\n".join(facts),
-        "labels": annotation
-        + "\n\n"
-        + "\n".join(track_table)
-        + "\n\nMissing ground truth uses -1. Null/transition classes stay ordinary "
-        "states unless the source explicitly excludes them. Recurrence counts "
-        "a state appearing in two or more separated segments within one series; "
-        "missing labels are excluded. Per-series statistics are in tsseg.json.",
+        "labels": annotation + "\n\n" + "\n".join(track_table) + label_footer,
         "annotation": annotation + " No independent annotator tracks are available; "
         "inter-annotator agreement cannot be computed.",
         "conversion": conversion + f"\n\nSource SHA256: `{sha256}`. "

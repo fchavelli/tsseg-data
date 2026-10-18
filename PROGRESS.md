@@ -5,6 +5,20 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / RIPE Atlas RTT: all 50 measured source traces, 408,087 RTT
+  values in milliseconds, lengths 1,646 / 8,501 median / 12,001, and all
+  **1,047 manual change point markers**. No synthetic traces from the same
+  repository are included. No semantic states or recurrence are claimed.
+  Native source order and two timestamp formats retained; observations are
+  irregular around four minutes apart, including four short backward steps and
+  gaps up to 18,003 s. One released annotation track has no per-person IDs or
+  agreement statistic. Pinned source revision `d090227f1e6deb158ac0d5c06966318d5e163d83`,
+  archive SHA256 `4c653cf6f840bdf85816c77b1b5b73de01cb36ceebbe54a1ebca15119fac275b`.
+  Repository MIT licence and RIPE Atlas terms v3.5 art. 4.5 checked on
+  2026-10-18: **tier C/source-only** pending upstream permission; see
+  `docs/licenses/rtt-ripe-atlas-labelled.md`. Raw 9.3 MiB, validation 0 errors /
+  0 warnings.
+
 - [x] Batch 2 / Petrobras 3W 2.0.0: all **1,119 measured** source instances
   by default, all 27 channels at provider-interpolated 1 Hz, 32,872,250
   observations, lengths 5,215 / 21,354 median / 768,314. Source registry
@@ -339,9 +353,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 25 builders remain after the
-  three pilots, nine batch-1 and thirteen batch-2 source builders. Next: batch 2
-  (including VFDB), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 24 builders remain after the
+  three pilots, nine batch-1 and fourteen batch-2 source builders. Next: batch 2
+  (neuroblastoma-cnv onward), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.
