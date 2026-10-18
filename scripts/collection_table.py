@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "neuroblastoma-cnv": "builder + validated build (575 profiles; weak region constraints only)",
     "rtt-ripe-atlas-labelled": "builder + validated local build (50 measured traces; RIPE rights hold)",
     "petrobras-3w": "builder + validated build (all 1,119 measured instances; two label tracks)",
     "uci-gas-dynamic-mixtures": "builder + validated local build (both mixtures; source licence conflict)",

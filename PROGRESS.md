@@ -5,6 +5,21 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Neuroblastoma: all 575 native profiles, split into 13,800
+  profile/chromosome series, 4,616,846 probe values; lengths 2 / 149 median /
+  5,937. All 3,418 expert regions preserved (2,845 normal = zero changes,
+  573 breakpoint = at least one change), covering 3,418 chromosome series.
+  These are weak genomic constraints: no exact CP, dense state, consensus or
+  recurrence is invented. Unannotated positions remain unconstrained; normal
+  is an ordinary zero-change constraint. Native region endpoints are preserved
+  without inventing an inclusion convention. Float64 normalized logratios and
+  irregular integer base-pair coordinates retained; no missing values or duplicate
+  positions. GPL-3 package terms verified at primary CRAN on 2026-10-18;
+  version 2023.9.3 SHA256
+  `3076d317455067bf55d6475119472ec4116461890624777bb1fc90d5b3f6c2a2`.
+  Reproducible pure Python RData reader declared in build dependencies; no R
+  source code executed. Raw 7.9 MiB, build 38 MiB. Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / RIPE Atlas RTT: all 50 measured source traces, 408,087 RTT
   values in milliseconds, lengths 1,646 / 8,501 median / 12,001, and all
   **1,047 manual change point markers**. No synthetic traces from the same
@@ -353,9 +368,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 24 builders remain after the
-  three pilots, nine batch-1 and fourteen batch-2 source builders. Next: batch 2
-  (neuroblastoma-cnv onward), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 23 builders remain after the
+  three pilots, nine batch-1 and fifteen batch-2 source builders. Next: batch 2
+  (lund2013-eye onward), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.

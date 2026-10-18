@@ -15,7 +15,7 @@ dependencies = ["numpy>=1.24", "pyarrow>=14"]
 
 [project.optional-dependencies]
 # Everything the builders need (download, decode the source formats, write Parquet).
-build = ["pandas>=2.0", "h5py>=3.8", "pooch>=1.7", "pyyaml>=6", "scipy>=1.10", "wfdb==4.3.1"]
+build = ["pandas>=2.0", "h5py>=3.8", "pooch>=1.7", "pyyaml>=6", "scipy>=1.10", "wfdb==4.3.1", "rdata==1.0.0", "xarray==2024.1.1"]
 # Validation of the Croissant files (same library as the NeurIPS checker).
 validate = ["mlcroissant>=1.1"]
 

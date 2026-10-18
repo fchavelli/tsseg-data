@@ -101,7 +101,7 @@ the authors allow re-hosting.
 | `tcpd`: Turing Change Point Dataset (TCPD) | generic_cpd | CPD | mixed per series (CC BY, CC0, GPL-2.0, OGL, MIT, US PD; 9 not redistributable) (C) | planned; source-only builder until rights are clarified |
 | `mozilla-perf-cpd-annotations`: Mozilla performance time series with multi-annotator change points (Besbes & Costa) | generic_cpd | CPD | CC-BY-4.0 (A) | builder + validated build |
 | `rtt-ripe-atlas-labelled`: RTT change detection dataset (RIPE Atlas, manual labels), Shao et al. | generic_cpd | CPD | MIT (repository); RIPE Atlas data under RIPE NCC terms (C) | builder + validated local build (50 measured traces; RIPE rights hold); source-only builder until rights are clarified |
-| `neuroblastoma-cnv`: Neuroblastoma copy number profiles with breakpoint annotations | generic_cpd | CPD | GPL-3.0 (B) | planned |
+| `neuroblastoma-cnv`: Neuroblastoma copy number profiles with breakpoint annotations | generic_cpd | CPD | GPL-3.0 (B) | builder + validated build (575 profiles; weak region constraints only) |
 | `calms21`: Caltech Mouse Social Interactions (CalMS21) | ethology | SD | CC-BY-4.0 (A) | planned |
 | `fly-vs-fly`: Fly vs. Fly (Boy meets boy, Aggression, Courtship) | ethology | SD | CC0-1.0 (A) | planned |
 | `ais-fishing-semseg`: Dataset for Semantic Segmentation of Fishing Trajectories (128 AIS trajectories) | maritime | SD | CC-BY-4.0 (A) | planned |
