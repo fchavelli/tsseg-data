@@ -179,17 +179,28 @@ def remote_extract(rz: RemoteZip, name: str, dest: Path) -> int:
     crc, fetched = 0, 0
     tmp = dest.with_suffix(dest.suffix + ".part")
     dest.parent.mkdir(parents=True, exist_ok=True)
-    with urllib.request.urlopen(req) as r, open(tmp, "wb") as f:
-        for b in iter(lambda: r.read(1 << 20), b""):
-            fetched += len(b)
-            out = dec.decompress(b) if dec else b
-            crc = zlib.crc32(out, crc)
-            f.write(out)
-        if dec:
-            out = dec.flush()
-            crc = zlib.crc32(out, crc)
-            f.write(out)
-    if crc != m["crc"]:
+    written = 0
+    with urllib.request.urlopen(req) as r:
+        expected_range = f"bytes {off}-{off + m['csize'] - 1}/{rz.size}"
+        if r.status != 206 or r.headers.get("Content-Range") != expected_range:
+            raise RuntimeError("server did not return the requested ZIP member range")
+        with open(tmp, "wb") as f:
+            for b in iter(lambda: r.read(1 << 20), b""):
+                fetched += len(b)
+                if fetched > m["csize"]:
+                    raise RuntimeError(f"ZIP member compressed size exceeded: {name}")
+                out = dec.decompress(b) if dec else b
+                written += len(out)
+                if written > m["usize"]:
+                    raise RuntimeError(f"ZIP member expanded size exceeded: {name}")
+                crc = zlib.crc32(out, crc)
+                f.write(out)
+            if dec:
+                out = dec.flush()
+                written += len(out)
+                crc = zlib.crc32(out, crc)
+                f.write(out)
+    if crc != m["crc"] or fetched != m["csize"] or written != m["usize"]:
         tmp.unlink()
         raise RuntimeError(f"CRC mismatch for {name}")
     tmp.rename(dest)

@@ -9,10 +9,11 @@ Status: **done** (satisfied for every dataset built so far), **to do** (work
 planned, not blocking yet), **blocking** (the submission cannot be made, or a
 dataset must leave the paper, until it is solved).
 
-Built so far: `mozilla-perf-cpd-annotations`, `opportunity`, `dreem-dod-h`
-(3 of 25 nights). The other 47 datasets of `registry/shortlist.yaml` have no
-builder yet: every "done" below applies to them only once their builder passes
-`scripts/validate.py`.
+Built locally so far: 35 selected dataset builders (3 pilots, 9 batch-1, 23
+batch-2), each validated with zero errors and warnings. `dreem-dod-h` now covers
+all 25 nights. `tcpd` covers 27 of 37 measured source signals; ten external
+signals remain to be reconstructed. Every "done" below applies to a dataset
+only once its builder passes `scripts/validate.py`.
 
 ## 1. Hosting
 
@@ -85,10 +86,13 @@ paper and remains an optional source-only builder.
 | `bee-dance` | C | no license, citation requested | **blocking**: contact Oh et al. |
 | `tcpd` | C | mixed per series; 9 series not redistributable | **blocking**: contact van den Burg & Williams, or re-host the redistributable series only |
 | `mocap` | C for labelled product | CMU motion terms permit redistribution; Barbič labels have no explicit licence | **blocking**: source-only pending annotation permission |
+| `hapt` | C pending clarification | Primary archive README prohibits commercial use despite the UCI CC BY 4.0 badge | **blocking**: clarify conflicting terms; docs/licenses/hapt.md |
+| `uci-gas-dynamic-mixtures` | C pending clarification | Primary page combines CC BY footer with research-only terms | **blocking**: clarify conflicting terms; docs/licenses/uci-gas-dynamic-mixtures.md |
+| `rtt-ripe-atlas-labelled` | C pending clarification | RIPE NCC terms require permission for commercial use of measurements | **blocking**: clarify rights; docs/licenses/rtt-ripe-atlas-labelled.md |
+| `swimming-smartwatch` | C | No explicit data licence at the primary source | **blocking**: contact authors; docs/licenses/swimming-smartwatch.md |
 | `wesad` | C | Siegen allows scientific, non-commercial use but grants no explicit redistribution right | **blocking**: source-only builder; contact the Siegen authors |
 
-Also to check before re-hosting: `rtt-ripe-atlas-labelled` (RIPE NCC terms on the
-measurements), `bimacs` (RGB-D for scientific use: re-host only CC0 parts), `has`
+Also to check before re-hosting: `bimacs` (RGB-D for scientific use: re-host only CC0 parts), `has`
 (remove GPS columns), `bebe` (per-species licenses).
 
 ## 7. Description of the collection

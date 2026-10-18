@@ -67,7 +67,7 @@ the authors allow re-hosting.
 | `skab`: Skoltech Anomaly Benchmark (SKAB) | industry_energy | CPD | GPL-3.0 (B) | builder + validated build (all 129 source CP markers) |
 | `mocap`: CMU MoCap subject 86 — segmentation ground truth (Barbič et al. 2004) | mocap_surgery_assembly | CPD | CMU motion terms; Barbič labels unlicensed (C) | builder + validated local build (14 Barbič trials); source-only builder until rights are clarified |
 | `sleep-edfx`: Sleep-EDF Database Expanded | physio | SD | ODC-By-1.0 (A) | planned |
-| `dreem-dod-h`: Dreem Open Dataset — Healthy (DOD-H) | physio | SD | MIT (A) | builder + validated build (3 of 25 nights) |
+| `dreem-dod-h`: Dreem Open Dataset — Healthy (DOD-H) | physio | SD | MIT (A) | builder + validated build (25 of 25 nights) |
 | `mitdb`: MIT-BIH Arrhythmia Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (48 two-lead ECG records; rhythm + sparse beats) |
 | `vfdb`: MIT-BIH Malignant Ventricular Ectopy Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (22 two-lead ECG records; distinct rhythm/noise tracks) |
 | `afdb`: MIT-BIH Atrial Fibrillation Database | physio | SD | ODC-By-1.0 (A) | builder + validated build (23 complete two-lead ECG records) |

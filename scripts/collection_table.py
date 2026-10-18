@@ -52,7 +52,7 @@ STATUS = {  # id -> status text, for datasets beyond "planned"
     "usc-had": "builder + validated local build (70 artificial CPD series)",
     "mozilla-perf-cpd-annotations": "builder + validated build",
     "opportunity": "builder + validated build",
-    "dreem-dod-h": "builder + validated build (3 of 25 nights)",
+    "dreem-dod-h": "builder + validated build (25 of 25 nights)",
 }
 TASK = {"sd": "SD", "cpd": "CPD", "both": "SD + CPD"}
 # English wording for registry fields written in French (the registry is a copy).

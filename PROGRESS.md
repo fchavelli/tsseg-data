@@ -496,9 +496,9 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
   configs at the same rate); a shifted label is caught. The 3 datasets rebuilt
   from the pilot raw cache and valid (0 error, 0 warning, 7 s, 1.2 GB RAM).
 
-## Sizes (build/ vs pilot/out)
+## Pilot sizes before the full Dreem build
 
-| Dataset | build/ | pilot/out |
+| Dataset | Pilot build | pilot/out |
 |---|---|---|
 | mozilla-perf-cpd-annotations | 0.8 MB (1 part) | 3.8 MB (174 files) |
 | opportunity | 16 MiB default + 184 MiB full | 235 MB |
@@ -517,9 +517,20 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.
   Do not treat method predictions or visually chosen changes as ground truth.
-- [ ] Dreem: the 22 other nights (`--all-records`, ~20 GB download, ~7 GB of
-  Parquet `full`); the record_id of `63b799f6...` (lights off at 60) is unknown
-  until its h5 is read.
+- [x] Dreem: all 25 nights built with `--all-records` and validated (0 errors,
+  0 warnings; 49 checksummed files, 44 Parquet parts). All 25 H5 files and 125
+  scorer JSONs are SHA256-pinned. The full/native config has 184,987,500 samples
+  across 16 channels at 250 Hz; the default has 73,995,000 samples across four
+  resampled channels at 100 Hz. Full-series lengths: 4,650,000 / 7,395,000 /
+  8,940,000 (min / median / max). Consensus: 2,649 segments, recurrence in all
+  25 nights, no missing epochs within evaluation windows. Mean pairwise scorer
+  kappa 0.701, ARI 0.593, transition F1 within one epoch 0.540. The file
+  `5bf0f969-304c-581e-949c-50c108f62846.h5` has record_id
+  `63b799f6-8a4f-4224-8797-ea971f78fb53`, so its lights-off cut starts at
+  epoch 60. Native/default Parquet: 9.30 / 0.94 GB. The 20 GB raw cache was
+  deleted after successful validation to preserve disk space; the pilot raw
+  cache remains untouched. Source licence confirmed at the primary Zenodo
+  deposit (MIT, deposited by paper co-author Valentin Thorey).
 - [ ] Verify against the papers: Mozilla author list (arXiv:2606.18377);
   Dreem DOD-H acquisition site and scorer details (Guillot et al. 2020), BibTeX
   volume / pages of Chavarriaga 2013 and Guillot 2020.

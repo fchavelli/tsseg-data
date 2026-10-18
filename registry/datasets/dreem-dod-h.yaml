@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+# Measured from the complete local build; full/native configuration unless noted.
 id: dreem-dod-h
 name: "Dreem Open Dataset — Healthy (DOD-H)"
 domain: "physio"
@@ -9,24 +9,24 @@ citation: "Guillot et al., IEEE TNSRE 28(9), 2020 (Dreem Open Datasets)"
 license: "MIT"
 license_url: "https://opensource.org/licenses/MIT"
 license_tier: "A"
-license_verified: "2026-10-17, API Zenodo (mit-license) ; dépôt GitHub Dreem-Organization/dreem-learning-open sans licence de données distincte"
+license_verified: "2026-10-18, https://zenodo.org/records/15900394 (MIT); depositor Valentin Thorey is a paper co-author and Dreem-Organization links the deposit"
 n_series: 25
-length: {min: null, median: null, max: null}
-n_channels: null
+length: {min: 4650000, median: 7395000, max: 8940000}
+n_channels: 16
 sampling_rate_hz: 250
 label_type: "multi_track"
 n_states: 5
 n_annotators: 5
 label_origin: "human"
-unlabeled_regions: "oui : stade -1 (non scoré)"
+unlabeled_regions: "Consensus: none inside the evaluation window; individual scorers and source H5 retain rare -1 unscored epochs"
 continuous: true
 access: "direct"
-size: "21.9 GB (dodh.zip)"
+size: "21.9 GB source ZIP; local Parquet 0.94 GB default + 9.30 GB full"
 in_tsseg_bench: false
 fm_pretraining: "unknown"
 value: "high"
-value_reason: "PSG de sujets sains scorées par 5 experts indépendants : référence multi-annotateurs du sleep staging, licence permissive"
+value_reason: "Healthy-subject PSG scored by five independent experts; multi-annotator sleep staging with a permissive source license"
 effort: "low"
-confidence: "medium"
-notes: "Fichiers .h5 (hypnogrammes + signaux EEG/EOG/EMG/ECG). 25 sujets et 5 scoreurs d'après Guillot et al. 2020 (non relu ici) ; 250 Hz à confirmer."
+confidence: "high"
+notes: "All 25 H5 nights and 125 scorer files SHA256-pinned. Native full: 16 channels at 250 Hz, 184987500 samples. Default: 4 resampled channels at 100 Hz, 73995000 samples. Consensus: 2649 segments, recurrence in 25/25 series, 0 missing within evaluation windows. See build/dreem-dod-h/tsseg.json for each annotation track and each night."
 rejected: null
