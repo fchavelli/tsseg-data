@@ -5,6 +5,24 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Lund 2013: **34 distinct article trials**, stored as 39
+  series (29 identical-signal expert pairs + five unequal trials × two native
+  copies). Trial/participant/annotator IDs in index prevent treating copies as
+  independent; split and uncertainty grouping must use trial/participant IDs.
+  All four measured channels (gaze x/y and horizontal/vertical pupil), 500 Hz,
+  119,017 stored samples, lengths 453 / 2,823 median / 4,990. MN/RA labels
+  retained; provider Zemblys2018 correction changes 75 MN labels and complete
+  original/corrected arrays remain auxiliary. Undefined 6 and blink 5 are ordinary
+  states. Paired consensus requires exact agreement (disagreement -1); individual
+  copies use their one available expert, unavailable track -1. Consensus has
+  2,508 segments, recurrence 39/39 stored copies, 6.7058% missing labels.
+  Agreement on 88,749 exact paired samples: 91.0072%, Cohen kappa 0.84585;
+  no agreement is invented for unequal copies. Native timestamps retained,
+  11,447 missing timestamps remain NaN. GPL-3 explicitly covers data in primary
+  README.docx (checked 2026-10-18). Pinned revision `3e12416ab3fd6254c81811cf03f8e5d67c5d7129`,
+  SHA256 `a6ebfaf3eb1a7bc4dcee64d6952c0b508eb2127f0174bf084d92297f4bb1eb1a`.
+  Raw 85 MiB, build 1.6 MiB. Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / Neuroblastoma: all 575 native profiles, split into 13,800
   profile/chromosome series, 4,616,846 probe values; lengths 2 / 149 median /
   5,937. All 3,418 expert regions preserved (2,845 normal = zero changes,
@@ -368,9 +386,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 23 builders remain after the
-  three pilots, nine batch-1 and fifteen batch-2 source builders. Next: batch 2
-  (lund2013-eye onward), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 22 builders remain after the
+  three pilots, nine batch-1 and sixteen batch-2 source builders. Next: batch 2
+  (swimming-smartwatch onward), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.
