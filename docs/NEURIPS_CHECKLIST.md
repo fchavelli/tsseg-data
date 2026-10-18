@@ -34,7 +34,7 @@ builder yet: every "done" below applies to them only once their builder passes
 | `license` (URL of a known license) | done for cleared datasets; **blocking** for source-only builds | SPDX/primary licence URL for cleared datasets. Source-only cards explicitly record unresolved rights; a primary page documenting absence of terms is not a redistribution licence. |
 | `conformsTo` | done | Croissant 1.1 and RAI 1.0 (decided 2026-10-18, as the 2026 guidelines' example); list columns use the 1.1 `isArray` / `arrayShape` instead of the deprecated `repeated`. |
 | `distribution`: FileObject (`@id`, `contentUrl`, `encodingFormat`, sha256) and FileSet (`@id`, `includes`, `encodingFormat`) | done (local paths) | `index.parquet`, auxiliary tables (FileObject, sha256); `data/<config>/*.parquet` (FileSet). On HF, `contentUrl` must become absolute (or a `containedIn` repository FileObject) and be re-validated. |
-| `recordSet` with `field` (`@id`, `dataType`, `source`) | done | One record set per config, `index`, auxiliary tables; list columns marked `repeated`; fields generated from the Parquet schemas and checked against them by `scripts/validate.py`. |
+| `recordSet` with `field` (`@id`, `dataType`, `source`) | done | One record set per config, `index`, auxiliary tables; list columns use Croissant 1.1 `isArray` / `arrayShape`; fields generated from the Parquet schemas and checked against them by `scripts/validate.py`. |
 | Croissant file valid (desk rejection otherwise) | done locally, to do online | `scripts/validate.py` loads each file with mlcroissant 1.1.1 (the checker's library) without error or warning and reads records from an excerpt. The online checker (HF space `JoaquinVanschoren/croissant-checker`) needs public URLs: run it well before the deadline. |
 | Data loadable automatically | done locally, partial | Records are read from a one-row excerpt: mlcroissant turns every list value into a Python object, which takes hours and tens of GB on the long series. The online checker may time out on `dreem-dod-h` and `opportunity/full` ("may not be possible for all datasets"). |
 
@@ -47,7 +47,7 @@ builder yet: every "done" below applies to them only once their builder passes
 | `rai:personalSensitiveInformation` | done | idem (health data flagged for Dreem) |
 | `rai:dataUseCases` (construct validity, validated uses) | done, to deepen | idem; the paper should state per dataset what the labels measure |
 | `rai:dataSocialImpact` | done | idem |
-| `rai:hasSyntheticData` (boolean) | done | `false` for the 3 built; the 2 synthetic datasets of the shortlist will need the generator and seeds in the collection activity |
+| `rai:hasSyntheticData` (boolean) | done | Set per dataset. Fully generated corpora were removed from the shortlist on 2026-10-18; constructed series such as TSSB and USC-HAD remain explicitly documented. |
 | `prov:wasDerivedFrom` (primary source URI; DOI when established) | done | explicit HTTP(S) primary source URL required; primary DOI preferred when established. NeurIPS does not require every source to have a DOI (checked 2026-10-18). Validator rejects the converted dataset destination and planned `fchavelli` HF destinations as sole provenance; no invented DOI |
 | `prov:wasGeneratedBy` (collection, annotation, preprocessing activities, with teams and platforms) | done | three `prov:Activity` entries per dataset; preprocessing points to the builder and the pinned source checksums |
 | RAI topics touched in the main paper, details in appendix or Croissant | to do | paper not written |
@@ -85,6 +85,7 @@ paper and remains an optional source-only builder.
 | `bee-dance` | C | no license, citation requested | **blocking**: contact Oh et al. |
 | `tcpd` | C | mixed per series; 9 series not redistributable | **blocking**: contact van den Burg & Williams, or re-host the redistributable series only |
 | `mocap` | C for labelled product | CMU motion terms permit redistribution; Barbič labels have no explicit licence | **blocking**: source-only pending annotation permission |
+| `wesad` | C | Siegen allows scientific, non-commercial use but grants no explicit redistribution right | **blocking**: source-only builder; contact the Siegen authors |
 
 Also to check before re-hosting: `rtt-ripe-atlas-labelled` (RIPE NCC terms on the
 measurements), `bimacs` (RGB-D for scientific use: re-host only CC0 parts), `has`

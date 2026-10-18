@@ -5,6 +5,19 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Selection review (2026-10-18): removed the fully generated Time2State and
+  PaTSS corpora from the active shortlist. Retained TSSB and USC-HAD constructions
+  from measured recordings, as requested. The target remains about 50 datasets,
+  without an interim hard cap. Checked tsseg-exp issue #1: MIT-BIH Arrhythmia and
+  Sleep-EDFx were already selected; added VFDB (22 rhythm-annotated ECG records,
+  ODC-By-1.0) and WESAD (15-subject stress/affect dataset, source-only under
+  Siegen's scientific non-commercial terms). Google Trends `mail_week.csv` is a
+  separate real-data candidate in the PaTSS deposit; reference CP/SD labels are
+  not established. Rbeast's `beach` example is another signal, not verified
+  benchmark ground truth. The issue's example loaders make univariate views;
+  builders will preserve the original multivariate signals. Sources and caveats
+  are in registry/shortlist.yaml.
+
 - [x] Batch 1 final gate: all **12** local builds (3 pilots + 9 batch-1 datasets)
   pass full `scripts/validate.py` with **0 errors / 0 warnings**, including
   SHA256SUMS, Parquet, chunks, labels/CPs, configuration identity and Croissant
@@ -178,8 +191,12 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 ## To do
 
 - [ ] Decision 7 (below) remains for user review; 38 builders remain after the
-  three pilots and nine completed batch-1 source builders. Next: batch 2 and
-  tier C author contacts; TSSB upstream rights now also require clarification.
+  three pilots and nine completed batch-1 source builders. Next: batch 2
+  (including VFDB), WESAD in the heavy source-only batch, and tier C author
+  contacts; TSSB upstream rights now also require clarification.
+- [ ] Verify whether the real Google Trends series in the PaTSS deposit has
+  independent reference boundaries, or find a better labelled primary source.
+  Do not treat method predictions or visually chosen changes as ground truth.
 - [ ] Dreem: the 22 other nights (`--all-records`, ~20 GB download, ~7 GB of
   Parquet `full`); the record_id of `63b799f6...` (lights off at 60) is unknown
   until its h5 is read.
@@ -212,5 +229,8 @@ Decided by the user on 2026-10-18:
 
 To validate:
 
-7. mlcroissant record reading is done on a one-row excerpt (full files are
-   checked by `validate.py` itself).
+7. Accept the local Croissant record read on a one-row excerpt: the full files
+   are checked by `validate.py` itself (SHA256, Parquet schemas and all rows),
+   while `mlcroissant` on a full long-series file has taken 433 s and 10.5 GB RAM.
+   Recommendation: keep this local split of checks, then run the official online
+   Croissant checker before publication; revise sharding if it times out.

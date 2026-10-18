@@ -23,9 +23,12 @@ annotation process and inter-annotator agreement.
 
 ## Format (version 1.1)
 
-- One Parquet row per series, signals and labels as list columns; part files of
-  about 256 MiB under `data/<config>/`; `index.parquet` with one row per series
-  (length, channels, split, label columns, annotators, change counts, files).
+- Each dataset has its own directory, one `index.parquet`, and one or more
+  Parquet part files per config under `data/<config>/` (about 256 MiB per part).
+  Each part file contains multiple rows. A row holds one series or one chunk,
+  with signals and labels as list columns; there is no file per row.
+  `index.parquet` has one row per series (length, channels, split, label
+  columns, annotators, change counts, files).
 - Series longer than 1 h at 10 Hz or more are stored in one-hour chunks
   (`series_id`, `chunk_idx`), concatenated back by the reader.
 - `-1` only where no ground truth exists (not scored, outside the protocol).
@@ -44,8 +47,9 @@ Details: `tsseg_data/format.py`. Reference reader: `tsseg_data/reader.py`.
 
 ## Datasets
 
-50 datasets selected from an inventory of about 370 (registry copied in
-`registry/`; selection criteria and license tiers below). Tiers: A = permissive,
+The evolving shortlist currently contains 50 datasets from an inventory of
+about 370; about 50 is the final target, not a fixed quota. Fully generated
+corpora are excluded. Selection criteria and license tiers are below. Tiers: A = permissive,
 re-hosted with attribution; B = share-alike or non-commercial, re-hosted under the
 same license; C = no license or "research only", built from the source only until
 the authors allow re-hosting.
@@ -65,11 +69,13 @@ the authors allow re-hosting.
 | `sleep-edfx`: Sleep-EDF Database Expanded | physio | SD | ODC-By-1.0 (A) | planned |
 | `dreem-dod-h`: Dreem Open Dataset — Healthy (DOD-H) | physio | SD | MIT (A) | builder + validated build (3 of 25 nights) |
 | `mitdb`: MIT-BIH Arrhythmia Database | physio | SD | ODC-By-1.0 (A) | planned |
+| `vfdb`: MIT-BIH Malignant Ventricular Ectopy Database | physio | SD | ODC-By-1.0 (A) | planned |
 | `afdb`: MIT-BIH Atrial Fibrillation Database | physio | SD | ODC-By-1.0 (A) | planned |
 | `helsinki-neonatal-eeg`: A dataset of neonatal EEG recordings with seizure annotations (Helsinki) | physio | SD | CC-BY-4.0 (A) | planned |
 | `noneeg`: Non-EEG Dataset for Assessment of Neurological Status | physio | SD | ODC-By-1.0 (A) | planned |
 | `ppg-dalia`: PPG-DaLiA: PPG dataset for motion compensation and heart rate estimation in Daily Life Activities | physio | SD | CC-BY-4.0 (A) | planned |
 | `eegmmidb`: EEG Motor Movement/Imagery Dataset | physio | SD | ODC-By-1.0 (A) | planned |
+| `wesad`: WESAD: Wearable Stress and Affect Detection | physio | SD | Siegen scientific, non-commercial use; redistribution not granted (C) | planned; source-only builder until the authors allow re-hosting |
 | `daphnet-fog`: Daphnet Freezing of Gait | physio | SD | CC-BY-4.0 (A) | planned |
 | `mosad`: MOSAD — Mobile Sensing Human Activity Data Set | har | SD | CC-BY-SA-3.0 (B) | planned |
 | `opportunity`: OPPORTUNITY Activity Recognition | har | SD | CC-BY-4.0 (A) | builder + validated build |
@@ -96,8 +102,6 @@ the authors allow re-hosting.
 | `mozilla-perf-cpd-annotations`: Mozilla performance time series with multi-annotator change points (Besbes & Costa) | generic_cpd | CPD | CC-BY-4.0 (A) | builder + validated build |
 | `rtt-ripe-atlas-labelled`: RTT change detection dataset (RIPE Atlas, manual labels), Shao et al. | generic_cpd | CPD | MIT (repository); RIPE Atlas data under RIPE NCC terms (A) | planned |
 | `neuroblastoma-cnv`: Neuroblastoma copy number profiles with breakpoint annotations | generic_cpd | CPD | GPL-3.0 (B) | planned |
-| `time2state-synthetic`: Time2State / E2USD synthetic segmentation dataset | synthetic | SD | MIT (A) | planned |
-| `patss-synthetic`: PaTSS replication data — synthetic series with gradual state transitions (+ Google Trends) | synthetic | SD | Apache-2.0 (A) | planned |
 | `calms21`: Caltech Mouse Social Interactions (CalMS21) | ethology | SD | CC-BY-4.0 (A) | planned |
 | `fly-vs-fly`: Fly vs. Fly (Boy meets boy, Aggression, Courtship) | ethology | SD | CC0-1.0 (A) | planned |
 | `ais-fishing-semseg`: Dataset for Semantic Segmentation of Fishing Trajectories (128 AIS trajectories) | maritime | SD | CC-BY-4.0 (A) | planned |
@@ -108,7 +112,7 @@ the authors allow re-hosting.
 Inclusion criteria: continuous recordings (no pre-cut windows unless the raw
 recording exists); dense state labels (SD and CPD) or annotated change points
 (CPD only), at least two segments; documented label provenance, tagged as
-`protocol`, `human`, `derived`, `concatenation` or `simulated`. Licenses are
+`protocol`, `human`, `derived` or `concatenation`. Licenses are
 checked at the primary source, never at a repackager.
 
 ## Usage

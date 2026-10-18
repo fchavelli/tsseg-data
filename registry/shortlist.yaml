@@ -1,7 +1,7 @@
 # Liste courte — phase 2 (qualification) du projet « jeux CPD / SD ».
 # Source : registry/*.yaml (non modifiés). Rédigé le 2026-10-17.
 # Domaines de la liste courte (équilibre) : physio, har, ethology, industry_energy,
-# mocap_surgery_assembly, generic_cpd, synthetic. Le domaine fin reste dans le registre.
+# mocap_surgery_assembly, generic_cpd. Le domaine fin reste dans le registre.
 # task : sd = labels d'états denses (utilisables aussi en CPD) ; cpd = CP annotés seuls.
 # license_check : rempli seulement si license_verified était faux/vide (aucun cas)
 # ou si une vérification restait ouverte dans le registre.
@@ -16,7 +16,8 @@ progress:
     - "vérification de licence : aucun jeu retenu avec license_verified vide ; contrôle ouvert RIPE Atlas tenté (non concluant)"
     - runners_up
     - "2026-10-17, décision utilisateur : JIGSAWS ×3 (D) retirés de la nouvelle collection (rosmag40 suffit pour la chirurgie) ; (correction 2026-10-18 : JIGSAWS ne figure PAS dans TSB-SEG, seulement dans tsseg-exp ; donc simplement exclus). Jeux à contact auteur (tcpd, mocap, bee-dance, utsa, usc-had) gardés."
-    - "2026-10-17 : +5 jeux de la passe ciblée (calms21, fly-vs-fly, ais-fishing-semseg, ami-meeting-corpus, rsdf-china-forest) → 50 jeux"
+    - "2026-10-17 : +5 jeux de la passe ciblée (calms21, fly-vs-fly, ais-fishing-semseg, ami-meeting-corpus, rsdf-china-forest) → 50 jeux à cette date"
+    - "2026-10-18 : corpus entièrement synthétiques Time2State et PaTSS retirés ; VFDB et WESAD ajoutés après revue de l'issue tsseg-exp#1. Le nombre cible reste environ 50, sans quota strict."
   todo: []
 
 datasets:
@@ -154,6 +155,17 @@ datasets:
     risks: "beaucoup d'enregistrements à un seul rythme : filtrer ≥ 2 segments"
     subset: "enregistrements à ≥ 2 rythmes"
     contact_needed: false
+  - id: vfdb
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: ODC-By-1.0
+    license_tier: A
+    why: "22 ECG à changements de rythme ventriculaire annotés ; complète MIT-BIH Arrhythmia par des épisodes rares de TV, flutter et fibrillation"
+    risks: "une partie des enregistrements peut n'avoir qu'un seul rythme ; (NOISE est une annotation de qualité, pas un nouveau rythme ; préserver cette nuance)"
+    subset: "deux canaux ECG natifs ; documenter les séries à moins de deux segments"
+    contact_needed: false
   - id: afdb
     registry: physio.yaml
     domain: physio
@@ -210,6 +222,17 @@ datasets:
     risks: "segments de ~4 s ; signal EEG faible pour la tâche ; runs 1-2 à un seul état (exclure)"
     subset: "runs 3-14"
     contact_needed: false
+  - id: wesad
+    registry: physio.yaml
+    domain: physio
+    task: sd
+    label_type: states
+    license: "conditions Siegen : usage scientifique non commercial, sans autorisation explicite de redistribution"
+    license_tier: C
+    why: "stress et affect (baseline, stress, amusement) sur ECG et signaux portés multivariés ; domaine distinct de l'activité physique"
+    risks: "CGU tier C : builder depuis la source seulement, contact auteur nécessaire ; 2,5 Go, fréquences hétérogènes et labels de transition à classifier"
+    subset: "signaux poitrine et poignet conservés avec fréquences natives documentées"
+    contact_needed: true
   - id: daphnet-fog
     registry: physio.yaml
     domain: physio
@@ -499,28 +522,6 @@ datasets:
     risks: "labels par région (0 CP / ≥ 1 CP), pas des positions exactes : métrique dédiée nécessaire"
     subset: null
     contact_needed: false
-  - id: time2state-synthetic
-    registry: cpd_benchmarks.yaml
-    domain: synthetic
-    task: sd
-    label_type: states
-    license: MIT
-    license_tier: A
-    why: "synthétique SD de référence (Time2State, E2USD), états récurrents"
-    risks: "générateur TSAGen sans licence (données MIT via le dépôt)"
-    subset: null
-    contact_needed: false
-  - id: patss-synthetic
-    registry: cpd_benchmarks.yaml
-    domain: synthetic
-    task: sd
-    label_type: states
-    license: Apache-2.0
-    license_tier: A
-    why: "seul jeu à transitions graduelles annotées, générateur fourni"
-    risks: "535 Mo, 1 010 séries : sous-ensemble test (500) suffit"
-    subset: "500 séries test"
-    contact_needed: false
   # ---------------- lot 6 : passe ciblée (registry/gaps.yaml), ajout du 2026-10-17 ----------------
   - id: calms21
     registry: gaps.yaml
@@ -585,7 +586,6 @@ runners_up:
   - {id: chbmit, registry: physio.yaml, reason: "référence crises EEG mais 45,8 Go ; helsinki retenu à la place"}
   - {id: oxford-mouse-psg, registry: physio.yaml, reason: "vigilance de souris, 4 à 10 annotateurs ; pont physio/éthologie"}
   - {id: edb, registry: physio.yaml, reason: "épisodes ST annotés par deux cardiologues ; ECG déjà couvert"}
-  - {id: wesad, registry: physio.yaml, reason: "référence stress porté mais niveau C (CGU Siegen) ; ppg-dalia couvre"}
   - {id: hangtime-har, registry: har.yaml, reason: "basket multi-pistes CC BY ; 3 canaux seulement"}
   - {id: wear, registry: har.yaml, reason: "sport extérieur, NULL récurrent ; NC, recouvre HAR déjà dense"}
   - {id: sphere-challenge, registry: har.yaml, reason: "labels multi-annotateurs probabilistes ; licence gouvernementale NC"}
@@ -593,4 +593,17 @@ runners_up:
   - {id: care-to-compare, registry: industry_energy.yaml, reason: "SCADA éolien réel (B) ; labels de statut dérivés"}
   - {id: blued, registry: industry_energy.yaml, reason: "2 482 événements on/off (CPD dense) ; licence incohérente (C), 12 kHz"}
   - {id: gaze-in-wild, registry: motion_misc.yaml, reason: "œil + tête, 5 annotateurs, CC BY ; effort moyen, oculométrie déjà couverte"}
-  - {id: andi2-benchmark, registry: cpd_benchmarks.yaml, reason: "segmentation de diffusion simulée (CC BY) ; quota de générateurs atteint"}
+
+excluded:
+  - {id: time2state-synthetic, reason: "corpus entièrement généré ; hors collection de signaux mesurés"}
+  - {id: patss-synthetic, reason: "corpus entièrement généré ; la série réelle Google Trends sera examinée séparément"}
+  - {id: andi2-benchmark, reason: "corpus entièrement généré ; ancien runner-up"}
+
+review_candidates:
+  - id: google-trends-mail-week
+    source_url: https://doi.org/10.48804/G2YRDR
+    source_file: data/google_trends/mail_week.csv
+    other_candidate_source: https://github.com/zhaokg/Rbeast
+    other_candidate_note: "different monthly Google Trends series for 'beach', used as a method example"
+    status: "real signal available, segmentation ground truth not verified"
+    next_check: "inspect PaTSS file and paper for independent reference boundaries and verify Google-origin reuse terms; do not use model predictions as labels"

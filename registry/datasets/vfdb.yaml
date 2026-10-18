@@ -1,0 +1,32 @@
+# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry); reviewed 2026-10-18.
+id: vfdb
+name: "MIT-BIH Malignant Ventricular Ectopy Database"
+domain: "physio"
+task: "both"
+source_url: "https://physionet.org/content/vfdb/1.0.0/"
+doi: "10.13026/C22P44"
+citation: "Greenwald, MS thesis MIT, 1986"
+license: "ODC-By-1.0"
+license_url: "https://opendatacommons.org/licenses/by/1-0/"
+license_tier: "A"
+license_verified: "2026-10-18, https://physionet.org/content/vfdb/1.0.0/ (Open Data Commons Attribution 1.0)"
+n_series: 22
+length: {min: 525000, median: 525000, max: 525000}
+n_channels: 2
+sampling_rate_hz: 250
+label_type: "states"
+n_states: null
+n_annotators: null
+label_origin: "human"
+unlabeled_regions: "(NOISE marks signal quality; the previous rhythm continues per the provider; treatment in evaluation to decide at build time)"
+continuous: true
+access: "direct"
+size: "34.7 MB"
+in_tsseg_bench: false
+fm_pretraining: "unknown"
+value: "high"
+value_reason: "annotations de rythme uniquement (TV, flutter, FV, bruit…) : vrai jeu de segments, rare"
+effort: "low"
+confidence: "high"
+notes: "Source page: 22 recordings of about 30–35 min at 250 Hz; .atr contains rhythm-change annotations only. Counts and lengths to recompute from files. The previous rhythm continues during (NOISE, which must be represented separately from a new rhythm."
+rejected: null

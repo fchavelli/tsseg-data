@@ -38,6 +38,7 @@ LICENSE_EN = {
     "utsa": "none at the source",
     "usc-had": "none at the source",
     "mocap": "CMU motion terms; Barbič labels unlicensed",
+    "wesad": "Siegen scientific, non-commercial use; redistribution not granted",
     "bebe": "CC-BY-4.0 (repository); per-species licenses",
     "bee-dance": "none; citation requested",
     "tcpd": "mixed per series (CC BY, CC0, GPL-2.0, OGL, MIT, US PD; 9 not redistributable)",
