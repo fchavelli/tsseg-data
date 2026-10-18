@@ -102,7 +102,7 @@ the authors allow re-hosting.
 | `mozilla-perf-cpd-annotations`: Mozilla performance time series with multi-annotator change points (Besbes & Costa) | generic_cpd | CPD | CC-BY-4.0 (A) | builder + validated build |
 | `rtt-ripe-atlas-labelled`: RTT change detection dataset (RIPE Atlas, manual labels), Shao et al. | generic_cpd | CPD | MIT (repository); RIPE Atlas data under RIPE NCC terms (C) | builder + validated local build (50 measured traces; RIPE rights hold); source-only builder until rights are clarified |
 | `neuroblastoma-cnv`: Neuroblastoma copy number profiles with breakpoint annotations | generic_cpd | CPD | GPL-3.0 (B) | builder + validated build (575 profiles; weak region constraints only) |
-| `calms21`: Caltech Mouse Social Interactions (CalMS21) | ethology | SD | CC-BY-4.0 (A) | planned |
+| `calms21`: Caltech Mouse Social Interactions (CalMS21) | ethology | SD | CC-BY-4.0 (A) | builder + validated build (all 89 task-1 sequences; poses + confidence) |
 | `fly-vs-fly`: Fly vs. Fly (Boy meets boy, Aggression, Courtship) | ethology | SD | CC0-1.0 (A) | planned |
 | `ais-fishing-semseg`: Dataset for Semantic Segmentation of Fishing Trajectories (123 released AIS trips) | maritime | SD | CC-BY-4.0 (A) | builder + validated build (123 released trips; native phases + activity names) |
 | `ami-meeting-corpus`: AMI Meeting Corpus: diarisation, recurrent speakers (derived-feature track) | audio_speech | SD | CC-BY-4.0 (A) | planned |

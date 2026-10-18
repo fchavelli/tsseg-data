@@ -5,6 +5,20 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / CalMS21 task 1: all 89 sequences (70 train / 19 test),
+  769,845 frames at 30 Hz (507,738 / 262,107), lengths 96 / 7,115 median /
+  23,810. Default all 28 native body-point x/y coordinates for both mice; full
+  additionally retains 14 MARS confidence scores. Native source sequence keys,
+  expert ID 0 and train/test split retained. Four labels including ordinary
+  other/background 3; 6,431 segments, recurrence 88/89, no missing ground truth.
+  JSON streamed from ZIP one sequence at a time using declared ijson 3.4.0;
+  no pickle, downloaded code, learned features or video loaded. No interpolation,
+  confidence masking, normalisation or synthetic data. Scope explicitly task 1;
+  multiple-annotator task 2 and new-behavior task 3 are not silently claimed.
+  CC BY 4.0 verified at primary CaltechDATA on 2026-10-18; primary archive MD5
+  matched, SHA256 `f1cd2f46771cc3834020d187604da53e5ff330121f5a816146f14192fb0bf427`.
+  Raw 437 MiB, build 144 MiB; 17.0 s / RSS 323 MiB. Validation 0/0.
+
 - [x] Batch 2 / AIS fishing: full primary CSV has **123 released trips**, not
   the 128 claimed in filename/title, from 84 vessel-ID prefixes. All 1,026,279
   observations, ten numeric position/trajectory variables in float64, native
@@ -416,9 +430,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 20 builders remain after the
-  three pilots, nine batch-1 and eighteen batch-2 source builders. Next: batch 2
-  (calms21 onward), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 19 builders remain after the
+  three pilots, nine batch-1 and nineteen batch-2 source builders. Next: batch 2
+  (bimacs onward), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.
