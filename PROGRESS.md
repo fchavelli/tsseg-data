@@ -5,6 +5,24 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Bimacs body-pose view: all 540 trials, 221,108 frames,
+  lengths 134 / 394 median / 1,035. Default all 25 joints x/y (50 channels),
+  full adds 25 confidence scores. Left/right action targets stay separate,
+  not annotators/consensus: 7,058 / 6,484 segments, recurrence 534 / 539 of 540;
+  missing shares 0.405684% / 0.274979%. Idle 0 scored; 11 explicit source null
+  intervals map -1. Every source endpoint equals frame_count-1; documented
+  half-open bounds retained, final frame -1 for each hand (no invented extension).
+  All raw intervals retained auxiliary. 4,513 frames have 2–5 person detections,
+  contrary to the one-person format description; main signal is NaN there and
+  every ambiguous detection is auxiliary with source rank, without arbitrary
+  subject assignment. Native zero/zero-confidence joints otherwise unchanged.
+  Only two primary CC0 annotation/body-pose ZIPs needed; both SHA match published
+  hashes. No RGB-D downloaded. Mixed 15/30 fps cannot be assigned per trial from
+  these ZIPs; sampling_rate_hz=None and frame indices retained. Primary server
+  ignores HTTP Range (200); ~93 GiB image-archive metadata retrieval was stopped
+  before reading bodies. Raw 269 MiB, build 52 MiB; build 20.2 s / RSS 522 MiB.
+  Validation 0/0; terms verified at primary KIT site on 2026-10-18.
+
 - [x] Batch 2 / CalMS21 task 1: all 89 sequences (70 train / 19 test),
   769,845 frames at 30 Hz (507,738 / 262,107), lengths 96 / 7,115 median /
   23,810. Default all 28 native body-point x/y coordinates for both mice; full
@@ -430,9 +448,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 19 builders remain after the
-  three pilots, nine batch-1 and nineteen batch-2 source builders. Next: batch 2
-  (bimacs onward), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 18 builders remain after the
+  three pilots, nine batch-1 and twenty batch-2 source builders. Next: batch 2
+  (mosad and source-only tcpd/bee-dance), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.

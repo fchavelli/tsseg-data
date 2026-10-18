@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "bimacs": "builder + validated build (540 body-pose trials; separate hand tracks; frame clock)",
     "calms21": "builder + validated build (all 89 task-1 sequences; poses + confidence)",
     "ais-fishing-semseg": "builder + validated build (123 released trips; native phases + activity names)",
     "swimming-smartwatch": "builder + validated local build (206 sessions; seven classes; no source licence)",
