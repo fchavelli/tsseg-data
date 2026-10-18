@@ -5,6 +5,15 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Shared card metadata corrected after batch 2: `size_categories` now uses
+  the number of series, giving `1K<n<10K` for the 1,119 measured 3W series and
+  `10K<n<100K` for Neuroblastoma's 13,800 chromosome series. The shared
+  annotation text now acknowledges independent expert tracks and their
+  measured agreement for Lund and TCPD, instead of claiming they are absent.
+  All four affected builds were regenerated from cached, SHA-pinned sources;
+  each passes `scripts/validate.py` with 0 errors / 0 warnings. Other builders
+  have fewer than 1,000 series or use their own card generator.
+
 - [x] Batch 2 / Bee Dance source-only: all six original tracked trajectories,
   x/y/heading in float64; 4,966 samples, lengths 603 / 785.5 median / 1,125,
   three exact behavior names, 123 segments, recurrence 6/6, no missing labels.

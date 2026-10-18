@@ -98,6 +98,25 @@ class ChangePointStatistics:
         }
 
 
+def _size_category(n_series: int) -> str:
+    """Hugging Face dataset-card size category for one row per series."""
+    for upper, name in (
+        (1_000, "n<1K"),
+        (10_000, "1K<n<10K"),
+        (100_000, "10K<n<100K"),
+        (1_000_000, "100K<n<1M"),
+        (10_000_000, "1M<n<10M"),
+        (100_000_000, "10M<n<100M"),
+        (1_000_000_000, "100M<n<1B"),
+        (10_000_000_000, "1B<n<10B"),
+        (100_000_000_000, "10B<n<100B"),
+        (1_000_000_000_000, "100B<n<1T"),
+    ):
+        if n_series < upper:
+            return name
+    return "n>1T"
+
+
 def finish(
     args,
     spec,
@@ -145,18 +164,27 @@ def finish(
         "series_statistics": stats.rows,
         **(info or {}),
     }
+    annotation_analysis = (
+        "Measured segment counts, missing share and state recurrence are reported "
+        "per track and series."
+        if labels
+        else "Boundary counts and annotation coverage are reported per series. "
+        "Semantic state recurrence is undefined for boundary-only labels."
+    )
+    if info.get("agreement") is not None:
+        agreement_note = (
+            "Independent annotator tracks are retained; agreement methods and "
+            "measured results are reported in tsseg.json under agreement."
+        )
+    else:
+        agreement_note = (
+            "No independent annotator tracks are available; inter-annotator "
+            "agreement cannot be computed."
+        )
     rai = {
         "dataCollection": collection,
         "dataAnnotationProtocol": annotation,
-        "dataAnnotationAnalysis": (
-            "Measured segment counts, missing share and state recurrence "
-            "are reported per track and series. No independent annotator tracks are available; "
-            "inter-annotator agreement cannot be computed."
-            if labels
-            else "Boundary counts and annotation coverage are reported per series. Semantic "
-            "state recurrence is undefined for boundary-only labels. Independent annotator "
-            "tracks are not available; inter-annotator agreement cannot be computed."
-        ),
+        "dataAnnotationAnalysis": annotation_analysis + " " + agreement_note,
         "dataPreprocessingProtocol": conversion,
         "dataLimitations": limitations,
         "dataBiases": biases,
@@ -252,13 +280,12 @@ def finish(
         "hf_license": info.get("hf_license", license_spdx.lower()),
         "tags": ["time-series", "change-point-detection", "tsseg"]
         + (["state-detection"] if labels else []),
-        "size_category": "n<1K",
+        "size_category": _size_category(measured["n_series"]),
         "annotations_creators": ["expert-generated"],
         "summary": description,
         "facts": "\n".join(facts),
         "labels": annotation + "\n\n" + "\n".join(track_table) + label_footer,
-        "annotation": annotation + " No independent annotator tracks are available; "
-        "inter-annotator agreement cannot be computed.",
+        "annotation": annotation + " " + agreement_note,
         "conversion": conversion + f"\n\nSource SHA256: `{sha256}`. "
         f"Rebuild: `python -I builders/{spec.id}.py`.",
         "license": license_text,
