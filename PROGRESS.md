@@ -5,6 +5,22 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Pneumatic EOL: all 468 CSV files form 156 triplets, not
+  468 series. 4,751,340 native sensor samples and all 3,673 original PLC
+  events retained; never unpickle source alternatives. Main two-channel stream
+  uses exact sensor timestamp union (2,390,995 rows, lengths 430 / 16,650
+  median / 19,840), irregular despite nominal 100-Hz sensors. No interpolation
+  or nearest matching; repeated timestamps retain occurrence ranks. Native
+  source order preserved in streamed auxiliary (631 reversals, 214 duplicate
+  sensor timestamps). PLC steps-post labels only actual measurements: no
+  PLC-only rows/initial all-NaN idle state. 3,536 segments, recurrence 66/156
+  **only in state 0**; no nonzero state recurs, so SD coverage is limited.
+  Zero is an ordinary PLC state; no unlabelled samples. Two one-second PLC
+  filename differences explicitly mapped, with timestamp overlap verified;
+  no time shifts. Primary Mendeley v3 CC BY 4.0 verified 2026-10-18, all 468
+  primary SHA pins committed. Final cached build: 5.94 s, 277 MiB peak RSS,
+  one triplet in memory. Raw 100 MiB/build 41 MiB. Validation 0/0.
+
 - [x] Batch 2 / CNC Mill UMich: all 18 experiments, all 47 numeric channels
   at 10 Hz; 25,286 samples, lengths 462 / 1,341 median / 2,332; 158
   process segments, recurrence 14/18, no missing ground truth. All eleven
@@ -295,8 +311,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 28 builders remain after the
-  three pilots, nine batch-1 and ten batch-2 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 27 builders remain after the
+  three pilots, nine batch-1 and eleven batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
