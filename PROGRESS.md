@@ -5,6 +5,22 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Bee Dance source-only: all six original tracked trajectories,
+  x/y/heading in float64; 4,966 samples, lengths 603 / 785.5 median / 1,125,
+  three exact behavior names, 123 segments, recurrence 6/6, no missing labels.
+  Only label0.btf is scored, explicitly identified as GT by primary manual
+  section 4. Undocumented label1 in two sequences, tracking IDs, available
+  framestamps and interval-like text retained unscored auxiliary; no fabricated
+  second expert or consensus. Model outputs and executables never used as GT
+  or run. Native timestamps advance by 33 units, but physical unit/rate is not
+  established; sampling_rate_hz=None corrects unverified registry 30-Hz claim.
+  Sequence6 overlaps TCPD bee_waggle_6; not independent evaluation material.
+  Primary page/manual/archive have no redistribution licence: tier C/source-only,
+  citation requested, verified 2026-10-18; docs/licenses/bee-dance.md.
+  Archive SHA256 `9b1277fd38026570ecee6c5a5602439b0aae1264185abf41311ad6646387ccb0`,
+  MD5 also matches primary TCPD source expectation. Raw 3.5 MiB, build 180 KiB.
+  Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / TCPD source-only builder: all **27 bundled measured signals**,
   6,660 observations, lengths 15 / 205 median / 816; all native dimensions retained
   (run_log two channels; absent dimensions NaN, native channel names in index).
@@ -483,9 +499,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 16 builders remain after the
-  three pilots, nine batch-1 and twenty-two batch-2 source builders. Next: batch 2
-  (source-only bee-dance), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 15 builders remain after the
+  three pilots, nine batch-1 and twenty-three batch-2 source builders. Next: batch 3
+  (heavy datasets, one at a time), including WESAD source-only, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] TCPD: reconstruct the ten non-bundled measured native JSONs; default local
   build is explicitly 27/37 and --require-complete fails until they are supplied.

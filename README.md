@@ -86,7 +86,7 @@ the authors allow re-hosting.
 | `casas-aruba-milan-tulum-cairo`: CASAS Smart Home dataset (aruba, cairo, milan, tulum) — labelled, with temperature | har | SD | CC-BY-4.0 (A) | builder + validated build (5 event logs; simultaneous activity sets preserved) |
 | `bebe`: BEBE: Bio-logger Ethogram Benchmark (collection of 9 datasets) | ethology | SD | CC-BY-4.0 (repository); per-species licenses (A) | planned |
 | `dog-behaviour-vehkaoja`: Movement Sensor Dataset for Dog Behavior Classification | ethology | SD | CC-BY-4.0 (A) | planned |
-| `bee-dance`: Honey Bee Dance (PS-SLDS, Oh et al.) | ethology | SD | none; citation requested (C) | planned; source-only builder until rights are clarified |
+| `bee-dance`: Honey Bee Dance (PS-SLDS, Oh et al.) | ethology | SD | none; citation requested (C) | builder + validated local build (all six native trajectories; original GT); source-only builder until rights are clarified |
 | `petrobras-3w`: 3W Dataset 2.0.0 (undesirable events in offshore oil wells) | industry_energy | SD + CPD | CC-BY-4.0 (A) | builder + validated build (all 1,119 measured instances; two label tracks) |
 | `cnc-mill-umich`: CNC Mill Tool Wear (University of Michigan SMART testbed) | industry_energy | SD | CC0-1.0 (A) | builder + validated build (18 complete experiments; all 47 numeric channels) |
 | `uci-gas-dynamic-mixtures`: Gas sensor array under dynamic gas mixtures (UCI 322) | industry_energy | SD | UCI CC BY 4.0; same primary description excludes commercial use (C) | builder + validated local build (both mixtures; source licence conflict); source-only builder until rights are clarified |

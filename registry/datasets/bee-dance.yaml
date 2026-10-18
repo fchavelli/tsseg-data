@@ -13,7 +13,7 @@ license_verified: "2026-10-17, page Georgia Tech"
 n_series: 6
 length: {min: null, median: null, max: null}
 n_channels: "3 (x, y, cap θ) ; 4 dans KL-CPD (x, y, sin θ, cos θ)"
-sampling_rate_hz: 30
+sampling_rate_hz: null
 label_type: states
 n_states: 3
 n_annotators: 1
