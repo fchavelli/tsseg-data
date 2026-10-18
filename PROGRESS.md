@@ -5,6 +5,21 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Swimming smartwatch: all 206 sessions / 40 swimmers,
+  1,962,177 observations at provider-resampled 30 Hz; lengths 1,321 / 6,442.5
+  median / 53,421. Default all 11 measured sensor channels (74 MiB); full also
+  retains 12 native derived norms (143 MiB). Seven scored states: the README
+  omits code 6 Kick and -1 Unknown, confirmed in author-linked code constants
+  downloaded only as inert text and independently SHA-pinned. All 77,943 source
+  Unknown samples remain -1 (3.97227%); Null 0/rest, Turn 5 and Kick 6 stay scored.
+  2,410 segments, recurrence 205/206, no nonfinite sensors or reversed/duplicate
+  uptime timestamps. Original pandas row IDs retained auxiliary. **Rights hold:**
+  no licence grant in complete primary repository tree/README; prior registry
+  MIT attribution unsupported. Tier C/source-only; docs/licenses/swimming-smartwatch.md.
+  Source revision `468ee355675b51fb3b9ad9d992ef7b807ae1af4f`, archive SHA256
+  `d607802935eaca9504082c053f6d6f3308b0cf4c696fc47375cb4a4fbb395c12`.
+  Raw 407 MiB, build 218 MiB; build 11.8 s, RSS 451 MiB. Validation 0/0.
+
 - [x] Batch 2 / Lund 2013: **34 distinct article trials**, stored as 39
   series (29 identical-signal expert pairs + five unequal trials × two native
   copies). Trial/participant/annotator IDs in index prevent treating copies as
@@ -386,9 +401,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 22 builders remain after the
-  three pilots, nine batch-1 and sixteen batch-2 source builders. Next: batch 2
-  (swimming-smartwatch onward), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 21 builders remain after the
+  three pilots, nine batch-1 and seventeen batch-2 source builders. Next: batch 2
+  (ais-fishing-semseg onward), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.

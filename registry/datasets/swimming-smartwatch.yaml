@@ -6,19 +6,19 @@ task: sd
 source_url: "https://github.com/brunnergino/swimming-recognition-lap-counting"
 doi: null
 citation: "Brunner et al., Swimming Style Recognition and Lap Counting Using a Smartwatch and Deep Learning, ISWC 2019"
-license: MIT
+license: LicenseRef-Unlicensed
 license_url: "https://github.com/brunnergino/swimming-recognition-lap-counting"
-license_tier: A
-license_verified: "2026-10-17, API GitHub (MIT) ; le dépôt contient les données"
+license_tier: C
+license_verified: "2026-10-18: no licence grant in pinned primary tree or README; prior MIT attribution unsupported; tier C/source-only"
 n_series: 206
 length: {min: 1300, median: 6400, max: 53000}
 n_channels: 11
 sampling_rate_hz: 30
 label_type: states
-n_states: 6
+n_states: 7
 n_annotators: null
 label_origin: human
-unlabeled_regions: "classe « null » (repos entre longueurs)"
+unlabeled_regions: "source -1 Unknown is unlabelled; 0 Null, 5 Turn, 6 Kick are ordinary scored states"
 continuous: true
 access: direct
 size: null

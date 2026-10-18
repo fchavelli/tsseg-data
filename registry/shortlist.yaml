@@ -471,12 +471,12 @@ datasets:
     domain: mocap_surgery_assembly
     task: sd
     label_type: states
-    license: MIT
-    license_tier: A
+    license: LicenseRef-Unlicensed
+    license_tier: C
     why: "séances de natation complètes, labels par échantillon, sport (domaine absent ailleurs)"
     risks: "données déjà prétraitées (30 Hz) ; nombre de fichiers à recompter"
     subset: null
-    contact_needed: false
+    contact_needed: true
   - id: tcpd
     registry: cpd_benchmarks.yaml
     domain: generic_cpd
