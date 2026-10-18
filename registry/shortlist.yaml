@@ -271,12 +271,12 @@ datasets:
     domain: har
     task: sd
     label_type: states
-    license: CC-BY-4.0
-    license_tier: A
+    license: "UCI CC BY 4.0; archive README prohibits commercial use"
+    license_tier: C
     why: "signaux bruts continus de UCI HAR + transitions posturales labellisées (segments courts)"
-    risks: "régions non labellisées entre activités (null) ; protocole très régulier"
+    risks: "2026-10-18: conflicting primary licence terms, source-only pending clarification; régions non labellisées entre activités (null) ; protocole très régulier"
     subset: null
-    contact_needed: false
+    contact_needed: true
   - id: harth
     registry: har.yaml
     domain: har

@@ -79,7 +79,7 @@ the authors allow re-hosting.
 | `daphnet-fog`: Daphnet Freezing of Gait | physio | SD | CC-BY-4.0 (A) | planned |
 | `mosad`: MOSAD — Mobile Sensing Human Activity Data Set | har | SD | CC-BY-SA-3.0 (B) | planned |
 | `opportunity`: OPPORTUNITY Activity Recognition | har | SD | CC-BY-4.0 (A) | builder + validated build |
-| `hapt`: Smartphone-Based Recognition of Human Activities and Postural Transitions (HAPT) | har | SD | CC-BY-4.0 (A) | planned |
+| `hapt`: Smartphone-Based Recognition of Human Activities and Postural Transitions (HAPT) | har | SD | UCI CC BY 4.0; archive README prohibits commercial use (C) | builder + validated local build (61 raw experiments; licence conflict); source-only builder until the authors allow re-hosting |
 | `harth`: HARTH — Human Activity Recognition Trondheim | har | SD | CC-BY-4.0 (A) | planned |
 | `capture24`: CAPTURE-24: Activity tracker dataset for human activity recognition | har | SD | CC-BY-4.0 (A) | planned |
 | `mhealth`: MHEALTH (Mobile HEALTH) dataset | har | SD | CC-BY-4.0 (A) | builder + validated build (10 complete logs; null state retained) |

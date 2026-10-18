@@ -5,6 +5,16 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / HAPT: all 61 raw experiments, 30 subjects, six axes at 50 Hz,
+  1,122,772 samples, lengths 9,898 / 17,963 median / 32,089; 1,847 segments,
+  recurrence 61/61, 27.3571% outside source annotation intervals mapped to -1.
+  All twelve states including postural transitions retained; original subject
+  train/test split recovered. One-based inclusive interval convention declared;
+  source readme leaves origin implicit (one-sample boundary uncertainty).
+  **Licence conflict:** UCI CC BY 4.0 versus archive README non-commercial
+  prohibition; conservatively tier C/source-only pending clarification, recorded
+  in docs/licenses/hapt.md and card/Croissant. SHA256 pinned; validation 0/0.
+
 - [x] Batch 2 / MHEALTH: ten complete subject logs, all 23 motion/ECG channels at
   50 Hz, 1,215,745 samples, lengths 98,304 / 120,960 median / 161,280; 262
   segments, recurrence in 10/10, no missing labels. Code 0 explicitly called
