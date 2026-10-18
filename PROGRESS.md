@@ -5,6 +5,14 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / HARTH: all 22 complete recordings, six accelerometer axes at
+  nominal 50 Hz, 6,461,328 samples, lengths 137,646 / 329,936.5 median /
+  418,989; 6,971 segments, recurrence 22/22, no missing labels. All twelve
+  source states retained, including shuffling/inactive cycling; no null class
+  invented. Source timestamps retained; discontinuities reach 302.18 s (S010),
+  so the physical time grid is not uniformly continuous. CC BY 4.0 verified
+  at UCI on 2026-10-18; SHA256-pinned archive. Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / HAPT: all 61 raw experiments, 30 subjects, six axes at 50 Hz,
   1,122,772 samples, lengths 9,898 / 17,963 median / 32,089; 1,847 segments,
   recurrence 61/61, 27.3571% outside source annotation intervals mapped to -1.

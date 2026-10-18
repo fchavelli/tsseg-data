@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "harth": "builder + validated build (22 complete recordings; timestamps retained)",
     "hapt": "builder + validated local build (61 raw experiments; licence conflict)",
     "mhealth": "builder + validated build (10 complete logs; null state retained)",
     "pump": "builder + validated build (400 cycles)",
