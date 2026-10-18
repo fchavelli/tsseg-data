@@ -77,7 +77,7 @@ the authors allow re-hosting.
 | `eegmmidb`: EEG Motor Movement/Imagery Dataset | physio | SD | ODC-By-1.0 (A) | planned |
 | `wesad`: WESAD: Wearable Stress and Affect Detection | physio | SD | Siegen scientific, non-commercial use; redistribution not granted (C) | planned; source-only builder until rights are clarified |
 | `daphnet-fog`: Daphnet Freezing of Gait | physio | SD | CC-BY-4.0 (A) | builder + validated build (17 runs; outside-protocol 0 excluded) |
-| `mosad`: MOSAD — Mobile Sensing Human Activity Data Set | har | SD | CC-BY-SA-3.0 (B) | planned |
+| `mosad`: MOSAD — Mobile Sensing Human Activity Data Set | har | SD | CC-BY-SA-3.0 (B) | builder + validated build (14 nine-axis recordings; no recurring state, CPD) |
 | `opportunity`: OPPORTUNITY Activity Recognition | har | SD | CC-BY-4.0 (A) | builder + validated build |
 | `hapt`: Smartphone-Based Recognition of Human Activities and Postural Transitions (HAPT) | har | SD | UCI CC BY 4.0; archive README prohibits commercial use (C) | builder + validated local build (61 raw experiments; licence conflict); source-only builder until rights are clarified |
 | `harth`: HARTH — Human Activity Recognition Trondheim | har | SD | CC-BY-4.0 (A) | builder + validated build (22 complete recordings; timestamps retained) |

@@ -2,7 +2,7 @@
 id: mosad
 name: "MOSAD — Mobile Sensing Human Activity Data Set"
 domain: har
-task: both
+task: cpd
 source_url: "https://github.com/ermshaua/mobile-sensing-human-activity-data-set"
 doi: null
 citation: "Ermshaus, Singh, Leser, DARLI-AP@EDBT/ICDT 2023"
@@ -15,7 +15,7 @@ length: {min: null, median: 55000, max: null}
 n_channels: 9
 sampling_rate_hz: 50
 label_type: states
-n_states: 21
+n_states: 20
 n_annotators: null
 label_origin: protocol
 unlabeled_regions: null

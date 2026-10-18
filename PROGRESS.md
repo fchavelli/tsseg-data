@@ -5,6 +5,23 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / MOSAD: 14 native recordings restored to all nine axes
+  (accelerometer, gyroscope, magnetometer), rather than the 126 separate
+  univariate benchmark views. All 481,056 samples at 50 Hz; lengths 11,131 /
+  19,512 median / 62,110. Twenty exact activity names (not registry 21), 114
+  segments, 100 source CP indices preserved; no repeated activity within any
+  series, so requalified CPD. No missing labels or signals; no null class.
+  Numeric NPZ read with allow_pickle=False, no provider code executed. Protocol
+  indices retained as zero-based first new segment, with one-sample convention
+  uncertainty explicitly documented. Exact nine-channel float32 SHA comparison
+  against all 250 HAS builds found no complete duplicates; shared author/protocol
+  and possible partial overlap remain a limitation, not evidence of independence.
+  CC BY-SA 3.0 verified at primary README on 2026-10-18. Source revision
+  `f5d4daf34cd94b7c7a150aa2a650d1d8a4971557`; NPZ SHA256
+  `79b767f5bdad2e0bcd5ac96ac59bf287b1eb481be882003779d56ab4469c9687`,
+  both annotation text files independently pinned. Raw 34 MiB, build 12 MiB.
+  Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / Bimacs body-pose view: all 540 trials, 221,108 frames,
   lengths 134 / 394 median / 1,035. Default all 25 joints x/y (50 channels),
   full adds 25 confidence scores. Left/right action targets stay separate,
@@ -448,9 +465,9 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 18 builders remain after the
-  three pilots, nine batch-1 and twenty batch-2 source builders. Next: batch 2
-  (mosad and source-only tcpd/bee-dance), WESAD in the heavy source-only batch, and tier C author
+- [ ] Decision 7 accepted on 2026-10-18; 17 builders remain after the
+  three pilots, nine batch-1 and twenty-one batch-2 source builders. Next: batch 2
+  (source-only tcpd/bee-dance), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
   independent reference boundaries, or find a better labelled primary source.
