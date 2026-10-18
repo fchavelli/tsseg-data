@@ -5,6 +5,13 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / MHEALTH: ten complete subject logs, all 23 motion/ECG channels at
+  50 Hz, 1,215,745 samples, lengths 98,304 / 120,960 median / 161,280; 262
+  segments, recurrence in 10/10, no missing labels. Code 0 explicitly called
+  null by the primary readme: retained as an ordinary state (not -1). Source
+  column-12 typo documented. CC BY 4.0 verified at UCI on 2026-10-18; archive
+  SHA256 pinned. Croissant/Parquet validation: 0 errors / 0 warnings.
+
 - [x] Selection review (2026-10-18): removed the fully generated Time2State and
   PaTSS corpora from the active shortlist. Retained TSSB and USC-HAD constructions
   from measured recordings, as requested. The target remains about 50 datasets,
@@ -190,7 +197,7 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 (below) remains for user review; 38 builders remain after the
+- [ ] Decision 7 accepted on 2026-10-18; 38 builders remain after the
   three pilots and nine completed batch-1 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
@@ -227,10 +234,8 @@ Decided by the user on 2026-10-18:
 6. Croissant `conformsTo` **1.1** (`http://mlcommons.org/croissant/1.1`) + RAI
    1.0; HF `task_categories: other` + tags.
 
-To validate:
-
-7. Accept the local Croissant record read on a one-row excerpt: the full files
+7. Accepted: local Croissant record read on a one-row excerpt: the full files
    are checked by `validate.py` itself (SHA256, Parquet schemas and all rows),
    while `mlcroissant` on a full long-series file has taken 433 s and 10.5 GB RAM.
-   Recommendation: keep this local split of checks, then run the official online
+   Keep this local split of checks, then run the official online
    Croissant checker before publication; revise sharding if it times out.

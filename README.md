@@ -82,7 +82,7 @@ the authors allow re-hosting.
 | `hapt`: Smartphone-Based Recognition of Human Activities and Postural Transitions (HAPT) | har | SD | CC-BY-4.0 (A) | planned |
 | `harth`: HARTH — Human Activity Recognition Trondheim | har | SD | CC-BY-4.0 (A) | planned |
 | `capture24`: CAPTURE-24: Activity tracker dataset for human activity recognition | har | SD | CC-BY-4.0 (A) | planned |
-| `mhealth`: MHEALTH (Mobile HEALTH) dataset | har | SD | CC-BY-4.0 (A) | planned |
+| `mhealth`: MHEALTH (Mobile HEALTH) dataset | har | SD | CC-BY-4.0 (A) | builder + validated build (10 complete logs; null state retained) |
 | `casas-aruba-milan-tulum-cairo`: CASAS Smart Home dataset (aruba, cairo, milan, tulum) — labelled, with temperature | har | SD | CC-BY-4.0 (A) | planned |
 | `bebe`: BEBE: Bio-logger Ethogram Benchmark (collection of 9 datasets) | ethology | SD | CC-BY-4.0 (repository); per-species licenses (A) | planned |
 | `dog-behaviour-vehkaoja`: Movement Sensor Dataset for Dog Behavior Classification | ethology | SD | CC-BY-4.0 (A) | planned |
