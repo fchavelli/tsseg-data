@@ -358,12 +358,12 @@ datasets:
   - id: petrobras-3w
     registry: industry_energy.yaml
     domain: industry_energy
-    task: sd
+    task: both
     label_type: multi_track
     license: CC-BY-4.0
     license_tier: A
     why: "industriel réel, 1 119 instances labellisées par experts, deux pistes d'états"
-    risks: "mélange réel / simulé OLGA / dessiné : garder le réel seul ; NaN"
+    risks: "2026-10-18 measured default: no event-class recurrence; operational-state recurrence only 10/1119; mélange réel / simulé OLGA / dessiné : garder le réel seul ; NaN"
     subset: "instances réelles (1 119)"
     contact_needed: false
   - id: cnc-mill-umich

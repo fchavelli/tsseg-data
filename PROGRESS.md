@@ -5,6 +5,21 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 2 / Petrobras 3W 2.0.0: all **1,119 measured** source instances
+  by default, all 27 channels at provider-interpolated 1 Hz, 32,872,250
+  observations, lengths 5,215 / 21,354 median / 768,314. Source registry
+  erroneously attributed all-origin totals to real data: exact Parquet metadata
+  totals are real 32,872,250 + simulated 40,748,658 + drawn 2,966,410 =
+  76,587,318. Default class track: 2,393 segments, **no recurrence** (CPD).
+  Operational track: 2,306 segments, recurrence only 10/1,119. Unknown labels
+  map NaN -> -1 in each track (12.2547% in real data; 5.26% used all-origin
+  denominator). Normal/Open code 0 stays scored. Missing/frozen sensors and
+  outliers retained; no new interpolation. Explicit --include-generated option
+  retains source origin and RAI synthetic flag; default counts/build exclude
+  every simulated/drawn instance. Entire archive MD5 primary + SHA verified;
+  CC BY 4.0 checked at primary Figshare and Petrobras on 2026-10-18.
+  Raw 1.67 GiB, measured build 199 MiB. Validation 0 errors / 0 warnings.
+
 - [x] Batch 2 / UCI Gas dynamic mixtures: both complete measured recordings,
   all 16 sensor channels at nominal 100 Hz; **8,386,765** samples (CO:
   4,208,261; methane: 4,178,504, correcting registry total/length). Reversible
@@ -324,8 +339,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 26 builders remain after the
-  three pilots, nine batch-1 and twelve batch-2 source builders. Next: batch 2
+- [ ] Decision 7 accepted on 2026-10-18; 25 builders remain after the
+  three pilots, nine batch-1 and thirteen batch-2 source builders. Next: batch 2
   (including VFDB), WESAD in the heavy source-only batch, and tier C author
   contacts; TSSB upstream rights now also require clarification.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has

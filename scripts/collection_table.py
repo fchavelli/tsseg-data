@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "petrobras-3w": "builder + validated build (all 1,119 measured instances; two label tracks)",
     "uci-gas-dynamic-mixtures": "builder + validated local build (both mixtures; source licence conflict)",
     "pneumatic-eol-strzinar": "builder + validated build (156 CSV triplets; native clocks retained)",
     "cnc-mill-umich": "builder + validated build (18 complete experiments; all 47 numeric channels)",
