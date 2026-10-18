@@ -5,6 +5,28 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 3 / Sleep-EDFx: all 197 complete PSG/hypnogram pairs (153 SC,
+  44 ST; 100 subjects), 1,385,653,000 samples at 100 Hz; lengths
+  2,698,000 / 8,166,000 median / 8,640,000. Seven original R&K states,
+  28,446 segments, recurrence 197/197; only unknown/uncovered samples are -1
+  (0.870059%). No wake cropping or stage merging; Movement time retained.
+  Default: both EEG derivations and EOG; full adds ST native 100-Hz EMG
+  (SC dimension NaN). All 656 slow streams retained at native rates, including
+  the ST marker at **10 Hz**, correcting the source summary's 1-Hz claim;
+  28,529 original annotation intervals retained separately.
+  Seven ST EDF+ hypnograms have stale Recordingfield dates one day before
+  their fixed startdates (ST7021, ST7071, ST7092, ST7131/2, ST7141/2). Direct
+  TAL decoding preserves sources unchanged, matches pyedflib exactly on its
+  190 accepted files, and uses fixed EDF clocks consistently: all 197 offsets
+  are zero. Both clock claims and conflict flags are retained in the index.
+  Patient header text and demographic spreadsheets excluded; group by subject.
+  ODC-By-1.0 verified at primary PhysioNet on 2026-10-18; all 394 source files
+  SHA256-pinned against the freshly verified primary manifest. Citation follows
+  Kemp 2000 and the current requested PhysioNet citation Pollard 2026.
+  Default/full: 16.15/16.44 GB, 130 Parquet parts. Full validation: 136 files,
+  **0 errors / 0 warnings**. Raw cache (8.2 GiB) deleted only after successful
+  validation; pilot raw untouched. Filesystem headroom: 36 GiB. No publication.
+
 - [x] Shared card metadata corrected after batch 2: `size_categories` now uses
   the number of series, giving `1K<n<10K` for the 1,119 measured 3W series and
   `10K<n<100K` for Neuroblastoma's 13,800 chromosome series. The shared
@@ -508,7 +530,7 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 15 builders remain after the
+- [ ] Decision 7 accepted on 2026-10-18; 14 builders remain after the
   three pilots, nine batch-1 and twenty-three batch-2 source builders. Next: batch 3
   (heavy datasets, one at a time), including WESAD source-only, and tier C author
   contacts; TSSB upstream rights now also require clarification.

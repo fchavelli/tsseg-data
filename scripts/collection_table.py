@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "sleep-edfx": "builder + validated build (all 197 complete PSGs; native-rate auxiliary)",
     "bee-dance": "builder + validated local build (all six native trajectories; original GT)",
     "tcpd": "builder + validated local build (27/37 measured signals; ten external inputs pending)",
     "mosad": "builder + validated build (14 nine-axis recordings; no recurring state, CPD)",

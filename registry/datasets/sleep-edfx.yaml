@@ -1,24 +1,31 @@
-# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+# Verified against primary PhysioNet 1.0.0 and measured source/build files.
 id: sleep-edfx
 name: "Sleep-EDF Database Expanded"
 domain: physio
 task: both
 source_url: "https://physionet.org/content/sleep-edfx/1.0.0/"
 doi: "10.13026/C2X676"
-citation: "Kemp et al., IEEE TBME 47(9):1185-1194, 2000 ; Goldberger et al., Circulation 2000 (PhysioNet)"
+citation: "Kemp et al., IEEE TBME 47(9):1185-1194, 2000; Pollard et al., Nature Health 1:792-795, 2026, doi:10.1038/s44360-026-00096-z (PhysioNet)"
 license: ODC-By-1.0
 license_url: "https://opendatacommons.org/licenses/by/1-0/"
 license_tier: A
-license_verified: "2026-10-17, API + page PhysioNet"
+license_verified: "2026-10-18, primary PhysioNet page: https://physionet.org/content/sleep-edfx/1.0.0/"
 n_series: 197
-length: {min: 3000000, median: 7900000, max: 8600000}
-n_channels: 7
+n_subjects: 100
+n_samples: 1385653000
+n_segments: 28446
+series_with_recurrence: 197
+unlabeled_share: 0.00870059098490026
+length: {min: 2698000, median: 8166000, max: 8640000}
+n_channels: 3
+n_channels_full: 4
+native_channels: "SC: seven (three at 100 Hz, four at 1 Hz); ST: five (four at 100 Hz, marker at 10 Hz)"
 sampling_rate_hz: 100
 label_type: states
-n_states: 6
+n_states: 7
 n_annotators: 1
 label_origin: human
-unlabeled_regions: "oui : « ? » (non scoré) et M (mouvement) ; SC = ~20 h dont de longues phases d'éveil de jour"
+unlabeled_regions: "Only Sleep stage ? and uncovered samples are -1; Movement time is an ordinary scored state. Complete SC daytime wake coverage retained."
 continuous: true
 access: direct
 size: "8.1 GB"
@@ -28,5 +35,5 @@ value: high
 value_reason: "référence du sleep staging, stades R&K récurrents (W,1,2,3,4,R), 153 SC + 44 ST, très cité"
 effort: medium
 confidence: high
-notes: "EEG Fpz-Cz, Pz-Oz et EOG à 100 Hz ; EMG, respiration, température à 1 Hz (fréquences mixtes). SC ≈ 20 h, ST ≈ 9 h. Hypnogrammes EDF+ par époques de 30 s (R&K). Longueurs estimées à 100 Hz depuis les durées de la page. Remplace sleep-edf (2002)."
+notes: "All 197 complete records: 153 SC and 44 ST; 1,385,653,000 samples on the 100-Hz grid. Default: both EEG derivations and EOG. Full adds native ST 100-Hz EMG, NaN for SC. Every SC 1-Hz stream and ST 10-Hz marker retained unresampled auxiliary; actual ST marker headers correct the primary summary's 1-Hz claim. Seven original R&K states retained without stage merging or wake cropping. Patient text and demographic spreadsheets excluded. Evaluate by cohort/subject, not night. All 394 source files SHA256-pinned against the primary manifest. Seven ST hypnograms have conflicting EDF+ Recordingfield dates; use fixed startdate/time fields and preserve both clocks and flags. All 197 PSG/hypnogram offsets are zero. Direct TAL decoding matches pyedflib exactly on all 190 files it accepts; seven conflicting headers are rejected by pyedflib."
 rejected: null

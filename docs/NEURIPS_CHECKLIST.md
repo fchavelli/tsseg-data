@@ -9,9 +9,10 @@ Status: **done** (satisfied for every dataset built so far), **to do** (work
 planned, not blocking yet), **blocking** (the submission cannot be made, or a
 dataset must leave the paper, until it is solved).
 
-Built locally so far: 35 selected dataset builders (3 pilots, 9 batch-1, 23
-batch-2), each validated with zero errors and warnings. `dreem-dod-h` now covers
-all 25 nights. `tcpd` covers 27 of 37 measured source signals; ten external
+Built locally so far: 36 selected dataset builders (3 pilots, 9 batch-1, 23
+batch-2, Sleep-EDFx from batch 3), each validated with zero errors and warnings.
+`dreem-dod-h` now covers all 25 nights; `sleep-edfx` covers all 197 complete PSGs with native-rate
+auxiliary streams. `tcpd` covers 27 of 37 measured source signals; ten external
 signals remain to be reconstructed. Every "done" below applies to a dataset
 only once its builder passes `scripts/validate.py`.
 
