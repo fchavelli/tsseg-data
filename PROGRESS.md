@@ -729,11 +729,26 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 9 builders remain after the
-  three pilots, nine batch-1, twenty-three batch-2 and six further batch-3
-  source builders. Next: batch 3
-  (heavy datasets, one at a time), including WESAD source-only, and tier C author
-  contacts; TSSB upstream rights now also require clarification.
+- [ ] Batch 3 / DEDDIAG storage gate (2026-10-19): the primary Figshare v1
+  manifest lists 15 house ZIPs totaling 15,301,162,142 bytes (14.25 GiB).
+  With about 21.37 GiB free and the 18-GiB reserve, a complete local cache
+  cannot fit even before conversion. Only primary metadata/README were read;
+  no house ZIP or build was started. Resume when storage is available, or
+  design and validate a genuinely bounded source-streaming workflow.
+- [ ] Batch 3 / AnDy compact-view feasibility: the primary Zenodo v2 manifest
+  lists `xsens_csv.zip` at 15,625,210,239 bytes, too large for the current
+  reserve. Its `xsens_c3d.zip` (1,379,554,812 bytes) and `xsens_bvh.zip`
+  (1,808,149,444 bytes) each contain 195 trial members; `labels_csv.zip`
+  (4,074,552 bytes) contains 195 matching trial members. A bounded remote
+  ZIP-directory/header pilot found BVH motion frames around 240 Hz and three
+  annotators on video-frame labels around 24 Hz. A full native kinematic view
+  may fit, but its sensor-to-video time alignment and complete channel scope
+  must be established before assigning dense labels or starting a heavy build.
+  No corpus archive has been downloaded. Source:
+  https://zenodo.org/records/3254403 .
+- [ ] Continue batch 3 one heavy dataset at a time, using the size and
+  alignment gates above; WESAD remains source-only. Tier C author contacts
+  and TSSB upstream rights also require attention.
 - [ ] TCPD: reconstruct the ten non-bundled measured native JSONs; default local
   build is explicitly 27/37 and --require-complete fails until they are supplied.
 - [ ] Verify whether the real Google Trends series in the PaTSS deposit has
