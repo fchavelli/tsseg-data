@@ -628,6 +628,33 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
+- [ ] Batch 3 / Capture-24 — **deferred before corpus download** (2026-10-19).
+  Primary author paper (doi:10.1038/s41597-024-03960-3, Data Records) confirms
+  CC BY 4.0 **data**, distinct from the academic/non-commercial Oxford utilities
+  software licence. 151 participants, 3,883 h at released 100 Hz, three XYZ g
+  channels; 2,562 h annotated, 206 CPA codes and six derived label mappings.
+  Camera images are not released. Missing camera/diary ground truth must remain
+  -1; dictionary mappings are derived taxonomies, not independent annotators.
+  Provider processing already includes nearest-neighbour rate correction and
+  gravity calibration; retain the released signal, without new resampling.
+  Native sensor timing does not imply sample-exact 100-Hz behavioral annotation
+  (camera images about every 20 s). Source counts are paper-reported, not yet
+  recomputed from files. Dataset ORA landing page currently returns HTTP 403;
+  official archive Range probe returns HTTP 200 without Content-Range or length,
+  so the response was closed without reading corpus bytes. A later ordinary
+  archive GET also returned 403. The source team's download documentation says
+  the ZIP is **over 6.5 GB** (prepare_data.py progress estimate 6.9e9 bytes).
+  Measured free 22.743 GiB leaves only 4.743 GiB above the 18-GiB reserve;
+  even the documented 6.5-GB lower bound alone would leave 16.689 GiB, before
+  any Parquet output. No full archive, CSV extraction, subject subset or reduced
+  frequency build downloaded; no safe selective pilot available on this endpoint.
+  **Next step:** supply a separate data volume for future Capture-24 raw/output,
+  or a primary Range-capable subject endpoint; obtain a pinned one-subject pilot
+  there, then require free >= source cache + measured full output * 1.25 + 18 GiB
+  before downloading the corpus. Recheck current ORA licence/privacy wording when
+  its landing page is accessible. Keep all 151 subjects/three released channels
+  in the eventual build. Continue with BEBE qualification; no existing data deleted.
+
 ## To do
 
 - [ ] Decision 7 accepted on 2026-10-18; 11 builders remain after the
