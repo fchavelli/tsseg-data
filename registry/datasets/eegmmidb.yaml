@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+# Verified against primary PhysioNet manifests, EDF+ annotations and native headers.
 id: eegmmidb
 name: "EEG Motor Movement/Imagery Dataset"
 domain: "physio"
@@ -9,24 +9,36 @@ citation: "Schalk et al., IEEE TBME 51(6):1034-1043, 2004"
 license: "ODC-By-1.0"
 license_url: "https://opendatacommons.org/licenses/by/1-0/"
 license_tier: "A"
-license_verified: "2026-10-17, API + page PhysioNet (access_policy: Open)"
+license_verified: "2026-10-19, primary PhysioNet v1.0.0 (ODC Attribution 1.0)"
 n_series: 1526
-length: {min: 9600, median: 19680, max: null}
+length: {min: 5920, median: 19680, max: 28960}
+n_samples: 27813376
+native_seconds: 174724
+n_segments: 41126
+series_with_recurrence: 1308
+series_with_substantive_recurrence: 1308
+unlabeled_share: 0.002100140594223441
+annotation_conflict_samples: 908
+baseline_annotation_anomaly_runs: [S089R01, S089R02]
+source_edf_intervals: 39569
+source_wfdb_events: 38641
+source_conversion_exact_matching_runs: 1260
 n_channels: 64
-sampling_rate_hz: 160
+sampling_rate_hz: null
+native_sampling_rates_hz: [128, 160]
 label_type: "states"
 n_states: 3
-n_annotators: null
+n_annotators: 1
 label_origin: "protocol"
-unlabeled_regions: "non"
+unlabeled_regions: "Samples outside explicit EDF+ intervals, including record padding tails, and contradictory interval overlaps remain -1; no extension of final labels."
 continuous: true
 access: "direct"
 size: "3.6 GB"
 in_tsseg_bench: false
-fm_pretraining: "probable : corpus de pré-entraînement de modèles EEG (BENDR, LaBraM…)"
+fm_pretraining: "unknown"
 value: "medium"
-value_reason: "109 sujets × 14 runs ; alternance repos T0 / tâche T1 / tâche T2 (~4 s) dans chaque run de 2 min : SD à états récurrents, labels exacts"
+value_reason: "All 64 native EEG channels and recurring within-run rest/target codes across 1,308 motor/imagery runs; cue-derived intervals with source anomalies explicitly retained."
 effort: "low"
-confidence: "medium"
-notes: "Runs 1-2 = ligne de base yeux ouverts / fermés d'1 min (un seul état). Runs 3-14 ≈ 2 min (≈ 19 680 points, valeur usuelle, non relue). Segments courts (~4 s = 640 points)."
+confidence: "high"
+notes: "All 109 subjects and all 14 runs retained. R01/R02 retained with eyes-open/closed protocol context and literal EDF+ codes. S089R01/R02 unexpectedly contain T0 for 0.1 s then T1 for 60.05 s; preserve and flag unresolved baseline T1 semantics, never infer a motor task. Other baselines contain only T0. One default config preserves all 64 native EEG channels in calibrated float32 uV; no duplicate light view, to retain the local 18-GiB disk reserve. Actual native rates: 36 task runs R03-R14 of S088/S092/S100 at 128 Hz, all other 1,490 runs at 160 Hz, correcting the nominal 160-Hz summary; exact elapsed time_ns and per-series frequency preserve timing without resampling. T1/T2 meanings depend on run paradigm, retained in metadata; never pool as universal target identities. EDF+ literal onset/duration is canonical; preserve .event conversions separately and report missing/extra intervals rather than assume source equivalence. Low-level WFDB byte-pair decoding retains real notes at sample zero that rdann filters out. Native EEG/TAL decoding checked against pyedflib on 160-Hz, 128-Hz and long pilot runs. No participant/run rejection or filtering. Group evaluation by participant."
 rejected: null

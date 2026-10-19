@@ -5,6 +5,48 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 3 / EEGMMIDB: all 109 participants and all 1,526 source runs,
+  including 218 provider-designated baselines and 1,308 motor/imagery task runs.
+  All 64 native EEG channels in one `default` config, calibrated float32 uV;
+  **disk-driven exception to light/default + full**: a second reduced view would
+  duplicate physical samples and breach the conservative 18-GiB reserve projection.
+  No channels, runs or participants rejected. Native rates: 1,490 runs at 160 Hz;
+  task runs R03-R14 of S088/S092/S100 (36 runs) at 128 Hz. Their baselines remain
+  160 Hz. Global/config rate is null; exact `time_ns` grids and per-series native
+  frequency/step preserve timing without resampling. 27,813,376 samples,
+  174,724 s; lengths 5,920 / 19,680 median / 28,960.
+  Canonical ground truth: 39,569 literal EDF+ onset/duration/code intervals.
+  T0 rest stays an ordinary scored state; T1/T2 meanings remain run-dependent
+  with paradigm/state-meaning metadata. Preserve baseline eyes-open/closed context
+  without inferring motor labels. S089R01/R02 actually contain T0 for 0.1 s then
+  T1 for 60.05 s despite the baseline protocol: retain the raw codes, flag the
+  anomaly and leave baseline T1 task semantics unresolved. Other baselines have
+  only T0. Half-open intervals mapped from exact decimal fractions; outside
+  explicit coverage and contradictory overlaps remain -1. 58,412 unscored samples
+  (0.210014%), including 908 conflicts. 41,126 segments; recurrence 1,308/1,526,
+  including substantive T1/T2 recurrence in all 1,308 task runs; per-state segment
+  counts retained for every series. Evaluate by participant.
+  Original WFDB conversions retained separately: 38,641 events; only 1,260 runs
+  exactly match EDF intervals. Strict onset/code/duration comparison finds 1,036
+  EDF intervals missing/non-identical and 108 non-identical WFDB events, including
+  decimal-time quantization differences. Preserve sample-zero NOTE annotations
+  using WFDB's byte-pair decoder; `rdann` otherwise removes genuine initial T0.
+  No fabricated second annotator or agreement. Patient/recording text, dates and
+  demographics excluded. ODC-By-1.0 verified at primary PhysioNet on 2026-10-19;
+  all 3,052 EDF/event files + RECORDS/SHA256SUMS pinned against primary manifest
+  and official S3 sizes. Sequential fetch, no archive extraction. Direct EDF
+  decoder validates every record clock, geometry, channel and calibration;
+  signals/TALs match pyedflib on standard, 128-Hz and long pilots.
+  Fourteen-run size pilot: actual 65.74 bytes/sample for native64; worst isolated
+  run 83.59. Worst ratio +25% +64 MiB projects 2.81 GiB output and 18.26 GiB free
+  before build. Rolling projections after each run include buffered samples,
+  actual compression, missing sources and metadata; actual minimum remained
+  above 19.3 GiB. Final output 1.85 GB, seven shared data parts. Full validation:
+  13 checksummed files, **0 errors / 0 warnings**. Exact native grids checked for
+  all 1,526 runs; all 64 output channels equal source for S088R03/S089R01, including
+  the unresolved baseline code. Raw cache deleted only after successful validation;
+  pilot raw untouched, 22.75 GiB free. No publication. Next: Capture-24.
+
 - [x] Batch 3 / PPG-DaLiA: all 15 synchronized participant recordings,
   8,287,296 native 64-Hz BVP samples (129,489 s); lengths
   336,000 / 573,312 median / 681,472. All 11 genuine channels retained:
@@ -588,8 +630,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 12 builders remain after the
-  three pilots, nine batch-1, twenty-three batch-2 and three further batch-3
+- [ ] Decision 7 accepted on 2026-10-18; 11 builders remain after the
+  three pilots, nine batch-1, twenty-three batch-2 and four further batch-3
   source builders. Next: batch 3
   (heavy datasets, one at a time), including WESAD source-only, and tier C author
   contacts; TSSB upstream rights now also require clarification.

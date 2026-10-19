@@ -219,8 +219,8 @@ datasets:
     license: ODC-By-1.0
     license_tier: A
     why: "64 canaux, 1 526 runs, alternance repos/tâche : cas très multivarié à segments courts"
-    risks: "segments de ~4 s ; signal EEG faible pour la tâche ; runs 1-2 à un seul état (exclure)"
-    subset: "runs 3-14"
+    risks: "Run-dependent T1/T2; native 128/160-Hz clocks; .event conversion omissions; record padding tails unscored; two baseline T1 anomalies have unresolved task semantics."
+    subset: "all 14 runs and 64 native EEG channels; baselines R01/R02 retained with literal EDF+ codes and separate eyes-open/closed protocol context"
     contact_needed: false
   - id: wesad
     registry: physio.yaml
