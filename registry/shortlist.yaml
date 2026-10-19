@@ -327,11 +327,11 @@ datasets:
     domain: ethology
     task: sd
     label_type: states
-    license: "CC-BY-4.0 (dépôt) ; licences propres par espèce"
+    license: "CC-BY-4.0 (seven audited animal archives); raw bears USGS public domain"
     license_tier: A
-    why: "seul benchmark multi-espèces d'éthogrammes continus (9 taxons, 1 654 h)"
-    risks: "~7 Go ; tortues sans mention de licence (exclure ou vérifier) ; hétérogène par espèce"
-    subset: "version « formatted » (~1,9 Go), sans les tortues"
+    why: "Seven animal datasets, 369 clips / 105 individuals; formatted-release track with per-cohort recurrence"
+    risks: "Provider preprocessing and sparse labels; dogs overlap dog-behaviour-vehkaoja; no independent evaluation across these datasets"
+    subset: "All seven licensed animal formatted archives; exclude noncommercial HAR/HAPT duplicate and rights-unclear turtles"
     contact_needed: false
   - id: dog-behaviour-vehkaoja
     registry: har.yaml

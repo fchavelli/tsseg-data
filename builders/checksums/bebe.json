@@ -1,0 +1,44 @@
+{
+  "formatted_desantis_rattlesnakes.zip": {
+    "url": "https://zenodo.org/api/records/10982620/files/formatted_desantis_rattlesnakes.zip/content",
+    "bytes": 337918,
+    "md5": "e2c3df00e4c25caf0823cb876456e977",
+    "sha256": "1a98bee41f35faf09a043d3b642d3a52d8979cef46514322686497171b6254b5"
+  },
+  "formatted_baglione_crows.zip": {
+    "url": "https://zenodo.org/api/records/10982620/files/formatted_baglione_crows.zip/content",
+    "bytes": 277386791,
+    "md5": "03d71a2803675a48b5f6a354f0e0fe74",
+    "sha256": "469e5cd50485205a47d189ab1245ec2250aace2828810531fa8c26d8dc079ebb"
+  },
+  "formatted_friedlaender_whales.zip": {
+    "url": "https://zenodo.org/api/records/10982620/files/formatted_friedlaender_whales.zip/content",
+    "bytes": 187565514,
+    "md5": "4ff830f7b9451d3d1be04b670bbcfb0e",
+    "sha256": "ba72d9663fa07f6563bd11b7248b15a70137766877fbd3801f6606f5c7428e1c"
+  },
+  "formatted_pagano_bears.zip": {
+    "url": "https://zenodo.org/api/records/10982620/files/formatted_pagano_bears.zip/content",
+    "bytes": 347124137,
+    "md5": "092f8667140beed982e550ef3ccecec5",
+    "sha256": "a8de64fe8b22f9cebe2bf27de410aee7fe837946712b1eb8e46029515548e4e6"
+  },
+  "formatted_maekawa_gulls.zip": {
+    "url": "https://zenodo.org/api/records/10982620/files/formatted_maekawa_gulls.zip/content",
+    "bytes": 130719685,
+    "md5": "ad4035e05cdba36427eee4ef147bdbc2",
+    "sha256": "b1ab74f8af390785aea0eb4f4166d745c2b696d43a182e3bc5e22dabf6611d9a"
+  },
+  "formatted_ladds_seals.zip": {
+    "url": "https://zenodo.org/api/records/10982620/files/formatted_ladds_seals.zip/content",
+    "bytes": 12771323,
+    "md5": "64d7fb2b6ad2462c5cb68b1bc2437096",
+    "sha256": "0999a161e48abd9799988c82e6940ed3a74cc4c60b45b66419904e64ef9b9678"
+  },
+  "formatted_vehkaoja_dogs.zip": {
+    "url": "https://zenodo.org/api/records/10982620/files/formatted_vehkaoja_dogs.zip/content",
+    "bytes": 667321547,
+    "md5": "39ec4444827c7c293b97a741ff0e6fbb",
+    "sha256": "9242635dd620363b81ffa699ec0befe9835144a5fe8d6735301131e07456635c"
+  }
+}

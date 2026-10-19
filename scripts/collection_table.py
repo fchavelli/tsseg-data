@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "bebe": "builder + validated build (7 licensed animal datasets; 369 clips; excludes HAR/turtles)",
     "capture24": "source audited; build deferred (18-GiB disk reserve; ORA access)",
     "eegmmidb": "builder + validated build (all 1,526 runs; 64 native EEG channels; 128/160 Hz)",
     "ppg-dalia": "builder + validated build (15 subjects; 11 genuine native-rate channels)",
@@ -67,7 +68,7 @@ LICENSE_EN = {
     "usc-had": "none at the source",
     "mocap": "CMU motion terms; Barbič labels unlicensed",
     "wesad": "Siegen scientific, non-commercial use; redistribution not granted",
-    "bebe": "CC-BY-4.0 (repository); per-species licenses",
+    "bebe": "CC-BY-4.0 (seven animal archives); USGS raw bears public domain",
     "bee-dance": "none; citation requested",
     "tcpd": "mixed per series (CC BY, CC0, GPL-2.0, OGL, MIT, US PD; 9 not redistributable)",
     "bimacs": "CC0-1.0 (annotations, derived data); RGB-D for scientific use",
@@ -75,7 +76,7 @@ LICENSE_EN = {
 }
 NAME_EN = {
     "utsa": "UCR Time Series Semantic Segmentation Archive (UTSA, FLOSS datasets)",
-    "bebe": "BEBE: Bio-logger Ethogram Benchmark (collection of 9 datasets)",
+    "bebe": "BEBE: seven licensed animal datasets (formatted-release subset)",
     "rtt-ripe-atlas-labelled": "RTT change detection dataset (RIPE Atlas, manual labels), Shao et al.",
     "ais-fishing-semseg": "Dataset for Semantic Segmentation of Fishing Trajectories (123 released AIS trips)",
     "ami-meeting-corpus": "AMI Meeting Corpus: diarisation, recurrent speakers (derived-feature track)",

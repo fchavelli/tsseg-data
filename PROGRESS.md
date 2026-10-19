@@ -5,6 +5,42 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 3 / BEBE: **seven licensed animal datasets**, all 369 formatted
+  source clips / 105 individuals; explicitly exclude noncommercial HAR (HAPT
+  duplicate) and rights-unclear turtles. This is a scoped provider-formatted
+  track, not the complete nine-dataset collection or original raw reconstruction.
+  Seven primary ZIPs (1,623,226,915 bytes) verified against Zenodo MD5/size and
+  SHA256-pinned. Per-archive CC BY 4.0 grants and original animal-source notices
+  audited; original bear source USGS public domain, crow raw grant also CC BY.
+  Deposit-level terms never override the two excluded source restrictions.
+  Dogs overlap dog-behaviour-vehkaoja; never independent evaluation datasets.
+  All 3–12 released sensor columns per cohort retained (18-name union, structural
+  absence NaN, native_channels explicit), one float32 cast, no new processing.
+  Provider interpolation/normalization, selected gull rotations, whale tail
+  cropping, preprocessed rattlesnake channels, source splitting/taxonomy grouping
+  are documented by cohort. ZIP members streamed directly; no CSV extraction.
+  Exact elapsed nanoseconds at released 1/5/16/25/50/100 Hz; global/config rate
+  null, per-series frequency/step explicit, source clips kept whole in shared
+  shards under this mixed-rate format. 100,902,705 samples; lengths
+  151 / 10,606 median / 1,728,000. Five animal-grouped source folds preserved.
+  Primary evaluation explicitly excludes local unknown=0: map to -1, including
+  missing observations and provider-collapsed rare/mixed behaviors; no infilling.
+  36 scored classes namespaced by cohort with reversible source-code maps;
+  71,838 segments, recurrence 209/369, unscored 71.433829%. Missing gaps can
+  separate repeated observations without proving an intervening state change.
+  Per-cohort recurrence: rattlesnakes 2/146, crows 20/20, whales 8/8,
+  bears 34/39, gulls 12/22, seals 71/72, dogs 62/62. Per-series stats retained.
+  Bounded no-duplicate prefix pilot: 1.512 GiB cache + output estimate with 25%
+  margin 1.049 GiB +64 MiB metadata, projected 20.12 GiB free. Rolling actual
+  compression/source-byte projections after every clip; minimum projection
+  20.02 GiB at recorded cohort ends, above the 18-GiB reserve. Final output 1,133,761,082 bytes,
+  five shared Parquet parts, exact primary licences/metadata retained.
+  Full validation **0 errors / 0 warnings**, 23 checksummed files. All 369 exact
+  time grids verified; all channels/labels and structural NaNs equal pinned
+  source on one complete clip per cohort. Raw cache deleted only after successful
+  validation; pilot raw untouched, 21.70 GiB free. No publication. Next: dog-behaviour-vehkaoja;
+  Capture-24 remains blocked by disk/primary access (see pending entry below).
+
 - [x] Batch 3 / EEGMMIDB: all 109 participants and all 1,526 source runs,
   including 218 provider-designated baselines and 1,308 motor/imagery task runs.
   All 64 native EEG channels in one `default` config, calibrated float32 uV;
@@ -657,8 +693,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 11 builders remain after the
-  three pilots, nine batch-1, twenty-three batch-2 and four further batch-3
+- [ ] Decision 7 accepted on 2026-10-18; 10 builders remain after the
+  three pilots, nine batch-1, twenty-three batch-2 and five further batch-3
   source builders. Next: batch 3
   (heavy datasets, one at a time), including WESAD source-only, and tier C author
   contacts; TSSB upstream rights now also require clarification.

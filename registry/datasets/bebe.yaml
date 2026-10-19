@@ -1,32 +1,83 @@
-# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+# Verified against primary BEBE v3 archives and provider annotation/evaluation documentation.
 id: bebe
-name: "BEBE — Bio-logger Ethogram Benchmark (collection de 9 jeux)"
+name: 'BEBE: seven licensed animal datasets (formatted-release subset)'
 domain: ethology
 task: both
-source_url: "https://zenodo.org/records/10982620"
-doi: "10.5281/zenodo.10982620"
-citation: "Hoffman et al., Movement Ecology 2024 (arXiv 2305.10740)"
-license: "CC-BY-4.0 (dépôt) ; licences propres par jeu : CC BY 4.0 (baleines, phoques, chiens, goélands, corneilles, crotales), domaine public USGS (ours), sans mention (tortues)"
-license_url: "https://creativecommons.org/licenses/by/4.0/"
-license_verified: "2026-10-17, page Zenodo + license.txt de chaque raw_*.zip lus à distance (requêtes Range)"
+source_url: https://zenodo.org/records/10982620
+doi: 10.5281/zenodo.10982620
+citation: Hoffman et al., Movement Ecology 12, 78 (2024), doi:10.1186/s40462-024-00511-8
+license: CC-BY-4.0 (seven audited formatted animal archives); original USGS bear source public domain
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_verified: 2026-10-19, primary Zenodo v3 per-archive formatted/original notices; original crow
+  archive grant also verified
 license_tier: A
-n_series: null
-length: {min: null, median: null, max: null}
-n_channels: null
+n_series: 369
+n_individuals: 105
+n_samples: 100902705
+native_seconds: 5511809.7725
+length:
+  min: 151
+  median: 10606.0
+  max: 1728000
+n_channels: 18
+native_channels_per_cohort:
+  min: 3
+  max: 12
 sampling_rate_hz: null
+native_sampling_rates_hz:
+- 1
+- 5
+- 16
+- 25
+- 50
+- 100
 label_type: states
-n_states: null
+n_states: 36
 n_annotators: null
+n_label_tracks: 1
 label_origin: human
-unlabeled_regions: "oui, massivement (comportements annotés sur une partie seulement des enregistrements)"
+n_segments: 71838
+series_with_recurrence: 209
+unlabeled_share: 0.7143382925165386
+unlabeled_regions: Local unknown=0 explicitly excluded by primary evaluation; mapped to -1, including
+  missing observations and provider-collapsed rare/mixed behaviors. No gap infilling.
 continuous: true
 access: direct
-size: "~7 Go (raw), ~1,9 Go (formatted)"
+size: 1,623,226,915 source ZIP bytes; 1,133,761,082 built bytes
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: high
-value_reason: "seul benchmark multi-espèces d'éthogrammes sur séries continues (1 654 h, 149 individus, 9 taxons d'après le papier) ; SD non supervisée explicitement visée (k-means, HMM, VAME)"
+value_reason: Seven animal cohorts with preserved formatted channels, cohort-specific behavioral labels,
+  source animal folds and measured per-clip recurrence.
 effort: medium
-confidence: medium
-notes: "Jeux : jeantet_turtles (13 tortues vertes, acc+gyr+profondeur 20 Hz, 46 comportements sur vidéo), friedlaender_whales (DTAG baleines à bosse), pagano_bears (ours polaires, colliers vidéo ; USGS), ladds_seals (otaries, captivité), vehkaoja_dogs (= dog-behaviour-vehkaoja), maekawa_gulls (goélands, labels début/fin), baglione_crows (corneilles), desantis_rattlesnakes (crotales, 10 Mo), HAR (= hapt). Fiches détaillées par jeu à faire en phase 2 ; les chiffres globaux viennent du papier (non relus). Version « formatted » = fichiers par individu avec label par échantillon, directement utilisables. Tortues : license.txt sans licence (citation seule) → s'en remettre au CC BY 4.0 du dépôt, à confirmer avec L. Jeantet."
+confidence: high
+included_cohorts:
+- desantis_rattlesnakes
+- baglione_crows
+- friedlaender_whales
+- pagano_bears
+- maekawa_gulls
+- ladds_seals
+- vehkaoja_dogs
+excluded_cohorts:
+  HAR: Original noncommercial terms; HAPT duplicate
+  jeantet_turtles: No clear original redistribution grant
+overlap_groups:
+  vehkaoja_dogs:
+  - dog-behaviour-vehkaoja
+notes: 'Explicit seven-of-nine formatted-release subset; all369 released clips /105 individuals retained.
+  HAR excluded for original noncommercial terms and HAPT overlap; turtles excluded because original citation-only
+  notice gives no clear redistribution grant. Do not apply deposit-level CC BY to override those restrictions.
+  Seven included formatted archives explicitly CC BY4; original animal source grants checked, bears USGS
+  public domain. Dogs share recordings with dog-behaviour-vehkaoja; never count them as independent evaluation
+  data. This is a provider-formatted track, not original raw reconstruction: source interpolation, normalization,
+  rotations, label grouping, splitting and whale tail cropping are documented per cohort. No new signal
+  processing. All released 3–12 sensor columns retained through float32 conversion; 18-name union with
+  structural NaN and native_channels per series, no shared physical units inferred. Mixed regular1/5/16/25/50/100-Hz
+  grids preserved as exact time_ns with per-series frequency, global rate null; whole source clips stored
+  in shared shards. Local behavior codes mapped reversibly to36 cohort-namespaced states, unknown unscored.
+  Five source folds retained with cohort-scoped animal IDs.209/369 series recurrent; 71.4338% source-excluded.
+  Missing gaps may separate observations without proving a behavioral change. All seven ZIP SHA256/official
+  MD5/size checked, CRC-checked CSV reads without extraction. Validation0 errors/0 warnings; all369 timing
+  grids verified, full source signal/label equality checked on one complete clip per cohort.'
 rejected: null
