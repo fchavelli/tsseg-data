@@ -5,6 +5,35 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 3 / PPG-DaLiA: all 15 synchronized participant recordings,
+  8,287,296 native 64-Hz BVP samples (129,489 s); lengths
+  336,000 / 573,312 median / 681,472. All 11 genuine channels retained:
+  default BVP; shared native auxiliary stream groups for wrist ACC (32 Hz),
+  EDA/TEMP (4 Hz), chest ECG/Resp/ACC (700 Hz). Thorax tables roll at about
+  256 MiB, with bounded 262,144-sample row groups; no file per participant.
+  Provider-documented dummy chest EDA/EMG/Temp excluded. Source synchronization
+  and sparse clock-drift deletions preserved; no additional resampling,
+  interpolation, scaling or duration trimming. S6 keeps its valid 1.5-hour portion.
+  All nine activity codes retained; transient 0 is an ordinary scored null state.
+  249 segments, no missing activity labels. Ordinary-state recurrence is 15/15,
+  entirely due to transient 0; substantive activity recurrence is **0/15**.
+  Supports protocol boundary CPD, with weak substantive SD recurrence; both
+  metrics retained, and participant-level evaluation required. Original 4-Hz
+  activity (517,956 samples), ECG-derived HR windows and literal corrected
+  R-peak indices kept separately; HR is not segmentation truth. Questionnaires,
+  demographics and absolute device timestamps excluded. CC BY 4.0 verified at
+  primary UCI 495 on 2026-10-19. Existing 1.46-GB partial archive reused:
+  UCI ignored Range, so streamed and compared its entire prefix before appending;
+  exact size / primary wrapper CRC checked, then SHA256 pinned (archive and README).
+  Restricted unpickler permits only numeric NumPy reconstruction primitives;
+  object arrays and arbitrary globals rejected. Output: 1.32 GB total, one default
+  part plus seven native sensor shards. Full Croissant/schema/checksum validation:
+  15 checksummed files, **0 errors / 0 warnings**. All native per-subject grids and
+  counts checked; first S1 row groups match source float32 exactly for all ten
+  auxiliary channels. Raw cache deleted only after successful validation;
+  pilot raw untouched, 25 GiB free (minimum observed about 22 GiB; reserve 18 GiB).
+  No publication. Next: EEGMMIDB.
+
 - [x] Batch 3 / Helsinki neonatal EEG: all 79 recordings, 103,123,200
   samples at native 256 Hz (402,825 s); lengths 802,048 / 1,143,808 median /
   3,946,496. Default: eight bilateral EEG electrodes
@@ -559,8 +588,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 13 builders remain after the
-  three pilots, nine batch-1, twenty-three batch-2 and two further batch-3
+- [ ] Decision 7 accepted on 2026-10-18; 12 builders remain after the
+  three pilots, nine batch-1, twenty-three batch-2 and three further batch-3
   source builders. Next: batch 3
   (heavy datasets, one at a time), including WESAD source-only, and tier C author
   contacts; TSSB upstream rights now also require clarification.

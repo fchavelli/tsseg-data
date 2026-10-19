@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry), not edited here.
+# Verified against primary UCI 495, the provider README and all 15 source pickles.
 id: ppg-dalia
 name: "PPG-DaLiA: PPG dataset for motion compensation and heart rate estimation in Daily Life Activities"
 domain: "physio"
@@ -9,16 +9,23 @@ citation: "Reiss et al., Sensors 19(14):3079, 2019"
 license: "CC-BY-4.0"
 license_url: "https://creativecommons.org/licenses/by/4.0/"
 license_tier: "A"
-license_verified: "2026-10-17, page UCI 495 (« licensed under CC BY 4.0 »)"
+license_verified: "2026-10-19, primary UCI 495 (CC BY 4.0)"
 n_series: 15
-length: {min: null, median: null, max: null}
-n_channels: null
+length: {min: 336000, median: 573312, max: 681472}
+n_samples: 8287296
+native_seconds: 129489
+n_segments: 249
+series_with_recurrence: 15
+series_with_recurrence_without_transient: 0
+null_states: [0]
+n_channels: 1
+n_native_genuine_channels: 11
 sampling_rate_hz: 64
 label_type: "states"
-n_states: 8
-n_annotators: null
+n_states: 9
+n_annotators: 1
 label_origin: "protocol"
-unlabeled_regions: "oui : transitions entre activités (label 0)"
+unlabeled_regions: "None; protocol transient periods (0) remain an ordinary scored null state."
 continuous: true
 access: "direct"
 size: "2.7 GB (zip)"
@@ -27,6 +34,6 @@ fm_pretraining: "unknown"
 value: "high"
 value_reason: "~2,5 h par sujet en conditions quasi réelles : assis, escaliers, baby-foot, vélo, voiture, déjeuner, marche, travail ; PPG + ECG + ACC"
 effort: "low"
-confidence: "medium"
-notes: "Poignet : BVP 64 Hz, EDA/TEMP 4 Hz, ACC 32 Hz ; poitrine : ECG/RESP/ACC 700 Hz (fréquences mixtes). Durées d'après le papier (non relues). Hébergement UCI déposé par les auteurs (même équipe Siegen que WESAD, mais licence CC BY ici). Peut figurer dans har.yaml."
+confidence: "high"
+notes: "All 15 synchronized recordings, native 64-Hz BVP default. Three shared auxiliary stream groups, sharded at approximately 256 MiB, retain wrist ACC (32 Hz), EDA/TEMP (4 Hz), chest ECG/Resp/ACC (700 Hz); all 11 genuine channels, no added resampling. Chest EDA/EMG/Temp are dummy modalities per provider and excluded. Original 4-Hz activity, ECG-derived HR references and corrected R-peak indices retained separately; HR is not segmentation truth. Provider tap synchronization and sparse clock-drift sample deletions already present in source. S6 contains only valid first approximately 1.5 hours. All nine states retained; 15/15 recurrence comes entirely from transient 0, and substantive activity recurrence is 0/15. Supports protocol boundary CPD with weak substantive SD recurrence; retain both metrics. No independent annotator agreement. Questionnaires/demographics and absolute timestamps excluded. Group evaluation by participant."
 rejected: null

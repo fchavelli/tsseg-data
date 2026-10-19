@@ -1,0 +1,18 @@
+{
+  "data.zip": {
+    "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00495/data.zip",
+    "bytes": 2864337783,
+    "crc32": 2476898001,
+    "sha256": "fcda4d13f6475e88a24f1ef9658627dc98e04dd5c5dd790cd2b0a1a22e31913b",
+    "crc32_evidence": {
+      "url": "https://archive.ics.uci.edu/static/public/495/ppg%2Bdalia.zip",
+      "member": "data.zip",
+      "method": "Stored first member local ZIP header, read without full wrapper download",
+      "verified_date": "2026-10-19"
+    }
+  },
+  "readme.pdf": {
+    "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00495/readme.pdf",
+    "sha256": "018a3bab7f1d02261ad4a42720f2235ac20e1c3c0a052f02ef91208096d4fc1b"
+  }
+}
