@@ -85,7 +85,7 @@ the authors allow re-hosting.
 | `mhealth`: MHEALTH (Mobile HEALTH) dataset | har | SD | CC-BY-4.0 (A) | builder + validated build (10 complete logs; null state retained) |
 | `casas-aruba-milan-tulum-cairo`: CASAS Smart Home dataset (aruba, cairo, milan, tulum) — labelled, with temperature | har | SD | CC-BY-4.0 (A) | builder + validated build (5 event logs; simultaneous activity sets preserved) |
 | `bebe`: BEBE: seven licensed animal datasets (formatted-release subset) | ethology | SD | CC-BY-4.0 (seven animal archives); USGS raw bears public domain (A) | builder + validated build (7 licensed animal datasets; 369 clips; excludes HAR/turtles) |
-| `dog-behaviour-vehkaoja`: Movement Sensor Dataset for Dog Behavior Classification | ethology | SD | CC-BY-4.0 (A) | planned |
+| `dog-behaviour-vehkaoja`: Movement Sensor Dataset for Dog Behavior Classification (complete source annotations) | ethology | SD | CC-BY-4.0 (A) | builder + validated build (62 native dual-IMU tests; original simultaneous labels; overlaps BEBE) |
 | `bee-dance`: Honey Bee Dance (PS-SLDS, Oh et al.) | ethology | SD | none; citation requested (C) | builder + validated local build (all six native trajectories; original GT); source-only builder until rights are clarified |
 | `petrobras-3w`: 3W Dataset 2.0.0 (undesirable events in offshore oil wells) | industry_energy | SD + CPD | CC-BY-4.0 (A) | builder + validated build (all 1,119 measured instances; two label tracks) |
 | `cnc-mill-umich`: CNC Mill Tool Wear (University of Michigan SMART testbed) | industry_energy | SD | CC0-1.0 (A) | builder + validated build (18 complete experiments; all 47 numeric channels) |

@@ -1,32 +1,68 @@
-# Copied from notes/datasets/registry/har.yaml (phase-1 registry entry), not edited here.
+# Verified against primary Mendeley v4 CSV, official hashes and original documentation.
 id: dog-behaviour-vehkaoja
-name: "Movement Sensor Dataset for Dog Behavior Classification"
+name: Movement Sensor Dataset for Dog Behavior Classification (complete source annotations)
 domain: ethology
 task: both
-source_url: "https://data.mendeley.com/datasets/vxhx934tbn"
-doi: "10.17632/vxhx934tbn.4"
-citation: "Vehkaoja et al., Data in Brief 40, 2022 ; Kumpulainen et al., Applied Animal Behaviour Science 241, 2021"
+source_url: https://data.mendeley.com/datasets/vxhx934tbn/4
+doi: 10.17632/vxhx934tbn.4
+citation: Vehkaoja et al., Data in Brief 40:107822 (2022), doi:10.1016/j.dib.2022.107822; Kumpulainen
+  et al., Applied Animal Behaviour Science 241:105393 (2021)
 license: CC-BY-4.0
-license_url: "https://creativecommons.org/licenses/by/4.0/"
-license_verified: "2026-10-17, API Mendeley Data + license.txt BEBE"
+license_url: https://creativecommons.org/licenses/by/4.0/
+license_verified: 2026-10-19, primary Mendeley v4 landing/embedded licence and official per-file SHA256
+  manifest
 license_tier: A
-n_series: 63
-length: {min: null, median: 170000, max: null}
+n_series: 62
+n_individuals: 45
+n_samples: 10611068
+length:
+  min: 146584
+  median: 170040
+  max: 217656
 n_channels: 12
 sampling_rate_hz: 100
 label_type: multi_track
-n_states: 7
+n_states: 59
+n_task_states: 7
+n_atomic_behavior_names: 19
 n_annotators: null
-label_origin: human
-unlabeled_regions: "oui : Task <undefined> hors tâches, comportement non annoté par endroits"
+n_label_tracks: 2
+label_origin: human/protocol
+series_with_behavior_recurrence: 62
+series_with_task_recurrence: 14
+series_with_substantive_recurrence: 62
+behavior_unlabeled_share: 0.3439225910153436
+task_unlabeled_share: 0.24434401890554278
+unlabeled_regions: Empty sets of three undefined behavior slots and undefined instructed tasks -> -1;
+  unused slots do not mask observed simultaneous behaviors. Technical synchronization labels remain ordinary
+  scored source states.
 continuous: true
 access: direct
-size: "~2 Go (CSV, 10,6 M lignes)"
+size: 440,938,008 source-cache bytes; 347,647,628 built bytes; CSV streamed without extraction
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: high
-value_reason: "2 IMU (cou, dos) à 100 Hz, deux pistes (tâche demandée + comportement annoté sur vidéo, jusqu'à 3 simultanés), 45 chiens environ"
+value_reason: Original instructed tasks, all simultaneous video behaviors and Bark event spans add annotation
+  coverage beyond BEBE; all sensor arrays duplicate BEBE dog cohort and cannot count as independent evaluation.
 effort: low
-confidence: medium
-notes: "63 tests (DogID × TestNum 1-2) ; médiane = ordre de grandeur (10,6 M lignes / 63 ; exemple MATLAB : 171 168 lignes). Comportements : galop, couché, assis, renifle, debout, trot, marche (+ autres). Aussi dans BEBE."
+confidence: high
+overlap_group: bebe/vehkaoja_dogs
+overlap_exact_float32_series: 62
+overlap_samples: 10611068
+notes: Complete primary CSV with all 12 dual-IMU channels at 100 Hz and source time_ns.45 dogs plus 17
+  repeat tests = 62 nonempty CSV groups, correcting provisional 63 from TXT MAT-row claim; unresolved
+  MAT-row discrepancy documented, no invented test. Primary paper declares CSV/MAT content equivalence,
+  so no duplicate MAT downloaded. Original three behavior slots, task and PointEvent preserved losslessly
+  as 24,660 half-open source spans; two canonical dense tracks preserve task and unordered simultaneous
+  behavior sets, with 59 reversible combination classes and seven literal instructed tasks. 19 atomic
+  names include17 substantive behaviors plus Synchronization/Extra_Synchronization; technical states retained
+  and explicitly flagged, excluded only from substantive recurrence statistics. Bark 231 contiguous source
+  spans / 26,173 source samples. Source three-slot co-occurrence 152,140 samples=1,521.4 s, unlike paper
+  15,214 s; keep source values. Source TXT reverses ANeck_x/y descriptions relative to explicit CSV header
+  and paper Table 2; no inferred axis swap. Units not explicitly established in audited source description.
+  Video labels about1-s resolution despite 100-Hz raster. Exact post-float32 equality with all 62 BEBE
+  dog sensor arrays, proved by per-series fingerprints against pinned BEBE source archive; preserve matching
+  series IDs and overlap group. Do not count these as independent recordings or split dogs across collections.
+  No new filtering, resampling, scaling, cropping or label rejection. Per-series/cohort stats and exact
+  original spans retained; task/behavior are distinct semantics, not independent annotators.
 rejected: null

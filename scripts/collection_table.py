@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "dog-behaviour-vehkaoja": "builder + validated build (62 native dual-IMU tests; original simultaneous labels; overlaps BEBE)",
     "bebe": "builder + validated build (7 licensed animal datasets; 369 clips; excludes HAR/turtles)",
     "capture24": "source audited; build deferred (18-GiB disk reserve; ORA access)",
     "eegmmidb": "builder + validated build (all 1,526 runs; 64 native EEG channels; 128/160 Hz)",

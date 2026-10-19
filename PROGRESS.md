@@ -5,6 +5,42 @@ Resume point of the repository set-up (started 2026-10-18 from the pilot in
 
 ## Done
 
+- [x] Batch 3 / Dog behavior (Vehkaoja): complete primary Mendeley v4 CSV,
+  all 62 tests / 45 dogs, 10,611,068 samples at 100 Hz; all 12 native back/neck
+  accelerometer/gyroscope channels. Lengths 146,584 / 170,040 median / 217,656.
+  CC BY 4.0 verified at primary source; ZIP and description official SHA256/size
+  pinned. CSV declared equivalent to MAT by primary paper: download only the
+  440,933,845-byte ZIP plus 4,163-byte description; stream the 1,985,551,732-byte
+  CSV without extraction. TXT says 63 MAT rows, but complete CSV has 62 tests
+  (45 dogs + 17 repeats, matching paper); discrepancy retained, no synthetic test.
+  **All 62 sensor arrays exactly duplicate BEBE vehkaoja_dogs after float32**,
+  proven by complete per-series channel fingerprints against pinned BEBE source.
+  Original annotations add distinct value: seven instructed tasks, 19 atomic
+  behavior names, all simultaneous behaviors and Bark events; preserve explicit
+  overlap IDs/group, never count independent sensor evaluations across the views.
+  Two dense tracks: literal instructed task and reversible unordered behavior set
+  (59 categories). Original task/three ordered behavior slots/PointEvent retained
+  losslessly as 24,660 half-open spans, including undefined entries. Empty behavior
+  sets/undefined tasks -> -1; unused slots do not discard other observed labels.
+  Synchronization/Extra_Synchronization stay ordinary annotated technical states;
+  substantive recurrence excludes these. Video resolution about 1 s, no invented
+  100-Hz annotation precision. Behavior recurrence 62/62 (also substantive), task
+  recurrence 14/62; 23,602 / 962 segments, unscored 34.392259% / 24.434402%.
+  Two/three populated slots: 2,486,375 / 152,140 samples; three-slot duration
+  1,521.4 s differs from paper 15,214 s. Bark 231 contiguous source spans,
+  26,173 source samples; preserve source duration, no event expansion.
+  CSV header/paper ANeck X/Y descriptions conflict with TXT row descriptions:
+  keep explicit header positions, no inferred swap or unit conversion.
+  No filtering, resampling, scaling, cropping or behavior rejection. Bounded
+  24,778-row prefix pilot measured 35.16 compressed bytes/sample; builder uses
+  55-byte floor +25% +64 MiB metadata, rolling guard after every test; minimum
+  projection 20.54 GiB free. Output about 348 MB, two shared parts. Full validation
+  **0 errors / 0 warnings**, eight checksummed files. All 62 exported sensor hashes
+  match source/BEBE; exact time grids and full original-span coverage verified;
+  both dense tracks reconstruct exactly from original spans on every test.
+  Raw cache deleted after successful validation, pilot raw untouched; 21.37 GiB free.
+  No publication. Next: DEDDIAG; Capture-24 remains deferred.
+
 - [x] Batch 3 / BEBE: **seven licensed animal datasets**, all 369 formatted
   source clips / 105 individuals; explicitly exclude noncommercial HAR (HAPT
   duplicate) and rights-unclear turtles. This is a scoped provider-formatted
@@ -693,8 +729,8 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
 
 ## To do
 
-- [ ] Decision 7 accepted on 2026-10-18; 10 builders remain after the
-  three pilots, nine batch-1, twenty-three batch-2 and five further batch-3
+- [ ] Decision 7 accepted on 2026-10-18; 9 builders remain after the
+  three pilots, nine batch-1, twenty-three batch-2 and six further batch-3
   source builders. Next: batch 3
   (heavy datasets, one at a time), including WESAD source-only, and tier C author
   contacts; TSSB upstream rights now also require clarification.

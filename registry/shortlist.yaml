@@ -340,9 +340,9 @@ datasets:
     label_type: multi_track
     license: CC-BY-4.0
     license_tier: A
-    why: "2 IMU à 100 Hz, deux pistes (tâche + comportement vidéo), 63 tests"
-    risks: "~2 Go ; comportements simultanés (jusqu'à 3) : choisir une piste exclusive"
-    subset: null
+    why: "All 12 dual-IMU channels, 62 tests/45 dogs; original instructed task, simultaneous behavior slots and Bark spans add annotation coverage"
+    risks: "All 62 sensor recordings duplicate BEBE dogs; preserve overlap group, never independent evaluations. Behavior set-valued; no arbitrary exclusive priority."
+    subset: "Complete primary CSV release; MAT representation declared equivalent, not duplicated"
     contact_needed: false
   - id: bee-dance
     registry: cpd_benchmarks.yaml

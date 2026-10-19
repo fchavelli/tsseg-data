@@ -1,0 +1,374 @@
+{
+  "16:1": {
+    "series_id": "vehkaoja_dogs__individual_16_test_1",
+    "samples": 164004,
+    "sha256_float32_channels": "3de8ac43db8ded243b571fdfdca23e7348c2d3cdc127af7730b3d884b01fa6fb",
+    "bebe_label_sha256": "ca30d4f85381b6c0823b16dd2764c3e736b20134dc40c325db941a148e877d19"
+  },
+  "16:2": {
+    "series_id": "vehkaoja_dogs__individual_16_test_2",
+    "samples": 156872,
+    "sha256_float32_channels": "efd5ddf2fbfe0be68de5303f0a6a7fe6cc8cefa50c9e83a441912f71d0260e05",
+    "bebe_label_sha256": "79862fef5dc91d02bbf522252cb3b40d2989dfafd92d6aef49f5bd15f3647ad9"
+  },
+  "18:1": {
+    "series_id": "vehkaoja_dogs__individual_18_test_1",
+    "samples": 175336,
+    "sha256_float32_channels": "bba3f76367dfae947f6d7f485632513950433131cc337eed6a4efffe2ecd2229",
+    "bebe_label_sha256": "88a0dc92787af781d005d71cebaa3e07de8bad0dcf1a3a52d200e2de0e396376"
+  },
+  "19:2": {
+    "series_id": "vehkaoja_dogs__individual_19_test_2",
+    "samples": 157376,
+    "sha256_float32_channels": "c144ef350934358230db213cbd11a8143e3a9cbf7a7901f919303c266bb4ae73",
+    "bebe_label_sha256": "36e41746448ee37a0248ef0a55466ab24ad8321a1942d1e811a442f8e47b193d"
+  },
+  "20:1": {
+    "series_id": "vehkaoja_dogs__individual_20_test_1",
+    "samples": 185904,
+    "sha256_float32_channels": "a6af3c958c9b5fdd0964b77a7899f1171590c78776209d1e62b071737d04b491",
+    "bebe_label_sha256": "1dd919872beca13d48e216abbb144e5e235478994510acc3302ebca8f249078c"
+  },
+  "21:1": {
+    "series_id": "vehkaoja_dogs__individual_21_test_1",
+    "samples": 173332,
+    "sha256_float32_channels": "432761f636f736eb04cdb9e91373dcdc3e2382d49737c2407610d48fd487b245",
+    "bebe_label_sha256": "2d3f2202a45d4b060559948331f195a83f7da231b74772480d521bb75fafd5d8"
+  },
+  "22:2": {
+    "series_id": "vehkaoja_dogs__individual_22_test_2",
+    "samples": 160404,
+    "sha256_float32_channels": "309b75bea73d7968fd0539c4f8bea5d92296fdd08d99230d42eb41db476d6b60",
+    "bebe_label_sha256": "9b83400a1ec7d445718940bc826b0fb67a640ac608146f41cade8b9b369d7585"
+  },
+  "23:1": {
+    "series_id": "vehkaoja_dogs__individual_23_test_1",
+    "samples": 168108,
+    "sha256_float32_channels": "63e90b1555908c80ea13aa2574e163ecd9b4a1daa10577be4e92743055bc64d8",
+    "bebe_label_sha256": "fc5d58a4594e3204dcb0da3ce779cc0d2b5adaaf553c6ff937a8b44f901e788b"
+  },
+  "23:2": {
+    "series_id": "vehkaoja_dogs__individual_23_test_2",
+    "samples": 151028,
+    "sha256_float32_channels": "e8d89d8a172a97ca5e266f48ce792611a27b7e13e28deee5b4f7371546fa5a67",
+    "bebe_label_sha256": "1137905fab2c0c689e8ccfa251a794b3c85135433b86611b350c358644907905"
+  },
+  "25:1": {
+    "series_id": "vehkaoja_dogs__individual_25_test_1",
+    "samples": 164512,
+    "sha256_float32_channels": "3b4b1a526b5a0f9a999475527c0cd4704545b66f7cfad45de5f1bc4246c3856d",
+    "bebe_label_sha256": "87b514a2f99e9f379e01e9eda826f720f81cdb86fb72e75f1a6e3c7fd87a0df9"
+  },
+  "25:2": {
+    "series_id": "vehkaoja_dogs__individual_25_test_2",
+    "samples": 152504,
+    "sha256_float32_channels": "f5dd9ca5c3e5f8d7ea3e53236779bfcaed2b1563f4bfaaf663a0391683623cd3",
+    "bebe_label_sha256": "6e110b2b7ce9b65b1b160cd5ed061908e32e30a0a2c667a62d300897d4bd5c39"
+  },
+  "26:1": {
+    "series_id": "vehkaoja_dogs__individual_26_test_1",
+    "samples": 170676,
+    "sha256_float32_channels": "02c55bbd9d34973bcae0746846e31081fdcdf8f67404010d63d2ec62a593c051",
+    "bebe_label_sha256": "c3a87eb15a637558cc246518eb5794ee5551d4c6d121cc75292a125e8bfea77f"
+  },
+  "26:2": {
+    "series_id": "vehkaoja_dogs__individual_26_test_2",
+    "samples": 161288,
+    "sha256_float32_channels": "df26847a3e53a488f012a53741bcbe42e45a60fce4e35db70042725b5319f124",
+    "bebe_label_sha256": "3c9cf39cdeea77c6b1913e99818d8479595ddb58cacfa48cd98cfe5e570b2eb3"
+  },
+  "27:1": {
+    "series_id": "vehkaoja_dogs__individual_27_test_1",
+    "samples": 171168,
+    "sha256_float32_channels": "94a6e43b5d84772254dba465341ae9ebfd66a0662d457986744b010ac4758003",
+    "bebe_label_sha256": "5cba186bc5de95bc932afc9db558ec078d7615191c3e03633c656b8535691750"
+  },
+  "27:2": {
+    "series_id": "vehkaoja_dogs__individual_27_test_2",
+    "samples": 156348,
+    "sha256_float32_channels": "504f31b18dd0ac7f95cdd785c9d9d576ba98942f5dab9d7cc00a341335a49816",
+    "bebe_label_sha256": "75f2fd5691001ddefa6ec09bf488be46befe74de07619ceff3a469f61011c9dd"
+  },
+  "28:1": {
+    "series_id": "vehkaoja_dogs__individual_28_test_1",
+    "samples": 166264,
+    "sha256_float32_channels": "c6545832c86a03230510abbb1b6c1000c6dcc9683071d025e52c75be60fef5d4",
+    "bebe_label_sha256": "53802ae8e5431554841beaef1a374e6fb8cf20d362f1e9f92615b463aa9c35f3"
+  },
+  "29:1": {
+    "series_id": "vehkaoja_dogs__individual_29_test_1",
+    "samples": 171988,
+    "sha256_float32_channels": "a16a2d02921ce391b86c722931889c680a59ec3ad1b1287ff2309287c3c83364",
+    "bebe_label_sha256": "70b668b55122a0211595bd962026c2762e3eb4c6ffab8132d1cdbf846c9eef68"
+  },
+  "29:2": {
+    "series_id": "vehkaoja_dogs__individual_29_test_2",
+    "samples": 152980,
+    "sha256_float32_channels": "3f55da24d2328ce59ff374b71b1cd001328102404fb00ccf391c66644d2fb31e",
+    "bebe_label_sha256": "04e878460aaeb3e2113ea11342cc5f76215eb873bde4f11cb97b8221b6b83e2a"
+  },
+  "30:1": {
+    "series_id": "vehkaoja_dogs__individual_30_test_1",
+    "samples": 171612,
+    "sha256_float32_channels": "4238b96c0f1c1f7f79a36285ee4468746facd569d5c05c0dba67f0f326f054df",
+    "bebe_label_sha256": "cf3519ff2b632e16c2541f356cc678fc2bf4fd5c20331b4e78c09407452015b1"
+  },
+  "30:2": {
+    "series_id": "vehkaoja_dogs__individual_30_test_2",
+    "samples": 163860,
+    "sha256_float32_channels": "4b0a222337aa0ee96eb3cf6a7b3ffb4074ca07fddda2cf126c39cedb9129896a",
+    "bebe_label_sha256": "6150a3ab269f12ab96e0729b11f337e16631209696b91442965866029593b40d"
+  },
+  "33:1": {
+    "series_id": "vehkaoja_dogs__individual_33_test_1",
+    "samples": 169024,
+    "sha256_float32_channels": "4fe288c896db1b196f656b7e23f23af3698e96d321b90d26106fa781035b572d",
+    "bebe_label_sha256": "d8c59963c501dfb68217531a8da3488a7a86736719239ff4b37d72c65222e34b"
+  },
+  "34:1": {
+    "series_id": "vehkaoja_dogs__individual_34_test_1",
+    "samples": 169404,
+    "sha256_float32_channels": "f2d6150aa786abefd5f112083ee2550707b6296ad888e03f99a7f5c7226a097b",
+    "bebe_label_sha256": "09833bd971129061857de8ad0ac04d7083cdf4982d9f375d8f0df001c086bf4a"
+  },
+  "34:2": {
+    "series_id": "vehkaoja_dogs__individual_34_test_2",
+    "samples": 149080,
+    "sha256_float32_channels": "4e213d178c0b78ec3d02657a30ee86bbbacc6036ecae1d8d34ddad6a95dc44f0",
+    "bebe_label_sha256": "1cda50cf32429e126564fa1515714ad84933cd14ce8eba1fe010657c093661ff"
+  },
+  "36:1": {
+    "series_id": "vehkaoja_dogs__individual_36_test_1",
+    "samples": 187852,
+    "sha256_float32_channels": "d79eb1b6325d81476dad20d3c922327b4771204a57258d002c771d74856b859c",
+    "bebe_label_sha256": "89eacdf461b284f84be70e682c42aa1bd0c77794d8c360a698ffa24977101511"
+  },
+  "39:1": {
+    "series_id": "vehkaoja_dogs__individual_39_test_1",
+    "samples": 184328,
+    "sha256_float32_channels": "befcfa185f831add850731f6772a6341393fb77e9ff0e2ba2c3ecb959b238f6e",
+    "bebe_label_sha256": "de98df16831ae97b2561a319cbcc72d5b57fc94f7f39cb1c823e3d856ca7afc1"
+  },
+  "39:2": {
+    "series_id": "vehkaoja_dogs__individual_39_test_2",
+    "samples": 185316,
+    "sha256_float32_channels": "f0af7e33db0156ab6e2c810ed4baaa86fd2b01a4eddb8d6275914b4f75a1920e",
+    "bebe_label_sha256": "2306a8b744bf497170f0befeff676434b90537e2e0f6eea861d5fe3d6308d3da"
+  },
+  "41:1": {
+    "series_id": "vehkaoja_dogs__individual_41_test_1",
+    "samples": 173276,
+    "sha256_float32_channels": "06d19b786e815b36d01738f0f6fb8dfd9e931fc3b43af459fd9fe3d0c4d7e013",
+    "bebe_label_sha256": "173e127fc4e2d3e1baefd92f3d0e50e0a9c586e14f004dcd12e46da5a7837c9e"
+  },
+  "41:2": {
+    "series_id": "vehkaoja_dogs__individual_41_test_2",
+    "samples": 157452,
+    "sha256_float32_channels": "a4505a8e15abb385f9efeb69711fcdf576f299f5f3e3e6e5b7442851bd7ecf98",
+    "bebe_label_sha256": "1ed8281dcd2c0fb00992654bf521c6d93027354fe99271a5f5b65d53cd1e092a"
+  },
+  "43:1": {
+    "series_id": "vehkaoja_dogs__individual_43_test_1",
+    "samples": 176928,
+    "sha256_float32_channels": "9fe83203f057b56946e44059207d3945387c1cd141f24d33ef000e138096a010",
+    "bebe_label_sha256": "b3b9d776c600acf6c63eb05d0e47455d5f080fc2374be3b9d6d03abb73f9b55a"
+  },
+  "43:2": {
+    "series_id": "vehkaoja_dogs__individual_43_test_2",
+    "samples": 148980,
+    "sha256_float32_channels": "2ec37cd53019a50d3878a1e6d10d682949287974660dd7de8c2ce9d85d1e0a86",
+    "bebe_label_sha256": "3e33fd39b75f3ac648234bed56fdd63e3a8510837aa0036b41694c127e8d7930"
+  },
+  "44:1": {
+    "series_id": "vehkaoja_dogs__individual_44_test_1",
+    "samples": 217656,
+    "sha256_float32_channels": "2df75d9d497cc3cfdd1773ac49c48d8f77185edcfb8d10988efe129cbe9c8edc",
+    "bebe_label_sha256": "f185c49821df5f8530a3e395551207b7d89236c202b8d1b6ac462b0c0a76144d"
+  },
+  "45:1": {
+    "series_id": "vehkaoja_dogs__individual_45_test_1",
+    "samples": 166764,
+    "sha256_float32_channels": "50b222fe85de8bc97dfe5bcc30c657caba77ce1aa7052cdb68c2018677913df7",
+    "bebe_label_sha256": "85d4940d7ef47ae6ef7c5755d6953cba9f0e71ddf220aa6599aaa3afa976e100"
+  },
+  "45:2": {
+    "series_id": "vehkaoja_dogs__individual_45_test_2",
+    "samples": 149980,
+    "sha256_float32_channels": "a6d928ccd9b7f6313e63fca103d806150c2867e372fa4a7959ea8a1486f98815",
+    "bebe_label_sha256": "b5289edc462d6cc617ffdbb21364678a3ec77c840982a450719c1b85f34948ec"
+  },
+  "46:1": {
+    "series_id": "vehkaoja_dogs__individual_46_test_1",
+    "samples": 146584,
+    "sha256_float32_channels": "9beb318806f9c9d43d5c99c7f4bf4ebbc7ae9291551df6af65b8f21180c32e0b",
+    "bebe_label_sha256": "89dda1ef90fe459f0aac056cfdc83cdfd7eb0fae4bad2cd8cedc0e326fe0314b"
+  },
+  "46:2": {
+    "series_id": "vehkaoja_dogs__individual_46_test_2",
+    "samples": 148864,
+    "sha256_float32_channels": "814ff7b3f7abccebffcddd49f424965de58f30483441b77c872947c64c478d6a",
+    "bebe_label_sha256": "2506734fdd727641f1124b9a1bb3e3f9145d19239bd2f84318bafa7181c6dd0e"
+  },
+  "47:1": {
+    "series_id": "vehkaoja_dogs__individual_47_test_1",
+    "samples": 190608,
+    "sha256_float32_channels": "e8eeabcaea50a195aa3d3786e91786b24715b3c11d571aab05fda76636f1f2b5",
+    "bebe_label_sha256": "2ae22f56db516459c9ad2fc3ca7353e0681ae3e9d19592dfe84613d74ea46a2a"
+  },
+  "47:2": {
+    "series_id": "vehkaoja_dogs__individual_47_test_2",
+    "samples": 160120,
+    "sha256_float32_channels": "f1227d8c6ddbd0e748aa3adb3cdf1d6c5030e7fc4421d2c9a8c08c6f1d56fe3b",
+    "bebe_label_sha256": "3be86171b5d841b546728387f92793926a76ad80daa361339504267492e00b50"
+  },
+  "48:1": {
+    "series_id": "vehkaoja_dogs__individual_48_test_1",
+    "samples": 175148,
+    "sha256_float32_channels": "5d7ffcc5e8778a7bda2f05a608e71f057c6b40167e5d97aa2c6f274b96e6a7dd",
+    "bebe_label_sha256": "bf072f0c3f734d89bbf20ede45b52b67d7f88e3d019cf302d29f2a249d102fdd"
+  },
+  "48:2": {
+    "series_id": "vehkaoja_dogs__individual_48_test_2",
+    "samples": 148756,
+    "sha256_float32_channels": "b0e3c0ca3946032cd5a168f58f84b3aab09ab051bd2d72770e924ead357729b2",
+    "bebe_label_sha256": "a4b09f37bf65764700f9439f5d298235622439182392d60b0e64938703f216ea"
+  },
+  "49:1": {
+    "series_id": "vehkaoja_dogs__individual_49_test_1",
+    "samples": 162900,
+    "sha256_float32_channels": "72ad1c40504ae65874ebbcddadac92042876cf18dbd65854d9220072295cb621",
+    "bebe_label_sha256": "8e2b6402fafb09386584aea5f39c9c447b9c28df16ce7f6959580208c49450d4"
+  },
+  "49:2": {
+    "series_id": "vehkaoja_dogs__individual_49_test_2",
+    "samples": 160580,
+    "sha256_float32_channels": "4e2beb39d5e5d1a112ce963506cf5743e953c0cf12fcf42fc93be7893773810c",
+    "bebe_label_sha256": "60fe210d49db399d34552aec2e94627352191d8c4e8dd7e26765f5aa3f815a4f"
+  },
+  "51:1": {
+    "series_id": "vehkaoja_dogs__individual_51_test_1",
+    "samples": 171576,
+    "sha256_float32_channels": "8e8b6809b81c66e7cdc6a6dbd78fbaca477350d3d2e2e743a9fea17e09eb7398",
+    "bebe_label_sha256": "6caaf130daf7ff7c21711cbb0bbb98b8a8ee9c14a87f925fd857cf9d36933160"
+  },
+  "52:1": {
+    "series_id": "vehkaoja_dogs__individual_52_test_1",
+    "samples": 193528,
+    "sha256_float32_channels": "289c76819f523655d18d28a54cf883ae32894fe530437a82e4c22d02127362d5",
+    "bebe_label_sha256": "77704c4634ad29a64d3f773384c7a2d95f7df2f35c4e69449d8780adac2f9315"
+  },
+  "53:1": {
+    "series_id": "vehkaoja_dogs__individual_53_test_1",
+    "samples": 193572,
+    "sha256_float32_channels": "fd600efed95e9f0d42430d6c470578a9f43da6526f9bb35427d10d2f25f92c52",
+    "bebe_label_sha256": "1d70e979d6c4a015a1e6d049d3e09118767dada0b4924e1561159f28d84052c7"
+  },
+  "54:1": {
+    "series_id": "vehkaoja_dogs__individual_54_test_1",
+    "samples": 184444,
+    "sha256_float32_channels": "336c31aaeafc51da2890e6f7cbd4091aa5d9afac922a70c24cbc576a78b13821",
+    "bebe_label_sha256": "20bd427e76f761b0c3c655df941b341622ba4deebb6acc08ce2897147e4e4044"
+  },
+  "55:1": {
+    "series_id": "vehkaoja_dogs__individual_55_test_1",
+    "samples": 175164,
+    "sha256_float32_channels": "64a6ee4df90d4102c0b45f93a72a14b03e4a1e326e5f1b78c25035390ba2fdcf",
+    "bebe_label_sha256": "6f5ac071f8102a42e49e0245d676c13d44208594d3393df6ea605cdc083f5521"
+  },
+  "56:1": {
+    "series_id": "vehkaoja_dogs__individual_56_test_1",
+    "samples": 180512,
+    "sha256_float32_channels": "4830674fe8c710888b2fbccc810125d0031fcdf29e75942a5e03ddc2fac18d36",
+    "bebe_label_sha256": "5907d15431448dd4cd6f16ad748bbe837f17bbf6ec33de9e533fbdd4af73aebd"
+  },
+  "57:1": {
+    "series_id": "vehkaoja_dogs__individual_57_test_1",
+    "samples": 182588,
+    "sha256_float32_channels": "b8e04a7750488aa5c1c0f3e04f95e31eba2e6d9c3abd5731d53d2bdef08ad121",
+    "bebe_label_sha256": "8ddbe90edf45bdd62c2dcd341a41ccc92d35d0a0962a5b0281302500d7aa3631"
+  },
+  "58:2": {
+    "series_id": "vehkaoja_dogs__individual_58_test_2",
+    "samples": 161700,
+    "sha256_float32_channels": "0ce1f2be294597f6c9afae6b56d484381afcdd33727f3b829ae9041afaf4519d",
+    "bebe_label_sha256": "eee47b2bc685ff11d420f76a7e9b73b5bd258a292382ec3622ad213d74885f90"
+  },
+  "59:1": {
+    "series_id": "vehkaoja_dogs__individual_59_test_1",
+    "samples": 153532,
+    "sha256_float32_channels": "7d2a7509aaf30ba8530436ed4ac6bcbb0c05c6340c6bb1e346c1f9b62cf3882c",
+    "bebe_label_sha256": "0af80daccb4c5c0061d1824f2caeebbbcd10d875eedd6003a4fb96df891a081f"
+  },
+  "60:1": {
+    "series_id": "vehkaoja_dogs__individual_60_test_1",
+    "samples": 168668,
+    "sha256_float32_channels": "ae9ccd47d56fed788a21b058394924a12f649821341bda9be79555f7fd29afb1",
+    "bebe_label_sha256": "27ceb94a95c067c069718e37ca85f5110bfbf1faacf950cb345661710778c5da"
+  },
+  "61:1": {
+    "series_id": "vehkaoja_dogs__individual_61_test_1",
+    "samples": 178348,
+    "sha256_float32_channels": "506de2191a89c8ca807a4fbe455eb8ff40f724cb752c5ec60a6e10a66e8981f0",
+    "bebe_label_sha256": "47c160709408182899dc980555339378da2102a7be8eeb0ab55a3c014ce49c30"
+  },
+  "63:2": {
+    "series_id": "vehkaoja_dogs__individual_63_test_2",
+    "samples": 205520,
+    "sha256_float32_channels": "28ee9a9f2414713ad8e2f22edf92b77a2fd8c23136e50ba1a3add07222b6105f",
+    "bebe_label_sha256": "7192d5288a7d29d82393178070dee647dc42bfc5c2318565efe248cbfc431fdf"
+  },
+  "65:1": {
+    "series_id": "vehkaoja_dogs__individual_65_test_1",
+    "samples": 173792,
+    "sha256_float32_channels": "391ac0f298908d238fa8f5c9c391f82819c2d875d768738bc71d940e33207d9c",
+    "bebe_label_sha256": "eb81313d89a6a909208a170f209704dcff3134f64b3c6308db87f8217d362ef8"
+  },
+  "66:2": {
+    "series_id": "vehkaoja_dogs__individual_66_test_2",
+    "samples": 151680,
+    "sha256_float32_channels": "835a8135c66c1c9f8ee005c5d83149a1babdf2e0ae2635bc04c2feec54673b7c",
+    "bebe_label_sha256": "7b7cddfbda18ac32f631db0da2fa2826a2b777b05e4a72a119145661a111db63"
+  },
+  "67:1": {
+    "series_id": "vehkaoja_dogs__individual_67_test_1",
+    "samples": 187804,
+    "sha256_float32_channels": "dcdf41c3fd1788b9263cdfbc250802d6c19ba6bdb2b15bb2f1b3c3fa895a1472",
+    "bebe_label_sha256": "6ebd7aba1e6bca05c2bd168987a1dd29ecdff15c642530f871e2472ae3ba0b2a"
+  },
+  "68:1": {
+    "series_id": "vehkaoja_dogs__individual_68_test_1",
+    "samples": 186972,
+    "sha256_float32_channels": "aacd1ea5e7e024954c1a87a7ef20dbaa8251584335d35fd784ae2e4011df2a51",
+    "bebe_label_sha256": "e99fe2c2f97952f595a31e102e6eb613840f8a1e57333460b166f4a9b0e5645b"
+  },
+  "70:1": {
+    "series_id": "vehkaoja_dogs__individual_70_test_1",
+    "samples": 192036,
+    "sha256_float32_channels": "0fcf7c3e3b6e866dfc7ad98596d3ed36546f3656c643257a59d5c408b97866c1",
+    "bebe_label_sha256": "2cc2da69923ec25c5b96f3c1283c36553ef029941d8f70cd40c8cca38194112a"
+  },
+  "72:1": {
+    "series_id": "vehkaoja_dogs__individual_72_test_1",
+    "samples": 160404,
+    "sha256_float32_channels": "20a1f126e9afd9421b1c72233a47bf834101b7bac178fe99daca082523689b1a",
+    "bebe_label_sha256": "c1bde4418f6289efe6458a86618004d5eb82213d5c7c757ecd634828eea81a5c"
+  },
+  "73:1": {
+    "series_id": "vehkaoja_dogs__individual_73_test_1",
+    "samples": 195552,
+    "sha256_float32_channels": "196ae37fc4d044b435eba8ab21ee02f01517b11dee21c74edb1ad2189349b04e",
+    "bebe_label_sha256": "52b432c5efc126be372fee6a3539807623c050799000e9912b59447174be00d8"
+  },
+  "74:1": {
+    "series_id": "vehkaoja_dogs__individual_74_test_1",
+    "samples": 195688,
+    "sha256_float32_channels": "200c4056ea4b8efc3dd795423178ee86dcae016f5f71b991a7ad7976ad3661f6",
+    "bebe_label_sha256": "4cf0afd2b07d295227351de24dbe4c888299e267a1a9738d6ba4bc0714bec84c"
+  },
+  "74:2": {
+    "series_id": "vehkaoja_dogs__individual_74_test_2",
+    "samples": 192824,
+    "sha256_float32_channels": "2d1806094795c61290fb086f374833e49240a8a1fb21efeb7223b62389118fb2",
+    "bebe_label_sha256": "b886689bbbbd751182c126a0c79d49947ddb8289dbab3d048da3122b9d6c8501"
+  }
+}
