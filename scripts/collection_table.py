@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "ami-meeting-corpus": "source audited; feature build deferred (171 mixes;18-GiB reserve/external growth)",
     "fly-vs-fly": "builder + validated build (47 native two-fly scenes; overlapping behavior tracks)",
     "rosmag40": "builder + validated build (40 published 34-feature sequences; bilateral MD/FGD tracks)",
     "andy-lab-oneperson": "compact views audited; build deferred (18-GiB reserve)",

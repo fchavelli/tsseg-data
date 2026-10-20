@@ -897,3 +897,19 @@ Decided by the user on 2026-10-18:
   Free before/after cleanup35,269,808,128 /35,653,214,208 bytes; every other cache
   and the pilot output retained. See docs/qualification/fly-vs-fly.md.
   Nothing published; next batch3 candidate is AMI (derived features).
+
+- [ ] Batch3 / AMI deferred before audio acquisition (2026-10-20): primary
+  CC BY4.0 explicitly covers corpus, signals and manual annotations. Exact
+  chooser/HEAD inventory171 headset mixes totals11,546,801,653 bytes. Manual
+  v1.6.2 ZIP22,887,865 bytes SHA-pinned for audit:687 files /171 meetings,
+  93,637 transcriber segments,168 four-agent meetings and three five-agent;
+  two reversed intervals require explicit handling. Word/phoneme times are
+  automatic forced alignment; overlaps need per-agent activity, silence is an
+  ordinary scored state. No audio/video body or feature build acquired.
+  Free30,837,972,992 bytes leaves11,510,620,160 above18GiB: audio cache alone
+  exceeds headroom by36,181,493 bytes, before features/buffers and continued
+  unrelated results.zip growth. No safe audio pilot; no reduction to fewer
+  meetings or coarse rates. Proposed deterministic MFCC requires fixed DSP,
+  measured pilot and independent numeric verification after storage restoration.
+  Primary inventory, annotations audit and resumption gates:
+  docs/qualification/ami-meeting-corpus.md. Proceed with small RSDF audit only.
