@@ -106,7 +106,7 @@ the authors allow re-hosting.
 | `fly-vs-fly`: Fly vs. Fly (Boy meets boy, Aggression, Courtship) | ethology | SD | CC0-1.0 (A) | builder + validated build (47 native two-fly scenes; overlapping behavior tracks) |
 | `ais-fishing-semseg`: Dataset for Semantic Segmentation of Fishing Trajectories (123 released AIS trips) | maritime | SD | CC-BY-4.0 (A) | builder + validated build (123 released trips; native phases + activity names) |
 | `ami-meeting-corpus`: AMI Meeting Corpus: diarisation, recurrent speakers (derived-feature track) | audio_speech | SD | CC-BY-4.0 (A) | source audited; feature build deferred (171 mixes;18-GiB reserve/external growth) |
-| `rsdf-china-forest`: RSDF — Reference samples of Stable, Disturbed and Forestated forests over China (1986–2025) | remote_sensing | CPD | CC-BY-4.0 (A) | planned |
+| `rsdf-china-forest`: RSDF — Reference samples of Stable, Disturbed and Forestated forests over China (1986–2025) | remote_sensing | CPD | CC-BY-4.0 (A) | builder + validated build (12,991 native Landsat points;47 ambiguous references unscored) |
 <!-- datasets:end -->
 
 Inclusion criteria: continuous recordings (no pre-cut windows unless the raw

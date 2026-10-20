@@ -1,32 +1,48 @@
-# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
+# Complete primary native time-series view, version1; verified2026-10-20.
 id: rsdf-china-forest
 name: "RSDF — Reference samples of Stable, Disturbed and Forestated forests over China (1986–2025)"
 domain: remote_sensing
 task: cpd
-source_url: https://doi.org/10.6084/m9.figshare.33313359
-doi: 10.6084/m9.figshare.33313359
-citation: "Shang et al., ESSD preprint essd-2026-705 (v3) ; v1 Shang et al. 2023"
+source_url: https://doi.org/10.6084/m9.figshare.33313359.v1
+doi: 10.6084/m9.figshare.33313359.v1
+citation: "Shang et al., ESSD preprint essd-2026-705; fixed Figshare article version1"
 license: CC-BY-4.0
 license_url: https://creativecommons.org/licenses/by/4.0/
 license_tier: A
-license_verified: "2026-10-17, API figshare (article 33313359)"
+license_verified: "2026-10-20, primary Figshare API article33313359 version1"
 n_series: 12991
-length: {min: null, median: null, max: null}
-n_channels: 6
+length: {min: 639, median: 1268, max: 3798}
+n_channels: 8 # Six reflectance bands plus native Sensor and QA context.
 sampling_rate_hz: null
 label_type: cps
 n_states: null
-n_annotators: null
+n_annotators: null # Released consensus only; individual expert tracks not released.
 label_origin: human
-unlabeled_regions: "non"
+unlabeled_regions: "Default reference null for47 ambiguous PIDs; stable-only points have an empty CP list, not missing"
 continuous: true
 access: direct
-size: "340 Mo (réflectances) + 0,7 Mo (CSV) ; 1,2 Go de figures PDF inutiles"
+size: "232 MB complete native converted view;340.4 MB source ZIP+0.68 MB labels; no figures archive"
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: high
-value_reason: "CP datés au jour (année + DOY) et typés (coupe, feu, autre, reboisement) par interprétation visuelle, avec les séries Landsat de réflectance incluses ; échantillonnage aléatoire stratifié → ~80 % de séries sans CP (vraie évaluation des faux positifs)"
+value_reason: "Dated and typed human forest-change events with all native Landsat trajectories and stable negative controls"
 effort: medium
-confidence: medium
-notes: "États récurrents : non en général (CPD : 16 % un événement, 4,4 % deux ou plus ; forêt → perturbée → repousse peut revenir à l'état forêt). Séries Landsat irrégulières (nuages), 6 bandes ; longueur ~40 ans × quelques dizaines d'acquisitions/an, à mesurer. Confiance de l'annotation fournie par échantillon. ESSD en révision : figer la version figshare."
+confidence: high
+notes: >
+  All12,991 primary sample CSVs and13,765 original annotation rows,
+  19,637,038 observations. Six original reflectance bands, Landsat sensor5/7/8/9,
+  QA0/1, exact calendar dates, coordinates and every original row retained.
+  12,031,665 QA0 rows (61.2703%) stay present and flagged; source numeric blanks
+  remain NaN, no new masking/scaling/filtering or guessed reflectance calibration.
+  Stable chronological sort is reversible with source_row_index for each observation
+  in source-order.parquet.1,025 PIDs have7,006 native date reversals;2,307,256 duplicate
+  dates remain, with stable source order on ties. Irregular dates, no invented rate.
+  Reference maps original Year/DOY to first chronological acquisition on/after date;
+  all source dates, raw types/confidence and neighboring acquisitions retained.
+  46 PIDs combine stable and event claims; one other PID has distinct event dates
+  mapping to one boundary. These47 have null default reference, never false no-CP.
+  12,944 scorable PIDs include10,343 stable-only controls and2,601 changed points,
+  with3,322 evaluable CPs. No latent states or recurrence invented.
+  Fixed primary version1 CC BY4.0, provider MD5/size and SHA256 pins, ZIP CRC checks.
+  See docs/qualification/rsdf-china-forest.md for full audit and validation evidence.
 rejected: null

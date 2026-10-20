@@ -1,0 +1,36 @@
+{
+  "primary_record": "https://api.figshare.com/v2/articles/33313359/versions/1",
+  "doi": "10.6084/m9.figshare.33313359.v1",
+  "version": 1,
+  "snapshot_date": "2026-10-20",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "files": [
+    {
+      "name": "RSDF_SurfaceReflectance.zip",
+      "url": "https://ndownloader.figshare.com/files/67838727",
+      "bytes": 340399479,
+      "provider_md5": "19d4421ba925824a2efbc4ed2b3ae328",
+      "sha256": "e40a417c936cfbbce190af9f94f330530a4caf0fd40a60364c08c4644bf1d3c8"
+    },
+    {
+      "name": "RSDF.csv",
+      "url": "https://ndownloader.figshare.com/files/67838733",
+      "bytes": 677547,
+      "provider_md5": "b1eb380e091bbaad051bfa74a79b77d3",
+      "sha256": "dcc1268c5c20e68044e3b459c98f8a05a673abe9ecdb7b98bcecefd56ba0579f"
+    }
+  ],
+  "storage_pilot": {
+    "series": 7,
+    "samples": 10158,
+    "native_csv_bytes": 873340,
+    "output_bytes": 235857,
+    "native_complete_bytes": 1746880440,
+    "complete_projection_margin_buffer_bytes": 656819029,
+    "margin": 1.25
+  }
+}

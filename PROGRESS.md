@@ -913,3 +913,29 @@ Decided by the user on 2026-10-18:
   measured pilot and independent numeric verification after storage restoration.
   Primary inventory, annotations audit and resumption gates:
   docs/qualification/ami-meeting-corpus.md. Proceed with small RSDF audit only.
+
+
+- [x] Batch3 / RSDF China forest complete (2026-10-20): all12,991 native
+  Landsat sample CSVs,19,637,038 observations, six bands+Sensor+QA, all calendar
+  dates/coordinates and13,765 original reference rows. Source article version1
+  CC BY4.0 verified; ZIP/CSV provider MD5/size+SHA256 pinned. No PDF figure archive.
+  Preserve12,031,665 QA0 invalid observations (61.270264%) and183 native missing
+  values asNaN; no additional masking/filtering/scaling or guessed calibration.
+  Full source chronology audit found1,025 PIDs /7,006 date reversals and
+  2,307,256 duplicate dates. Stable chronological sort preserves ties and a
+  source_row_index for every observation in source-order.parquet; independent
+  inversion reconstructs every original row/date exactly.
+  Dated event reference maps to first sorted acquisition on/after source date,
+  preserving raw Year/DOY/Type/Confidence and adjacent acquisition dates. Default
+  reference null for46 stable/event contradictions and one distinct-event
+  collision (PID427210048), never a false no-CP.12,944 scorable PIDs comprise
+  10,343 stable controls and2,601 changed points with3,322 CPs; no states invented.
+  Seven-point pilot235,857B, complete projection+25%+64MiB656,819,029B;
+  actual232,025,704B. One heavy job at a time, free>18GiB throughout.
+  Final validator0/0 (7 files/1part), independent full comparison12,991/12,991:
+  every band/Sensor/QA/NaN/date/coordinate/source order, all annotations and CPs
+  exact. Logs raw/rsdf-{validation,reconstruction}.log retained. Only
+  raw/rsdf-china-forest deleted after both gates,357,066,734 file bytes;
+  free before/after88,504,078,336 /88,861,163,520 bytes. Other caches untouched.
+  See docs/qualification/rsdf-china-forest.md. No publication. Re-evaluate AMI
+  gate after short disk-stability check; no audio started at this checkpoint.
