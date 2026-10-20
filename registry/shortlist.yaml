@@ -419,8 +419,8 @@ datasets:
     license: CC-BY-4.0
     license_tier: A
     why: "3 annotateurs, mocap optique + inertielle, actions élémentaires multi-pistes"
-    risks: "xsens_csv 15,6 Go ; annotations faites sur un avatar rejoué"
-    subset: "Xsens seul, sous-ensemble de canaux"
+    risks: "Complete native BVH/C3D views fail the 18-GiB disk reserve; video tail coverage must be audited"
+    subset: "Complete selected native Xsens BVH or C3D representation; all 195 trials"
     contact_needed: false
   - id: ha4m
     registry: motion_misc.yaml
@@ -429,8 +429,8 @@ datasets:
     label_type: states
     license: CC-BY-4.0
     license_tier: A
-    why: "217 assemblages, squelette 32 articulations, 12 actions + don't care, 2 annotateurs"
-    risks: "3,2 To au total : vérifier que le squelette se télécharge seul"
+    why: "217 assemblies, 32-joint skeletons, 12 actions plus don't care; one published ground truth checked by two researchers"
+    risks: "Selective public skeleton access established; full-view storage and frame alignment pilot pending"
     subset: "squelettes seuls"
     contact_needed: false
   - id: rosmag40

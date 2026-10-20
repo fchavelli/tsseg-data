@@ -735,17 +735,26 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
   cannot fit even before conversion. Only primary metadata/README were read;
   no house ZIP or build was started. Resume when storage is available, or
   design and validate a genuinely bounded source-streaming workflow.
-- [ ] Batch 3 / AnDy compact-view feasibility: the primary Zenodo v2 manifest
-  lists `xsens_csv.zip` at 15,625,210,239 bytes, too large for the current
-  reserve. Its `xsens_c3d.zip` (1,379,554,812 bytes) and `xsens_bvh.zip`
-  (1,808,149,444 bytes) each contain 195 trial members; `labels_csv.zip`
-  (4,074,552 bytes) contains 195 matching trial members. A bounded remote
-  ZIP-directory/header pilot found BVH motion frames around 240 Hz and three
-  annotators on video-frame labels around 24 Hz. A full native kinematic view
-  may fit, but its sensor-to-video time alignment and complete channel scope
-  must be established before assigning dense labels or starting a heavy build.
-  No corpus archive has been downloaded. Source:
-  https://zenodo.org/records/3254403 .
+- [ ] Batch 3 / AnDy compact views deferred (2026-10-20): primary paper confirms
+  common Xsens/avatar-video starts, 240-Hz motion and 24-fps annotations. Full
+  native BVH has 72 position/Euler channels; C3D has 64 model-derived XYZ points
+  (192 channels). Three rater slots are trial-local, sampled from four people.
+  Two paired pilots reveal a 13-sample-equivalent video tail in one trial;
+  future interval mapping must audit all trials without stretching labels.
+  Complete-view output projections with 25% margin and source caches leave
+  17.89 GiB (BVH) / 17.61 GiB (C3D), below the 18-GiB reserve. No complete motion
+  archive or build downloaded; bounded pilots and 4-MB labels cache retained.
+  Detailed sources, sizes and resume rules: docs/qualification/andy-ha4m.md.
+- [ ] Batch 3 / HA4M selective-access audit (2026-10-20): primary repository
+  CC BY 4.0 verified at cc0b49cbf0bb39f63b368c5c4f10d0c27a6a452e. Public ownCloud
+  WebDAV exposes independent skeleton/label folders in all 217 trials:
+  2,740,949,486 + 6,405,585 bytes, without imagery. One-frame pilot has 384 native
+  numeric channels including confidence/quaternions/projections; XYZ-only is 96.
+  First two source frames share a device timestamp; retain frame IDs and times.
+  One published GT track, not two independent annotators. Full cache plus output
+  is not yet storage-qualified. Next: bounded compressed single-trial Skeletons
+  pilot, scope/label/missing-frame audit, then complete-view storage gate.
+  No HA4M corpus downloaded; see docs/qualification/andy-ha4m.md.
 - [ ] Continue batch 3 one heavy dataset at a time, using the size and
   alignment gates above; WESAD remains source-only. Tier C author contacts
   and TSSB upstream rights also require attention.

@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+# Primary compact-view qualification updated 2026-10-20; see docs/qualification/andy-ha4m.md.
 id: andy-lab-oneperson
 name: "AndyData-lab-onePerson (AnDy industry-oriented human movement and ergonomics dataset)"
 domain: motion_capture
@@ -29,9 +29,13 @@ value_reason: "13 sujets × 15 essais de 1,5–2 min ; mocap optique + inertiell
 effort: medium
 confidence: medium
 notes: >
-  n_series = 13 × 15 essais (description Zenodo). Annotations faites sur la vidéo d'un
-  avatar rejouant le mouvement, en CSV. Pistes : posture générale, posture détaillée,
-  action courante (taxonomie à confirmer dans le papier IJRR / HAL hal-02289107).
-  Fréquences : Xsens et Qualisys à confirmer (non lues). Choisir un sous-ensemble de
-  canaux (positions/angles articulaires Xsens) ; ne télécharger que xsens_csv + labels.
+  Primary paper establishes common starts for Xsens avatar video and motion;
+  physical cameras are not synchronized. Three annotation slots per trial are
+  drawn from four people, not stable cross-trial annotator identities. Complete
+  BVH has 72 position/Euler channels; C3D has 64 model-derived XYZ landmarks
+  (192 channels). Both have 195 matching trials. Two matched pilots show video
+  tails can exceed motion (13 sample intervals in one trial); never blindly
+  repeat labels by ten or stretch intervals. Both full cached native views fail
+  the 18-GiB reserve with measured output and 25% margin (17.89/17.61 GiB).
+  No complete motion archive or build downloaded. See docs/qualification/andy-ha4m.md.
 rejected: null

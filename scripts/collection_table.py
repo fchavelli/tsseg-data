@@ -18,6 +18,8 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "andy-lab-oneperson": "compact views audited; build deferred (18-GiB reserve)",
+    "ha4m": "primary skeleton access audited (217 trials); storage pilot pending",
     "dog-behaviour-vehkaoja": "builder + validated build (62 native dual-IMU tests; original simultaneous labels; overlaps BEBE)",
     "bebe": "builder + validated build (7 licensed animal datasets; 369 clips; excludes HAR/turtles)",
     "capture24": "source audited; build deferred (18-GiB disk reserve; ORA access)",

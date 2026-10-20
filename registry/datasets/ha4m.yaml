@@ -1,7 +1,7 @@
-# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+# Primary selective-access qualification updated 2026-10-20; see docs/qualification/andy-ha4m.md.
 id: ha4m
 name: "HA4M — Human Action Multi-Modal Monitoring in Manufacturing (epicyclic gear train assembly)"
-domain: procedural_cooking
+domain: motion_capture
 task: sd
 source_url: "https://doi.org/10.57760/sciencedb.01872"
 doi: "10.57760/sciencedb.01872"
@@ -12,11 +12,11 @@ license_tier: A
 license_verified: "2026-10-17, métadonnées DataCite du DOI ScienceDB (rightsList)"
 n_series: 217
 length: {min: null, median: null, max: null}
-n_channels: 96
+n_channels: null
 sampling_rate_hz: 30
 label_type: states
 n_states: 13
-n_annotators: 2
+n_annotators: 1
 label_origin: human
 unlabeled_regions: "classe « don't care » (ID 0) pour transitions et imprévus"
 continuous: true
@@ -29,9 +29,16 @@ value_reason: "217 assemblages par 41 sujets, squelette Azure Kinect 32 articula
 effort: medium
 confidence: medium
 notes: >
-  n_channels = 32 × 3 positions (orientations en plus). Fichier Labels.txt par vidéo
-  (image, action, indice de répétition). Vérifier si le squelette peut se télécharger
-  sans les 3,2 To (miroir baltig.cnr.it/ISP/ha4m). n_annotators = 2 au sens « vérifié
-  par deux chercheurs » (une seule vérité publiée). Dérivé HA4M-THMS (Zenodo
-  18363094, CC BY 4.0) : mouvements d'atteinte extraits, pas une segmentation.
+  Primary CC BY 4.0 repository revision cc0b49cbf0bb39f63b368c5c4f10d0c27a6a452e.
+  Author-linked public ownCloud WebDAV permits independent Skeletons and Labels.txt
+  access. All 217 trial directory listings contain both: 2,740,949,486 skeleton
+  bytes plus 6,405,585 label bytes. Full share is 4.58 TB. One native frame has
+  32 joints and 12 numeric observations per joint (384 channels including XYZ,
+  quaternion, confidence and 2D projections), rather than XYZ-only 96. Preserve
+  source frame IDs and device times: first two pilot frames share a timestamp.
+  One released label track checked by two researchers; no independent rater
+  tracks. Primary README says 4,123 actions. Need full-scope reconciliation,
+  missing-detection/label semantics and a compressed single-trial storage pilot
+  before a corpus build. No corpus downloaded. HA4M-THMS is a reaching derivative,
+  not a substitute for original segmentation. See docs/qualification/andy-ha4m.md.
 rejected: null
