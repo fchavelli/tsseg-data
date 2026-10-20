@@ -850,3 +850,18 @@ Decided by the user on 2026-10-18:
    while `mlcroissant` on a full long-series file has taken 433 s and 10.5 GB RAM.
    Keep this local split of checks, then run the official online
    Croissant checker before publication; revise sharding if it times out.
+
+- [ ] Batch 3 / Fly vs. Fly paused (2026-10-20): primary CaltechDATA cc-zero
+  verified. Bounded ZIP inventory finds47 native two-fly tracking trials,
+  47 primary action files, eight second action files and three splits; selected
+  native MAT cache totals383,168,883 bytes, versus3.686GB complete archives.
+  Four pilot tracks establish17 fields per fly, shared literal flag_frames,
+  NaNs, one-based inclusive bouts and explicit unknown intervals. Preserve
+  overlapping behaviors independently and second annotation slots; never infer
+  exclusive labels/global annotator IDs. Full schema/semantics audit pending.
+  Partial acquisition247,648,796 bytes retained. Shared free space unexpectedly
+  fell by~3GiB beyond this dataset's consumption, crossing18GiB reserve;
+  download and draft pilot guards stopped automatically. Pilot output only16KiB,
+  no completed build/validation/commit. No unrelated cache removed. See
+  docs/qualification/fly-vs-fly.md for exact sources, inventory and resume gates.
+  Resolve shared storage change before any further heavy job.
