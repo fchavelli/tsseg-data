@@ -1,4 +1,4 @@
-# Copied from notes/datasets/registry/motion_misc.yaml (phase-1 registry entry), not edited here.
+# Complete primary published kinematic view verified 2026-10-20.
 id: rosmag40
 name: "ROSMAG40 — ROSMA subset with gesture annotations (dVRK)"
 domain: surgical_robotics
@@ -9,28 +9,39 @@ citation: "Rivas-Blanco et al., Applied Sciences 14:3701, 2024 ; ROSMA : Rivas-B
 license: CC-BY-4.0
 license_url: "https://zenodo.org/records/10719748"
 license_tier: A
-license_verified: "2026-10-17, champ licence Zenodo (API)"
-n_series: 22
-length: {min: null, median: 3311, max: null}
-n_channels: null
+license_verified: "2026-10-20, primary Zenodo v1 metadata license cc-by-4.0"
+n_series: 40
+length: {min: 1185, median: 1710, max: 3121}
+n_channels: 34
 sampling_rate_hz: null
 label_type: hierarchical
 n_states: null
-n_annotators: null
+n_annotators: null # Four instrument/semantic tracks, no independent rater count released
 label_origin: human
-unlabeled_regions: null
+unlabeled_regions: "None; idle 1 remains an ordinary scored null state"
 continuous: true
 access: direct
-size: "~4,0 Go (zip, vidéos comprises)"
+size: "7.9 MB complete selected build; 13 MB source prefix excludes videos"
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: medium
 value_reason: "seul jeu chirurgical robotique (dVRK) à gestes annotés sous licence A ; deux niveaux (MD haut niveau, FGD fin)"
 effort: medium
-confidence: medium
+confidence: high
 notes: >
-  22 vidéos, 72 843 images annotées (médiane estimée = moyenne 3 311 images, non une
-  vraie médiane). Cinématique dVRK à 50 Hz dans ROSMA (154 variables selon arXiv v2) ;
-  synchronisation avec les labels vidéo à vérifier. ROSMA complet (206 essais, sans
-  gestes) : hébergement et licence non retrouvés.
+  All 40 primary published sequences, 72,843 rows, five users and two tasks.
+  Original Zenodo description says 22 videos; actual archive and paper contain 40.
+  Complete 34-feature view: 16 observations per PSM plus provider distance/angle.
+  Already provider-selected/processed, not original ROSMA154/160 channels at 50 Hz.
+  Exact row joins follow pinned author loader and all triplets have matching lengths.
+  No timestamps or explicit aggregation recipe; physical sampling_rate_hz remains null,
+  video nominal 15 fps recorded as provenance only. Original row index retained.
+  Four human tracks: MD/FGD independently for PSM1/PSM2, not four raters or consensus.
+  Idle 1 is scored; no missing labels. Hierarchy exact at all rows/tools.
+  Recurrence 40/40 for every track including idle; substantive recurrence 39/40
+  for both PSM1 levels and 40/40 for PSM2. Full class/run statistics in card.
+  Source Range206 permits bounded 12,980,548-byte prefix acquisition excluding video;
+  prefix and all 120 native TXT members SHA-pinned. Complete build validation 0/0
+  and independent exact comparison of all values, labels, row order and source hashes.
+  See docs/qualification/rosmag40.md for source scope, rights, timing and storage.
 rejected: null

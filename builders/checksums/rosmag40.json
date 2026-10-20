@@ -1,0 +1,1134 @@
+{
+  "url": "https://zenodo.org/api/records/10719748/files/ROSMAG40.zip/content",
+  "archive_bytes": 3980673198,
+  "archive_provider_md5": "c8deeb9eb5cf631159aad985ace5c86d",
+  "snapshot_date": "2026-10-20",
+  "prefix": {
+    "bytes": 12980548,
+    "sha256": "24fa74dd19d8ca1314a167e897784bcb59454f9763e5fddc5ec33690d1fcf19f"
+  },
+  "native_bytes": 37679441,
+  "channels": [
+    "PSM1_orientation_x",
+    "PSM1_orientation_y",
+    "PSM1_orientation_z",
+    "PSM1_orientation_w",
+    "PSM1_velocity_linear_x",
+    "PSM1_velocity_linear_y",
+    "PSM1_velocity_linear_z",
+    "PSM1_velocity_angular_x",
+    "PSM1_velocity_angular_y",
+    "PSM1_velocity_angular_z",
+    "PSM1_wrench_force_x",
+    "PSM1_wrench_force_y",
+    "PSM1_wrench_force_z",
+    "PSM1_wrench_torque_x",
+    "PSM1_wrench_torque_y",
+    "PSM1_wrench_torque_z",
+    "PSM2_orientation_x",
+    "PSM2_orientation_y",
+    "PSM2_orientation_z",
+    "PSM2_orientation_w",
+    "PSM2_velocity_linear_x",
+    "PSM2_velocity_linear_y",
+    "PSM2_velocity_linear_z",
+    "PSM2_velocity_angular_x",
+    "PSM2_velocity_angular_y",
+    "PSM2_velocity_angular_z",
+    "PSM2_wrench_force_x",
+    "PSM2_wrench_force_y",
+    "PSM2_wrench_force_z",
+    "PSM2_wrench_torque_x",
+    "PSM2_wrench_torque_y",
+    "PSM2_wrench_torque_z",
+    "distance",
+    "angle"
+  ],
+  "members": [
+    {
+      "name": "FGDlabels/X01_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 180,
+      "size": 7148,
+      "crc": 3081090109,
+      "offset": 0,
+      "method": 8,
+      "sha256": "b20b6d2388ca395a4d17863e86a93bc903a8107faa3dc5fc62f2a753c4c907a1"
+    },
+    {
+      "name": "FGDlabels/X01_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 179,
+      "size": 5900,
+      "crc": 2959857222,
+      "offset": 251,
+      "method": 8,
+      "sha256": "6059082731bb02dd02e30796f51d4d7aee5b088455fdf101f5b48bc7a52f15b1"
+    },
+    {
+      "name": "FGDlabels/X01_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 135,
+      "size": 5176,
+      "crc": 604421598,
+      "offset": 501,
+      "method": 8,
+      "sha256": "82830ca3f2244873f5208d330e8afca28b52d18242f88eaf2f19f27f108a6836"
+    },
+    {
+      "name": "FGDlabels/X01_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 210,
+      "size": 6772,
+      "crc": 3636627866,
+      "offset": 707,
+      "method": 8,
+      "sha256": "94c7cac4ce4d9ee1a5843087009c058c4066ea1158635473e47a27ed0c10465c"
+    },
+    {
+      "name": "FGDlabels/X01_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 211,
+      "size": 7092,
+      "crc": 2404258050,
+      "offset": 988,
+      "method": 8,
+      "sha256": "1ba352383e43c29ee3b38f2e9b1848690ea7e7205f728c6738349c58e27a5cd5"
+    },
+    {
+      "name": "FGDlabels/X01_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 197,
+      "size": 6320,
+      "crc": 2406465806,
+      "offset": 1273,
+      "method": 8,
+      "sha256": "0c471f4fea47d74346f20cb24160fe122940d1fd408d1e4756f3984710a7a245"
+    },
+    {
+      "name": "FGDlabels/X01_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 182,
+      "size": 5060,
+      "crc": 2953356471,
+      "offset": 1544,
+      "method": 8,
+      "sha256": "07553de16773c4c2408aefc6d4f46d65a786fdab46b3088e20321e501bb5668f"
+    },
+    {
+      "name": "FGDlabels/X01_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 188,
+      "size": 5188,
+      "crc": 3665055029,
+      "offset": 1800,
+      "method": 8,
+      "sha256": "56572031517bc68bc8c2a9d4c0493d4b3128293ec30d79a098de15641faf76b6"
+    },
+    {
+      "name": "FGDlabels/X02_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 183,
+      "size": 8628,
+      "crc": 3981081263,
+      "offset": 2062,
+      "method": 8,
+      "sha256": "6c07ee4ee3d68b26ebe90bb5773f8b8a451de4cc17c991447b34ba4c738fee51"
+    },
+    {
+      "name": "FGDlabels/X02_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 152,
+      "size": 8100,
+      "crc": 2956895555,
+      "offset": 2316,
+      "method": 8,
+      "sha256": "8a0f927040da4cd5e105e729338d40c815da0b3f63c30e5c1720362bdb9d25e4"
+    },
+    {
+      "name": "FGDlabels/X02_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 276,
+      "size": 10180,
+      "crc": 2252030468,
+      "offset": 2539,
+      "method": 8,
+      "sha256": "b14c8d5a09224574e6b993149061ca37be57e13663fd2659a2cb8c34e009a6df"
+    },
+    {
+      "name": "FGDlabels/X02_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 196,
+      "size": 6120,
+      "crc": 2871847471,
+      "offset": 2886,
+      "method": 8,
+      "sha256": "d84b0e008d4ae33a982a6c8b579f0b155cf6d5025b8dcd2685bb3d0068cfb26a"
+    },
+    {
+      "name": "FGDlabels/X02_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 206,
+      "size": 9532,
+      "crc": 2263326316,
+      "offset": 3153,
+      "method": 8,
+      "sha256": "e77c316c49de87de3cfa02d730d7f5b8c7ae7451274b33b80e5d5baa6f047d40"
+    },
+    {
+      "name": "FGDlabels/X02_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 198,
+      "size": 7644,
+      "crc": 3809328793,
+      "offset": 3433,
+      "method": 8,
+      "sha256": "6257d05fc37ca6d956494a293c29eee099a7eab547b0c831f9c7f10281dd8624"
+    },
+    {
+      "name": "FGDlabels/X02_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 195,
+      "size": 6908,
+      "crc": 1534592856,
+      "offset": 3705,
+      "method": 8,
+      "sha256": "df07312fde9c0152d5840a65f065df5b12634a26c7a6f5444f5611d3b83fbb95"
+    },
+    {
+      "name": "FGDlabels/X02_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 176,
+      "size": 6112,
+      "crc": 1453344158,
+      "offset": 3974,
+      "method": 8,
+      "sha256": "14895f08a48f00e129513bcea07e0d7c1967e32137fb6bcfcbf09f2ac1628065"
+    },
+    {
+      "name": "FGDlabels/X06_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 177,
+      "size": 7964,
+      "crc": 4198390742,
+      "offset": 4224,
+      "method": 8,
+      "sha256": "16b9c1bb659ab979d75663fa8ae42625a99ce0d8339a10a25b5b8276ff6ed3cb"
+    },
+    {
+      "name": "FGDlabels/X06_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 185,
+      "size": 6668,
+      "crc": 379340743,
+      "offset": 4472,
+      "method": 8,
+      "sha256": "ec20dc315e7405d5ecb5ed111e277a3768eb8b97ca2ef6f8930bf55095db4a0f"
+    },
+    {
+      "name": "FGDlabels/X06_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 238,
+      "size": 8212,
+      "crc": 571263165,
+      "offset": 4728,
+      "method": 8,
+      "sha256": "0ddc982cd21a6bda80793d0f836ec41173b493c9468ef4f1198482801b012c9d"
+    },
+    {
+      "name": "FGDlabels/X06_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 176,
+      "size": 5564,
+      "crc": 2805676027,
+      "offset": 5037,
+      "method": 8,
+      "sha256": "5e178240db22943116d1fd474ebd4ebf812e26716e3fdc305b157895a01c33a2"
+    },
+    {
+      "name": "FGDlabels/X06_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 214,
+      "size": 8532,
+      "crc": 2571070095,
+      "offset": 5284,
+      "method": 8,
+      "sha256": "f069a6307024a2cc573f8931e973c86a621d76fe7170ce5827021f092496e4c9"
+    },
+    {
+      "name": "FGDlabels/X06_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 188,
+      "size": 5408,
+      "crc": 1503388345,
+      "offset": 5572,
+      "method": 8,
+      "sha256": "a2b4cd5db8e9fcde53a929399c8ac1c7f248416424b75011a0fea9998f9eff87"
+    },
+    {
+      "name": "FGDlabels/X06_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 177,
+      "size": 6652,
+      "crc": 3076545181,
+      "offset": 5834,
+      "method": 8,
+      "sha256": "dfe28578059511f872538b7cb3df0bfb9d2fbd253cdb8abf495165a2ddd22356"
+    },
+    {
+      "name": "FGDlabels/X06_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 175,
+      "size": 4748,
+      "crc": 3419547163,
+      "offset": 6085,
+      "method": 8,
+      "sha256": "6968040c138011d64b8eaf25f576dbd8033bea14ab804610a0330c94a8d0beb0"
+    },
+    {
+      "name": "FGDlabels/X07_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 202,
+      "size": 9316,
+      "crc": 4050425429,
+      "offset": 6334,
+      "method": 8,
+      "sha256": "a2718ae51e01659ec2ed5471d4bafde86d3b26915c345c25c7ad91e384fade8f"
+    },
+    {
+      "name": "FGDlabels/X07_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 161,
+      "size": 6424,
+      "crc": 4014109361,
+      "offset": 6607,
+      "method": 8,
+      "sha256": "fb9cde2089cb4672722fafc5224494d6d6454aff020b6cd52cffcdf09f34e782"
+    },
+    {
+      "name": "FGDlabels/X07_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 171,
+      "size": 6524,
+      "crc": 695898656,
+      "offset": 6839,
+      "method": 8,
+      "sha256": "11f15e1277d48d700edb4731f7039e8117092e0878dca841a9bc6009f2f3a3fe"
+    },
+    {
+      "name": "FGDlabels/X07_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 137,
+      "size": 5168,
+      "crc": 2456943707,
+      "offset": 7081,
+      "method": 8,
+      "sha256": "79f5e7ca2ed28ee2fb8d431a887bd6ff06dc158debe250e1bb11f42981549a3e"
+    },
+    {
+      "name": "FGDlabels/X07_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 231,
+      "size": 10860,
+      "crc": 229127251,
+      "offset": 7289,
+      "method": 8,
+      "sha256": "07f9c125b28ccee2d96d4bbb0e0502fe03699f503ec824ca6b9a27a3203d1d79"
+    },
+    {
+      "name": "FGDlabels/X07_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 209,
+      "size": 7824,
+      "crc": 3864888659,
+      "offset": 7594,
+      "method": 8,
+      "sha256": "370217ceb236383c6c55fbf740d392822413605653ac36deb0c571c0459d473f"
+    },
+    {
+      "name": "FGDlabels/X07_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 179,
+      "size": 5516,
+      "crc": 1150921099,
+      "offset": 7877,
+      "method": 8,
+      "sha256": "a8a5f4d0b36f2c7727daf58b8ecc5efada0d4cfe6fb3e36a36023b8dac3fa5e5"
+    },
+    {
+      "name": "FGDlabels/X07_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 173,
+      "size": 4740,
+      "crc": 2512815760,
+      "offset": 8130,
+      "method": 8,
+      "sha256": "91fd1a178e3d7db52df23af33959003c4133001631119a6b33e41f4ce78b554b"
+    },
+    {
+      "name": "FGDlabels/X08_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 211,
+      "size": 8960,
+      "crc": 3869362323,
+      "offset": 8377,
+      "method": 8,
+      "sha256": "5137141de0edb59df6d4022e390c2bb2a3ae9118281f4fdd96eac8d54b438a89"
+    },
+    {
+      "name": "FGDlabels/X08_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 179,
+      "size": 9100,
+      "crc": 1949802926,
+      "offset": 8659,
+      "method": 8,
+      "sha256": "571efd2837380d853cd6bd0b91d44530fb92e95dac6d689307e0825e6588ef85"
+    },
+    {
+      "name": "FGDlabels/X08_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 240,
+      "size": 12484,
+      "crc": 2684126410,
+      "offset": 8909,
+      "method": 8,
+      "sha256": "314cae08b4cafd55374079936963db3291e6d1285f64a0d9ca92484ee3e55389"
+    },
+    {
+      "name": "FGDlabels/X08_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 187,
+      "size": 6624,
+      "crc": 1190380582,
+      "offset": 9220,
+      "method": 8,
+      "sha256": "1a74432f3f61d5d35af3f9e09bb1a9d8472939b661fdca3e6bcfa28e863e2723"
+    },
+    {
+      "name": "FGDlabels/X08_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 233,
+      "size": 10712,
+      "crc": 250751167,
+      "offset": 9478,
+      "method": 8,
+      "sha256": "9955c53deeb425f31fa160b2a711670c3888d68339dd7f30f2a21bdff6132d15"
+    },
+    {
+      "name": "FGDlabels/X08_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 191,
+      "size": 7716,
+      "crc": 1191847443,
+      "offset": 9785,
+      "method": 8,
+      "sha256": "662dccc12d473953800871c45cc456194aa62c337c8fd1a5b1e3fd584904b157"
+    },
+    {
+      "name": "FGDlabels/X08_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 191,
+      "size": 7044,
+      "crc": 4004422197,
+      "offset": 10050,
+      "method": 8,
+      "sha256": "06b1f635a7e9581ba75160b072fbc69a1b40b358cffc5ea1e1c73b8eb8563da3"
+    },
+    {
+      "name": "FGDlabels/X08_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 184,
+      "size": 6732,
+      "crc": 2780130022,
+      "offset": 10315,
+      "method": 8,
+      "sha256": "11f5de6b68c879cb054d7466e7f07da0a155fdcd73e8965868a0ab4ba682223f"
+    },
+    {
+      "name": "kinematics/X01_Pea_on_a_Peg_01.txt",
+      "compressed": 319206,
+      "size": 911857,
+      "crc": 1699866655,
+      "offset": 10573,
+      "method": 8,
+      "sha256": "48fc32cbc645d8dd8d0adf657e7660f0f3784bbfef6c849765e9a6e1da9271cc"
+    },
+    {
+      "name": "kinematics/X01_Pea_on_a_Peg_02.txt",
+      "compressed": 263035,
+      "size": 753192,
+      "crc": 221688948,
+      "offset": 329843,
+      "method": 8,
+      "sha256": "b669c02493763425c9fca78cb8ec8dd1a98361549e89fe6e3f3ae5af10caba74"
+    },
+    {
+      "name": "kinematics/X01_Pea_on_a_Peg_04.txt",
+      "compressed": 230705,
+      "size": 663069,
+      "crc": 2760653935,
+      "offset": 592942,
+      "method": 8,
+      "sha256": "d2fc08ff9420cbb9c5961edf871c341fd25736bc359cee7c718e4e74f07dda87"
+    },
+    {
+      "name": "kinematics/X01_Pea_on_a_Peg_05.txt",
+      "compressed": 301670,
+      "size": 863801,
+      "crc": 2345794509,
+      "offset": 823711,
+      "method": 8,
+      "sha256": "1e6ce5fadf39a66fe0008b69d570d2f562932085a9dda3cb9adec87ad6042fac"
+    },
+    {
+      "name": "kinematics/X01_Post_and_Sleeve_01.txt",
+      "compressed": 317070,
+      "size": 899001,
+      "crc": 4177142644,
+      "offset": 1125445,
+      "method": 8,
+      "sha256": "76dee38d74ac4426ec2d7401ed6220fd4f14a7421926c270f3c21b77ac03679e"
+    },
+    {
+      "name": "kinematics/X01_Post_and_Sleeve_02.txt",
+      "compressed": 282577,
+      "size": 798800,
+      "crc": 4293250199,
+      "offset": 1442582,
+      "method": 8,
+      "sha256": "fff73693ac33ae1e65ea632ada399329f7767343ae6a5c36bc3b50aa51940c8e"
+    },
+    {
+      "name": "kinematics/X01_Post_and_Sleeve_04.txt",
+      "compressed": 226693,
+      "size": 641524,
+      "crc": 1462441191,
+      "offset": 1725226,
+      "method": 8,
+      "sha256": "09b7243ca640de00f56015064c8100d2d16e7301337f1d3b387d172377494bb9"
+    },
+    {
+      "name": "kinematics/X01_Post_and_Sleeve_05.txt",
+      "compressed": 232775,
+      "size": 656986,
+      "crc": 2305439789,
+      "offset": 1951986,
+      "method": 8,
+      "sha256": "beb5ba6afa11e953854ef6986c4d1d26db9588447ad0cbe58cd7f3dc19b57d2f"
+    },
+    {
+      "name": "kinematics/X02_Pea_on_a_Peg_01.txt",
+      "compressed": 382497,
+      "size": 1103415,
+      "crc": 1292930503,
+      "offset": 2184828,
+      "method": 8,
+      "sha256": "509af14d537eecca797f86bfb2f87a2b58bd8be6ddd0170d0c4b9853cb1be8b7"
+    },
+    {
+      "name": "kinematics/X02_Pea_on_a_Peg_02.txt",
+      "compressed": 356963,
+      "size": 1035821,
+      "crc": 236520411,
+      "offset": 2567389,
+      "method": 8,
+      "sha256": "8b1fcd6da096817f415cba9481755e2bfe660c4b02d960ba2078d4cb6294d684"
+    },
+    {
+      "name": "kinematics/X02_Pea_on_a_Peg_04.txt",
+      "compressed": 446847,
+      "size": 1294782,
+      "crc": 3159455566,
+      "offset": 2924416,
+      "method": 8,
+      "sha256": "b791f250fb04c3e4dbcb1e3f87d6293e97d0ef3a5b706df734025a741cdbe87f"
+    },
+    {
+      "name": "kinematics/X02_Pea_on_a_Peg_05.txt",
+      "compressed": 271409,
+      "size": 778573,
+      "crc": 2859311330,
+      "offset": 3371327,
+      "method": 8,
+      "sha256": "8873ead0f793ab756e09d4e63f4450114b101f794627f353740a37a81fcd58dd"
+    },
+    {
+      "name": "kinematics/X02_Post_and_Sleeve_01.txt",
+      "compressed": 423775,
+      "size": 1213832,
+      "crc": 1940305082,
+      "offset": 3642800,
+      "method": 8,
+      "sha256": "6be16355fb35529ac2105429f92e1028cff10568c7e96080bb58f5e2a9e4acb0"
+    },
+    {
+      "name": "kinematics/X02_Post_and_Sleeve_02.txt",
+      "compressed": 339207,
+      "size": 973519,
+      "crc": 1081385338,
+      "offset": 4066642,
+      "method": 8,
+      "sha256": "3e240cf5a69855dd0cfaef52605db98a79fc1d1d6c5bbd2017a081008bc0fffb"
+    },
+    {
+      "name": "kinematics/X02_Post_and_Sleeve_04.txt",
+      "compressed": 306941,
+      "size": 878767,
+      "crc": 2829445517,
+      "offset": 4405916,
+      "method": 8,
+      "sha256": "05c8fa8367dffe08475324b0f7d0da5af21a2a92a38de996bbc7e9639a77107e"
+    },
+    {
+      "name": "kinematics/X02_Post_and_Sleeve_05.txt",
+      "compressed": 272295,
+      "size": 775019,
+      "crc": 530401438,
+      "offset": 4712924,
+      "method": 8,
+      "sha256": "9fc55438285d317b3d942ea43c89cbeabb1dc64f2d3c80a1f8950eb0c2879feb"
+    },
+    {
+      "name": "kinematics/X06_Pea_on_a_Peg_01.txt",
+      "compressed": 354430,
+      "size": 1016365,
+      "crc": 3161999725,
+      "offset": 4985286,
+      "method": 8,
+      "sha256": "e702801312b9b54f9c0ca9544c66cf4d41d61b6be68617537e63824f49a27eea"
+    },
+    {
+      "name": "kinematics/X06_Pea_on_a_Peg_02.txt",
+      "compressed": 297825,
+      "size": 852339,
+      "crc": 829944195,
+      "offset": 5339780,
+      "method": 8,
+      "sha256": "80e7f56911548a5333a442f5b1255f77e2766f8ca5b4efd76315aa5c4875bee2"
+    },
+    {
+      "name": "kinematics/X06_Pea_on_a_Peg_04.txt",
+      "compressed": 366818,
+      "size": 1052608,
+      "crc": 1715624219,
+      "offset": 5637669,
+      "method": 8,
+      "sha256": "3942248df9bde9ef0ad0b75aa25d81d6e76d67620ffe77d5aa67841930b7d86c"
+    },
+    {
+      "name": "kinematics/X06_Pea_on_a_Peg_05.txt",
+      "compressed": 248021,
+      "size": 705950,
+      "crc": 777668626,
+      "offset": 6004551,
+      "method": 8,
+      "sha256": "8904e71e6f412340aa33981184372f45c8959c0198925f5a6a1245f553021d5d"
+    },
+    {
+      "name": "kinematics/X06_Post_and_Sleeve_01.txt",
+      "compressed": 378797,
+      "size": 1084303,
+      "crc": 3468008276,
+      "offset": 6252636,
+      "method": 8,
+      "sha256": "0ddd2826d0a4c2528bf1ab34a6db4e8f607dc3b442c6740dbf0b6d3c5881f0a7"
+    },
+    {
+      "name": "kinematics/X06_Post_and_Sleeve_02.txt",
+      "compressed": 241652,
+      "size": 686395,
+      "crc": 1404921688,
+      "offset": 6631500,
+      "method": 8,
+      "sha256": "a88cab47effcaf514b44d655b02c16a92ee301072a4697977b59aa965a1272aa"
+    },
+    {
+      "name": "kinematics/X06_Post_and_Sleeve_04.txt",
+      "compressed": 296864,
+      "size": 843880,
+      "crc": 3948475543,
+      "offset": 6873219,
+      "method": 8,
+      "sha256": "28a34984791694b3e40936ef4d26112fed0687a24f56369a242695f4ef6d27f0"
+    },
+    {
+      "name": "kinematics/X06_Post_and_Sleeve_05.txt",
+      "compressed": 212267,
+      "size": 602014,
+      "crc": 549992333,
+      "offset": 7170150,
+      "method": 8,
+      "sha256": "cb27c6448b5302bc6a816dcf0a28d9a896ec64153388cbfea31760345733d2e3"
+    },
+    {
+      "name": "kinematics/X07_Pea_on_a_Peg_01.txt",
+      "compressed": 412570,
+      "size": 1185912,
+      "crc": 3300271679,
+      "offset": 7382484,
+      "method": 8,
+      "sha256": "8e9bc71201d74189219a5b05722b376d8959c2a5f0838c5117963634f3c7b71d"
+    },
+    {
+      "name": "kinematics/X07_Pea_on_a_Peg_02.txt",
+      "compressed": 285178,
+      "size": 815984,
+      "crc": 1543378174,
+      "offset": 7795118,
+      "method": 8,
+      "sha256": "88421758837771ff13ba7637c79112038ec9ed220b3f12d87ad534ca4c4c7b5c"
+    },
+    {
+      "name": "kinematics/X07_Pea_on_a_Peg_04.txt",
+      "compressed": 289843,
+      "size": 831734,
+      "crc": 3113133843,
+      "offset": 8080360,
+      "method": 8,
+      "sha256": "b17940ce454135e78896b13ef211fa2440fa47b72d411d62f628beb6f7936af4"
+    },
+    {
+      "name": "kinematics/X07_Pea_on_a_Peg_05.txt",
+      "compressed": 229825,
+      "size": 660636,
+      "crc": 728542367,
+      "offset": 8370267,
+      "method": 8,
+      "sha256": "0584870e2ccb19b67874ad70c0ab2d6c8441d7cf76fb1278e5417559c2db438b"
+    },
+    {
+      "name": "kinematics/X07_Post_and_Sleeve_01.txt",
+      "compressed": 482557,
+      "size": 1375629,
+      "crc": 4082731021,
+      "offset": 8600156,
+      "method": 8,
+      "sha256": "a5bd03043907d5a0aac9df5992ae946764d87b6772913c4545e77011ccd479c4"
+    },
+    {
+      "name": "kinematics/X07_Post_and_Sleeve_02.txt",
+      "compressed": 347605,
+      "size": 993565,
+      "crc": 756657150,
+      "offset": 9082780,
+      "method": 8,
+      "sha256": "7b176b08f55b20f9e1c7a603ae0630a43e752dec82794fce838d7164e54a1678"
+    },
+    {
+      "name": "kinematics/X07_Post_and_Sleeve_04.txt",
+      "compressed": 245567,
+      "size": 696567,
+      "crc": 504676914,
+      "offset": 9430452,
+      "method": 8,
+      "sha256": "06813b9691f03f46c1c37ae334898695542645ac71314293f1ce001176ebc6f7"
+    },
+    {
+      "name": "kinematics/X07_Post_and_Sleeve_05.txt",
+      "compressed": 211455,
+      "size": 599241,
+      "crc": 1275140984,
+      "offset": 9676086,
+      "method": 8,
+      "sha256": "c3ea4329b6155326a05cda4df03c9d049538d23e795dab34b8acb716a5e35897"
+    },
+    {
+      "name": "kinematics/X08_Pea_on_a_Peg_01.txt",
+      "compressed": 397646,
+      "size": 1141444,
+      "crc": 1988968546,
+      "offset": 9887608,
+      "method": 8,
+      "sha256": "903423b9db7dc68571b6c245ad872d5b28a4bd48b4d6fe9d120c683e3dd6935f"
+    },
+    {
+      "name": "kinematics/X08_Pea_on_a_Peg_02.txt",
+      "compressed": 404959,
+      "size": 1167329,
+      "crc": 3873300586,
+      "offset": 10285318,
+      "method": 8,
+      "sha256": "671de520e58e72908bbf784046c342b437de83f38a80cb63591e5846ce171300"
+    },
+    {
+      "name": "kinematics/X08_Pea_on_a_Peg_04.txt",
+      "compressed": 550214,
+      "size": 1594619,
+      "crc": 2713721509,
+      "offset": 10690341,
+      "method": 8,
+      "sha256": "d7e10a258ad07741712400ce5958911b68407b9facf97c6267f0b5b00e47daa2"
+    },
+    {
+      "name": "kinematics/X08_Pea_on_a_Peg_05.txt",
+      "compressed": 294977,
+      "size": 849824,
+      "crc": 1605581132,
+      "offset": 11240619,
+      "method": 8,
+      "sha256": "2386f01ceae96a2c7db34b5e50f5611e38a763ec52962b51e0dd27bdebc0607d"
+    },
+    {
+      "name": "kinematics/X08_Post_and_Sleeve_01.txt",
+      "compressed": 474242,
+      "size": 1362385,
+      "crc": 2745117451,
+      "offset": 11535660,
+      "method": 8,
+      "sha256": "330a9ec90489af6fbcf502a6fb549c1f49b9f527e0deebc2ba83fa51d0871709"
+    },
+    {
+      "name": "kinematics/X08_Post_and_Sleeve_02.txt",
+      "compressed": 344708,
+      "size": 982970,
+      "crc": 2825646450,
+      "offset": 12009969,
+      "method": 8,
+      "sha256": "134058089323fe1567b31d089b399cdbb1718af58ec8b54a94d046b4a8e155ac"
+    },
+    {
+      "name": "kinematics/X08_Post_and_Sleeve_04.txt",
+      "compressed": 314415,
+      "size": 895522,
+      "crc": 1723388907,
+      "offset": 12354744,
+      "method": 8,
+      "sha256": "92dcb39bf0c5c13ffc3634e9ae73b998e62ae2665e8837583695c31319e86ab9"
+    },
+    {
+      "name": "kinematics/X08_Post_and_Sleeve_05.txt",
+      "compressed": 300704,
+      "size": 857524,
+      "crc": 1166989236,
+      "offset": 12669226,
+      "method": 8,
+      "sha256": "ceec3f14e1c02b07749a67f18881f224e6d7b2e429e4bceee3a9be39fb43d2c5"
+    },
+    {
+      "name": "MDlabels/X01_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 175,
+      "size": 7148,
+      "crc": 3553481688,
+      "offset": 12969997,
+      "method": 8,
+      "sha256": "72f734264d5c255ab11f13c6814469693399e99e2e78511e2d72e4ea300349cc"
+    },
+    {
+      "name": "MDlabels/X01_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 176,
+      "size": 5900,
+      "crc": 416736506,
+      "offset": 12970242,
+      "method": 8,
+      "sha256": "08e51263d4ba9cbd70a7005dac2fd4590d1f855ae064451f4489eb1fc238f637"
+    },
+    {
+      "name": "MDlabels/X01_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 133,
+      "size": 5176,
+      "crc": 1599520582,
+      "offset": 12970488,
+      "method": 8,
+      "sha256": "f1f68c3512997ff376a8c00810f98b31177a6e911d36e47f68a6d67add8ed762"
+    },
+    {
+      "name": "MDlabels/X01_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 200,
+      "size": 6772,
+      "crc": 544171599,
+      "offset": 12970691,
+      "method": 8,
+      "sha256": "b6dcda3f1f0626286b2a055b780ecb8357e4c8a52dfe4e742cc7e871d1dad9c5"
+    },
+    {
+      "name": "MDlabels/X01_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 215,
+      "size": 7092,
+      "crc": 3046349995,
+      "offset": 12970961,
+      "method": 8,
+      "sha256": "d1fc4d76f785378fc6d2d8f4e2ffcce2a854ccd883c4f29f9c4a1a531cca48be"
+    },
+    {
+      "name": "MDlabels/X01_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 209,
+      "size": 6320,
+      "crc": 934966097,
+      "offset": 12971249,
+      "method": 8,
+      "sha256": "2b60817caff1342bf0e533489d97c1c3b88ee569f9d705f7b87869dbd27d591e"
+    },
+    {
+      "name": "MDlabels/X01_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 192,
+      "size": 5060,
+      "crc": 3945740677,
+      "offset": 12971531,
+      "method": 8,
+      "sha256": "fde5d65c7596a50494445c27e72288fb8b97dafd0dfba34b8b4d9b25cb85e196"
+    },
+    {
+      "name": "MDlabels/X01_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 197,
+      "size": 5188,
+      "crc": 160066150,
+      "offset": 12971796,
+      "method": 8,
+      "sha256": "10bc8ebc18b086da19911e3bc969edd26db34e2574f2c1f9d20b18f66711c108"
+    },
+    {
+      "name": "MDlabels/X02_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 168,
+      "size": 8628,
+      "crc": 3717744934,
+      "offset": 12972066,
+      "method": 8,
+      "sha256": "d53c3655f498151c6f1d80e747ae10e56b9ec8f6ce92a6d9140526bf0eb1265c"
+    },
+    {
+      "name": "MDlabels/X02_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 142,
+      "size": 8100,
+      "crc": 685910205,
+      "offset": 12972304,
+      "method": 8,
+      "sha256": "a249c888c82ccc62c551b4a965dc3a595c4b2b9e02877e96abfefb8ed4b098b6"
+    },
+    {
+      "name": "MDlabels/X02_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 266,
+      "size": 10180,
+      "crc": 3545650821,
+      "offset": 12972516,
+      "method": 8,
+      "sha256": "6f0e330b86ad3e07a5f1254ae45f41b20d6fe4e401dc2f66e836c868dabeb9c0"
+    },
+    {
+      "name": "MDlabels/X02_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 188,
+      "size": 6120,
+      "crc": 2829757293,
+      "offset": 12972852,
+      "method": 8,
+      "sha256": "3f086ec95e6e4e15a7d81547b2c4da9346a7e245e50f10130b86ac10c8700e79"
+    },
+    {
+      "name": "MDlabels/X02_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 217,
+      "size": 9532,
+      "crc": 2498425466,
+      "offset": 12973110,
+      "method": 8,
+      "sha256": "21e03bf60cbd765f0030bf40e70dc579fcf584a8b755db7ff13b0f9cfc05e516"
+    },
+    {
+      "name": "MDlabels/X02_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 199,
+      "size": 7644,
+      "crc": 2055998696,
+      "offset": 12973400,
+      "method": 8,
+      "sha256": "4ec36b129f7ceb033555290c2405906e1024d5215e5edef78a9efb0835607203"
+    },
+    {
+      "name": "MDlabels/X02_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 195,
+      "size": 6908,
+      "crc": 3895256549,
+      "offset": 12973672,
+      "method": 8,
+      "sha256": "12266d817b3d3323d2fa7f2ec9c3c96252d403aaa3b26209ec8c8316650fb6fa"
+    },
+    {
+      "name": "MDlabels/X02_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 196,
+      "size": 6112,
+      "crc": 232268818,
+      "offset": 12973940,
+      "method": 8,
+      "sha256": "68a1e252ac1727f29dc8d09806b2f3583eaf36beee04b81e4940094604683926"
+    },
+    {
+      "name": "MDlabels/X06_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 168,
+      "size": 7964,
+      "crc": 371390568,
+      "offset": 12974209,
+      "method": 8,
+      "sha256": "d34faebb77405734285aa0aa1c5230c8e562fc56f1da6adf318c00b657e9e4fe"
+    },
+    {
+      "name": "MDlabels/X06_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 174,
+      "size": 6668,
+      "crc": 4014845729,
+      "offset": 12974447,
+      "method": 8,
+      "sha256": "ac877b41dade196bdf7a16b7264bfae36742579d3638732cc3382035cfb64948"
+    },
+    {
+      "name": "MDlabels/X06_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 223,
+      "size": 8212,
+      "crc": 3958965362,
+      "offset": 12974691,
+      "method": 8,
+      "sha256": "03b6992de2af463c1acddffa123014e45f90df2d17f5be32e08653f9603e9811"
+    },
+    {
+      "name": "MDlabels/X06_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 170,
+      "size": 5564,
+      "crc": 1829796629,
+      "offset": 12974984,
+      "method": 8,
+      "sha256": "d5d7918ab38eb57f151b5c2721dee3b5a1ac99c3d2467ad030ffdf51cb5e0333"
+    },
+    {
+      "name": "MDlabels/X06_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 226,
+      "size": 8532,
+      "crc": 2423873659,
+      "offset": 12975224,
+      "method": 8,
+      "sha256": "b14e327d5c7db10da90acda8177adb49dc1892437140f0d9ca8d6923a543fdb8"
+    },
+    {
+      "name": "MDlabels/X06_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 189,
+      "size": 5408,
+      "crc": 1498462726,
+      "offset": 12975523,
+      "method": 8,
+      "sha256": "0a3935c295b5ecb62fb7533215f9392e22308158261946b3363b7ec50a2046f3"
+    },
+    {
+      "name": "MDlabels/X06_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 178,
+      "size": 6652,
+      "crc": 2330531451,
+      "offset": 12975785,
+      "method": 8,
+      "sha256": "e87b7e774966be4e3e09fa4dfb13d74dc119029ea187ed6bece60f9094cccf2f"
+    },
+    {
+      "name": "MDlabels/X06_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 177,
+      "size": 4748,
+      "crc": 3622736014,
+      "offset": 12976036,
+      "method": 8,
+      "sha256": "2171856d9564f55e516da9051fb0bdf6d8a142c8725a736935e66e71b337062b"
+    },
+    {
+      "name": "MDlabels/X07_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 197,
+      "size": 9316,
+      "crc": 808512139,
+      "offset": 12976286,
+      "method": 8,
+      "sha256": "2bf87ff5bcf2e31693eb384288b2eab83124bd10c18798e84d17107fc38b67d5"
+    },
+    {
+      "name": "MDlabels/X07_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 152,
+      "size": 6424,
+      "crc": 2201921110,
+      "offset": 12976553,
+      "method": 8,
+      "sha256": "c46f4dc8d2631176493f3efc0ec2ed05b68bb2a8c2770957ba452a8e646e731d"
+    },
+    {
+      "name": "MDlabels/X07_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 162,
+      "size": 6524,
+      "crc": 3819529177,
+      "offset": 12976775,
+      "method": 8,
+      "sha256": "04cc536aca61f122d1410b228c80ae95cac2be5da8f55cc1282e8ab6fc761196"
+    },
+    {
+      "name": "MDlabels/X07_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 132,
+      "size": 5168,
+      "crc": 3418300086,
+      "offset": 12977007,
+      "method": 8,
+      "sha256": "b2cc61eff6f10032c2e61f7264bc969e83ee255bf03a94c400d66f97dc65d3b6"
+    },
+    {
+      "name": "MDlabels/X07_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 234,
+      "size": 10860,
+      "crc": 1053295914,
+      "offset": 12977209,
+      "method": 8,
+      "sha256": "8d7943ac82128f35ad7abeff0734b5c3568d09c13e04c180054dfc3431aa14a8"
+    },
+    {
+      "name": "MDlabels/X07_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 220,
+      "size": 7824,
+      "crc": 2137280931,
+      "offset": 12977516,
+      "method": 8,
+      "sha256": "20e2b62086651125c7ec464ab56815929e0a90ac8280787e926e9ad7e5d2d125"
+    },
+    {
+      "name": "MDlabels/X07_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 192,
+      "size": 5516,
+      "crc": 3522585965,
+      "offset": 12977809,
+      "method": 8,
+      "sha256": "4639f743842e80daa3c67598112e3b7d1084044b12bd1af451d1696b530b8666"
+    },
+    {
+      "name": "MDlabels/X07_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 179,
+      "size": 4740,
+      "crc": 538426,
+      "offset": 12978074,
+      "method": 8,
+      "sha256": "c2181c13ceee97953843eaedf2302604bd4bf60188555b62f196257a6177357b"
+    },
+    {
+      "name": "MDlabels/X08_Pea_On_A_Peg_01_gesture.txt",
+      "compressed": 208,
+      "size": 8960,
+      "crc": 1120032289,
+      "offset": 12978326,
+      "method": 8,
+      "sha256": "d1d62926559f0a9febb194207d41a0d3119fefb6e9041741a008208b41d41e80"
+    },
+    {
+      "name": "MDlabels/X08_Pea_On_A_Peg_02_gesture.txt",
+      "compressed": 175,
+      "size": 9100,
+      "crc": 621482767,
+      "offset": 12978604,
+      "method": 8,
+      "sha256": "403cf05c488bd857d1b858ac253f07ed742feb141e6951cbe5a7f0f5ab67f96c"
+    },
+    {
+      "name": "MDlabels/X08_Pea_On_A_Peg_04_gesture.txt",
+      "compressed": 236,
+      "size": 12484,
+      "crc": 3616295237,
+      "offset": 12978849,
+      "method": 8,
+      "sha256": "df9a27e9b67357a92f1ae48367c34b30a3f969ab260f6b79ecd5efdb4a5108c4"
+    },
+    {
+      "name": "MDlabels/X08_Pea_On_A_Peg_05_gesture.txt",
+      "compressed": 180,
+      "size": 6624,
+      "crc": 4043868306,
+      "offset": 12979155,
+      "method": 8,
+      "sha256": "9d6e1ec7c92077a49af2ee62bf29905ccfb58cb1d30341a67ecc1ef1e553aa29"
+    },
+    {
+      "name": "MDlabels/X08_Post_And_Sleeve_01_gesture.txt",
+      "compressed": 244,
+      "size": 10712,
+      "crc": 509394530,
+      "offset": 12979405,
+      "method": 8,
+      "sha256": "f042048215d2641832002944a856733266672b17044ed1b376852e5f4c1d2ae7"
+    },
+    {
+      "name": "MDlabels/X08_Post_And_Sleeve_02_gesture.txt",
+      "compressed": 209,
+      "size": 7716,
+      "crc": 766385558,
+      "offset": 12979722,
+      "method": 8,
+      "sha256": "29da84b7331e0b2f7f74653db5713bac4d0838030ca62f98e02cf7c1769042c8"
+    },
+    {
+      "name": "MDlabels/X08_Post_And_Sleeve_04_gesture.txt",
+      "compressed": 199,
+      "size": 7044,
+      "crc": 2727738355,
+      "offset": 12980004,
+      "method": 8,
+      "sha256": "d55d784e4a7aa3933e283279933a6ec241ecdfeba43c9643f796268a6804512e"
+    },
+    {
+      "name": "MDlabels/X08_Post_And_Sleeve_05_gesture.txt",
+      "compressed": 199,
+      "size": 6732,
+      "crc": 3673260929,
+      "offset": 12980276,
+      "method": 8,
+      "sha256": "b0e61ec41f629111a156a490a4598bc09d7f55464169dda1084d456b125a4523"
+    }
+  ],
+  "author_code": {
+    "revision": "7042e7d2dff084ad860bc1f4bb9022fb1bb82662",
+    "url": "https://raw.githubusercontent.com/irivas-uma/rosma/7042e7d2dff084ad860bc1f4bb9022fb1bb82662/gestureSegmentation/gestureSegmentation.mlx",
+    "sha256": "b6c17222e324e154fe84b0c5d42684e05ac3a6cd8919abd84df44f9356271361"
+  }
+}

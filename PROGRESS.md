@@ -770,7 +770,32 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
   Only raw/ha4m was deleted after both successful gates (1,177,011,113 bytes).
   Free before/after cleanup: 19.351 / 20.448 GiB; other caches remain untouched.
   Detailed source rights, association evidence, reconstruction and storage:
-  docs/qualification/andy-ha4m.md. Next heavy candidate: ROSMAG40 kinematics.
+  docs/qualification/andy-ha4m.md. ROSMAG40 completed below.
+- [x] Batch 3 / ROSMAG40 complete (2026-10-20): all 40 actual released trials,
+  72,843 frame-aligned rows, five users, two tasks, all 34 published features.
+  Source Zenodo description says 22 videos; actual archive and primary paper
+  contain 40. This is the complete provider-processed ROSMAG40 view, not a
+  reconstruction of the original ROSMA154/160-channel 50-Hz corpus.
+  Four human tracks retain MD/FGD independently for PSM1/PSM2; no invented
+  annotator/consensus. Exact author row pairing, all triplet lengths agree and
+  hierarchy exact everywhere. Idle1 stays scored, no missing labels. Recurrence
+  40/40 each track including idle; substantive39/40 PSM1 and40/40 PSM2.
+  Native timestamps and explicit provider aggregation recipe absent, so retain
+  source_row_index and physical sampling_rate_hz=null; nominal video15 fps is
+  provenance only. No guessed synchronization or conversion to50 Hz/15 Hz.
+  Primary Zenodo CC BY4.0 verified. HTTP206 selective prefix12,980,548 bytes
+  contains all120 selected TXT members, zero video members; prefix/member SHA256
+  and native CRC/size pinned. Full archive3.98GB never acquired.
+  Complete build about7.93MB; conservative full source/output+64MiB gate
+  155,448,294 bytes, additional audit copies still leave>20.26GiB projected.
+  Final validator0 errors/0 warnings (5 files,1 part); independent exact literal
+  source comparison passed all40 trials, every34-float row, four labels, row order,
+  subject ID and source SHA/CRC. Logs raw/rosmag40-validation.log and
+  raw/rosmag40-reconstruction.log remain outside removable cache.
+  Only raw/rosmag40 deleted after successful gates (50,874,306 bytes).
+  Free before/after: 20.393 / 20.441 GiB; other caches untouched.
+  See docs/qualification/rosmag40.md. Next: Fly vs. Fly
+  tracking features only; no next heavy job started.
 - [ ] Continue batch 3 one heavy dataset at a time, using the size and
   alignment gates above; WESAD remains source-only. Tier C author contacts
   and TSSB upstream rights also require attention.

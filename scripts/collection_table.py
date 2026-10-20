@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "rosmag40": "builder + validated build (40 published 34-feature sequences; bilateral MD/FGD tracks)",
     "andy-lab-oneperson": "compact views audited; build deferred (18-GiB reserve)",
     "ha4m": "builder + validated build (217 native skeleton trials; 384 channels + all ambiguous blocks)",
     "dog-behaviour-vehkaoja": "builder + validated build (62 native dual-IMU tests; original simultaneous labels; overlaps BEBE)",
