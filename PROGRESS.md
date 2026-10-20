@@ -745,16 +745,32 @@ Gains come from zstd level 9 + byte-stream-split encoding of the float columns.
   17.89 GiB (BVH) / 17.61 GiB (C3D), below the 18-GiB reserve. No complete motion
   archive or build downloaded; bounded pilots and 4-MB labels cache retained.
   Detailed sources, sizes and resume rules: docs/qualification/andy-ha4m.md.
-- [ ] Batch 3 / HA4M selective-access audit (2026-10-20): primary repository
-  CC BY 4.0 verified at cc0b49cbf0bb39f63b368c5c4f10d0c27a6a452e. Public ownCloud
-  WebDAV exposes independent skeleton/label folders in all 217 trials:
-  2,740,949,486 + 6,405,585 bytes, without imagery. One-frame pilot has 384 native
-  numeric channels including confidence/quaternions/projections; XYZ-only is 96.
-  First two source frames share a device timestamp; retain frame IDs and times.
-  One published GT track, not two independent annotators. Full cache plus output
-  is not yet storage-qualified. Next: bounded compressed single-trial Skeletons
-  pilot, scope/label/missing-frame audit, then complete-view storage gate.
-  No HA4M corpus downloaded; see docs/qualification/andy-ha4m.md.
+- [x] Batch 3 / HA4M completed locally (2026-10-20): all 217 native skeleton
+  trials / 41 subjects, 642,268 frame positions, 384 observations per frame;
+  nominal 30 fps, native timestamps retained (1,469 duplicates, no reversals).
+  All 639,590 native body blocks are preserved exactly once: 639,517 main poses
+  plus 73 auxiliary blocks. Main is NaN on 2,751 unavailable/ambiguous frames;
+  no interpolation, geometric actor choice or person-specific labels.
+  One released manual reference checked by two researchers; ordinary null 0
+  stays scored. Recurrence is 204/217 including null, versus 49/217 for
+  substantive action classes 1–12; 3,224 semantic runs, 4,124 action/repetition
+  runs including 435 null instances. The README's 4,123 count differs by one.
+  IDU039V001/V002 use the reversed association of the original CC-BY CSVs,
+  supported by exact full-vector agreement with pinned later author GT files.
+  Those unlicensed evidence files are not packaged; every original annotation
+  row and repetition index is retained separately.
+  Complete build about 624 MB, SHA-pinned native content and original CSVs.
+  Final validator: 0 errors / 0 warnings, all 10 checksummed files, 3 main parts.
+  Independent literal-source reconstruction passed 217/217: every observation,
+  body ID, source block index, timestamp, original/corrected label and repetition
+  is exact after the documented float32 cast. Logs raw/ha4m-validation.log and
+  raw/ha4m-reconstruction.log remain outside the removable cache.
+  The full job stayed above 18 GiB: measured build minimum 19.268 GiB,
+  projected minimum 18.873 GiB.
+  Only raw/ha4m was deleted after both successful gates (1,177,011,113 bytes).
+  Free before/after cleanup: 19.351 / 20.448 GiB; other caches remain untouched.
+  Detailed source rights, association evidence, reconstruction and storage:
+  docs/qualification/andy-ha4m.md. Next heavy candidate: ROSMAG40 kinematics.
 - [ ] Continue batch 3 one heavy dataset at a time, using the size and
   alignment gates above; WESAD remains source-only. Tier C author contacts
   and TSSB upstream rights also require attention.

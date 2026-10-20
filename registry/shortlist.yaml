@@ -430,8 +430,8 @@ datasets:
     license: CC-BY-4.0
     license_tier: A
     why: "217 assemblies, 32-joint skeletons, 12 actions plus don't care; one published ground truth checked by two researchers"
-    risks: "Selective public skeleton access established; full-view storage and frame alignment pilot pending"
-    subset: "squelettes seuls"
+    risks: "Complete skeleton view validated; ambiguous bodies preserved; trial39 label association documented; versionless source pinned"
+    subset: "All 217 native skeleton trials, all 384 observations and every body block"
     contact_needed: false
   - id: rosmag40
     registry: motion_misc.yaml

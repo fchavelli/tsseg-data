@@ -1,4 +1,4 @@
-# Primary selective-access qualification updated 2026-10-20; see docs/qualification/andy-ha4m.md.
+# Complete native skeleton build verified 2026-10-20; see docs/qualification/andy-ha4m.md.
 id: ha4m
 name: "HA4M — Human Action Multi-Modal Monitoring in Manufacturing (epicyclic gear train assembly)"
 domain: motion_capture
@@ -9,36 +9,41 @@ citation: "Cicirelli et al., The HA4M dataset: Multi-Modal Monitoring of an asse
 license: CC-BY-4.0
 license_url: "https://creativecommons.org/licenses/by/4.0/legalcode"
 license_tier: A
-license_verified: "2026-10-17, métadonnées DataCite du DOI ScienceDB (rightsList)"
+license_verified: "2026-10-20, primary repository LICENSE at revision cc0b49cbf0bb39f63b368c5c4f10d0c27a6a452e"
 n_series: 217
-length: {min: null, median: null, max: null}
-n_channels: null
+length: {min: 997, median: 2900, max: 7262}
+n_channels: 384
 sampling_rate_hz: 30
 label_type: states
 n_states: 13
 n_annotators: 1
 label_origin: human
-unlabeled_regions: "classe « don't care » (ID 0) pour transitions et imprévus"
+unlabeled_regions: "None after documented trial39 association; source 0 is an ordinary scored null state"
 continuous: true
 access: direct
-size: "3,2 To en tout (vidéos, nuages de points) ; squelette seul : petit, à extraire"
+size: "624 MB complete skeleton build; 1.12 GB temporary compressed source cache"
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: high
 value_reason: "217 assemblages par 41 sujets, squelette Azure Kinect 32 articulations à 30 fps, 12 actions + don't care annotées image par image (contrôlées par 2 chercheurs) ; ordre partiellement libre, actions répétées (2, 3, 11) ; 4 124 actions annotées ; licence A"
 effort: medium
-confidence: medium
+confidence: high
 notes: >
-  Primary CC BY 4.0 repository revision cc0b49cbf0bb39f63b368c5c4f10d0c27a6a452e.
-  Author-linked public ownCloud WebDAV permits independent Skeletons and Labels.txt
-  access. All 217 trial directory listings contain both: 2,740,949,486 skeleton
-  bytes plus 6,405,585 label bytes. Full share is 4.58 TB. One native frame has
-  32 joints and 12 numeric observations per joint (384 channels including XYZ,
-  quaternion, confidence and 2D projections), rather than XYZ-only 96. Preserve
-  source frame IDs and device times: first two pilot frames share a timestamp.
-  One released label track checked by two researchers; no independent rater
-  tracks. Primary README says 4,123 actions. Need full-scope reconciliation,
-  missing-detection/label semantics and a compressed single-trial storage pilot
-  before a corpus build. No corpus downloaded. HA4M-THMS is a reaching derivative,
-  not a substitute for original segmentation. See docs/qualification/andy-ha4m.md.
+  Complete 217 trials from 41 subjects: 642,268 frame positions at nominal 30 fps,
+  all 32 joints and 12 native observations per joint. Native microsecond clocks
+  retain 1,469 duplicates and no reversals. Exactly one valid body block supplies
+  main; all invalid-ID and ambiguous multi-valid blocks remain in typed auxiliary
+  data, preserving all 639,590 source blocks (639,517 main plus 73 auxiliary).
+  Main has 2,751 structurally unavailable poses; no interpolation or actor claim.
+  Original CC-BY annotations for IDU039V001/V002 are associated in reverse using
+  SHA-pinned later primary-author action vectors as evidence; unlicensed evidence
+  files are not rehosted. Every original declared annotation row is retained.
+  One released manual reference checked by two researchers, no independent raters.
+  Null 0 remains scored: recurrence 204/217 with null versus 49/217 for substantive
+  classes 1-12. Semantic runs 3,224; joint action/repetition runs 4,124, including
+  435 null instances. Source README says 4,123, a documented discrepancy.
+  Independent reconstruction verifies every value/ID/timestamp/annotation against
+  SHA-pinned native sources after the documented float32 cast; validation 0/0.
+  Source rights: https://baltig.cnr.it/ISP/ha4m/-/blob/cc0b49cbf0bb39f63b368c5c4f10d0c27a6a452e/LICENSE.
+  See docs/qualification/andy-ha4m.md for alignment, reconstruction and storage.
 rejected: null

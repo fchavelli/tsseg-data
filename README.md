@@ -93,7 +93,7 @@ the authors allow re-hosting.
 | `pneumatic-eol-strzinar`: Pneumatic Pressure and Electrical Current Time Series in Manufacturing (end-of-line test station) | industry_energy | SD | CC-BY-4.0 (A) | builder + validated build (156 CSV triplets; native clocks retained) |
 | `deddiag`: DEDDIAG — Domestic Electricity Demand Dataset of Individual Appliances in Germany | industry_energy | SD | CC-BY-4.0 (A) | planned |
 | `andy-lab-oneperson`: AndyData-lab-onePerson (AnDy industry-oriented human movement and ergonomics dataset) | mocap_surgery_assembly | SD | CC-BY-4.0 (A) | compact views audited; build deferred (18-GiB reserve) |
-| `ha4m`: HA4M — Human Action Multi-Modal Monitoring in Manufacturing (epicyclic gear train assembly) | mocap_surgery_assembly | SD | CC-BY-4.0 (A) | primary skeleton access audited (217 trials); storage pilot pending |
+| `ha4m`: HA4M — Human Action Multi-Modal Monitoring in Manufacturing (epicyclic gear train assembly) | mocap_surgery_assembly | SD | CC-BY-4.0 (A) | builder + validated build (217 native skeleton trials; 384 channels + all ambiguous blocks) |
 | `rosmag40`: ROSMAG40 — ROSMA subset with gesture annotations (dVRK) | mocap_surgery_assembly | SD | CC-BY-4.0 (A) | planned |
 | `bimacs`: KIT Bimanual Actions Dataset (Bimacs) | mocap_surgery_assembly | SD | CC0-1.0 (annotations, derived data); RGB-D for scientific use (A) | builder + validated build (540 body-pose trials; separate hand tracks; frame clock) |
 | `lund2013-eye`: Lund 2013 hand-labelled eye-movement data (EyeMovementDetectorEvaluation) | mocap_surgery_assembly | SD | GPL-3.0 (B) | builder + validated build (34 trials / 39 native copies; both experts + correction) |
