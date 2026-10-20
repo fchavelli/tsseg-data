@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "fly-vs-fly": "builder + validated build (47 native two-fly scenes; overlapping behavior tracks)",
     "rosmag40": "builder + validated build (40 published 34-feature sequences; bilateral MD/FGD tracks)",
     "andy-lab-oneperson": "compact views audited; build deferred (18-GiB reserve)",
     "ha4m": "builder + validated build (217 native skeleton trials; 384 channels + all ambiguous blocks)",
@@ -89,21 +90,30 @@ NAME_EN = {
 
 def main() -> None:
     short = yaml.safe_load((REPO / "registry" / "shortlist.yaml").read_text())
-    rows = ["| Dataset | Domain | Task | License (tier) | Status |", "|---|---|---|---|---|"]
+    rows = [
+        "| Dataset | Domain | Task | License (tier) | Status |",
+        "|---|---|---|---|---|",
+    ]
     for d in short["datasets"]:
-        entry = yaml.safe_load((REPO / "registry" / "datasets" / f"{d['id']}.yaml").read_text())
+        entry = yaml.safe_load(
+            (REPO / "registry" / "datasets" / f"{d['id']}.yaml").read_text()
+        )
         name = NAME_EN.get(d["id"], str(entry.get("name", d["id"]))).replace("|", "/")
         status = STATUS.get(d["id"], "planned")
         if d.get("license_tier") == "C":
             status += "; source-only builder until rights are clarified"
         elif d.get("contact_needed"):
             status += "; author contact planned"
-        rows.append(f"| `{d['id']}`: {name} | {d['domain']} | {TASK.get(d['task'], d['task'])} "
-                    f"| {LICENSE_EN.get(d['id'], d['license'])} ({d['license_tier']}) | {status} |")
+        rows.append(
+            f"| `{d['id']}`: {name} | {d['domain']} | {TASK.get(d['task'], d['task'])} "
+            f"| {LICENSE_EN.get(d['id'], d['license'])} ({d['license_tier']}) | {status} |"
+        )
     readme = REPO / "README.md"
     text = readme.read_text()
     block = "<!-- datasets:start -->\n" + "\n".join(rows) + "\n<!-- datasets:end -->"
-    text = re.sub(r"<!-- datasets:start -->.*?<!-- datasets:end -->", block, text, flags=re.S)
+    text = re.sub(
+        r"<!-- datasets:start -->.*?<!-- datasets:end -->", block, text, flags=re.S
+    )
     readme.write_text(text)
     print(f"{len(rows) - 2} datasets")
 

@@ -1,32 +1,51 @@
-# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
+# Complete primary native tracking view, audited 2026-10-20.
 id: fly-vs-fly
 name: "Fly vs. Fly (Boy meets boy, Aggression, Courtship)"
 domain: animal_behavior
 task: sd
-source_url: https://data.caltech.edu/records/1893
+source_url: https://data.caltech.edu/records/zrznw-w7386
 doi: 10.22002/D1.1893
-citation: "Eyjolfsdottir et al., ECCV 2014"
+citation: "Eyjolfsdottir et al., Detecting social actions of fruit flies, ECCV 2014"
 license: CC0-1.0
 license_url: https://creativecommons.org/publicdomain/zero/1.0/
 license_tier: A
-license_verified: "2026-10-17, page CaltechDATA (droits « cc-zero »)"
-n_series: null
-length: {min: null, median: null, max: null}
-n_channels: null
-sampling_rate_hz: 30
-label_type: states
-n_states: 10
-n_annotators: null
+license_verified: "2026-10-20, primary CaltechDATA API version1.0 reports cc-zero"
+n_series: 47
+length: {min: 53999, median: 53999, max: 255929}
+n_channels: 34
+sampling_rate_hz: null # Native per scene: Boy200fps; Aggression/Courtship30fps.
+label_type: multilabel
+n_states: 10 # Semantic behaviors; each dense behavior track is binary.
+n_annotators: null # Released secondary files have no established rater identity.
 label_origin: human
-unlabeled_regions: "oui, hors actions annotées (classe implicite « aucune »)"
+unlabeled_regions: >
+  Explicit unknown intervals, behavior vocabulary absent from the subset, absent
+  secondary files and unannotated Courtship fly2 remain -1. Ordinary absence0 is scored.
 continuous: true
 access: direct
-size: "~3,7 Go sans films (zip Aggression + BoyMeetsBoy_wo_movies + Courtship) ; 44 Go avec"
+size: "212 MB native tracking build; 383 MB selected MAT cache; full ZIPs not acquired"
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: high
-value_reason: "CC0, trajectoires de pose articulée par image pour 2 mouches, 10 actions sociales annotées par experts, 22 h de vidéo"
+value_reason: "CC0 complete two-fly trajectories with recurrent overlapping social behaviors"
 effort: medium
-confidence: medium
-notes: "États récurrents : oui (lunge, wing threat, tussle, wing extension, circling, copulation… se répètent dans chaque vidéo). Actions = intervalles (bouts) potentiellement chevauchants entre mouches : à rendre denses par mouche. Fréquence 30 Hz de mémoire, à vérifier."
+confidence: high
+notes: >
+  All47 released native tracking scenes: Aggression10, Boy6, Courtship31
+  (wild21, hyper10), 3,702,554 frames, all17 tracker observations per fly.
+  Both fly trajectories remain together; videos and derived feat.mat are outside
+  this complete selected tracking view. Native NaNs remain, no filtering or resampling.
+  Native200/30fps per scene and exact nominal frame-index time_ns; global rate null.
+  Ten behaviors represented as40 independent binary tracks (two flies, primary/secondary
+  released annotation slots), retaining overlap instead of imposing exclusive states.
+  Courtship official n_flies=1 establishes that only fly1 has annotation: fly2 is
+  entirely unscored, not negative. All47 official source splits retained.
+  Every11,040 original bout, one-based inclusive endpoints and original certainty
+  retained separately; four bouts lack certainty. Secondary files exist for eight
+  trials; file concordance does not establish independent/global rater identities.
+  Literal shared flag_frames retained with own length. Five Courtship wild trials
+  have54,000 flags for53,999 trajectory frames; extra terminal flags stay auxiliary.
+  Primary cc-zero, native SHA256/CRC/size pins for105 selected MAT members, acquired
+  by exact bounded HTTP206 ranges. Source archives contain movies despite filenames;
+  full3.686GB archives never cached. See docs/qualification/fly-vs-fly.md.
 rejected: null

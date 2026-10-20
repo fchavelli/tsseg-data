@@ -851,7 +851,7 @@ Decided by the user on 2026-10-18:
    Keep this local split of checks, then run the official online
    Croissant checker before publication; revise sharding if it times out.
 
-- [ ] Batch 3 / Fly vs. Fly paused (2026-10-20): primary CaltechDATA cc-zero
+- [x] Batch 3 / Fly vs. Fly initial pause (2026-10-20, resolved below): primary CaltechDATA cc-zero
   verified. Bounded ZIP inventory finds47 native two-fly tracking trials,
   47 primary action files, eight second action files and three splits; selected
   native MAT cache totals383,168,883 bytes, versus3.686GB complete archives.
@@ -865,3 +865,35 @@ Decided by the user on 2026-10-18:
   no completed build/validation/commit. No unrelated cache removed. See
   docs/qualification/fly-vs-fly.md for exact sources, inventory and resume gates.
   Resolve shared storage change before any further heavy job.
+
+
+- [x] Batch 3 / Fly vs. Fly completed locally (2026-10-20): all47 released
+  two-fly native tracking scenes (Aggression10, Boy6, Courtship31),3,702,554
+  frames and all34 observations. Native30/200fps per scene, nominal exact
+  time_ns grid, global rate null; all24 train/23 test official splits retained.
+  Forty independent binary tracks preserve overlapping behaviors, primary and
+  eight trial-local secondary files. No independent/global rater identity
+  established; metadata reports file concordance only. Courtship n_flies=1
+  means fly2 is entirely unscored despite empty bout cells. Explicit unknown,
+  absent vocabulary and absent secondary files stay-1; ordinary absence0 scored.
+  All11,040 literal bouts and certainty retained; four missing certainty values
+  stay null, no clipping. All47 MAT schemas audited. Five Courtship wild trials
+  have54,000 flag entries for53,999 poses; preserve every flag with its own
+  native length, no invented trajectory frame. Exact5,373,590 NaN observations
+  retained after float32 cast.46/47 scenes have positive behavior overlap.
+  Default wing-extension track:2,920 runs, recurrence37/47 including absence
+  versus36/47 positive runs;14.861957% unscored. Unknown masks can split positives.
+  Primary CaltechDATA cc-zero verified; all105 native MAT SHA256/CRC/size pinned,
+  exact bounded HTTP206 ranges, full3.686GB archives never acquired.
+  Four-scene pilot24.08MB/414,259frames,58.13B/frame; conservative5M-frame
+  projection+25%=363MB, below reserved1GiB output. Actual211,915,716 bytes.
+  Final Croissant/Parquet validator0 errors/0 warnings (7 files,1part).
+  Independent complete comparison47/47: every float32 value/NaN,40 labels,
+  official split, nominal clock, flag and original bout exactly reconstructed.
+  Logs raw/fly-vs-fly-validation.log and raw/fly-vs-fly-reconstruction.log remain.
+  After external space was restored, all resumed heavy jobs ran sequentially;
+  free remained above18GiB despite continued external consumption. Only
+  raw/fly-vs-fly deleted after both successful gates (383,352,980 file bytes).
+  Free before/after cleanup35,269,808,128 /35,653,214,208 bytes; every other cache
+  and the pilot output retained. See docs/qualification/fly-vs-fly.md.
+  Nothing published; next batch3 candidate is AMI (derived features).

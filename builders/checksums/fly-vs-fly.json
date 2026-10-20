@@ -1,0 +1,989 @@
+{
+  "record": "https://data.caltech.edu/records/zrznw-w7386",
+  "archives": [
+    {
+      "name": "Aggression.zip",
+      "url": "https://data.caltech.edu/api/records/zrznw-w7386/files/Aggression.zip/content",
+      "bytes": 701514459,
+      "md5": "md5:db2b527b800f4013d1e583f53b116c18",
+      "members": [
+        {
+          "name": "Aggression/movie1/movie1_actions.mat",
+          "offset": 43968843,
+          "compressed": 666,
+          "size": 696,
+          "crc": 3162159252,
+          "method": 8,
+          "sha256": "dfb69d52d41ef79513d98b5950fb453bf2cd287f0791df8ba2d2b21be01d6927"
+        },
+        {
+          "name": "Aggression/movie1/movie1_track.mat",
+          "offset": 64165728,
+          "compressed": 4184579,
+          "size": 4197955,
+          "crc": 551368664,
+          "method": 8,
+          "sha256": "98fa9a40bca8b830f9df822f905f37bc86f2b4586385075ce4a32d64c40080fe"
+        },
+        {
+          "name": "Aggression/movie10/movie10_actions.mat",
+          "offset": 112480799,
+          "compressed": 1283,
+          "size": 1278,
+          "crc": 325868883,
+          "method": 8,
+          "sha256": "def8d1032e05654c8391ad3a797f5467c9217a4f032fa30df5e946d9bca6a49d"
+        },
+        {
+          "name": "Aggression/movie10/movie10_track.mat",
+          "offset": 133795445,
+          "compressed": 4686127,
+          "size": 4700710,
+          "crc": 518570837,
+          "method": 8,
+          "sha256": "4f7a5bdc2b088f2f006402fc8ef4c0ace276da790bde0dc01d172a0848fe6cdb"
+        },
+        {
+          "name": "Aggression/movie2/movie2_actions.mat",
+          "offset": 182645988,
+          "compressed": 3300,
+          "size": 3295,
+          "crc": 2628526915,
+          "method": 8,
+          "sha256": "f228fc472f1343ed8ed3df4f3cfb7cb1a1fc48420a7915a1f0973b550a0ec230"
+        },
+        {
+          "name": "Aggression/movie2/movie2_track.mat",
+          "offset": 205755936,
+          "compressed": 6678718,
+          "size": 6695439,
+          "crc": 3721318957,
+          "method": 8,
+          "sha256": "21fc1570707331004179be6abca64c921410a2fc6ede94df6e6803bcbc0d5e84"
+        },
+        {
+          "name": "Aggression/movie3/movie3_actions.mat",
+          "offset": 256528871,
+          "compressed": 2486,
+          "size": 2481,
+          "crc": 3537070113,
+          "method": 8,
+          "sha256": "2ca1336da0a6d8c6a014fec08aec00c4844c800fe8d4c6570a4671b33a0a6e5f"
+        },
+        {
+          "name": "Aggression/movie3/movie3_track.mat",
+          "offset": 279147809,
+          "compressed": 5983103,
+          "size": 5997311,
+          "crc": 1613880747,
+          "method": 8,
+          "sha256": "c8edc60ca8046b00f08fe3819c53516f1c7f2a91d65ae1b710526490ec093068"
+        },
+        {
+          "name": "Aggression/movie4/movie4_actions.mat",
+          "offset": 329101122,
+          "compressed": 1392,
+          "size": 1387,
+          "crc": 4283662750,
+          "method": 8,
+          "sha256": "1228b7ce6ad1206bb5eb7d4c0f682d0d7bba69d7321f51f5d6ec2d51be3327c3"
+        },
+        {
+          "name": "Aggression/movie4/movie4_track.mat",
+          "offset": 349835084,
+          "compressed": 4251609,
+          "size": 4265741,
+          "crc": 3540010049,
+          "method": 8,
+          "sha256": "8a90f573babbbc91483d668109573448aa0d050373deb09646dd0a8aee88410b"
+        },
+        {
+          "name": "Aggression/movie5/movie5_actions.mat",
+          "offset": 398145494,
+          "compressed": 1966,
+          "size": 1961,
+          "crc": 1953414819,
+          "method": 8,
+          "sha256": "2990a62c06eb9db624de6aab3157d4238ac301f57c7f0e3670fd51e6cce2301b"
+        },
+        {
+          "name": "Aggression/movie5/movie5_track.mat",
+          "offset": 418498409,
+          "compressed": 4108323,
+          "size": 4123224,
+          "crc": 389745155,
+          "method": 8,
+          "sha256": "5bc84a0daf828a74f7efc7651df641db9ac7bd021cfaf0ec561c14eed71691ef"
+        },
+        {
+          "name": "Aggression/movie6/movie6_actions.mat",
+          "offset": 466698754,
+          "compressed": 3321,
+          "size": 3316,
+          "crc": 4008889926,
+          "method": 8,
+          "sha256": "79ce425aba834bcddfc0259fea8612ef955472f099843ab6f9539aed31173643"
+        },
+        {
+          "name": "Aggression/movie6/movie6_second_actions.mat",
+          "offset": 488312201,
+          "compressed": 1782,
+          "size": 1777,
+          "crc": 673680201,
+          "method": 8,
+          "sha256": "5ca5fef728cd230c6cd6276d9e6bcb3ad54f106b26e201a71fa26e28fd797bab"
+        },
+        {
+          "name": "Aggression/movie6/movie6_track.mat",
+          "offset": 488314088,
+          "compressed": 5273160,
+          "size": 5287728,
+          "crc": 818217278,
+          "method": 8,
+          "sha256": "c5617f3ef0c063d9f3d72029cebe76a2f9feda52a8e9c889e1b7df441841aff2"
+        },
+        {
+          "name": "Aggression/movie7/movie7_actions.mat",
+          "offset": 537592750,
+          "compressed": 2126,
+          "size": 2121,
+          "crc": 3301519122,
+          "method": 8,
+          "sha256": "92affc5752c99b696a0bebc7ea4e7a78aa0db6bd71a7140e5edb9013ec27a850"
+        },
+        {
+          "name": "Aggression/movie7/movie7_track.mat",
+          "offset": 558968641,
+          "compressed": 5096643,
+          "size": 5112095,
+          "crc": 4184622717,
+          "method": 8,
+          "sha256": "87f992d61203d1a93e082a744bd8e1d4f02a71932101f405d4cf388baca7a30f"
+        },
+        {
+          "name": "Aggression/movie8/movie8_actions.mat",
+          "offset": 608164880,
+          "compressed": 2989,
+          "size": 2984,
+          "crc": 479770234,
+          "method": 8,
+          "sha256": "c738e6088045fdbd52c48eec3d35157641a19518a3d76e0f5a513a881c54a431"
+        },
+        {
+          "name": "Aggression/movie8/movie8_track.mat",
+          "offset": 630008269,
+          "compressed": 5338635,
+          "size": 5351442,
+          "crc": 3741128144,
+          "method": 8,
+          "sha256": "f0084efdc6d7d101557fac055fa486bb4173fdd6102b4a9f9481e35b749a2b81"
+        },
+        {
+          "name": "Aggression/movie9/movie9_actions.mat",
+          "offset": 679445103,
+          "compressed": 639,
+          "size": 665,
+          "crc": 143255609,
+          "method": 8,
+          "sha256": "7583b327fa598998f48a5f1de947b182b97051f8a1aa4a626afdfe70a8bfe7ba"
+        },
+        {
+          "name": "Aggression/movie9/movie9_track.mat",
+          "offset": 698353186,
+          "compressed": 3155448,
+          "size": 3169645,
+          "crc": 1519439214,
+          "method": 8,
+          "sha256": "be27fc1ff1f2b9d85f0588093d24f2c780ffe91fa2657c0ef3f69c8a49bd4be0"
+        },
+        {
+          "name": "Aggression/traintest.mat",
+          "offset": 701508730,
+          "compressed": 476,
+          "size": 580,
+          "crc": 3476961472,
+          "method": 8,
+          "sha256": "4d6ba4ec481655e6e71eb7672ebea280e96c2c4c551775a0a525264110a2703e"
+        }
+      ]
+    },
+    {
+      "name": "BoyMeetsBoy_wo_movies.zip",
+      "url": "https://data.caltech.edu/api/records/zrznw-w7386/files/BoyMeetsBoy_wo_movies.zip/content",
+      "bytes": 806108930,
+      "md5": "md5:7639e3c8d5a7806a2f580739888e6347",
+      "members": [
+        {
+          "name": "Boy_meets_boy light/movie1/movie1_actions.mat",
+          "offset": 1817,
+          "compressed": 2060,
+          "size": 2061,
+          "crc": 4113501739,
+          "method": 8,
+          "sha256": "77bc512ee6e16a938f121f0e65c50ca721a6df4257b65a178330a80fc63a095d"
+        },
+        {
+          "name": "Boy_meets_boy light/movie1/movie1_track.mat",
+          "offset": 102843994,
+          "compressed": 30515044,
+          "size": 30602851,
+          "crc": 580514299,
+          "method": 8,
+          "sha256": "5978ba5bd95f6055270622c5735c8647cad289b7e417e9e483236810c5d86950"
+        },
+        {
+          "name": "Boy_meets_boy light/movie2/movie2_actions.mat",
+          "offset": 133359827,
+          "compressed": 1764,
+          "size": 1759,
+          "crc": 3198852862,
+          "method": 8,
+          "sha256": "7d041000b4320e61452a020afb4d8e6636b33a79a67b38338133131b36205553"
+        },
+        {
+          "name": "Boy_meets_boy light/movie2/movie2_track.mat",
+          "offset": 236516930,
+          "compressed": 30798162,
+          "size": 30884721,
+          "crc": 1128992872,
+          "method": 8,
+          "sha256": "b0e2b89cc58c6515c2f08e7d013caa5a1dbcf1f8736c98c133791d89754f1b46"
+        },
+        {
+          "name": "Boy_meets_boy light/movie3/movie3_actions.mat",
+          "offset": 267316042,
+          "compressed": 1944,
+          "size": 1939,
+          "crc": 671187189,
+          "method": 8,
+          "sha256": "7128ba3ab85f5f8800b3cd0f25d107a327313a3e8a674e9e844336de3fe3f12f"
+        },
+        {
+          "name": "Boy_meets_boy light/movie3/movie3_track.mat",
+          "offset": 369380516,
+          "compressed": 31600035,
+          "size": 31692612,
+          "crc": 3486619050,
+          "method": 8,
+          "sha256": "5e351b5a46dd68af666f802e7f9ed66fe2ec2c7d409b801e80660a3818f2df80"
+        },
+        {
+          "name": "Boy_meets_boy light/movie4/movie4_actions.mat",
+          "offset": 400981356,
+          "compressed": 2620,
+          "size": 2625,
+          "crc": 3734002579,
+          "method": 8,
+          "sha256": "8f9492045d3d2c1de4ac00a12dfb242f5566344ee4f2aa71b0c64e6cb7bf05f7"
+        },
+        {
+          "name": "Boy_meets_boy light/movie4/movie4_second_actions.mat",
+          "offset": 503891615,
+          "compressed": 2721,
+          "size": 2723,
+          "crc": 810290291,
+          "method": 8,
+          "sha256": "86a209362ebf9a767782b284bc83c97efda12b712633646eef7acb418436bbe3"
+        },
+        {
+          "name": "Boy_meets_boy light/movie4/movie4_track.mat",
+          "offset": 503894997,
+          "compressed": 31751485,
+          "size": 31846417,
+          "crc": 1580165947,
+          "method": 8,
+          "sha256": "b9991e644f2247e172be43610cc3624ced2ae8e98b3f39e71786c83912d989bb"
+        },
+        {
+          "name": "Boy_meets_boy light/movie5/movie5_actions.mat",
+          "offset": 535647287,
+          "compressed": 2439,
+          "size": 2445,
+          "crc": 1182322792,
+          "method": 8,
+          "sha256": "d0bb58dd098d5579c5c260a4f5d9493ae365dbcaa20ac4a2650acc4dd72e5ac1"
+        },
+        {
+          "name": "Boy_meets_boy light/movie5/movie5_second_actions.mat",
+          "offset": 640725976,
+          "compressed": 1391,
+          "size": 1386,
+          "crc": 1757196841,
+          "method": 8,
+          "sha256": "9452d813e012583b97afea9889d48dfcd6080b0322e9d53e3989dc0c5014d12d"
+        },
+        {
+          "name": "Boy_meets_boy light/movie5/movie5_track.mat",
+          "offset": 640728028,
+          "compressed": 32576828,
+          "size": 32672803,
+          "crc": 868936104,
+          "method": 8,
+          "sha256": "de1b524bc846dcec636ccbb63032202e0084473ca8b3ae28ddaf98ec5fe6e635"
+        },
+        {
+          "name": "Boy_meets_boy light/movie6/movie6_actions.mat",
+          "offset": 673305661,
+          "compressed": 1864,
+          "size": 1862,
+          "crc": 1609899420,
+          "method": 8,
+          "sha256": "386543f1d0883511b682ab8fd8ca1f8ed95bbfa727051f5242f50c28caf7f2b9"
+        },
+        {
+          "name": "Boy_meets_boy light/movie6/movie6_second_actions.mat",
+          "offset": 775297229,
+          "compressed": 2128,
+          "size": 2123,
+          "crc": 1551484902,
+          "method": 8,
+          "sha256": "348a7ab6cf69917f84d1b56c42b2eb50f7c08546a492c4ab412e8d38688f4d90"
+        },
+        {
+          "name": "Boy_meets_boy light/movie6/movie6_track.mat",
+          "offset": 775300017,
+          "compressed": 30802833,
+          "size": 30890415,
+          "crc": 4235064472,
+          "method": 8,
+          "sha256": "7c946c93a4eb38b91a97881be0ebba63f13e0609ede02bd684f558fa384da121"
+        },
+        {
+          "name": "Boy_meets_boy light/traintest.mat",
+          "offset": 806102955,
+          "compressed": 453,
+          "size": 563,
+          "crc": 505153736,
+          "method": 8,
+          "sha256": "0b3810e1f6c1db5cd13fc9b9737422a883255812ef7962f4c5cea980ca8f7232"
+        }
+      ]
+    },
+    {
+      "name": "Courtship.zip",
+      "url": "https://data.caltech.edu/api/records/zrznw-w7386/files/Courtship.zip/content",
+      "bytes": 2178696665,
+      "md5": "md5:e31c49ead19e7b8d5b1fbfb284c4307f",
+      "members": [
+        {
+          "name": "Courtship/hyper/movie1/movie1_actions.mat",
+          "offset": 43994371,
+          "compressed": 1528,
+          "size": 1523,
+          "crc": 704105098,
+          "method": 8,
+          "sha256": "c9dacc3bdbe7c9b546838b1e27ef06fc501f4e56db8f6e27a05839734035759a"
+        },
+        {
+          "name": "Courtship/hyper/movie1/movie1_track.mat",
+          "offset": 66109962,
+          "compressed": 5170284,
+          "size": 5187586,
+          "crc": 4111981209,
+          "method": 8,
+          "sha256": "7517a222591f87d32e81cfb71e9aa216706070e7723de94990a1f5e0ab803cc4"
+        },
+        {
+          "name": "Courtship/hyper/movie10/movie10_actions.mat",
+          "offset": 115153879,
+          "compressed": 1228,
+          "size": 1223,
+          "crc": 2312040016,
+          "method": 8,
+          "sha256": "96cbc4dba067823e0732fecc7a8858146a6656f431889c85a03270b61419bedb"
+        },
+        {
+          "name": "Courtship/hyper/movie10/movie10_track.mat",
+          "offset": 137238546,
+          "compressed": 5171964,
+          "size": 5188817,
+          "crc": 1388811369,
+          "method": 8,
+          "sha256": "c76b5879816431245f9ebce25cba64a52f64adbbc16726eb043acc2bbd9b4334"
+        },
+        {
+          "name": "Courtship/hyper/movie2/movie2_actions.mat",
+          "offset": 186260374,
+          "compressed": 1157,
+          "size": 1152,
+          "crc": 1220624717,
+          "method": 8,
+          "sha256": "163b31396f42fffc977845255cfcae920eefb8984a00fa38ea9847455ecb5a27"
+        },
+        {
+          "name": "Courtship/hyper/movie2/movie2_track.mat",
+          "offset": 208018962,
+          "compressed": 4682761,
+          "size": 4698678,
+          "crc": 1271109522,
+          "method": 8,
+          "sha256": "957744f442f28d680980ae3f2a9c0729c9e734e69b24bd4b7bab09dfb112e1b7"
+        },
+        {
+          "name": "Courtship/hyper/movie3/movie3_actions.mat",
+          "offset": 256624024,
+          "compressed": 1177,
+          "size": 1172,
+          "crc": 87250203,
+          "method": 8,
+          "sha256": "f75fede81e669d31ab17599ef885a6c3e7c9ce12273abc49db2125043659c861"
+        },
+        {
+          "name": "Courtship/hyper/movie3/movie3_track.mat",
+          "offset": 278298743,
+          "compressed": 4815328,
+          "size": 4831342,
+          "crc": 2254515239,
+          "method": 8,
+          "sha256": "f707eae51a81818db3d21b92bd70b577071f7541afcaca6d7bc633735c9ca926"
+        },
+        {
+          "name": "Courtship/hyper/movie4/movie4_actions.mat",
+          "offset": 326863400,
+          "compressed": 1024,
+          "size": 1026,
+          "crc": 337653254,
+          "method": 8,
+          "sha256": "5818de5c771244ef27730c2f25adabbd9a085b1ce8691e74941b21f4250f8757"
+        },
+        {
+          "name": "Courtship/hyper/movie4/movie4_track.mat",
+          "offset": 348892497,
+          "compressed": 4858401,
+          "size": 4874561,
+          "crc": 383049582,
+          "method": 8,
+          "sha256": "517907bd090bdc5c936e3cc7ebd04352a80ab9dee61686a49848486aba433582"
+        },
+        {
+          "name": "Courtship/hyper/movie5/movie5_actions.mat",
+          "offset": 397585962,
+          "compressed": 1193,
+          "size": 1188,
+          "crc": 3544729471,
+          "method": 8,
+          "sha256": "9786b9153e1ab60595295fda15007d11f93b682fb7bd39fe76d5ca41903a5c58"
+        },
+        {
+          "name": "Courtship/hyper/movie5/movie5_track.mat",
+          "offset": 420126347,
+          "compressed": 5253989,
+          "size": 5269699,
+          "crc": 562909722,
+          "method": 8,
+          "sha256": "b32deef05e8d882d02159e294a060ddd621fc3e5e93c81d6d9915c12b313635b"
+        },
+        {
+          "name": "Courtship/hyper/movie6/movie6_actions.mat",
+          "offset": 469273948,
+          "compressed": 1095,
+          "size": 1095,
+          "crc": 308775060,
+          "method": 8,
+          "sha256": "affafd22afe253db79540d250019804dbae887a6a6885db216a9693712b9d239"
+        },
+        {
+          "name": "Courtship/hyper/movie6/movie6_second_actions.mat",
+          "offset": 491497688,
+          "compressed": 1049,
+          "size": 1051,
+          "crc": 3672983140,
+          "method": 8,
+          "sha256": "0bf42c7978e99719a5ea53b29040819a3cb7273e4109dd78f829a79192488a5f"
+        },
+        {
+          "name": "Courtship/hyper/movie6/movie6_track.mat",
+          "offset": 491499013,
+          "compressed": 4902832,
+          "size": 4919985,
+          "crc": 924194719,
+          "method": 8,
+          "sha256": "a28dcca9db3cb4e8fb26f0c14d4757cc2e5a13802d445942cc668bf29696f7e4"
+        },
+        {
+          "name": "Courtship/hyper/movie7/movie7_actions.mat",
+          "offset": 540169545,
+          "compressed": 1117,
+          "size": 1118,
+          "crc": 860381132,
+          "method": 8,
+          "sha256": "c2500fac9f2d26c5bcc9724cfa9c2c8e18dda1bf666e995b5e458720f3308c76"
+        },
+        {
+          "name": "Courtship/hyper/movie7/movie7_second_actions.mat",
+          "offset": 562145251,
+          "compressed": 1126,
+          "size": 1127,
+          "crc": 2728352113,
+          "method": 8,
+          "sha256": "a0423118218799bb577ea68c1d6b012cbaf62e1e25ca98f5c9a4c7010a95cffc"
+        },
+        {
+          "name": "Courtship/hyper/movie7/movie7_track.mat",
+          "offset": 562146653,
+          "compressed": 4808705,
+          "size": 4825402,
+          "crc": 1761808781,
+          "method": 8,
+          "sha256": "dfd61bfa020dd08531f18aaa93d10af3d9947b3fd4a1ed191aaa200faac99ae7"
+        },
+        {
+          "name": "Courtship/hyper/movie8/movie8_actions.mat",
+          "offset": 610807167,
+          "compressed": 1337,
+          "size": 1339,
+          "crc": 2928190313,
+          "method": 8,
+          "sha256": "c908f0121920c46749f3207139b61de2cc82f1cb50e28c6b9baffab7f352e982"
+        },
+        {
+          "name": "Courtship/hyper/movie8/movie8_second_actions.mat",
+          "offset": 633095053,
+          "compressed": 1329,
+          "size": 1326,
+          "crc": 554883411,
+          "method": 8,
+          "sha256": "d510331b2b715794bb2f2f1ee494c7dea79168dfc2dc051ec627891c73fc1559"
+        },
+        {
+          "name": "Courtship/hyper/movie8/movie8_track.mat",
+          "offset": 633096736,
+          "compressed": 5281307,
+          "size": 5297435,
+          "crc": 4286795266,
+          "method": 8,
+          "sha256": "677c77a852515352ae17eacfadf0e50f5d7c80be441aad856f34595dd72fe004"
+        },
+        {
+          "name": "Courtship/hyper/movie9/movie9_actions.mat",
+          "offset": 682046204,
+          "compressed": 925,
+          "size": 935,
+          "crc": 3248647519,
+          "method": 8,
+          "sha256": "2ab4eacc50ca0371ca863d3fefefe184b5aabbb0c26945179c29d5f7872ad319"
+        },
+        {
+          "name": "Courtship/hyper/movie9/movie9_second_actions.mat",
+          "offset": 703845188,
+          "compressed": 428,
+          "size": 467,
+          "crc": 520270218,
+          "method": 8,
+          "sha256": "63ece5d48116008e5cedee4613ddf013238b072a254a8a5cc51a71aa4ea4c877"
+        },
+        {
+          "name": "Courtship/hyper/movie9/movie9_track.mat",
+          "offset": 703845892,
+          "compressed": 4677404,
+          "size": 4693509,
+          "crc": 3857231899,
+          "method": 8,
+          "sha256": "dcdace18944005bfb760e5db4aa547f02109358df8929ce85d5f582d2882dcd2"
+        },
+        {
+          "name": "Courtship/traintest.mat",
+          "offset": 708523397,
+          "compressed": 608,
+          "size": 703,
+          "crc": 3852223632,
+          "method": 8,
+          "sha256": "8a97bbbc4ee701824bb7fd08eb29bc5dc1f13117137f5bf1d9a98a5dd4951196"
+        },
+        {
+          "name": "Courtship/wild/movie1/movie1_actions.mat",
+          "offset": 752330481,
+          "compressed": 514,
+          "size": 554,
+          "crc": 379018968,
+          "method": 8,
+          "sha256": "5346f3a1acd2fa154c48d7eeb920aa578e671b1f7dd0a6f631a2fd94d29f7f2b"
+        },
+        {
+          "name": "Courtship/wild/movie1/movie1_track.mat",
+          "offset": 774108176,
+          "compressed": 4608618,
+          "size": 4625286,
+          "crc": 2819089121,
+          "method": 8,
+          "sha256": "3c4ef6367e39c400dc58b8f6b0ead9e258004f95f7a68dd2275a7ae3968cf65b"
+        },
+        {
+          "name": "Courtship/wild/movie10/movie10_actions.mat",
+          "offset": 822770599,
+          "compressed": 363,
+          "size": 407,
+          "crc": 1688396645,
+          "method": 8,
+          "sha256": "86338e9edcf267922078f82c4abf79fb826c8885f83f087dde793ca915d68332"
+        },
+        {
+          "name": "Courtship/wild/movie10/movie10_track.mat",
+          "offset": 844032881,
+          "compressed": 4111900,
+          "size": 4128471,
+          "crc": 2969583532,
+          "method": 8,
+          "sha256": "c65357fbca9d5a9b13246c44d77b8260cd2328722753e066fb6a69f4382b252b"
+        },
+        {
+          "name": "Courtship/wild/movie11/movie11_actions.mat",
+          "offset": 891937474,
+          "compressed": 347,
+          "size": 395,
+          "crc": 1115083555,
+          "method": 8,
+          "sha256": "b77cb7d4456d62c007d4a324a67b1d8f8379e1a8bab592e5b95885780116924e"
+        },
+        {
+          "name": "Courtship/wild/movie11/movie11_track.mat",
+          "offset": 912912753,
+          "compressed": 3925241,
+          "size": 3942438,
+          "crc": 2051357604,
+          "method": 8,
+          "sha256": "cd62c8fb29dcaf9e705495e64c555b2c473afd86095f9a4cc58411f0019e36dd"
+        },
+        {
+          "name": "Courtship/wild/movie12/movie12_actions.mat",
+          "offset": 960820708,
+          "compressed": 436,
+          "size": 476,
+          "crc": 1893669658,
+          "method": 8,
+          "sha256": "3cd49527de1afcc5e2447ecb8867004a45d9f9737a81ced39322faffeb422752"
+        },
+        {
+          "name": "Courtship/wild/movie12/movie12_track.mat",
+          "offset": 982300728,
+          "compressed": 4858036,
+          "size": 4875357,
+          "crc": 1173837475,
+          "method": 8,
+          "sha256": "fe0403337e402e623dd8242552a29b34a5d8628c1a658655cba44b5c2dee7b5c"
+        },
+        {
+          "name": "Courtship/wild/movie13/movie13_actions.mat",
+          "offset": 1030956543,
+          "compressed": 736,
+          "size": 765,
+          "crc": 3239197339,
+          "method": 8,
+          "sha256": "d80e0a132cf4a344df62f0147bf79ca810366d74426421bedb5ae5ea3bb6ef93"
+        },
+        {
+          "name": "Courtship/wild/movie13/movie13_track.mat",
+          "offset": 1052692966,
+          "compressed": 4914532,
+          "size": 4930314,
+          "crc": 1979238276,
+          "method": 8,
+          "sha256": "27d307eb983eea427b6d3b88b70d03a1e69062127b592f5ab9d1b1753ef8a16d"
+        },
+        {
+          "name": "Courtship/wild/movie14/movie14_actions.mat",
+          "offset": 1101340908,
+          "compressed": 369,
+          "size": 416,
+          "crc": 1067489228,
+          "method": 8,
+          "sha256": "dc060abacf588a41284859f2d5e030d4dcbfa545adcc072679f6f90a905804e7"
+        },
+        {
+          "name": "Courtship/wild/movie14/movie14_track.mat",
+          "offset": 1122834188,
+          "compressed": 4610875,
+          "size": 4626994,
+          "crc": 2614142857,
+          "method": 8,
+          "sha256": "3b2b2c260b590f6be2318d1b517e17d347364d38c6a9fcb684d2fb77d1e4e867"
+        },
+        {
+          "name": "Courtship/wild/movie15/movie15_actions.mat",
+          "offset": 1171490095,
+          "compressed": 420,
+          "size": 461,
+          "crc": 3934875325,
+          "method": 8,
+          "sha256": "ba7aab18bd95287e5b2bca3933f7ef9a4c25d02e105c762700e4f9477c7712a0"
+        },
+        {
+          "name": "Courtship/wild/movie15/movie15_track.mat",
+          "offset": 1192905284,
+          "compressed": 4479593,
+          "size": 4494788,
+          "crc": 2154882698,
+          "method": 8,
+          "sha256": "7db2ff8a463eebc0be5f9ca96dbc8b5fa9ada0f05f40e4512aa4d44cec389c9e"
+        },
+        {
+          "name": "Courtship/wild/movie16/movie16_actions.mat",
+          "offset": 1241462534,
+          "compressed": 366,
+          "size": 410,
+          "crc": 711723907,
+          "method": 8,
+          "sha256": "668942d50d6e03296d7581268cde826cf98b4803d9239d0752287c40802d427a"
+        },
+        {
+          "name": "Courtship/wild/movie16/movie16_track.mat",
+          "offset": 1262917901,
+          "compressed": 4396715,
+          "size": 4412803,
+          "crc": 3717137508,
+          "method": 8,
+          "sha256": "4d0c41b9f52c4bb1238a58eb11ed2af93c7ebad713380a692b0a816a31f4ff40"
+        },
+        {
+          "name": "Courtship/wild/movie17/movie17_actions.mat",
+          "offset": 1311381055,
+          "compressed": 439,
+          "size": 479,
+          "crc": 3173263589,
+          "method": 8,
+          "sha256": "6175537311bb44ec00b629d10f023ee5dd265412f4992ce09f51465c01af2af3"
+        },
+        {
+          "name": "Courtship/wild/movie17/movie17_track.mat",
+          "offset": 1333020635,
+          "compressed": 4716479,
+          "size": 4733287,
+          "crc": 1566509363,
+          "method": 8,
+          "sha256": "0d0442442428759f29ea23a84a65836ac22dc8a371d6f195d692b4a25ebd4648"
+        },
+        {
+          "name": "Courtship/wild/movie18/movie18_actions.mat",
+          "offset": 1381800364,
+          "compressed": 396,
+          "size": 439,
+          "crc": 813219450,
+          "method": 8,
+          "sha256": "dc14cd7c163dd6221151a8f1463048b5100bea59152b6383f7adacd47e2761c1"
+        },
+        {
+          "name": "Courtship/wild/movie18/movie18_track.mat",
+          "offset": 1403354167,
+          "compressed": 4616162,
+          "size": 4632846,
+          "crc": 2778598465,
+          "method": 8,
+          "sha256": "9f1f9d8e576774c5f20edbb369fb13a3051c1a741e9cc0ea84fcf6569acd6290"
+        },
+        {
+          "name": "Courtship/wild/movie19/movie19_actions.mat",
+          "offset": 1452047198,
+          "compressed": 354,
+          "size": 398,
+          "crc": 3119983733,
+          "method": 8,
+          "sha256": "757b535dbb2c61576011e6af81404518fd022e7a3ba7d78cd12945afacd3b446"
+        },
+        {
+          "name": "Courtship/wild/movie19/movie19_track.mat",
+          "offset": 1473361541,
+          "compressed": 4572662,
+          "size": 4587874,
+          "crc": 1798810825,
+          "method": 8,
+          "sha256": "87ee4eb22dea6b1fc2331d28949cb5c0a4116d35a3dd95dd26e0cd9055ed9955"
+        },
+        {
+          "name": "Courtship/wild/movie2/movie2_actions.mat",
+          "offset": 1522024849,
+          "compressed": 387,
+          "size": 429,
+          "crc": 967830511,
+          "method": 8,
+          "sha256": "17856929edf31cb0f95d23309066f7e02d958b8cb44d82148c63608397d9e9fd"
+        },
+        {
+          "name": "Courtship/wild/movie2/movie2_track.mat",
+          "offset": 1543202037,
+          "compressed": 4414957,
+          "size": 4432066,
+          "crc": 4071142423,
+          "method": 8,
+          "sha256": "35236b92236b130ace6bbf6e70d68eaa5584919ec6a1a6545581b222bf53b827"
+        },
+        {
+          "name": "Courtship/wild/movie20/movie20_actions.mat",
+          "offset": 1591749623,
+          "compressed": 453,
+          "size": 492,
+          "crc": 1946042347,
+          "method": 8,
+          "sha256": "79f6422d5cc6c299cc06b5be5fde33d5b183540989c5ec96635de7ce948f4cde"
+        },
+        {
+          "name": "Courtship/wild/movie20/movie20_track.mat",
+          "offset": 1612708342,
+          "compressed": 4688595,
+          "size": 4705002,
+          "crc": 2481738595,
+          "method": 8,
+          "sha256": "1fa383e28a643d1a968f9a7bae0299715f9364c18edcd230fe28af779838f2ee"
+        },
+        {
+          "name": "Courtship/wild/movie21/movie21_actions.mat",
+          "offset": 1661437462,
+          "compressed": 396,
+          "size": 438,
+          "crc": 2850637384,
+          "method": 8,
+          "sha256": "7d0def6a6133d38514583204c7afba6fa07dc71b66c3c1f8a15fbe295e7797b6"
+        },
+        {
+          "name": "Courtship/wild/movie21/movie21_track.mat",
+          "offset": 1682640409,
+          "compressed": 4305027,
+          "size": 4320301,
+          "crc": 1957677722,
+          "method": 8,
+          "sha256": "85201d61716b5b2ee00e96fff1d9894b120a68bbbe76b93897947939929a094b"
+        },
+        {
+          "name": "Courtship/wild/movie3/movie3_actions.mat",
+          "offset": 1731000861,
+          "compressed": 380,
+          "size": 424,
+          "crc": 4053123255,
+          "method": 8,
+          "sha256": "6bd40c39512882c928eff72776e25c5cc761dc8292366071d1c52cbfc958fccc"
+        },
+        {
+          "name": "Courtship/wild/movie3/movie3_track.mat",
+          "offset": 1752057845,
+          "compressed": 4393298,
+          "size": 4409136,
+          "crc": 4177401425,
+          "method": 8,
+          "sha256": "5c4ab24b4bcdf42d371b277cf4ed08c1d8cb02c0a9d740e2ea69fda7e64dbad3"
+        },
+        {
+          "name": "Courtship/wild/movie4/movie4_actions.mat",
+          "offset": 1800617698,
+          "compressed": 387,
+          "size": 429,
+          "crc": 3933472024,
+          "method": 8,
+          "sha256": "a821f62f1fa529fe5e370bc3e516f70cb7fb7ef8df61b611469f8bfd42d0588b"
+        },
+        {
+          "name": "Courtship/wild/movie4/movie4_track.mat",
+          "offset": 1821666872,
+          "compressed": 4322785,
+          "size": 4339957,
+          "crc": 2747502696,
+          "method": 8,
+          "sha256": "83aecb49387ea2fa1fbcfc13c0d0fbbf8380b566589f78e193656c8b819fa59d"
+        },
+        {
+          "name": "Courtship/wild/movie5/movie5_actions.mat",
+          "offset": 1870058398,
+          "compressed": 525,
+          "size": 563,
+          "crc": 3094591662,
+          "method": 8,
+          "sha256": "e74bab9b1d5819c8f3bfe997c58fd03989499216433a4bac868c7f2e440edc86"
+        },
+        {
+          "name": "Courtship/wild/movie5/movie5_track.mat",
+          "offset": 1892025536,
+          "compressed": 5147265,
+          "size": 5162709,
+          "crc": 3826511865,
+          "method": 8,
+          "sha256": "31254a96eb39e8403b5e132d89a196eb3995d027104c8429fc9a23f12259d2cd"
+        },
+        {
+          "name": "Courtship/wild/movie6/movie6_actions.mat",
+          "offset": 1941200888,
+          "compressed": 356,
+          "size": 400,
+          "crc": 2869612125,
+          "method": 8,
+          "sha256": "23db8f90cbe8bd01ee5beca4d15466fd5bb7e84a882af95267748cf7b083fd0a"
+        },
+        {
+          "name": "Courtship/wild/movie6/movie6_track.mat",
+          "offset": 1963036313,
+          "compressed": 4741994,
+          "size": 4760204,
+          "crc": 1618975092,
+          "method": 8,
+          "sha256": "665ef3d2af3f17075ebb3326140bd37ddd7729e084ae0dac336920e9ef7be3f0"
+        },
+        {
+          "name": "Courtship/wild/movie7/movie7_actions.mat",
+          "offset": 2011892108,
+          "compressed": 425,
+          "size": 466,
+          "crc": 4031419633,
+          "method": 8,
+          "sha256": "af9daddba52bec99a71138ed0b62b49c3212f3015090e45959c8b96c2a706328"
+        },
+        {
+          "name": "Courtship/wild/movie7/movie7_track.mat",
+          "offset": 2033762774,
+          "compressed": 4523658,
+          "size": 4541050,
+          "crc": 1564932739,
+          "method": 8,
+          "sha256": "889ae30307e2a0d7a6ed2b362dd2202516672fdeca2c737ac8be1d96bbc470de"
+        },
+        {
+          "name": "Courtship/wild/movie8/movie8_actions.mat",
+          "offset": 2082221420,
+          "compressed": 440,
+          "size": 479,
+          "crc": 1858337692,
+          "method": 8,
+          "sha256": "86c9829df40b47f78563043c5d13f5384e93793cdc66131c137064b05331b07d"
+        },
+        {
+          "name": "Courtship/wild/movie8/movie8_track.mat",
+          "offset": 2103625167,
+          "compressed": 4548169,
+          "size": 4565085,
+          "crc": 1127031702,
+          "method": 8,
+          "sha256": "fd4cf6827b5690fa37b4d3f10b1d44dbc3e74859eb03b84f773e3df1ed6263d0"
+        },
+        {
+          "name": "Courtship/wild/movie9/movie9_actions.mat",
+          "offset": 2152175809,
+          "compressed": 382,
+          "size": 425,
+          "crc": 3021024066,
+          "method": 8,
+          "sha256": "3896a65c612965a819b156fb0a0d34759a0f9218b86b068bfd643b54ff4bf8d5"
+        },
+        {
+          "name": "Courtship/wild/movie9/movie9_track.mat",
+          "offset": 2174099644,
+          "compressed": 4579606,
+          "size": 4596575,
+          "crc": 4139089838,
+          "method": 8,
+          "sha256": "12c75e4778a9164acb3c94a322eaf9391e6ed46d8786d5e679e4b8fdb92575f6"
+        }
+      ]
+    }
+  ],
+  "snapshot_date": "2026-10-20",
+  "license_evidence": {
+    "api": "https://data.caltech.edu/api/records/zrznw-w7386",
+    "rights": "cc-zero"
+  },
+  "native_bytes": 383168883,
+  "expected_series": 47,
+  "expected_samples": 3702554,
+  "storage_pilot": {
+    "frames": 414259,
+    "output_bytes": 24079474,
+    "bytes_per_frame": 58.126616440439435,
+    "conservative_full_output_bytes": 1073741824,
+    "margin": 1.25
+  }
+}
