@@ -177,7 +177,7 @@
   "source_size_text": [
     "10 GB"
   ],
-  "audio_downloaded": false,
+  "audio_downloaded": true,
   "files": [
     {
       "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2001a/audio/EN2001a.Mix-Headset.wav",
@@ -874,11 +874,100 @@
     "segment_count": 93637,
     "missing_segment_times": 0,
     "nonpositive_segments": 2,
-    "speakers_per_meeting": {
+    "audio_without_segment_meeting": [],
+    "segment_meetings_without_audio": [],
+    "segment_files_per_meeting": {
       "4": 168,
       "5": 3
     },
-    "audio_without_segment_meeting": [],
-    "segment_meetings_without_audio": []
+    "participant_roster_distribution": {
+      "3": 5,
+      "4": 163,
+      "5": 3
+    },
+    "empty_absent_placeholders": [
+      "EN2002c.D",
+      "EN2003a.D",
+      "EN2009b.D",
+      "EN2009c.D",
+      "IN1001.D"
+    ]
+  },
+  "native_header_audit": {
+    "count": 171,
+    "sample_rate_hz": 16000,
+    "sample_width_bytes": 2,
+    "channel_distribution": {
+      "1": 170,
+      "2": 1
+    },
+    "stereo_meetings": [
+      "ES2010d"
+    ],
+    "method": "55 local wave headers;116 primary HTTP Range bytes0-255 with exact206/Content-Range/body-size guards",
+    "stereo_probe": {
+      "frames": 480000,
+      "seconds": 30,
+      "channels_identical": true,
+      "correlation": 1.0,
+      "max_difference": 0,
+      "rms_per_channel": [
+        219.9574647469748,
+        219.9574647469748
+      ],
+      "peak_abs_per_channel": [
+        6984,
+        6984
+      ]
+    }
+  },
+  "build_status": "complete; independently verified and validated0/0 on2026-10-21",
+  "source_sha_manifest": "builders/checksums/ami-meeting-corpus.json",
+  "complete_build": {
+    "series": 171,
+    "feature_frames": 35986766,
+    "feature_channels": 13,
+    "feature_sampling_rate_hz": 100,
+    "native_pcm_frames": 5757872100,
+    "native_hours": 99.96305729166666,
+    "source_segment_rows": 93637,
+    "source_defects": {
+      "reversed": 2,
+      "outside_native_audio_duration": 5,
+      "affected_meetings": [
+        "EN2005a",
+        "ES2011c",
+        "TS3007c"
+      ]
+    },
+    "overlapping_centers": 5921694,
+    "output_bytes": 1633817064,
+    "validation": {
+      "errors": 0,
+      "warnings": 0,
+      "checksummed_files": 12,
+      "part_files": 7
+    },
+    "independent_comparison": {
+      "meetings": 171,
+      "all_labels_clocks_source_fields_exact": true,
+      "mfcc_max_abs_error": 4.76837158e-07,
+      "mfcc_tolerance": 3e-05
+    }
+  },
+  "annotation_version_discrepancy": {
+    "filename": "1.6.2",
+    "internal_readme": "1.7",
+    "internal_readme_date": "2014-06-16",
+    "archive_posted_date": "2017-04-10"
+  },
+  "cleanup": {
+    "target": "raw/ami-meeting-corpus",
+    "deleted_files": 275,
+    "deleted_file_bytes": 11569996696,
+    "free_before_bytes": 59678584832,
+    "cleanup_unix_time": 1792571134.0472558,
+    "gates": "validator0/0 and independent171/171 full parity passed; only named raw source directory removed",
+    "free_after_bytes": 71249760256
   }
 }

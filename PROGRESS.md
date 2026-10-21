@@ -902,7 +902,7 @@ Decided by the user on 2026-10-18:
   CC BY4.0 explicitly covers corpus, signals and manual annotations. Exact
   chooser/HEAD inventory171 headset mixes totals11,546,801,653 bytes. Manual
   v1.6.2 ZIP22,887,865 bytes SHA-pinned for audit:687 files /171 meetings,
-  93,637 transcriber segments,168 four-agent meetings and three five-agent;
+  93,637 transcriber segments; actual roster later audited as5×3,163×4,3×5;
   two reversed intervals require explicit handling. Word/phoneme times are
   automatic forced alignment; overlaps need per-agent activity, silence is an
   ordinary scored state. No audio/video body or feature build acquired.
@@ -939,3 +939,59 @@ Decided by the user on 2026-10-18:
   free before/after88,504,078,336 /88,861,163,520 bytes. Other caches untouched.
   See docs/qualification/rsdf-china-forest.md. No publication. Re-evaluate AMI
   gate after short disk-stability check; no audio started at this checkpoint.
+
+- [x] Batch3 / AMI resumed after storage restoration (2026-10-20): unrelated
+  file size/mtime stable and free~88.8GB for>10min. Four PCM pilots433.7MB,
+  1,355,420 MFCC13 frames ->61,578,618B output in13.5s. Complete output
+  projection×1.25+64MiB=2,116,280,299B; full cache11,546,801,653B fits with
+  18GiB reserve. Independent pilot4/4 matches every source/label/clock/segment;
+  separate numpyFFT/analytic Hamming/mel/cosineDCT maximum error5.96e-8.
+  Fixed25ms centered/Hamming,10ms hop,FFT512,40mel,ln floor1e-10,DCT-II ortho,
+ 13 coefficients, no model. Five independent speaker tracks, overlap retained,
+  absent agents-1; two reversed native spans flagged/unscored without repair.
+  Full171 source acquisition running as one job with<=4 bounded streams,
+  per-MiB reserve guard and atomic per-file SHA/native-header checkpoints.
+  No simultaneous feature job. Typical0.8–1.3MB/s/file, full download may take
+  50–90min with four streams (3.5h serial). No complete build claimed yet.
+  Resume using raw/ami-meeting-corpus/audio-pins.json and full-acquisition log;
+  retain all raw audio until complete build+validation+independent parity pass.
+
+  AMI roster correction during complete source acquisition: five3-agent meetings
+  have emptyD XML placeholders (EN2002c,EN2003a,EN2009b,EN2009c,IN1001).
+  Primary roster distribution is5×3,163×4,3×5; files alone overcount speakers.
+  AbsentD stays-1, never artificial negative0. All93,637 real segment rows
+  belong to declared roster agents, and every roster agent has a source file.
+
+  Native WAV header preflight171/171:170mono, one stereo ES2010d, all16kHz
+  int16PCM. A30s probe of its two channels is exactly identical. Preserve native
+  channel count and source SHA; fixed feature preprocessing averages channels
+  arithmetically in float64 before windowing. RIFF PCM lengths, not total file
+  sizes, define clocks because29 source files contain trailing metadata chunks.
+
+
+- [x] Batch3 / AMI complete (2026-10-21): all 171 primary mixed-headset WAVs,
+  11,546,801,653 source bytes + 22,887,865-byte manual ZIP, complete SHA manifest.
+  99.9630573 h native PCM -> 35,986,766 MFCC13 frames at 100 Hz; fixed DSP,
+  NumPy 1.26.4 / SciPy 1.15.3, no model or resampling. Native 170 mono + one
+  stereo ES2010d: explicit float64 channel mean, native channel count retained.
+  All 93,637 source segment rows preserved, including 51 optional timing pairs.
+  Primary rosters 5x3 / 163x4 / 3x5; five absent D placeholders stay -1.
+  Two reversed source intervals and five beyond native EOF at TS3007c retained
+  and flagged; 743 intersecting track/frame cells unscored, no invented frames.
+  TS3007c PCM 2420 s vs XML duration 2430 s is explicit. All overlaps preserved,
+  5,921,694 multi-active centers. XML partitions 98/20/20 plus 33 unspecified;
+  missing values stay null. Archive filename 1.6.2 vs internal README 1.7/2014
+  discrepancy and known propagated-timing limitations documented. No acoustic
+  silence or sample-accurate voice-activity claim; no transcript/identity data.
+  Robust bounded 32 MiB Range206/ETag/retry acquisition recovered interrupted
+  source transfer without reducing scope. Full build output 1,633,817,064 bytes
+  (pilot projection incl. margin/buffer 2,116,280,299). Validator 0 errors /
+  0 warnings, 12 files / 7 parts; independent 171/171 compares every source SHA,
+  PCM length/channel, roster/partition, segment field, label and frame anchor.
+  Every MFCC frame numerically matches separate FFT/window/mel/cosine DCT,
+  max absolute error 4.76837158e-7 < 3e-5. Final metadata precision revalidated.
+  Only raw/ami-meeting-corpus removed after both gates: 11,569,996,696 bytes,
+  275 files. Free before/after 59,678,584,832 / 71,249,760,256 bytes; other
+  caches/pilots/logs untouched. Evidence raw/ami-full-{build,validation,
+  reconstruction}.log and acquisition-20261021 log; cleanup report retained.
+  README/registry and qualification updated; nothing published or pushed.

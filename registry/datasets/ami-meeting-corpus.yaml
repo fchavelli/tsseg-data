@@ -1,45 +1,53 @@
-# Copied from notes/datasets/registry/gaps.yaml (phase-1 registry entry), not edited here.
 id: ami-meeting-corpus
-name: "AMI Meeting Corpus — diarisation, locuteurs récurrents (piste caractéristiques dérivées)"
+name: "AMI Meeting Corpus: complete mixed-headset MFCC13 and manual activity tracks"
 domain: audio_speech
 task: sd
 source_url: https://groups.inf.ed.ac.uk/ami/corpus/
 doi: null
-citation: "Carletta et al., MLMI 2005 (The AMI Meeting Corpus)"
+citation: "Carletta J. (2006). Announcing the AMI Meeting Corpus. The ELRA Newsletter11(1),3–5."
 license: CC-BY-4.0
 license_url: https://groups.inf.ed.ac.uk/ami/corpus/license.shtml
 license_tier: A
-license_verified: "2026-10-20, primary AMI corpus licence and download page: corpus, signals and annotations CC BY4.0"
-n_series: null
-length: {min: null, median: null, max: null}
-n_channels: null
-sampling_rate_hz: null # Derived feature hop not built; source audio is16kHz.
+license_verified: "2026-10-20, primary web licence and SHA-pinned archive LICENCE.txt apply CC BY4.0 to corpus and annotations"
+n_series: 171
+length: {min: 47788, median: 213590, max: 541524}
+n_channels: 13
+sampling_rate_hz: 100 # Derived MFCC anchors; native PCM is16kHz, unchanged clock.
 label_type: multi_track
-n_states: null # 168 meetings with four agents; three with five.
-n_annotators: null
+n_states: 2 # Independent binary transcriber-segment activity per local speaker A–E.
+n_annotators: null # Local speakers are not distinct annotation raters.
 label_origin: human
-unlabeled_regions: "Overlap requires per-agent tracks; reviewed silence is ordinary absence, not missing; two reversed native segment intervals require explicit handling"
+unlabeled_regions: "Absent roster agents are -1; uncertain intersecting portions of seven defective intervals are -1; background0 means no selected transcriber interval, not independently verified acoustic silence"
 continuous: true
 access: direct
-size: "171 primary mixed-headset WAVs:11,546,801,653 bytes exactly; manual annotations22,887,865 bytes; no audio acquired"
+size: "171 native WAVs11,546,801,653B +22,887,865B manual ZIP; complete derived output1,633,817,064B"
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: high
-value_reason: "réunions de ~30 min à 4 participants : les mêmes locuteurs reviennent des dizaines de fois par série, vrai jeu SD ; licence A couvrant corpus et annotations"
+value_reason: "Complete100h meeting view with recurrent per-speaker transcriber segments, overlapping tracks and deterministic model-free spectral features; no exclusive speaker labels"
 effort: high
-confidence: medium
+confidence: high
 notes: >
-  Deferred before audio acquisition: all171 primary headset mixes inventoried
-  with exact HTTP HEAD sizes. Complete audio cache alone exceeds available
-  headroom above18GiB while unrelated results.zip continues growing.
-  Source PCM16kHz, not the eventual derived-feature sampling rate. Proposed
-  deterministic13-MFCC view at10ms hop requires native-audio pilot, frozen DSP
-  parameters/version and independent numeric comparison before integration.
-  Manual v1.6.2 ZIP SHA-pinned for audit only:687 segment files/171 meetings,
-  93,637 human transcriber segments, two reversed intervals preserved as issues.
-  Word/phoneme timings are automatic forced alignment, not manual boundaries.
-  168 meetings have four agents, three have five; overlaps must be retained.
-  Source audio and manual annotations explicitly CC BY4.0. No builder/build or
-  full audio SHA manifest; no audio/video body downloaded. See
-  docs/qualification/ami-meeting-corpus.md and its exact primary file inventory.
+  Complete primary171 mixed-headset view:35,986,766 MFCC13 frames at100Hz,
+  99.9630573h native PCM. Fixed25ms centered symmetric Hamming,10ms hop,
+  FFT512,40 continuous HTK-mel triangles,ln floor1e-10,ortho DCT-II;
+  NumPy1.26.4/SciPy1.15.3 pinned, no downloaded model or resampling.
+  Native170mono+ES2010d stereo; explicit float64 arithmetic channel mean,
+  native counts and full WAV SHA retained.29 WAVs contain trailing metadata,
+  excluded from PCM clocks. All93,637 original transcriber segment rows and
+  channel/decimal timing strings preserved, including51 optional starttime/endtime
+  pairs that do not replace transcriber times. Two reversed rows and five
+  beyondEOF rows at TS3007c remain flagged;630 intersecting C frames plus
+  12/101 reversed C/D frames are unscored, never padded or repaired.
+  Primary rosters5x3,163x4,3x5; five absent D XML placeholders never create
+  negatives. All overlaps retained:5,921,694 multi-active feature centers.
+  Native XML partitions98train/20dev/20eval,33unspecified; literal nullable
+  visibility/seen_type/k5/k10 retained, not invented full-corpus or ASR splits.
+  Word/phoneme timing is automatic forced alignment, not manual boundary truth.
+  Archive filename1.6.2 conflicts with internal README release1.7 dated2014;
+  exact complete SHA manifest identifies actual bytes. No raw waveform, word
+  text, names, encoded demographic IDs, absolute dates or videos packaged.
+  Full validator0errors/0warnings (12files/7parts); independent171/171 source,
+  label/clock/annotation parity; all MFCC frames maxabs4.76837158e-7 <3e-5.
+  See docs/qualification/ami-meeting-corpus.md for source and validation evidence.
 rejected: null

@@ -1,0 +1,3380 @@
+{
+  "primary_record": "https://groups.inf.ed.ac.uk/ami/download/",
+  "chooser_url": "https://homepages.inf.ed.ac.uk/cgi/simonk/AMI/estimate.cgi?sessionID=ES2002&sessionID=ES2003&sessionID=ES2004&sessionID=ES2005&sessionID=ES2006&sessionID=ES2007&sessionID=ES2008&sessionID=ES2009&sessionID=ES2010&sessionID=ES2011&sessionID=ES2012&sessionID=ES2013&sessionID=ES2014&sessionID=ES2015&sessionID=ES2016&sessionID=IS1000&sessionID=IS1001&sessionID=IS1002&sessionID=IS1003&sessionID=IS1004&sessionID=IS1005&sessionID=IS1006&sessionID=IS1007&sessionID=IS1008&sessionID=IS1009&sessionID=TS3003&sessionID=TS3004&sessionID=TS3005&sessionID=TS3006&sessionID=TS3007&sessionID=TS3008&sessionID=TS3009&sessionID=TS3010&sessionID=TS3011&sessionID=TS3012&sessionID=EN2001a&sessionID=EN2001b&sessionID=EN2001d&sessionID=EN2001e&sessionID=EN2002a&sessionID=EN2002b&sessionID=EN2002c&sessionID=EN2002d&sessionID=EN2003a&sessionID=EN2004a&sessionID=EN2005a&sessionID=EN2006a&sessionID=EN2006b&sessionID=EN2009b&sessionID=EN2009c&sessionID=EN2009d&sessionID=IB4001&sessionID=IB4002&sessionID=IB4003&sessionID=IB4004&sessionID=IB4005&sessionID=IB4010&sessionID=IB4011&sessionID=IN1001&sessionID=IN1002&sessionID=IN1005&sessionID=IN1007&sessionID=IN1008&sessionID=IN1009&sessionID=IN1012&sessionID=IN1013&sessionID=IN1014&sessionID=IN1015&sessionID=IN1016&ES=a&ES=b&ES=c&ES=d&IS=a&IS=b&IS=c&IS=d&TS=a&TS=b&TS=c&TS=d&mediaType=Mix-Headset&detailed=yes",
+  "snapshot_date": "2026-10-21",
+  "scope": "All171 primary Mix-Headset WAV meetings; every released transcriber segment from all687 segment XML files, including empty placeholders. Other microphone/video streams and transcript word text are excluded.",
+  "audio_count": 171,
+  "audio_bytes": 11546801653,
+  "audio_downloaded": true,
+  "audio_sha_convention": "Computed on initial exact-size primary download, not provider-supplied digests; subsequent builds enforce unchanged complete bytes.",
+  "license": {
+    "name": "CC-BY-4.0",
+    "url": "https://groups.inf.ed.ac.uk/ami/corpus/license.shtml",
+    "verified_date": "2026-10-20",
+    "archive_license_member": "LICENCE.txt"
+  },
+  "annotation_file": {
+    "name": "ami_public_manual_1.6.2.zip",
+    "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusAnnotations/ami_public_manual_1.6.2.zip",
+    "bytes": 22887865,
+    "sha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+    "filename_version": "1.6.2",
+    "internal_readme_version": "1.7",
+    "internal_readme_date": "2014-06-16",
+    "archive_posted_date": "2017-04-10",
+    "metadata_member_sha256": {
+      "00README_MANUAL.txt": "001292e9082f0f403a155dd5e7e4a8d5ac6542dbf37b19a12c7b6030fabdd350",
+      "LICENCE.txt": "d52fd9c7c19eec9f0bec3107554c10937203e261259d73b01637a61501fec7f7",
+      "corpusResources/meetings.xml": "8ab6cdcf03ed863e839418f31c7380392397a2eed892d73b9bc1b438c7ec520a"
+    }
+  },
+  "extractor_dependencies": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3"
+  },
+  "native_header_audit": {
+    "meetings": 171,
+    "sampling_rate_hz": 16000,
+    "sample_width_bytes": 2,
+    "channel_counts": {
+      "1": 170,
+      "2": 1
+    }
+  },
+  "storage_pilot": {
+    "source_bytes": 433733896,
+    "output_bytes": 61578618,
+    "feature_frames": 1355420,
+    "full_output_projection_margin_buffer_bytes": 2116280299,
+    "margin": 1.25
+  },
+  "files": [
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2001a/audio/EN2001a.Mix-Headset.wav",
+      "bytes": 168007726,
+      "sha256": "81e06be816e9d94d0bee410bef1b158b2cdfba8e2b80f44a6e62cf6b9fd780f9",
+      "source_samples": 84003841,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 168007726,
+        "pcm_data_bytes": 168007682,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2001b/audio/EN2001b.Mix-Headset.wav",
+      "bytes": 110460290,
+      "sha256": "1db444de2d5b2eaa73d1831bff84ae97b9d73cc286c51cf6c8c588ca44d41296",
+      "source_samples": 55230123,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 110460290,
+        "pcm_data_bytes": 110460246,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2001d/audio/EN2001d.Mix-Headset.wav",
+      "bytes": 113484162,
+      "sha256": "12646b67dd73da62e51e89482b5bfd432e72da34614be61c8294f3c2c3b7ab51",
+      "source_samples": 56742059,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 113484162,
+        "pcm_data_bytes": 113484118,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2001e/audio/EN2001e.Mix-Headset.wav",
+      "bytes": 130231682,
+      "sha256": "99c2d597913777811ece709c13ee02335d6c6dc4fc7d2c09a814e2145d915d7c",
+      "source_samples": 65115819,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 130231682,
+        "pcm_data_bytes": 130231638,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2002a/audio/EN2002a.Mix-Headset.wav",
+      "bytes": 68566744,
+      "sha256": "a15017d0d3c871866971ee178052a0ce3a7e44d6fbf89fc23dcab326511b65f5",
+      "source_samples": 34283350,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 68566744,
+        "pcm_data_bytes": 68566700,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2002b/audio/EN2002b.Mix-Headset.wav",
+      "bytes": 57179180,
+      "sha256": "50e2c8e4737850c4bf3cc24e7087c755e1c733cd91822106afd0df485ba64893",
+      "source_samples": 28589568,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 57179180,
+        "pcm_data_bytes": 57179136,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2002c/audio/EN2002c.Mix-Headset.wav",
+      "bytes": 95112236,
+      "sha256": "a057708b3adb553f709fcde97d2af8e0455076bc3f88c250975227433d6e0270",
+      "source_samples": 47556096,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 95112236,
+        "pcm_data_bytes": 95112192,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2002d/audio/EN2002d.Mix-Headset.wav",
+      "bytes": 70716802,
+      "sha256": "6aa99d9d71cb695ea699d6be277f78eff68e847c93560031486eba9f18164ebe",
+      "source_samples": 35358379,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 70716802,
+        "pcm_data_bytes": 70716758,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2003a/audio/EN2003a.Mix-Headset.wav",
+      "bytes": 71688920,
+      "sha256": "008bc0cc470f33e81eaad8c4167c7a24852e85ac3a577fc1edf9865cc7339d64",
+      "source_samples": 35844438,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 71688920,
+        "pcm_data_bytes": 71688876,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2004a/audio/EN2004a.Mix-Headset.wav",
+      "bytes": 110261634,
+      "sha256": "d188219aff66264adc8d6a8192f272ca4155b483cf7eaa9498a8f0f6ac0ed9dc",
+      "source_samples": 55130795,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 110261634,
+        "pcm_data_bytes": 110261590,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2005a/audio/EN2005a.Mix-Headset.wav",
+      "bytes": 173287554,
+      "sha256": "de22e698d8590d2370fde94ceb708c7e53f980036a34a62b465fcad1b0a2053b",
+      "source_samples": 86643755,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 173287554,
+        "pcm_data_bytes": 173287510,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2006a/audio/EN2006a.Mix-Headset.wav",
+      "bytes": 112815832,
+      "sha256": "4e10dd0209c661af4769e2fa9c34a3b4804c852e8ba098d9dc9026127261e211",
+      "source_samples": 56407894,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 112815832,
+        "pcm_data_bytes": 112815788,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2006b/audio/EN2006b.Mix-Headset.wav",
+      "bytes": 97672322,
+      "sha256": "2998358d8ee9524252ad3d5864cea3c66d07c5ca97a6b3a3f3cb42173acb71b2",
+      "source_samples": 48836139,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 97672322,
+        "pcm_data_bytes": 97672278,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2009b/audio/EN2009b.Mix-Headset.wav",
+      "bytes": 79177090,
+      "sha256": "fe1c5f8251b932422623d0081ba3faac14ed46fdb5c694c01b5a2b5862583b3a",
+      "source_samples": 39588523,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 79177090,
+        "pcm_data_bytes": 79177046,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2009c/audio/EN2009c.Mix-Headset.wav",
+      "bytes": 99199704,
+      "sha256": "5108a3f293aca23fb2cee072575404cf02d496fe69812d36268c975d66f3cbe9",
+      "source_samples": 49599830,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 99199704,
+        "pcm_data_bytes": 99199660,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/EN2009d/audio/EN2009d.Mix-Headset.wav",
+      "bytes": 170379992,
+      "sha256": "eeb4a5ff47cadba8c75bdf32213b9264805027faa943c7f55eec0423c6ea4312",
+      "source_samples": 85189974,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 170379992,
+        "pcm_data_bytes": 170379948,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2002a/audio/ES2002a.Mix-Headset.wav",
+      "bytes": 40724524,
+      "sha256": "9c76866990fcc8b84006dc32d273ad99df439090b748ebe72103bb78c3216ee7",
+      "source_samples": 20362240,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 40724524,
+        "pcm_data_bytes": 40724480,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2002b/audio/ES2002b.Mix-Headset.wav",
+      "bytes": 72952194,
+      "sha256": "977fbf6cd473cfb1984b41755762eea4d7ffdad3fb15adcfdebcb8842163ec66",
+      "source_samples": 36476075,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 72952194,
+        "pcm_data_bytes": 72952150,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2002c/audio/ES2002c.Mix-Headset.wav",
+      "bytes": 77557804,
+      "sha256": "8aa5dca8a0d31aaa596ecec8e0d7d8df1646fd4328d2740b287650d8012412df",
+      "source_samples": 38778880,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 77557804,
+        "pcm_data_bytes": 77557760,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2002d/audio/ES2002d.Mix-Headset.wav",
+      "bytes": 83973504,
+      "sha256": "b8e0c2d0df9fccfcfab8e5d148f399a679bd2d90299c2262194b9db941749374",
+      "source_samples": 41986730,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 83973504,
+        "pcm_data_bytes": 83973460,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2003a/audio/ES2003a.Mix-Headset.wav",
+      "bytes": 36472536,
+      "sha256": "41cf861afafc20e70061c6cc82b2cb1c620d630be6d13361da928f04fc00beea",
+      "source_samples": 18236246,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 36472536,
+        "pcm_data_bytes": 36472492,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2003b/audio/ES2003b.Mix-Headset.wav",
+      "bytes": 67514072,
+      "sha256": "71ba1c132d1957bd9b20f4c0ccae8b05ebf2399302b451897624a6de9611032f",
+      "source_samples": 33757014,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 67514072,
+        "pcm_data_bytes": 67514028,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2003c/audio/ES2003c.Mix-Headset.wav",
+      "bytes": 72221740,
+      "sha256": "828faf52f14ae584c299c35009fa519b4780bfcc2c966288eebb6af091ef0fd7",
+      "source_samples": 36110848,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 72221740,
+        "pcm_data_bytes": 72221696,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2003d/audio/ES2003d.Mix-Headset.wav",
+      "bytes": 75232984,
+      "sha256": "c0657bd0ac840244d3e94f52323e4f01702d3e76ed752eeb239fd45481eb7108",
+      "source_samples": 37616470,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 75232984,
+        "pcm_data_bytes": 75232940,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2004a/audio/ES2004a.Mix-Headset.wav",
+      "bytes": 33579394,
+      "sha256": "3e2560b19bee6952c7c7ce041b0f1ea8a7ea9468044c4eea79d2a2c67e24ab0f",
+      "source_samples": 16789675,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 33579394,
+        "pcm_data_bytes": 33579350,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2004b/audio/ES2004b.Mix-Headset.wav",
+      "bytes": 75055832,
+      "sha256": "ad0cf07c42b1694ccf7bea8f1a37348d9cfab194787abc7d050b29ba56e365c8",
+      "source_samples": 37527894,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 75055832,
+        "pcm_data_bytes": 75055788,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2004c/audio/ES2004c.Mix-Headset.wav",
+      "bytes": 74699820,
+      "sha256": "47dc9bd2e3b1d174842091ae9e1fe765218f0c87658b17d6469c404e03ec2ac5",
+      "source_samples": 37349888,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 74699820,
+        "pcm_data_bytes": 74699776,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2004d/audio/ES2004d.Mix-Headset.wav",
+      "bytes": 71113346,
+      "sha256": "3cfce3297ebb7faeb53c02727eea5e9f2c76e9ed4b62db3b03d73e66836e91f3",
+      "source_samples": 35556651,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 71113346,
+        "pcm_data_bytes": 71113302,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2005a/audio/ES2005a.Mix-Headset.wav",
+      "bytes": 15292120,
+      "sha256": "ac33e7b18ae72931e65dc279af4b129370ad62ca6ed64299b9e35f356e3f8ed8",
+      "source_samples": 7646038,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 15292120,
+        "pcm_data_bytes": 15292076,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2005b/audio/ES2005b.Mix-Headset.wav",
+      "bytes": 74024322,
+      "sha256": "c96d83f955852773353861c880f0898d95d916d22e1caf4dd9df2ac572f1a281",
+      "source_samples": 37012139,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 74024322,
+        "pcm_data_bytes": 74024278,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2005c/audio/ES2005c.Mix-Headset.wav",
+      "bytes": 73468972,
+      "sha256": "f70fc24dcd7fa67a5a5aabedc546af5bfc0d2df34632eb3266abf26c98cdae26",
+      "source_samples": 36734464,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 73468972,
+        "pcm_data_bytes": 73468928,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2005d/audio/ES2005d.Mix-Headset.wav",
+      "bytes": 55397762,
+      "sha256": "6a3d4dae9540e7f4847c33124dbfc51ad3916bb5dfae9ee3cde9c280e717a4da",
+      "source_samples": 27698859,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 55397762,
+        "pcm_data_bytes": 55397718,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2006a/audio/ES2006a.Mix-Headset.wav",
+      "bytes": 41098968,
+      "sha256": "1b1a0b273f2f589abc8788b6f9a2ba5ae343c2aa71fc425f48c8b79ce1406eef",
+      "source_samples": 20549462,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 41098968,
+        "pcm_data_bytes": 41098924,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2006b/audio/ES2006b.Mix-Headset.wav",
+      "bytes": 69860056,
+      "sha256": "6305a877557fd4687f79a44475e7ee843a79e495846e76e854f2c26d4a5d4b07",
+      "source_samples": 34930006,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 69860056,
+        "pcm_data_bytes": 69860012,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2006c/audio/ES2006c.Mix-Headset.wav",
+      "bytes": 69813976,
+      "sha256": "d7d9a3005908f8616938f3be6ed0fa0c4a629085aded85f4aa212a06449c6f04",
+      "source_samples": 34906966,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 69813976,
+        "pcm_data_bytes": 69813932,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2006d/audio/ES2006d.Mix-Headset.wav",
+      "bytes": 62958296,
+      "sha256": "94749fc7e8a6e0957d56d83c9021cd94052889ed40049a55a061b29f2e00c3d4",
+      "source_samples": 31479126,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 62958296,
+        "pcm_data_bytes": 62958252,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2007a/audio/ES2007a.Mix-Headset.wav",
+      "bytes": 38601772,
+      "sha256": "57a4e0015ca37f9d6fa5c7ce91e78538b772a80234ed774009e8c7c3e89908a1",
+      "source_samples": 19300864,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 38601772,
+        "pcm_data_bytes": 38601728,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2007b/audio/ES2007b.Mix-Headset.wav",
+      "bytes": 53931052,
+      "sha256": "d7d2207b7bc504d3121ef02c074af23ae8a88fdc627a47d768ab619137c807fa",
+      "source_samples": 26965504,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 53931052,
+        "pcm_data_bytes": 53931008,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2007c/audio/ES2007c.Mix-Headset.wav",
+      "bytes": 76077100,
+      "sha256": "20978cecd99cb9f17b9cf61e3a929c9ddf617a4e42926454043350462f3eda4f",
+      "source_samples": 38038528,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 76077100,
+        "pcm_data_bytes": 76077056,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2007d/audio/ES2007d.Mix-Headset.wav",
+      "bytes": 39984514,
+      "sha256": "dda3c37a0d6a19775deb8347c2ad19223d5e2aa510795856abbc7c4bab1210f2",
+      "source_samples": 19992235,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 39984514,
+        "pcm_data_bytes": 39984470,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2008a/audio/ES2008a.Mix-Headset.wav",
+      "bytes": 33387564,
+      "sha256": "65fcfc924e9bdb0388cbc3242a17bda88291ebc638f486e39a9ede78e92cb1e6",
+      "source_samples": 16693760,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 33387564,
+        "pcm_data_bytes": 33387520,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2008b/audio/ES2008b.Mix-Headset.wav",
+      "bytes": 71413122,
+      "sha256": "8aa976aa242e895775857b028db2ca5c5f56a2a2d8a096adc81cc82a9c4b6ba4",
+      "source_samples": 35706539,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 71413122,
+        "pcm_data_bytes": 71413078,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2008c/audio/ES2008c.Mix-Headset.wav",
+      "bytes": 67283926,
+      "sha256": "99d48ed73a4602a34a507133a65dcacf1159d89be16ae72b264a8897a5436fce",
+      "source_samples": 33641941,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 67283926,
+        "pcm_data_bytes": 67283882,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2008d/audio/ES2008d.Mix-Headset.wav",
+      "bytes": 84026412,
+      "sha256": "5df7d9e5286802d79ccc5d8930eed7179b14ed2d2b1788e3da547da20b115e74",
+      "source_samples": 42013184,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 84026412,
+        "pcm_data_bytes": 84026368,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2009a/audio/ES2009a.Mix-Headset.wav",
+      "bytes": 44870700,
+      "sha256": "472adcae2cff535a251469bf5a9647ac9166de0f1bc049ce24504104cae9b1fc",
+      "source_samples": 22435328,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 44870700,
+        "pcm_data_bytes": 44870656,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2009b/audio/ES2009b.Mix-Headset.wav",
+      "bytes": 45930540,
+      "sha256": "7bef2999aa6dc63c516f8ef4260a0e6354cb63bf0fd34df894af6f716f78c359",
+      "source_samples": 22965248,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 45930540,
+        "pcm_data_bytes": 45930496,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2009c/audio/ES2009c.Mix-Headset.wav",
+      "bytes": 62621740,
+      "sha256": "350661f98c86a8a5973f1131e36444d93c0f44d07db5b12e174a49cb97f620a4",
+      "source_samples": 31310848,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 62621740,
+        "pcm_data_bytes": 62621696,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2009d/audio/ES2009d.Mix-Headset.wav",
+      "bytes": 67678252,
+      "sha256": "b5ef423361ce67c804042ec479c6aeaf2cb8c19f73a779d61fabb7501e9e9b10",
+      "source_samples": 33839104,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 67678252,
+        "pcm_data_bytes": 67678208,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2010a/audio/ES2010a.Mix-Headset.wav",
+      "bytes": 20617260,
+      "sha256": "bd188f52a76a0eb2cf1036b3179fff8ed1d075e6f90bc4b0e035e069816ed180",
+      "source_samples": 10308608,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 20617260,
+        "pcm_data_bytes": 20617216,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2010b/audio/ES2010b.Mix-Headset.wav",
+      "bytes": 56063362,
+      "sha256": "d26a677fe959bfa3d4a56462a930878c975446abf5c217fb2ec0bbc8d260fdf6",
+      "source_samples": 28031659,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 56063362,
+        "pcm_data_bytes": 56063318,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2010c/audio/ES2010c.Mix-Headset.wav",
+      "bytes": 58808364,
+      "sha256": "2cbb3b8876e61687c1b804e4ce5055bf5acc07720ab2eeccda4a5f95c4c4dfb3",
+      "source_samples": 29404160,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 58808364,
+        "pcm_data_bytes": 58808320,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2010d/audio/ES2010d.Mix-Headset.wav",
+      "bytes": 62030212,
+      "sha256": "0435f583b7ffa7055e7c5a884ed6eafcbfcb3b4f4fe6f04a16e34f7e04c2455e",
+      "source_samples": 15507542,
+      "sample_rate_hz": 16000,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 62030212,
+        "pcm_data_bytes": 62030168,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2011a/audio/ES2011a.Mix-Headset.wav",
+      "bytes": 35643096,
+      "sha256": "130bc4218891a5b4cdbedcd716c94cd062f6ea13b2c19b77fe9d82e4023e1c78",
+      "source_samples": 17821526,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 35643096,
+        "pcm_data_bytes": 35643052,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2011b/audio/ES2011b.Mix-Headset.wav",
+      "bytes": 50600664,
+      "sha256": "63459ac9811903fe49f79982e9155b457425fa62c5f1f47d4047f512cd348c83",
+      "source_samples": 25300310,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 50600664,
+        "pcm_data_bytes": 50600620,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2011c/audio/ES2011c.Mix-Headset.wav",
+      "bytes": 51714092,
+      "sha256": "8c2d75e76817ab770ccab71e48e1d41e62729992e6f928bf2a6a8a4bd381e111",
+      "source_samples": 25857024,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 51714092,
+        "pcm_data_bytes": 51714048,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2011d/audio/ES2011d.Mix-Headset.wav",
+      "bytes": 63434456,
+      "sha256": "8f4f6d823d691037c04a9f7f0bb6ffa3db512d85aa69245144a55d55cfe4f102",
+      "source_samples": 31717206,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 63434456,
+        "pcm_data_bytes": 63434412,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2012a/audio/ES2012a.Mix-Headset.wav",
+      "bytes": 35345112,
+      "sha256": "73c9779d2d78c9cea65e8f3b4eca8ab523a97ba2e5392e002828b520cd875e88",
+      "source_samples": 17672534,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 35345112,
+        "pcm_data_bytes": 35345068,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2012b/audio/ES2012b.Mix-Headset.wav",
+      "bytes": 71669378,
+      "sha256": "9039ab2b729bd2429ae2d464a7fed50efeaf4022255f945828c66b0f8426f667",
+      "source_samples": 35834667,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 71669378,
+        "pcm_data_bytes": 71669334,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2012c/audio/ES2012c.Mix-Headset.wav",
+      "bytes": 70678232,
+      "sha256": "3be7c659956c09ed1a32730f1a3b9924a2d379dc7058a5966c0d74d933fde506",
+      "source_samples": 35339094,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 70678232,
+        "pcm_data_bytes": 70678188,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2012d/audio/ES2012d.Mix-Headset.wav",
+      "bytes": 30388952,
+      "sha256": "39fcde566e2d1bc7ec40a31dec19251cc253aac54be94713e68eea3008af4f8d",
+      "source_samples": 15194454,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 30388952,
+        "pcm_data_bytes": 30388908,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2013a/audio/ES2013a.Mix-Headset.wav",
+      "bytes": 26405592,
+      "sha256": "96fd96fce2c735b75e370f626c06ea149d2a57b249528e1c6cfda17d32d0c0ff",
+      "source_samples": 13202774,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 26405592,
+        "pcm_data_bytes": 26405548,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2013b/audio/ES2013b.Mix-Headset.wav",
+      "bytes": 68116184,
+      "sha256": "09931b8ded46208fe9906b71e09b41fdeabbd7965bb17f48f67f39b3c2bc0c2b",
+      "source_samples": 34058070,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 68116184,
+        "pcm_data_bytes": 68116140,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2013c/audio/ES2013c.Mix-Headset.wav",
+      "bytes": 75459970,
+      "sha256": "f31e8d004236d4d36eb5d5ac826db1c2d93417d510a9746d5f548d660c5b4179",
+      "source_samples": 37729963,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 75459970,
+        "pcm_data_bytes": 75459926,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2013d/audio/ES2013d.Mix-Headset.wav",
+      "bytes": 60753964,
+      "sha256": "f6c59242b0808b6a6cf8e12ff8d79e38b4fb0f13426fe09329b47dad8d93e9e5",
+      "source_samples": 30376960,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 60753964,
+        "pcm_data_bytes": 60753920,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2014a/audio/ES2014a.Mix-Headset.wav",
+      "bytes": 36768472,
+      "sha256": "9d29e308566b8c7be4c328f4a2998e371e5f506384f111042ec91b465f7f792c",
+      "source_samples": 18384214,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 36768472,
+        "pcm_data_bytes": 36768428,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2014b/audio/ES2014b.Mix-Headset.wav",
+      "bytes": 74236632,
+      "sha256": "472969899eb229d56e4c68576dd641afecae1a2300591d3be1c8561f6a41d79d",
+      "source_samples": 37118294,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 74236632,
+        "pcm_data_bytes": 74236588,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2014c/audio/ES2014c.Mix-Headset.wav",
+      "bytes": 72752856,
+      "sha256": "36a475ae5febcbbfa28bdf847afe2c1c49bf22e910145fde5709ea16fd9b0720",
+      "source_samples": 36376406,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 72752856,
+        "pcm_data_bytes": 72752812,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2014d/audio/ES2014d.Mix-Headset.wav",
+      "bytes": 93163564,
+      "sha256": "5293a8197d393e61b06d4c5ea1bf3b340a8a77178ba6facacd6be32bd6978005",
+      "source_samples": 46581760,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 93163564,
+        "pcm_data_bytes": 93163520,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2015a/audio/ES2015a.Mix-Headset.wav",
+      "bytes": 36689964,
+      "sha256": "918aeaf28fe9025378f33e089f44f29906842c0b247b1b775e709673801212dd",
+      "source_samples": 18344960,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 36689964,
+        "pcm_data_bytes": 36689920,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2015b/audio/ES2015b.Mix-Headset.wav",
+      "bytes": 73435522,
+      "sha256": "261e76702792b499779743e4b83a6caadb181d5dbcd3202d99fc058be6d70f00",
+      "source_samples": 36717739,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 73435522,
+        "pcm_data_bytes": 73435478,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2015c/audio/ES2015c.Mix-Headset.wav",
+      "bytes": 68348632,
+      "sha256": "50999075fa47769474ecb2b39629db674f0b2a33ca5368df6af07ea106253dcb",
+      "source_samples": 34174294,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 68348632,
+        "pcm_data_bytes": 68348588,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2015d/audio/ES2015d.Mix-Headset.wav",
+      "bytes": 61810050,
+      "sha256": "0e7a2c371f73c461bfca6244f491760fa76047f7b64dc74cbecfff67af921222",
+      "source_samples": 30905003,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 61810050,
+        "pcm_data_bytes": 61810006,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2016a/audio/ES2016a.Mix-Headset.wav",
+      "bytes": 44294104,
+      "sha256": "152c6970818df773e0c44de1da077288f0d966f9a22530819ed1b4400353d128",
+      "source_samples": 22147030,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 44294104,
+        "pcm_data_bytes": 44294060,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2016b/audio/ES2016b.Mix-Headset.wav",
+      "bytes": 77191212,
+      "sha256": "bb2e6f082fa82e5cb0edb39d5fdd99911589c5f40add575f7ffabc3b7178effd",
+      "source_samples": 38595584,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 77191212,
+        "pcm_data_bytes": 77191168,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2016c/audio/ES2016c.Mix-Headset.wav",
+      "bytes": 73868674,
+      "sha256": "8885f3d72b9f15b20002ef15491545af7c7339e650f9b245cfb8d7fc5f8c20a0",
+      "source_samples": 36934315,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 73868674,
+        "pcm_data_bytes": 73868630,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/ES2016d/audio/ES2016d.Mix-Headset.wav",
+      "bytes": 48744152,
+      "sha256": "ffadb2cd9ad3d090463f3da0071931276bdfdbd6a1d8a26b230df5e0da98a244",
+      "source_samples": 24372054,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 48744152,
+        "pcm_data_bytes": 48744108,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IB4001/audio/IB4001.Mix-Headset.wav",
+      "bytes": 56980866,
+      "sha256": "11e395326e9d8922801c736822a91477aa8bb2a65ce353585e3b19724e294c5d",
+      "source_samples": 28490411,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 56980866,
+        "pcm_data_bytes": 56980822,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IB4002/audio/IB4002.Mix-Headset.wav",
+      "bytes": 60235820,
+      "sha256": "a97ec6a4118347b5a18dc5ec98df2412f1de8581a2b0542d8c82ba6b4d56aec4",
+      "source_samples": 30117888,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 60235820,
+        "pcm_data_bytes": 60235776,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IB4003/audio/IB4003.Mix-Headset.wav",
+      "bytes": 64744152,
+      "sha256": "a28e876a8dc3ed076ce38a167d8de4cc1d3ff8c0b5142c57d4c194ece7752fc2",
+      "source_samples": 32372054,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 64744152,
+        "pcm_data_bytes": 64744108,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IB4004/audio/IB4004.Mix-Headset.wav",
+      "bytes": 76570668,
+      "sha256": "106be8125d20fe35ca483d48a782866f1b99c9aaa1a1a51cbf94c50933540b18",
+      "source_samples": 38285312,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 76570668,
+        "pcm_data_bytes": 76570624,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IB4005/audio/IB4005.Mix-Headset.wav",
+      "bytes": 64618540,
+      "sha256": "96465a9b66128d50bf6e0ee0ccf6b509e9d743aacb248a38ffaa063cb378e65a",
+      "source_samples": 32309248,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 64618540,
+        "pcm_data_bytes": 64618496,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"3da002c-3f3aba4255840\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IB4010/audio/IB4010.Mix-Headset.wav",
+      "bytes": 94737794,
+      "sha256": "996c2f77648eb34adc9221a08d1cf4a4d7a4c1daddbe2b25cd9bff4e6495b3e0",
+      "source_samples": 47368875,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 94737794,
+        "pcm_data_bytes": 94737750,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IB4011/audio/IB4011.Mix-Headset.wav",
+      "bytes": 77343448,
+      "sha256": "fa1e9060e7314dd703d919a493145b5d20a1b9e8a23f6903f362fbbaccc842d5",
+      "source_samples": 38671702,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 77343448,
+        "pcm_data_bytes": 77343404,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1001/audio/IN1001.Mix-Headset.wav",
+      "bytes": 110840024,
+      "sha256": "9bffc290193022169e7cb46af699eccf383cae37b412d47b1462fd8619b296f0",
+      "source_samples": 55419990,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 110840024,
+        "pcm_data_bytes": 110839980,
+        "bytes_after_pcm": 0
+      }
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1002/audio/IN1002.Mix-Headset.wav",
+      "bytes": 79120600,
+      "sha256": "e925ffaca1ca1cfc74fe0368e8d312b4f7d9f5e20998b7371ee61f09d6c898d3",
+      "source_samples": 39560278,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 79120600,
+        "pcm_data_bytes": 79120556,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4b748d8-403e09b6cd080\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1005/audio/IN1005.Mix-Headset.wav",
+      "bytes": 89562668,
+      "sha256": "e00cac97fd5dbab71397e6eb32f871f3f8c2b6e59c5581d9e37bf209bbfefc7c",
+      "source_samples": 44781312,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 89562668,
+        "pcm_data_bytes": 89562624,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"5569e2c-403e0f7fdb6c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1007/audio/IN1007.Mix-Headset.wav",
+      "bytes": 77162712,
+      "sha256": "1eaa121c19bf35253e64836d4b81175c50df21b7da3869672839b6c27dd985da",
+      "source_samples": 38581334,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 77162712,
+        "pcm_data_bytes": 77162668,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"49968d8-403e127e9c7c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1008/audio/IN1008.Mix-Headset.wav",
+      "bytes": 109302658,
+      "sha256": "550dba8b80571bbf5a2c293fe6d94c76b6b7537b2c7c186ce6908c2496f68eb9",
+      "source_samples": 54651307,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 109302658,
+        "pcm_data_bytes": 109302614,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"683d382-403e12f3e9c80\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1009/audio/IN1009.Mix-Headset.wav",
+      "bytes": 40203138,
+      "sha256": "7ee90aac9105734ab40d3085dcb4d0ad4ba06adc1c24facb2ad843529b489506",
+      "source_samples": 20101547,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 40203138,
+        "pcm_data_bytes": 40203094,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"2657382-403f04c996bc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1012/audio/IN1012.Mix-Headset.wav",
+      "bytes": 99485912,
+      "sha256": "cc121921d743a3c88f53e60eabd1824f6f34f802b3c9679af20b32067ca44300",
+      "source_samples": 49742934,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 99485912,
+        "pcm_data_bytes": 99485868,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"5ee08d8-404fb4bfcbe40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1013/audio/IN1013.Mix-Headset.wav",
+      "bytes": 100548140,
+      "sha256": "8f0a59bd50722f71e46062136db702daea8c69a6940f18bc78cede80f3638dc0",
+      "source_samples": 50274048,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 100548140,
+        "pcm_data_bytes": 100548096,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"5fe3e2c-405d8b1a07380\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1014/audio/IN1014.Mix-Headset.wav",
+      "bytes": 118171864,
+      "sha256": "ea8c65624b0a4ea4a1fad83fddbc34fcc2c0ff6912dc570e68699ce92da5b00a",
+      "source_samples": 59085910,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 118171864,
+        "pcm_data_bytes": 118171820,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"70b28d8-405d8b85cb1c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IN1016/audio/IN1016.Mix-Headset.wav",
+      "bytes": 115337432,
+      "sha256": "104707e7bf2b05865bacd997751f89b9080a295610e57790d79df4fc9f2f4bb5",
+      "source_samples": 57668694,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 115337432,
+        "pcm_data_bytes": 115337388,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"6dfe8d8-405d8c2da3dc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1000a/audio/IS1000a.Mix-Headset.wav",
+      "bytes": 50645452,
+      "sha256": "25c9a48237c1f23bc419702f89234467a1b9efedbac16d9673f52d6a8c1c6a57",
+      "source_samples": 25322667,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST"
+        ],
+        "declared_riff_bytes": 50645452,
+        "pcm_data_bytes": 50645334,
+        "bytes_after_pcm": 74
+      },
+      "http_etag": "\"304c9cc-3f024667ba4c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1000b/audio/IS1000b.Mix-Headset.wav",
+      "bytes": 74997452,
+      "sha256": "0f71e5018a283adf85e949f456a4c360d4fb8d9c195d29ed82b4b38d0d9a724d",
+      "source_samples": 37498667,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST"
+        ],
+        "declared_riff_bytes": 74997452,
+        "pcm_data_bytes": 74997334,
+        "bytes_after_pcm": 74
+      },
+      "http_etag": "\"4785ecc-3f02489d41b00\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1000c/audio/IS1000c.Mix-Headset.wav",
+      "bytes": 67657772,
+      "sha256": "3703479fdc0d2f9168c1874eabace7d55bd2a2f44db2f911e0d4c538222b01aa",
+      "source_samples": 33828864,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 67657772,
+        "pcm_data_bytes": 67657728,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"408602c-3f296c992f6c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1000d/audio/IS1000d.Mix-Headset.wav",
+      "bytes": 83786786,
+      "sha256": "77643e759067ddfae82140deda6b9044ef2f62e92d08d9372d8eebf5a965504a",
+      "source_samples": 41893334,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST"
+        ],
+        "declared_riff_bytes": 83786786,
+        "pcm_data_bytes": 83786668,
+        "bytes_after_pcm": 74
+      },
+      "http_etag": "\"4fe7c22-3f024eb948500\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1001a/audio/IS1001a.Mix-Headset.wav",
+      "bytes": 29089836,
+      "sha256": "3630cc7415931e4dc91e3cd022cd7b6123057a055e8ac4114bdf010398ed89f0",
+      "source_samples": 14544896,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 29089836,
+        "pcm_data_bytes": 29089792,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"1bbe02c-42affa221e500\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1001b/audio/IS1001b.Mix-Headset.wav",
+      "bytes": 67734230,
+      "sha256": "d637c9262a47bd37fc3e0a8669b75100ee07a357eb938977930177d7ec3cfccb",
+      "source_samples": 33867093,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 67734230,
+        "pcm_data_bytes": 67734186,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4098ad6-42affa732e440\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1001c/audio/IS1001c.Mix-Headset.wav",
+      "bytes": 46254806,
+      "sha256": "43aebd5d3ebbeafe4548d04e2f1174552e91f73fb90cdd4cee49efdef9d889c9",
+      "source_samples": 23127381,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 46254806,
+        "pcm_data_bytes": 46254762,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"2c1cad6-42affa79db400\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1001d/audio/IS1001d.Mix-Headset.wav",
+      "bytes": 24991104,
+      "sha256": "67814feae09a7c692ae153b566f3534c24690c9ff8bd95e23f3540ccc5fb31e0",
+      "source_samples": 12495530,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 24991104,
+        "pcm_data_bytes": 24991060,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"17d5580-42affa8a11a40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1002b/audio/IS1002b.Mix-Headset.wav",
+      "bytes": 75765426,
+      "sha256": "2714833e12db9318fdf2f5165e192a0ee3d4a596e858aac7f85c33c7bf5fac9b",
+      "source_samples": 37882667,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST"
+        ],
+        "declared_riff_bytes": 75765426,
+        "pcm_data_bytes": 75765334,
+        "bytes_after_pcm": 48
+      },
+      "http_etag": "\"48416b2-3f28243e6c740\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1002c/audio/IS1002c.Mix-Headset.wav",
+      "bytes": 66588093,
+      "sha256": "d652be347b21a5e19627a50a9a0e76c785eb658d4db6954d4568ba4694280ce7",
+      "source_samples": 33293333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 66588093,
+        "pcm_data_bytes": 66586666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"3f80dbd-3f024223c5480\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1002d/audio/IS1002d.Mix-Headset.wav",
+      "bytes": 40416640,
+      "sha256": "449db8492292544b955dd0ea1acbb40d83b5528a5e4d006f82e554bc3635f559",
+      "source_samples": 20208298,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 40416640,
+        "pcm_data_bytes": 40416596,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"268b580-3f129176b67c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1003a/audio/IS1003a.Mix-Headset.wav",
+      "bytes": 29231830,
+      "sha256": "10d768ad3cf53d02aff96057fb80631c1047e79221ee8f3edb3614dfa23507b5",
+      "source_samples": 14615893,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 29231830,
+        "pcm_data_bytes": 29231786,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"1be0ad6-3f12914bcc280\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1003b/audio/IS1003b.Mix-Headset.wav",
+      "bytes": 52673427,
+      "sha256": "996b3781d63e85c42f84d49edb8b6c8224db4e985a346dfecf741d0ec5d83ae5",
+      "source_samples": 26336000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 52673427,
+        "pcm_data_bytes": 52672000,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"323bb93-3f25fcf5e2340\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1003c/audio/IS1003c.Mix-Headset.wav",
+      "bytes": 60044093,
+      "sha256": "c7d18200a4a831c515ccf817d7c42608146c285f30089d008bbdc272ea8508c7",
+      "source_samples": 30021333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 60044093,
+        "pcm_data_bytes": 60042666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"394333d-3f024afbcb200\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1003d/audio/IS1003d.Mix-Headset.wav",
+      "bytes": 67217427,
+      "sha256": "bfeffddd293aa952be24a28eb54e69124760c432015cc361f858fca82ad6e64a",
+      "source_samples": 33608000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 67217427,
+        "pcm_data_bytes": 67216000,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"401a813-3f024e5fa3180\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1004a/audio/IS1004a.Mix-Headset.wav",
+      "bytes": 25500093,
+      "sha256": "c37050e46bf3d339e896cc75baf31b191f4a3c491109d6faa44d9d55cd79666b",
+      "source_samples": 12749333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 25500093,
+        "pcm_data_bytes": 25498666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"18519bd-3f0270c7c5e80\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1004b/audio/IS1004b.Mix-Headset.wav",
+      "bytes": 69814759,
+      "sha256": "a477f5a67c2c82eadc007a015596d0a47df2a8cc465d3880126b89deb13aaedf",
+      "source_samples": 34906666,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 69814759,
+        "pcm_data_bytes": 69813332,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"42949e7-3f0272f794740\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1004c/audio/IS1004c.Mix-Headset.wav",
+      "bytes": 72444093,
+      "sha256": "b9a4974943fc3bae1c816eb68f6694616a0e0ee1acc41d46133bd70982c83869",
+      "source_samples": 36221333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 72444093,
+        "pcm_data_bytes": 72442666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"45168bd-3f0276eb6da80\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1004d/audio/IS1004d.Mix-Headset.wav",
+      "bytes": 62892093,
+      "sha256": "af30388e1849af758229cd747493821de69c5f058d179ef0e3a4542009a42c16",
+      "source_samples": 31445333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 62892093,
+        "pcm_data_bytes": 62890666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"3bfa83d-3f027a765f640\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1005a/audio/IS1005a.Mix-Headset.wav",
+      "bytes": 32796093,
+      "sha256": "cfb67dda357aa1281f610a98ff99d2247c409a9f0bc5fcef2622175ec5c57e6c",
+      "source_samples": 16397333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 32796093,
+        "pcm_data_bytes": 32794666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"1f46dbd-3f9aa6aa3acc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1005b/audio/IS1005b.Mix-Headset.wav",
+      "bytes": 69825427,
+      "sha256": "713197cc6ee2fd74810c3b0c73b7ec7358e02baca331ca67e9f502d28f881e9a",
+      "source_samples": 34912000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 69825427,
+        "pcm_data_bytes": 69824000,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"4297393-3f9aa8092e8c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1005c/audio/IS1005c.Mix-Headset.wav",
+      "bytes": 65926759,
+      "sha256": "843ab87cc01ebb5e6d546e99c2246a948200d18d71e99f8d529cc598db1834e6",
+      "source_samples": 32962666,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 65926759,
+        "pcm_data_bytes": 65925332,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"3edf667-3f9aae8587600\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1006a/audio/IS1006a.Mix-Headset.wav",
+      "bytes": 27222759,
+      "sha256": "24b58e38cb625606658045c7c4aeb66f72f73aa9af71dee5e63d948dbc933025",
+      "source_samples": 13610666,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 27222759,
+        "pcm_data_bytes": 27221332,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"19f62e7-3f0270c118ec0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1006b/audio/IS1006b.Mix-Headset.wav",
+      "bytes": 69124140,
+      "sha256": "27de32c98c9b3f906a0063f51aa05347ae24303b5af22a080561926bfdb8b0f6",
+      "source_samples": 34562048,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 69124140,
+        "pcm_data_bytes": 69124096,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"41ec02c-3f12912e3bcc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1006c/audio/IS1006c.Mix-Headset.wav",
+      "bytes": 62406759,
+      "sha256": "dc2b56362eb45a8384d57fbfff118874f6eac8915a3c74ff91e854f795daef5f",
+      "source_samples": 31202666,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 62406759,
+        "pcm_data_bytes": 62405332,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"3b84067-3f02766e7f3c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1006d/audio/IS1006d.Mix-Headset.wav",
+      "bytes": 58854759,
+      "sha256": "cee3f73b16051893a90f68f681af470a8682cd6858c64f021776baf5bc02800f",
+      "source_samples": 29426666,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 58854759,
+        "pcm_data_bytes": 58853332,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"3820d67-3f02799642580\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1007a/audio/IS1007a.Mix-Headset.wav",
+      "bytes": 30913427,
+      "sha256": "df2cee040ad065649ce4285d1f3244579dd06ece2f0e16d0c8091d4698e39fc4",
+      "source_samples": 15456000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 30913427,
+        "pcm_data_bytes": 30912000,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"1d7b393-3f02717833ec0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1007b/audio/IS1007b.Mix-Headset.wav",
+      "bytes": 41686759,
+      "sha256": "eea0adb204e18b68e2197fa26fd13a2d9a3d464ad36bbfe76164a6dc1b67a00f",
+      "source_samples": 20842666,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 41686759,
+        "pcm_data_bytes": 41685332,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"27c16e7-3f0273170d180\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1007c/audio/IS1007c.Mix-Headset.wav",
+      "bytes": 67622759,
+      "sha256": "ccc56bb3980c1027e8ff313e018a8b53c2bd730f1a378f4870e3371616e2ed1f",
+      "source_samples": 33810666,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 67622759,
+        "pcm_data_bytes": 67621332,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"407d767-3f027644890c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1007d/audio/IS1007d.Mix-Headset.wav",
+      "bytes": 64929836,
+      "sha256": "470b25ca979716d23c05fa30e854b11d22670754dd236da7634b7e8fda221c73",
+      "source_samples": 32464896,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 64929836,
+        "pcm_data_bytes": 64929792,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"3dec02c-3f26a4ba9b400\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1008a/audio/IS1008a.Mix-Headset.wav",
+      "bytes": 30204093,
+      "sha256": "75ae8796ca2177fa0c77055de2fe2f95325b412dc7152a9b32c76c9884a3d382",
+      "source_samples": 15101333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 30204093,
+        "pcm_data_bytes": 30202666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"1cce0bd-414e93ca19300\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1008b/audio/IS1008b.Mix-Headset.wav",
+      "bytes": 56593427,
+      "sha256": "0d992a210480c6e9652b317ed7f66261e80a1aa86f7e5c3dffd10e81b8e30de2",
+      "source_samples": 28296000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 56593427,
+        "pcm_data_bytes": 56592000,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"35f8c13-3f023df5bf800\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1008c/audio/IS1008c.Mix-Headset.wav",
+      "bytes": 49484093,
+      "sha256": "1965c56162efb29953d21a5e7f5659f7f78a41e8923b7c399d3b4bbf9ae4b0a9",
+      "source_samples": 24741333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 49484093,
+        "pcm_data_bytes": 49482666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"2f3113d-3f023fa5c3340\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1008d/audio/IS1008d.Mix-Headset.wav",
+      "bytes": 47388093,
+      "sha256": "22bc4c5ef7c033427426e84b168f71d162a42ed287ae4781aa2f6c06b67a6177",
+      "source_samples": 23693333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 47388093,
+        "pcm_data_bytes": 47386666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"2d315bd-3f0241ccfc7c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1009a/audio/IS1009a.Mix-Headset.wav",
+      "bytes": 26844093,
+      "sha256": "6eb5a0ede0d9e72794f976ce7bea5b78133eae969f99b4c5418b43c2468d25b1",
+      "source_samples": 13421333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 26844093,
+        "pcm_data_bytes": 26842666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"1999bbd-3f022e2fe4180\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1009b/audio/IS1009b.Mix-Headset.wav",
+      "bytes": 65676093,
+      "sha256": "07c2891ae6ad7c507b2a4f15b2dcd0a2343491df9e4e6a58f9db0d0b2c5e1382",
+      "source_samples": 32837333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 65676093,
+        "pcm_data_bytes": 65674666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"3ea233d-3f023ce222dc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1009c/audio/IS1009c.Mix-Headset.wav",
+      "bytes": 58268093,
+      "sha256": "f317910070db0f2649315decbb34686d648bbe9dc3f7576710184f4d572bdbcc",
+      "source_samples": 29133333,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 58268093,
+        "pcm_data_bytes": 58266666,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"37919bd-3f023f7ea9700\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/IS1009d/audio/IS1009d.Mix-Headset.wav",
+      "bytes": 62225427,
+      "sha256": "470440114ee2ed076cfc77c53136ad5d3af500d8a5a6ca36755e83534f5ca4ea",
+      "source_samples": 31112000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data",
+          "cue ",
+          "LIST",
+          "LIST",
+          "muma",
+          "chrp",
+          "bext"
+        ],
+        "declared_riff_bytes": 62225427,
+        "pcm_data_bytes": 62224000,
+        "bytes_after_pcm": 1383
+      },
+      "http_etag": "\"3b57c13-3f024340eb540\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3003a/audio/TS3003a.Mix-Headset.wav",
+      "bytes": 48180608,
+      "sha256": "b6ce59ff735c234afdd94b13744aa26f6785af746170543fd03b33160e920a6d",
+      "source_samples": 24090282,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 48180608,
+        "pcm_data_bytes": 48180564,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"2df2d80-4046d3a208a00\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3003b/audio/TS3003b.Mix-Headset.wav",
+      "bytes": 70729772,
+      "sha256": "0c94f3a09ab747caa7714efe8852f5ff37d36cf272b75709344991df1aa266ca",
+      "source_samples": 35364864,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 70729772,
+        "pcm_data_bytes": 70729728,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"437402c-4046d3a2fcc40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3003c/audio/TS3003c.Mix-Headset.wav",
+      "bytes": 82240044,
+      "sha256": "b9f455870e8cb0ba765523a1767cc366775ab7e5e3eabf37d9c91289e5a1a70a",
+      "source_samples": 41120000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 82240044,
+        "pcm_data_bytes": 82240000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4e6e22c-40c5aa115e800\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3003d/audio/TS3003d.Mix-Headset.wav",
+      "bytes": 83782444,
+      "sha256": "ece4a41c37c1092c737d1dfe313afb18248364625991f745fed4b372c3c67eb3",
+      "source_samples": 41891200,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 83782444,
+        "pcm_data_bytes": 83782400,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4fe6b2c-40c5aa1eb8780\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3004a/audio/TS3004a.Mix-Headset.wav",
+      "bytes": 43050368,
+      "sha256": "ca3bc00d6c85451918290b0a3dd137e322ad8b063fd26f71fe3bdaa42ad66719",
+      "source_samples": 21525162,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 43050368,
+        "pcm_data_bytes": 43050324,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"290e580-4046d3ccf2f40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3004b/audio/TS3004b.Mix-Headset.wav",
+      "bytes": 71873920,
+      "sha256": "3c8e8e9f4b24cc9a8c2fa5932cbecebcf9d14b6b415ac48d6229547fc014c9b2",
+      "source_samples": 35936938,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 71873920,
+        "pcm_data_bytes": 71873876,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"448b580-4046d3ccf2f40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3004c/audio/TS3004c.Mix-Headset.wav",
+      "bytes": 95040044,
+      "sha256": "4fea0b90a24164511a902f9bc148322ee9dea236195690af081bc0033db640ea",
+      "source_samples": 47520000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 95040044,
+        "pcm_data_bytes": 95040000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"5aa322c-40c5aa368ffc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3004d/audio/TS3004d.Mix-Headset.wav",
+      "bytes": 88025644,
+      "sha256": "d89950bb537e05939994c06083447bd820a86a64cb32aec4d691e7096f974cdf",
+      "source_samples": 44012800,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 88025644,
+        "pcm_data_bytes": 88025600,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"53f2a2c-40c5aa45d23c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3005a/audio/TS3005a.Mix-Headset.wav",
+      "bytes": 42203180,
+      "sha256": "431faf4e85eeeb4653256bc8e4f36aaf06dc71538a58b1b6c1a78f2df81276ea",
+      "source_samples": 21101568,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 42203180,
+        "pcm_data_bytes": 42203136,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"283f82c-4046d3d67c5c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3005b/audio/TS3005b.Mix-Headset.wav",
+      "bytes": 78077312,
+      "sha256": "8020ab7c3f26f1a876e4675b00dadba38f01b7f3b6639990999b1ee4c37513db",
+      "source_samples": 39038634,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 78077312,
+        "pcm_data_bytes": 78077268,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4a75d80-4046d3d770800\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3005c/audio/TS3005c.Mix-Headset.wav",
+      "bytes": 76896044,
+      "sha256": "ea98038a538ccec3bfc017192f3f0f5282ead185f35c6b6c4bcca890b867832b",
+      "source_samples": 38448000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 76896044,
+        "pcm_data_bytes": 76896000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"495572c-40c5aa5bc1780\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3005d/audio/TS3005d.Mix-Headset.wav",
+      "bytes": 85510444,
+      "sha256": "a0c2882124f31fb5d0bf46548a7777702ed6012e4319f61cf536c6ab3e5b91b0",
+      "source_samples": 42755200,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 85510444,
+        "pcm_data_bytes": 85510400,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"518c92c-40c5aa6b03b80\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3006a/audio/TS3006a.Mix-Headset.wav",
+      "bytes": 40091692,
+      "sha256": "d3a14878e387563dd7f6cc4d9fa26e70cd1073f2b7f90102a076878cb29bb6f3",
+      "source_samples": 20045824,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 40091692,
+        "pcm_data_bytes": 40091648,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"263c02c-4046d3e005c40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3006b/audio/TS3006b.Mix-Headset.wav",
+      "bytes": 75324800,
+      "sha256": "65008347971a4da203260860cbf0266814dcd8db3ac63a5242628e21d06c88c0",
+      "source_samples": 37662378,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 75324800,
+        "pcm_data_bytes": 75324756,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"47d5d80-4046d3e0f9e80\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3006c/audio/TS3006c.Mix-Headset.wav",
+      "bytes": 82695552,
+      "sha256": "9922fc1f145d5089e56401f044ebff84ad30a9d0caab8a8e46a51d1d74d1d265",
+      "source_samples": 41347754,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 82695552,
+        "pcm_data_bytes": 82695508,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4edd580-40c5aa85b7a80\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3006d/audio/TS3006d.Mix-Headset.wav",
+      "bytes": 95088044,
+      "sha256": "f25a091b6f7b18370b1173c30eda92dd7d2e208741c996c14ab6360507324b3e",
+      "source_samples": 47544000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 95088044,
+        "pcm_data_bytes": 95088000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"5aaedac-40c5aa95ee0c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3007a/audio/TS3007a.Mix-Headset.wav",
+      "bytes": 51499052,
+      "sha256": "eb758a584903a8d894790764b7217a43634f80d147b8db879815e74d1d1a7882",
+      "source_samples": 25749504,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 51499052,
+        "pcm_data_bytes": 51499008,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"311d02c-4046d3e98f2c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3007b/audio/TS3007b.Mix-Headset.wav",
+      "bytes": 107355520,
+      "sha256": "414e49da13f0831166d3b92d62f96eef6b7802f734b356eff570f7e37beffe5d",
+      "source_samples": 53677738,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 107355520,
+        "pcm_data_bytes": 107355476,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"6661d80-4046d3ed5fbc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3007c/audio/TS3007c.Mix-Headset.wav",
+      "bytes": 77440044,
+      "sha256": "237e75fcd50161cb087a38cec8e54dbc46a1aa3916b58fec24090e4f2b683f29",
+      "source_samples": 38720000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 77440044,
+        "pcm_data_bytes": 77440000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"49da42c-40c5aaaae9240\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3007d/audio/TS3007d.Mix-Headset.wav",
+      "bytes": 90377644,
+      "sha256": "c4868077605c42ea26506c5ea482ec17bdd839fbb872f4b68ab712f9f676ff23",
+      "source_samples": 45188800,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 90377644,
+        "pcm_data_bytes": 90377600,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"5630dac-40c5aabb1f880\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3008a/audio/TS3008a.Mix-Headset.wav",
+      "bytes": 43271552,
+      "sha256": "e5c190189edb01338abb570d7d618109a34c9eef7ac6295239d4692e75c3d7aa",
+      "source_samples": 21635754,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 43271552,
+        "pcm_data_bytes": 43271508,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"2944580-4046d3f6e9240\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3008b/audio/TS3008b.Mix-Headset.wav",
+      "bytes": 74270764,
+      "sha256": "49d3c9bc7718e9a2b7739b1a481eab8c2f5bc067d8742e2e111876a0b3565734",
+      "source_samples": 37135360,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 74270764,
+        "pcm_data_bytes": 74270720,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"46d482c-4046d3f6e9240\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3008c/audio/TS3008c.Mix-Headset.wav",
+      "bytes": 80256044,
+      "sha256": "196e36624840eec139e2277a6f02f5a943622226e305ed9047bf122816f51ac3",
+      "source_samples": 40128000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 80256044,
+        "pcm_data_bytes": 80256000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4c89c2c-40c5aad10ec40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3008d/audio/TS3008d.Mix-Headset.wav",
+      "bytes": 89440044,
+      "sha256": "b52dd29a8e0d9b0a6bf19d0fe92a17b83786ec7424c6798304cd69e7c243f076",
+      "source_samples": 44720000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 89440044,
+        "pcm_data_bytes": 89440000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"554bf2c-40c5aae051040\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3009a/audio/TS3009a.Mix-Headset.wav",
+      "bytes": 48188800,
+      "sha256": "54caac8bcbd22f1a5d66ba122f6fb7febef344e5163c289ff84943476d83185f",
+      "source_samples": 24094378,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 48188800,
+        "pcm_data_bytes": 48188756,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"2df4d80-4046d3ff7e680\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3009b/audio/TS3009b.Mix-Headset.wav",
+      "bytes": 78721750,
+      "sha256": "97267d50549d64cff3ae5fb81f4d7db54deeaf625a79f2e0a2b2dde84070f5d1",
+      "source_samples": 39360853,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 78721750,
+        "pcm_data_bytes": 78721706,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4b132d6-4046d40166b00\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3009c/audio/TS3009c.Mix-Headset.wav",
+      "bytes": 82560044,
+      "sha256": "4fe7430b0edc2f414e888eeec32706f2ff67f76a44d88f3a9699fd045a58d465",
+      "source_samples": 41280000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 82560044,
+        "pcm_data_bytes": 82560000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4ebc42c-40c5c19ba31c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3009d/audio/TS3009d.Mix-Headset.wav",
+      "bytes": 65798444,
+      "sha256": "a163a6e77bc23ae6406b04eec1fe7304e28cdba7e4a3648305dd97011fafbc98",
+      "source_samples": 32899200,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 65798444,
+        "pcm_data_bytes": 65798400,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"3ec012c-40c5c1a808f00\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3010a/audio/TS3010a.Mix-Headset.wav",
+      "bytes": 33312812,
+      "sha256": "d3a7d934b73fa5b9cfcff54ce3909ba59b544ef43c248c931082aa62056c1625",
+      "source_samples": 16656384,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 33312812,
+        "pcm_data_bytes": 33312768,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"1fc502c-4046d40813ac0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3010b/audio/TS3010b.Mix-Headset.wav",
+      "bytes": 66735488,
+      "sha256": "b973b8dcd69c01ff782f77da7ada6979f7999e063b8de30d89f5b8dd1d53a043",
+      "source_samples": 33367722,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 66735488,
+        "pcm_data_bytes": 66735444,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"3fa4d80-4046d40af0180\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3010c/audio/TS3010c.Mix-Headset.wav",
+      "bytes": 68544044,
+      "sha256": "6fae7327a367f3ea11ee91c35da708d5484c5924f51b309669409043a9c30a56",
+      "source_samples": 34272000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 68544044,
+        "pcm_data_bytes": 68544000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"415e62c-40c5c1bdf82c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3010d/audio/TS3010d.Mix-Headset.wav",
+      "bytes": 61462442,
+      "sha256": "ff642ecea1b3709a8e8cd71414a8ddd37c04cac46319fea6db63be4ff40fdaf8",
+      "source_samples": 30731199,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 61462442,
+        "pcm_data_bytes": 61462398,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"3a9d7aa-40c5c1c969dc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3011a/audio/TS3011a.Mix-Headset.wav",
+      "bytes": 48312364,
+      "sha256": "cafbc1f039b5fb7aee4edd40ef3b3c1236c0c30eb9a9249a5df68740e8be9248",
+      "source_samples": 24156160,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 48312364,
+        "pcm_data_bytes": 48312320,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"2e1302c-4046d410a8f00\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3011b/audio/TS3011b.Mix-Headset.wav",
+      "bytes": 70854700,
+      "sha256": "310e11e9819759aba450c910a1bf52c770e363fd9565227b2f6b1fcff09a9812",
+      "source_samples": 35427328,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 70854700,
+        "pcm_data_bytes": 70854656,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"439282c-4046d41479800\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3011c/audio/TS3011c.Mix-Headset.wav",
+      "bytes": 76640044,
+      "sha256": "c6a5da21dddbc9450dc3ebd3fcef32ec69f2e901ba1e321b8d6e431bd055481b",
+      "source_samples": 38320000,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 76640044,
+        "pcm_data_bytes": 76640000,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4916f2c-40c5c1e41dcc0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3011d/audio/TS3011d.Mix-Headset.wav",
+      "bytes": 69037270,
+      "sha256": "5405f0959f5fa1442c8b29e8bd51c10d37a9c833d195ed6d1655ff69ff331724",
+      "source_samples": 34518613,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 69037270,
+        "pcm_data_bytes": 69037226,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"41d6cd6-40c5c1f177c40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3012a/audio/TS3012a.Mix-Headset.wav",
+      "bytes": 27499222,
+      "sha256": "812d1b31e4cd160bbe6434fee2dde2de8bdc3a918cdc48ef3d34b3163c6e96cf",
+      "source_samples": 13749589,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 27499222,
+        "pcm_data_bytes": 27499178,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"1a39ad6-4046d4156da40\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3012b/audio/TS3012b.Mix-Headset.wav",
+      "bytes": 78637100,
+      "sha256": "382fd0f2f41f97df38f8e5ff61ed93f0a1af30ff4b1877e40ff39ab8110139b0",
+      "source_samples": 39318528,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 78637100,
+        "pcm_data_bytes": 78637056,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4afe82c-4046d4193e340\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3012c/audio/TS3012c.Mix-Headset.wav",
+      "bytes": 76047062,
+      "sha256": "55db4479ddcd055b4e514f2bfaf63d02d76da4c3a13e67b0fcb4aeb30698ea17",
+      "source_samples": 38023509,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 76047062,
+        "pcm_data_bytes": 76047018,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"48862d6-40c5c20a436c0\""
+    },
+    {
+      "url": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror//amicorpus/TS3012d/audio/TS3012d.Mix-Headset.wav",
+      "bytes": 74931244,
+      "sha256": "da504dfba820f5ee2fc913c0efedcdb41577b2d32b4b61b722b1974c3b8bd854",
+      "source_samples": 37465600,
+      "sample_rate_hz": 16000,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "riff_layout": {
+        "chunk_tags": [
+          "fmt ",
+          "data"
+        ],
+        "declared_riff_bytes": 74931244,
+        "pcm_data_bytes": 74931200,
+        "bytes_after_pcm": 0
+      },
+      "http_etag": "\"4775c2c-40c5c2179d640\""
+    }
+  ]
+}
