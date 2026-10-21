@@ -995,3 +995,30 @@ Decided by the user on 2026-10-18:
   caches/pilots/logs untouched. Evidence raw/ami-full-{build,validation,
   reconstruction}.log and acquisition-20261021 log; cleanup report retained.
   README/registry and qualification updated; nothing published or pushed.
+
+
+- [x] Batch3 / WESAD source-only complete (2026-10-21): all 15 released subjects,
+  60,807,600 native chest/protocol samples at 700 Hz (24.13 h). All 14 genuine
+  channels preserved exactly: eight chest plus wrist ACC32/BVP64/EDA-TEMP4 Hz,
+  separate native tables and exact integer indices; no new resampling,
+  filtering, calibration or clipping. Source float32 chest temperature promoted
+  losslessly to float64; every other released signal value remains exact.
+  Original 700-Hz codes0–7 preserved separately; evaluation0/5–7 -> -1,
+  29,336,997 samples masked (48.2456091%), never undefined0 as rest. Valid
+  baseline/stress/amusement occur once and meditation twice in every subject;
+  substantive recurrence15/15. No nonfinite signals or native duration mismatches.
+  Source S2/S17 temperature-sensor attachment warnings retained; no inferred mask.
+  Primary Siegen scientific noncommercial terms with attribution, no explicit
+  redistribution grant: tier C, source-only and rehosting_allowed:false in
+  card/Croissant/registry. Source ZIP2,249,444,501B, provider MD5/SHA1 and SHA256
+  pinned, 92-entry archive never globally extracted; restricted numeric-only
+  pickle reader checks selected members/CRC. S15 pilot63,736,876B, conservative
+  projection1,501,188,574B; actual1,052,303,494B. Full validator0/0 (12files,
+  4default parts +4native tables), independent15/15 exact every channel/value,
+  original code/evaluation label/index/count and quality note. Nested empty
+  nullStates RDF recursion fixed by correctly omitting the empty mapping;
+  no native data changed. Metadata final precision revalidated0/0.
+  Only raw/wesad removed after gates:2,249,841,394B /7files; free
+  67,786,424,320 ->70,036,291,584B. Other caches/pilots/logs untouched.
+  Logs raw/wesad-{acquisition,full-build,full-validation,full-reconstruction}.log;
+  source pins/qualification/README/registry updated. No publication or push.

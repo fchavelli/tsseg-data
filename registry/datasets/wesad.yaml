@@ -1,33 +1,51 @@
-# Copied from notes/datasets/registry/physio.yaml (phase-1 registry entry); reviewed 2026-10-18.
 id: wesad
-name: "WESAD: Wearable Stress and Affect Detection"
-domain: "physio"
-task: "both"
-source_url: "https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html"
+name: "WESAD: complete synchronized native-rate physiology (source-only)"
+domain: physio
+task: both
+source_url: https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html
 doi: null
-alternate_repository_doi: "10.24432/C57K5T (UCI copy, not the primary Siegen source)"
-citation: "Schmidt et al., ICMI 2018"
-license: "CGU Univ. Siegen : usage scientifique non commercial, crédit demandé (pas de licence nommée)"
-license_url: "https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html"
-license_tier: "C"
-license_verified: "2026-10-18, https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html (scientific, non-commercial use with attribution; no explicit redistribution grant)"
+alternate_repository_doi: "10.24432/C57K5T (UCI copy, not primary Siegen source)"
+citation: "Schmidt et al. (2018), ICMI,400–408. https://doi.org/10.1145/3242969.3242985"
+license: "Scientific non-commercial use with attribution; no named licence or explicit redistribution grant"
+license_url: https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html
+license_tier: C
+license_verified: "2026-10-21, primary Siegen author page; source-only, no rehosting"
 n_series: 15
-length: {min: null, median: null, max: null}
-n_channels: 8
-sampling_rate_hz: 700
-label_type: "states"
-n_states: 4
+length: {min: 3656100, median: 3883600, max: 4949700}
+n_channels: 14 # Default8chest + six genuine native-rate wrist auxiliary channels.
+sampling_rate_hz: 700 # Native chest/default/protocol; wrist32/64/4Hz, never resampled.
+label_type: states
+n_states: 4 # Scored1baseline/2stress/3amusement/4meditation; original0–7 retained separately.
 n_annotators: null
-label_origin: "protocol"
-unlabeled_regions: "oui : label 0 (transitoire) et 5-7 (à ignorer)"
+label_origin: protocol
+unlabeled_regions: "Native0 not-defined/transient and5–7 ignore map to-1 for evaluation;29,336,997/60,807,600 samples (48.2456091%). Every original code retained separately."
 continuous: true
-access: "direct"
-size: "2.5 GB (zip)"
+access: direct
+size: "Primary ZIP2,249,444,501B; complete local output1,052,303,494B; archive never globally extracted"
 in_tsseg_bench: false
-fm_pretraining: "unknown"
-value: "high"
-value_reason: "référence du stress porté : baseline / amusement / stress (TSST) / méditation ×2, poitrine 700 Hz + poignet ; méditation récurrente"
-effort: "medium"
-confidence: "medium"
-notes: "Primary page confirms 15 subjects and chest/wrist physiological and motion data; original zip 2.5 GB. Earlier inventory: chest at 700 Hz, wrist at 64/32/4 Hz; verify rates, counts and null labels from the source archive before building. UCI DOI identifies a repository copy, not the primary Siegen source. Scientific, non-commercial use only with no explicit redistribution grant: source-only builder and author contact."
+fm_pretraining: unknown
+value: high
+value_reason: "Complete24.13h native multirate physiological view; meditation recurs twice in15/15 subjects, remaining valid conditions once each; explicit source-only rights"
+effort: medium
+confidence: high
+notes: >
+  Complete15 released synchronized SX.pkl subjects (S2–S17 exceptS12);
+  provider excludedS1/S12 after sensor malfunction.60,807,600 chest/protocol
+  samples700Hz, all8 genuine chest channels and all6 wrist channels at native
+  ACC32/BVP64/EDA-TEMP4Hz. Exact integer sample indices, float64 preserving all
+  source numeric values without new calibration/filtering/interpolation or
+  resampling; sourcefloat32 chest temperature promoted losslessly. Every native
+  code0–7 retained, evaluation masks0/5–7 rather than treating0 as rest.
+  All streams share native duration within each released subject; no imposed
+  clipping. Protocol is scheduled condition, not an expert affect diagnosis.
+  Source temperature-sensor attachment warnings forS2/S17 retained; no inferred
+  quality exclusion. No nonfinite signal values found. Source demographics,
+  questionnaires and absolute timestamps excluded. Scientific noncommercial
+  terms have no explicit redistribution grant: local source-only builder,
+  rehosting_allowed:false in card/Croissant metadata. Primary size+provider
+  MD5/SHA1+SHA256 pinned; full ZIP remains compressed, numeric-only restricted
+  unpickler consumes each selected member with CRC checks. Pilot63.737MB,
+  complete projection incl.50% margin+64MiB1.501GB; actual1.052GB.
+  Validator0errors/0warnings (12files/4parts); independent15/15 exact every
+  native value, label/mask and sample index. See docs/qualification/wesad.md.
 rejected: null

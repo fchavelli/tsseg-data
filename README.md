@@ -75,7 +75,7 @@ the authors allow re-hosting.
 | `noneeg`: Non-EEG Dataset for Assessment of Neurological Status | physio | SD | ODC-By-1.0 (A) | builder + validated build (20 native 8-Hz records + native 1-Hz auxiliary) |
 | `ppg-dalia`: PPG-DaLiA: PPG dataset for motion compensation and heart rate estimation in Daily Life Activities | physio | SD | CC-BY-4.0 (A) | builder + validated build (15 subjects; 11 genuine native-rate channels) |
 | `eegmmidb`: EEG Motor Movement/Imagery Dataset | physio | SD | ODC-By-1.0 (A) | builder + validated build (all 1,526 runs; 64 native EEG channels; 128/160 Hz) |
-| `wesad`: WESAD: Wearable Stress and Affect Detection | physio | SD | Siegen scientific, non-commercial use; redistribution not granted (C) | planned; source-only builder until rights are clarified |
+| `wesad`: WESAD: complete synchronized native-rate physiology (source-only) | physio | SD | Siegen scientific, non-commercial use; redistribution not granted (C) | builder + validated local build (15 native-rate subjects; 14 channels; original protocol + explicit mask); source-only builder until rights are clarified |
 | `daphnet-fog`: Daphnet Freezing of Gait | physio | SD | CC-BY-4.0 (A) | builder + validated build (17 runs; outside-protocol 0 excluded) |
 | `mosad`: MOSAD — Mobile Sensing Human Activity Data Set | har | SD | CC-BY-SA-3.0 (B) | builder + validated build (14 nine-axis recordings; no recurring state, CPD) |
 | `opportunity`: OPPORTUNITY Activity Recognition | har | SD | CC-BY-4.0 (A) | builder + validated build |

@@ -18,6 +18,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parents[1]
 STATUS = {  # id -> status text, for datasets beyond "planned"
+    "wesad": "builder + validated local build (15 native-rate subjects; 14 channels; original protocol + explicit mask)",
     "rsdf-china-forest": "builder + validated build (12,991 native Landsat points;47 ambiguous references unscored)",
     "ami-meeting-corpus": "builder + validated build (171 complete mixed-headset MFCC13 meetings; overlapping speaker tracks)",
     "fly-vs-fly": "builder + validated build (47 native two-fly scenes; overlapping behavior tracks)",

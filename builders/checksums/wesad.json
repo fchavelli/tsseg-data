@@ -1,0 +1,169 @@
+{
+  "primary_record": "https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html",
+  "snapshot_date": "2026-10-21",
+  "scope": "All15 released synchronized subject pickles and every native chest/wrist signal/label. Original unsynchronized alternative streams and personal questionnaires/demographics are excluded.",
+  "rights": {
+    "tier": "C",
+    "source_only": true,
+    "rehosting_allowed": false,
+    "terms": "Scientific non-commercial use with attribution, no explicit redistribution grant.",
+    "url": "https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html",
+    "verified_date": "2026-10-21"
+  },
+  "archive": {
+    "name": "WESAD.zip",
+    "url": "https://uni-siegen.sciebo.de/public.php/dav/files/HGdUkoNlW1Ub0Gx",
+    "linked_share": "https://uni-siegen.sciebo.de/s/HGdUkoNlW1Ub0Gx",
+    "bytes": 2249444501,
+    "provider_md5": "e328980e7992502de30c96ba2a7cb3e2",
+    "provider_sha1": "bae786bf599ef28e42e1c2e18da9b84d685e84e7",
+    "sha256": "5e15d2606adf16d819ba535c1786d92e94bae5ff5392f7ae01fb63f9938fd71c",
+    "etag": "\"ac228d1dc0f066b9634f5f0026b6bf8b\""
+  },
+  "readme": {
+    "member": "WESAD/wesad_readme.pdf",
+    "bytes": 242559,
+    "sha256": "167f2f6388c029f4cf669e5dd54089854ce355c55b149520da9266fea65d809b"
+  },
+  "zip_inventory": {
+    "members": 92,
+    "expanded_bytes": 17578304666,
+    "members_extracted": 0
+  },
+  "synchronized_members": [
+    {
+      "name": "WESAD/S10/S10.pkl",
+      "bytes": 867178991,
+      "compressed_bytes": 77881600,
+      "crc32": "13579ceb",
+      "offset": 76
+    },
+    {
+      "name": "WESAD/S11/S11.pkl",
+      "bytes": 831090213,
+      "compressed_bytes": 74769541,
+      "crc32": "62d1ee04",
+      "offset": 141159711
+    },
+    {
+      "name": "WESAD/S13/S13.pkl",
+      "bytes": 885309681,
+      "compressed_bytes": 80301162,
+      "crc32": "b7726f20",
+      "offset": 276296711
+    },
+    {
+      "name": "WESAD/S14/S14.pkl",
+      "bytes": 881137147,
+      "compressed_bytes": 81273348,
+      "crc32": "4e9cb930",
+      "offset": 420956778
+    },
+    {
+      "name": "WESAD/S15/S15.pkl",
+      "bytes": 827715045,
+      "compressed_bytes": 75285147,
+      "crc32": "9f2a6939",
+      "offset": 567321636
+    },
+    {
+      "name": "WESAD/S16/S16.pkl",
+      "bytes": 898980304,
+      "compressed_bytes": 82610365,
+      "crc32": "c2d692b9",
+      "offset": 705124514
+    },
+    {
+      "name": "WESAD/S17/S17.pkl",
+      "bytes": 946975319,
+      "compressed_bytes": 84329324,
+      "crc32": "8538a119",
+      "offset": 854592804
+    },
+    {
+      "name": "WESAD/S2/S2.pkl",
+      "bytes": 975117737,
+      "compressed_bytes": 86983149,
+      "crc32": "1e505f10",
+      "offset": 1006556876
+    },
+    {
+      "name": "WESAD/S3/S3.pkl",
+      "bytes": 1031507132,
+      "compressed_bytes": 93260258,
+      "crc32": "45c2e43e",
+      "offset": 1164239331
+    },
+    {
+      "name": "WESAD/S4/S4.pkl",
+      "bytes": 1034344388,
+      "compressed_bytes": 91322270,
+      "crc32": "48000537",
+      "offset": 1330834095
+    },
+    {
+      "name": "WESAD/S5/S5.pkl",
+      "bytes": 993435543,
+      "compressed_bytes": 88469755,
+      "crc32": "16aaf03a",
+      "offset": 1494812652
+    },
+    {
+      "name": "WESAD/S6/S6.pkl",
+      "bytes": 1123292444,
+      "compressed_bytes": 101826757,
+      "crc32": "167477ff",
+      "offset": 1654156750
+    },
+    {
+      "name": "WESAD/S7/S7.pkl",
+      "bytes": 829424437,
+      "compressed_bytes": 75935697,
+      "crc32": "b3de6ab0",
+      "offset": 1835906806
+    },
+    {
+      "name": "WESAD/S8/S8.pkl",
+      "bytes": 869469022,
+      "compressed_bytes": 78170159,
+      "crc32": "90df25e0",
+      "offset": 1972122978
+    },
+    {
+      "name": "WESAD/S9/S9.pkl",
+      "bytes": 832647582,
+      "compressed_bytes": 75772715,
+      "crc32": "b67632a2",
+      "offset": 2113439672
+    }
+  ],
+  "subject_sensor_quality_notes": {
+    "WESAD/S10/S10_readme.txt": [],
+    "WESAD/S11/S11_readme.txt": [],
+    "WESAD/S13/S13_readme.txt": [],
+    "WESAD/S14/S14_readme.txt": [],
+    "WESAD/S15/S15_readme.txt": [],
+    "WESAD/S16/S16_readme.txt": [],
+    "WESAD/S17/S17_readme.txt": [
+      "The RespiBAN temperature sensor was not fully attached throughout the entire duration of the study protocol."
+    ],
+    "WESAD/S2/S2_readme.txt": [
+      "The RespiBAN temperature sensor was not fully attached throughout the entire duration of the study protocol."
+    ],
+    "WESAD/S3/S3_readme.txt": [],
+    "WESAD/S4/S4_readme.txt": [],
+    "WESAD/S5/S5_readme.txt": [],
+    "WESAD/S6/S6_readme.txt": [],
+    "WESAD/S7/S7_readme.txt": [],
+    "WESAD/S8/S8_readme.txt": [],
+    "WESAD/S9/S9_readme.txt": []
+  },
+  "storage_pilot": {
+    "subject": "S15",
+    "source_pickle_bytes": 827715045,
+    "output_bytes": 63736876,
+    "native_chest_samples": 3676400,
+    "projected_complete_upper_margin_buffer_bytes": 1501188574,
+    "projection": "15*pilot*1.5 +64MiB; final per-member projection may refine this conservatively"
+  }
+}
