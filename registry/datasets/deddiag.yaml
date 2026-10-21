@@ -1,37 +1,51 @@
-# Copied from notes/datasets/registry/industry_energy.yaml (phase-1 registry entry), not edited here.
+# Complete native selected scope audited at primary Figshare version1.
 id: deddiag
-name: "DEDDIAG — Domestic Electricity Demand Dataset of Individual Appliances in Germany"
+name: "DEDDIAG: native sparse appliance and mains electricity"
 domain: energy
-task: both
+task: sd
 source_url: https://doi.org/10.6084/m9.figshare.13615073.v1
 doi: 10.6084/m9.figshare.13615073.v1
-citation: "Wenninger, Maier & Schmidt, Scientific Data 8, 176, 2021"
+citation: "Wenninger, Maier & Schmidt, Scientific Data8,176,2021"
 license: CC-BY-4.0
 license_url: https://creativecommons.org/licenses/by/4.0/
 license_tier: A
-license_verified: "2026-10-17, API figshare (champ license + fichier LICENSE)"
-n_series: 15
+license_verified: "2026-10-21, primary fixed Figshare API version1 and distributed LICENSE"
+n_series: 54
 length: {min: null, median: null, max: null}
 n_channels: 1
-sampling_rate_hz: 1
-label_type: multi_track
-n_states: null
-n_annotators: null
+sampling_rate_hz: null # Irregular value changes and hourly heartbeat; nominal hardware about1Hz.
+label_type: multi_label
+n_states: 39 # Reversible nonempty source-label sets;37 original label definitions retained separately.
+n_annotators: null # No supplied global annotator identities.
 label_origin: human
-unlabeled_regions: "oui : annotations pour 14 des 50 appareils seulement"
+unlabeled_regions: "All observations outside positive source intervals are-1; only14/54 traces have events, not reviewed idle negatives"
 continuous: true
 access: direct
-size: "~15 Go (zips par maison, dump SQL)"
+size: "15,301,162,142 bytes in15 primary house ZIPs; no SQL/database expansion"
 in_tsseg_bench: false
 fm_pretraining: unknown
 value: high
-value_reason: "rare : annotations manuelles début/fin d'usage pour 14 appareils (lave-vaisselle, lave-linge, sèche-linge...) sur des enregistrements de plusieurs années à 1 Hz"
-effort: medium
-confidence: medium
-notes: >-
-  15 maisons, jusqu'à 3,5 ans, 50 appareils à 1 Hz ; une maison avec secteur
-  triphasé (désagrégation). Les intervalles annotés font une piste d'états
-  d'usage (programme en cours / arrêt) par appareil : SD sur la puissance de
-  l'appareil (cycles de programmes) ou CPD. Format : base TimescaleDB
-  (import.sh + SQL) — builder plus lourd.
+value_reason: "Sparse recurring human program/usage intervals with complete native multi-year household power observations and overlapping source labels"
+effort: high
+confidence: high
+notes: >
+  All54 released traces from15houses:50appliances+4mains traces in house08.
+  Native UTC microsecond timestamps and float64 watts, including duplicate
+  measurements and power>=4000W, without resampling, clipping, interpolation
+  or optional author SQL1Hz expansion/filter. Native observations are irregular;
+  hardware nominal rate is not an assertion of a dense released1Hz grid.
+  Stable chronological sorting preserves an exactly reversible source-row index
+  through consecutive mapping runs. Original item/label/event tables retain
+  every literal source field, ID and row index; household demographics excluded.
+  All1738 source closed event intervals on14items retained,37 definitions
+  across15items; item35 has definitions but no events and remains unscored.
+  Overlap encoded as reversible active-label sets; technical/error/unknown
+  classes preserved. No invented off/standby negatives or exact physical CPs.
+  Nearest-second association follows author UI; exact half-second boundaries
+  with distinct adjacent states stay-1 due platform-dependent floating rounding.
+  Monitoring gaps>3605s are reported without filling. Split by household;
+  no supplied source train/test assignment or independent global rater tracks.
+  Complete house01/largesthouse08 pilots have exact independent source parity;
+  largestpilot validator0errors/0warnings. Full15-house acquisition in progress.
+  See docs/qualification/deddiag.md for storage gate and primary evidence.
 rejected: null

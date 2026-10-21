@@ -1,0 +1,1606 @@
+{
+  "primary_record": "https://api.figshare.com/v2/articles/13615073/versions/1",
+  "doi": "10.6084/m9.figshare.13615073.v1",
+  "snapshot_date": "2026-10-21",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "source_zip_bytes": 15301162142,
+  "scope": "All54 sparse appliance/mains streams from15houses and every1738 original annotation row/37label definitions. No resampling, SQL filtering or demographic files.",
+  "files": [
+    {
+      "id": 26179622,
+      "name": "house_01.zip",
+      "size": 77164768,
+      "download_url": "https://ndownloader.figshare.com/files/26179622",
+      "computed_md5": "75d9042ecea355cbc2a9c3f1a43b313b",
+      "metadata_member_sha256": {
+        "house_01/item_0002_annotation_labels.tsv": "86a6add5d061afb970340efdd3727bff9b7f7689ae30120ceadcc1096543652b",
+        "house_01/item_0002_annotations.tsv": "752128b52f5c4c9358b8702f85e7b5dafded7cc733a05eab544cb0b7f40322c6",
+        "house_01/item_0001_annotations.tsv": "d5fd56f02d42881afd02e50872d5b4bd4bf5c267ad0920176db584c89d19b680",
+        "house_01/item_0004_annotation_labels.tsv": "7e9458726c7f29bc037f6273e68b12114758270cc871b1e17c7e0a74de81c317",
+        "house_01/item_0004_annotations.tsv": "2984adde8d10aded177bd0f590dec4bdbe677973c908cf1520535f1318971547",
+        "house_01/item_0001_annotation_labels.tsv": "ede88074f859a7e05274c7848a254939db532bb09eb3955c818111d3bbaf69cb",
+        "house_01/items.tsv": "02c205da5851d9b8e2613c6f487f80bc9d36ee369d051e298dd88e8b505d05ef"
+      },
+      "members": [
+        {
+          "name": "house_01/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_01/item_0001_data.tsv.gz",
+          "bytes": 58164851,
+          "compressed_bytes": 58173273,
+          "crc32": "dd58dea2"
+        },
+        {
+          "name": "house_01/item_0002_annotation_labels.tsv",
+          "bytes": 64,
+          "compressed_bytes": 59,
+          "crc32": "997ddf50"
+        },
+        {
+          "name": "house_01/item_0002_data.tsv.gz",
+          "bytes": 6380487,
+          "compressed_bytes": 6381462,
+          "crc32": "78ae0036"
+        },
+        {
+          "name": "house_01/item_0002_annotations.tsv",
+          "bytes": 1891,
+          "compressed_bytes": 593,
+          "crc32": "6ce4c9cc"
+        },
+        {
+          "name": "house_01/item_0004_data.tsv.gz",
+          "bytes": 12602166,
+          "compressed_bytes": 12604081,
+          "crc32": "99cde8a1"
+        },
+        {
+          "name": "house_01/item_0001_annotations.tsv",
+          "bytes": 7391,
+          "compressed_bytes": 1626,
+          "crc32": "5d52204a"
+        },
+        {
+          "name": "house_01/item_0004_annotation_labels.tsv",
+          "bytes": 93,
+          "compressed_bytes": 80,
+          "crc32": "8f3f5ea1"
+        },
+        {
+          "name": "house_01/house.tsv",
+          "bytes": 320,
+          "compressed_bytes": 118,
+          "crc32": "ec3c7541"
+        },
+        {
+          "name": "house_01/item_0004_annotations.tsv",
+          "bytes": 3472,
+          "compressed_bytes": 1059,
+          "crc32": "d9807884"
+        },
+        {
+          "name": "house_01/item_0001_annotation_labels.tsv",
+          "bytes": 72,
+          "compressed_bytes": 59,
+          "crc32": "738ed996"
+        },
+        {
+          "name": "house_01/items.tsv",
+          "bytes": 117,
+          "compressed_bytes": 86,
+          "crc32": "08e08e8e"
+        }
+      ],
+      "sha256": "5b04b605884d0d1121fd06374dde6bb60ee7dcfc57e21852b2b284c25c785e56"
+    },
+    {
+      "id": 26179625,
+      "name": "house_00.zip",
+      "size": 455126703,
+      "download_url": "https://ndownloader.figshare.com/files/26179625",
+      "computed_md5": "1be4af9822522cad90ae98d4bec8e9cb",
+      "metadata_member_sha256": {
+        "house_00/item_0010_annotation_labels.tsv": "a17029f9f68c8ab2fe98776efdfb5818787ae099e87e17de0ef4c564664ee744",
+        "house_00/items.tsv": "af3a79a740de43d575df13f297e1821540b460a0a2329820672a319b862c6bc9",
+        "house_00/item_0010_annotations.tsv": "b51d15410c124a016a7a00d2cfb9f1a14ddbe4bb16b1eafe1b4ab79cc682db1a"
+      },
+      "members": [
+        {
+          "name": "house_00/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_00/item_0010_annotation_labels.tsv",
+          "bytes": 96,
+          "compressed_bytes": 82,
+          "crc32": "dbd392c9"
+        },
+        {
+          "name": "house_00/house.tsv",
+          "bytes": 434,
+          "compressed_bytes": 126,
+          "crc32": "1968f899"
+        },
+        {
+          "name": "house_00/item_0010_data.tsv.gz",
+          "bytes": 455059056,
+          "compressed_bytes": 455122607,
+          "crc32": "dd49800e"
+        },
+        {
+          "name": "house_00/items.tsv",
+          "bytes": 60,
+          "compressed_bytes": 50,
+          "crc32": "c24641c1"
+        },
+        {
+          "name": "house_00/item_0010_annotations.tsv",
+          "bytes": 10647,
+          "compressed_bytes": 2750,
+          "crc32": "21133a04"
+        }
+      ],
+      "sha256": "7c5d2a54711c3ed4326093eaa4df23202a5e05b7c1e935d672ef9625b22b0bb6"
+    },
+    {
+      "id": 26179628,
+      "name": "house_02.zip",
+      "size": 1498300841,
+      "download_url": "https://ndownloader.figshare.com/files/26179628",
+      "computed_md5": "46e96ccc2b2bdf91dbd4051c941568d8",
+      "metadata_member_sha256": {
+        "house_02/item_0011_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_02/item_0012_annotation_labels.tsv": "20d2d95d8b7399210ea0f51f4e4f95d146f06c45fa67dbbbd085ca7f53849323",
+        "house_02/item_0012_annotations.tsv": "45eae842356da255181b3768827c9d6b9cf00abe2bab5743ae2869ddf26b17bb",
+        "house_02/item_0011_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_02/items.tsv": "a5e33e603531773a79f265b54eda5bace53fd0be90fd8442f6cacb2b0c50f012"
+      },
+      "members": [
+        {
+          "name": "house_02/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_02/item_0011_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_02/item_0012_annotation_labels.tsv",
+          "bytes": 42,
+          "compressed_bytes": 42,
+          "crc32": "4a854baf"
+        },
+        {
+          "name": "house_02/item_0012_data.tsv.gz",
+          "bytes": 35457155,
+          "compressed_bytes": 35462489,
+          "crc32": "c90cc017"
+        },
+        {
+          "name": "house_02/item_0012_annotations.tsv",
+          "bytes": 3560,
+          "compressed_bytes": 1033,
+          "crc32": "5aa21ea8"
+        },
+        {
+          "name": "house_02/house.tsv",
+          "bytes": 232,
+          "compressed_bytes": 119,
+          "crc32": "c2eac9ae"
+        },
+        {
+          "name": "house_02/item_0011_data.tsv.gz",
+          "bytes": 1462602683,
+          "compressed_bytes": 1462835349,
+          "crc32": "116b9100"
+        },
+        {
+          "name": "house_02/item_0011_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_02/items.tsv",
+          "bytes": 87,
+          "compressed_bytes": 65,
+          "crc32": "dd4d2af9"
+        }
+      ],
+      "sha256": "5d016996172b83c1a4c97139d2f951adc7d04f5f75ba149c3564f67ad635d0b7"
+    },
+    {
+      "id": 26179640,
+      "name": "house_03.zip",
+      "size": 1582254844,
+      "download_url": "https://ndownloader.figshare.com/files/26179640",
+      "computed_md5": "0e5a11bcef49bf4e396d49e92522a454",
+      "metadata_member_sha256": {
+        "house_03/item_0013_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_03/item_0013_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_03/item_0016_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_03/item_0014_annotations.tsv": "230fedcdb6fe02c30751efc0d1a1a91adc8e1709811f37bc4f9bf04a5ccb2698",
+        "house_03/item_0016_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_03/item_0014_annotation_labels.tsv": "cafb71b2e67beac3da82b5fdae246045ac009ed6a3fe58552e626410f1aea6c4",
+        "house_03/items.tsv": "8a561e80870e75c5423f2671a6ea0b7aad5fde14448d0f747dfba4a6c99bad90"
+      },
+      "members": [
+        {
+          "name": "house_03/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_03/item_0014_data.tsv.gz",
+          "bytes": 38829528,
+          "compressed_bytes": 38835780,
+          "crc32": "30846a28"
+        },
+        {
+          "name": "house_03/item_0013_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_03/item_0013_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_03/item_0013_data.tsv.gz",
+          "bytes": 587067718,
+          "compressed_bytes": 587162945,
+          "crc32": "b5ab08ad"
+        },
+        {
+          "name": "house_03/item_0016_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_03/item_0014_annotations.tsv",
+          "bytes": 141,
+          "compressed_bytes": 95,
+          "crc32": "6f228198"
+        },
+        {
+          "name": "house_03/house.tsv",
+          "bytes": 222,
+          "compressed_bytes": 108,
+          "crc32": "1ff4386c"
+        },
+        {
+          "name": "house_03/item_0016_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_03/item_0014_annotation_labels.tsv",
+          "bytes": 76,
+          "compressed_bytes": 62,
+          "crc32": "048daf0a"
+        },
+        {
+          "name": "house_03/items.tsv",
+          "bytes": 142,
+          "compressed_bytes": 127,
+          "crc32": "0ad33473"
+        },
+        {
+          "name": "house_03/item_0016_data.tsv.gz",
+          "bytes": 956099763,
+          "compressed_bytes": 956253327,
+          "crc32": "0c13a663"
+        }
+      ],
+      "sha256": "73a663fd9dad69f78d6533880c0334ace381391fe8a0b6b3be36874e013fbb93"
+    },
+    {
+      "id": 26179643,
+      "name": "house_04.zip",
+      "size": 1896060539,
+      "download_url": "https://ndownloader.figshare.com/files/26179643",
+      "computed_md5": "ef177a9b19cad755aa3b842da92e7d96",
+      "metadata_member_sha256": {
+        "house_04/item_0017_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_04/item_0017_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_04/item_0019_annotation_labels.tsv": "e86fe141144dbd151957286850f900bb4b6b4dbc313d8f89fd38922be6badab4",
+        "house_04/item_0020_annotation_labels.tsv": "cdae74d41632668a8e81443497d3303db7606ed3de53f8913dd9744fb2c47e9a",
+        "house_04/item_0018_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_04/item_0018_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_04/item_0020_annotations.tsv": "7b4928a7d7aa16b4da182b0f371ee54fda5b71a74910d4ef3fca3fa90e513a07",
+        "house_04/items.tsv": "44d76fc5e89bd771476248622d6d6d3820e03ca3dda7c4e45fcfa33190f26594",
+        "house_04/item_0019_annotations.tsv": "e3145aa114fdd98a606368d18b17323c02b859484cf20db7c98ff5cc90fe6bc8"
+      },
+      "members": [
+        {
+          "name": "house_04/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_04/item_0017_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_04/item_0019_data.tsv.gz",
+          "bytes": 212897129,
+          "compressed_bytes": 212929696,
+          "crc32": "f547db8e"
+        },
+        {
+          "name": "house_04/item_0017_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_04/item_0019_annotation_labels.tsv",
+          "bytes": 142,
+          "compressed_bytes": 116,
+          "crc32": "19765a71"
+        },
+        {
+          "name": "house_04/item_0020_annotation_labels.tsv",
+          "bytes": 155,
+          "compressed_bytes": 111,
+          "crc32": "d92a6555"
+        },
+        {
+          "name": "house_04/item_0020_data.tsv.gz",
+          "bytes": 115059422,
+          "compressed_bytes": 115077546,
+          "crc32": "888eb878"
+        },
+        {
+          "name": "house_04/item_0018_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_04/item_0018_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_04/house.tsv",
+          "bytes": 317,
+          "compressed_bytes": 128,
+          "crc32": "6deef802"
+        },
+        {
+          "name": "house_04/item_0017_data.tsv.gz",
+          "bytes": 489309883,
+          "compressed_bytes": 489382600,
+          "crc32": "a9f8ec81"
+        },
+        {
+          "name": "house_04/item_0020_annotations.tsv",
+          "bytes": 8135,
+          "compressed_bytes": 2358,
+          "crc32": "45d7a258"
+        },
+        {
+          "name": "house_04/items.tsv",
+          "bytes": 170,
+          "compressed_bytes": 142,
+          "crc32": "d53e5a3a"
+        },
+        {
+          "name": "house_04/item_0019_annotations.tsv",
+          "bytes": 7353,
+          "compressed_bytes": 2234,
+          "crc32": "f7f6b224"
+        },
+        {
+          "name": "house_04/item_0018_data.tsv.gz",
+          "bytes": 1078506991,
+          "compressed_bytes": 1078662616,
+          "crc32": "0155653d"
+        }
+      ],
+      "sha256": "96304d6a163af7bf01fc6d85712b85571449361ae556e4d1b5c43407ae4c1cbb"
+    },
+    {
+      "id": 26179646,
+      "name": "house_05.zip",
+      "size": 1100028065,
+      "download_url": "https://ndownloader.figshare.com/files/26179646",
+      "computed_md5": "025e6cea9ac33ed70a44a828399f4dd7",
+      "metadata_member_sha256": {
+        "house_05/item_0009_annotations.tsv": "29fe3bc886e941da921309f7b93cf4ea94a44d56b6cade07563419ea2f641fda",
+        "house_05/item_0030_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_05/item_0009_annotation_labels.tsv": "f1381190ea834535171d045cb7c14f1b671a5b92753ed5930ce4cbc434c03297",
+        "house_05/item_0006_annotation_labels.tsv": "5cc2a3d736c904799708b6d0938eb7678b0570bd908067b895249aa4e1ac2b84",
+        "house_05/item_0008_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_05/item_0008_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_05/item_0006_annotations.tsv": "ea279f82f08ec2334baf02882b6ffc7584e3d4f86c2fdaea4eb2ad6e9259a51d",
+        "house_05/item_0030_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_05/item_0005_annotations.tsv": "7274af0ff89763ec8342b48d49fc61cf97aa637f0b6d85aac4d0706eb6a277ac",
+        "house_05/items.tsv": "879552718f2c65cb6876ce6af654b16db7461d5b252998abe217e0c504816a0a",
+        "house_05/item_0005_annotation_labels.tsv": "e93cb3ef896aa113aedf4581f5849d0ce752d2f52dce7f85505f73c4bc32ab3b"
+      },
+      "members": [
+        {
+          "name": "house_05/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_05/item_0009_annotations.tsv",
+          "bytes": 10473,
+          "compressed_bytes": 2442,
+          "crc32": "238ff797"
+        },
+        {
+          "name": "house_05/item_0030_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_05/item_0030_data.tsv.gz",
+          "bytes": 25593032,
+          "compressed_bytes": 25597057,
+          "crc32": "5ee737cf"
+        },
+        {
+          "name": "house_05/item_0009_annotation_labels.tsv",
+          "bytes": 57,
+          "compressed_bytes": 57,
+          "crc32": "18d32a05"
+        },
+        {
+          "name": "house_05/item_0006_annotation_labels.tsv",
+          "bytes": 133,
+          "compressed_bytes": 111,
+          "crc32": "cca1947c"
+        },
+        {
+          "name": "house_05/item_0008_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_05/item_0008_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_05/item_0005_data.tsv.gz",
+          "bytes": 43876455,
+          "compressed_bytes": 43883393,
+          "crc32": "58420ebe"
+        },
+        {
+          "name": "house_05/item_0006_data.tsv.gz",
+          "bytes": 28421792,
+          "compressed_bytes": 28426278,
+          "crc32": "baef9e01"
+        },
+        {
+          "name": "house_05/item_0006_annotations.tsv",
+          "bytes": 3937,
+          "compressed_bytes": 1200,
+          "crc32": "dba4eb02"
+        },
+        {
+          "name": "house_05/house.tsv",
+          "bytes": 225,
+          "compressed_bytes": 123,
+          "crc32": "1af168c8"
+        },
+        {
+          "name": "house_05/item_0030_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_05/item_0008_data.tsv.gz",
+          "bytes": 794420948,
+          "compressed_bytes": 794544753,
+          "crc32": "eef078cc"
+        },
+        {
+          "name": "house_05/item_0005_annotations.tsv",
+          "bytes": 13347,
+          "compressed_bytes": 4103,
+          "crc32": "d0872b3b"
+        },
+        {
+          "name": "house_05/item_0009_data.tsv.gz",
+          "bytes": 207534054,
+          "compressed_bytes": 207564736,
+          "crc32": "0b7aee26"
+        },
+        {
+          "name": "house_05/items.tsv",
+          "bytes": 193,
+          "compressed_bytes": 154,
+          "crc32": "d4be6cd4"
+        },
+        {
+          "name": "house_05/item_0005_annotation_labels.tsv",
+          "bytes": 88,
+          "compressed_bytes": 74,
+          "crc32": "407cf75e"
+        }
+      ],
+      "sha256": "5754777e3df8a276ca0bd6e311ca3b8f2fb144d92e2ded51afb48e330eeeba50"
+    },
+    {
+      "id": 26179649,
+      "name": "house_06.zip",
+      "size": 698606871,
+      "download_url": "https://ndownloader.figshare.com/files/26179649",
+      "computed_md5": "ea006dce4590ee047a5ba264b4a43010",
+      "metadata_member_sha256": {
+        "house_06/item_0031_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_06/item_0034_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_06/item_0034_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_06/item_0033_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_06/item_0032_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_06/item_0036_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_06/item_0036_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_06/item_0031_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_06/item_0033_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_06/item_0037_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_06/item_0032_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_06/item_0037_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_06/items.tsv": "b8de4e404e1ff94946052c8a4118c47ffef66b4c153fa70fd684be57579fb8e9"
+      },
+      "members": [
+        {
+          "name": "house_06/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_06/item_0037_data.tsv.gz",
+          "bytes": 193867473,
+          "compressed_bytes": 193898285,
+          "crc32": "6ac0c5fe"
+        },
+        {
+          "name": "house_06/item_0031_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_06/item_0034_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_06/item_0034_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_06/item_0033_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_06/item_0032_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_06/item_0036_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_06/item_0036_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_06/item_0031_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_06/item_0031_data.tsv.gz",
+          "bytes": 197321707,
+          "compressed_bytes": 197353423,
+          "crc32": "4accd634"
+        },
+        {
+          "name": "house_06/item_0034_data.tsv.gz",
+          "bytes": 75423376,
+          "compressed_bytes": 75435382,
+          "crc32": "cba770f4"
+        },
+        {
+          "name": "house_06/item_0032_data.tsv.gz",
+          "bytes": 208166474,
+          "compressed_bytes": 208199647,
+          "crc32": "cb6dbb23"
+        },
+        {
+          "name": "house_06/item_0033_data.tsv.gz",
+          "bytes": 4537533,
+          "compressed_bytes": 4538208,
+          "crc32": "8df291ca"
+        },
+        {
+          "name": "house_06/house.tsv",
+          "bytes": 435,
+          "compressed_bytes": 135,
+          "crc32": "63578e30"
+        },
+        {
+          "name": "house_06/item_0033_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_06/item_0037_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_06/item_0036_data.tsv.gz",
+          "bytes": 19174122,
+          "compressed_bytes": 19177195,
+          "crc32": "d0eef69f"
+        },
+        {
+          "name": "house_06/item_0032_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_06/item_0037_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_06/items.tsv",
+          "bytes": 256,
+          "compressed_bytes": 164,
+          "crc32": "74679d76"
+        }
+      ],
+      "sha256": "5a47ebe9b257a973ec144e89129674a31e494e29479d23db921bc5b2ca896296"
+    },
+    {
+      "id": 26179658,
+      "name": "house_07.zip",
+      "size": 1094338622,
+      "download_url": "https://ndownloader.figshare.com/files/26179658",
+      "computed_md5": "b04b1dff6fe2f2b0e0b1a7337552eff1",
+      "metadata_member_sha256": {
+        "house_07/item_0071_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_07/item_0069_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_07/item_0071_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_07/item_0069_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_07/item_0070_annotations.tsv": "799e58d49d0642d70c56a199eebeb816c671e48a65dfeb5d3cb0d809f1bb0c01",
+        "house_07/item_0068_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_07/item_0068_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_07/item_0070_annotation_labels.tsv": "9f91e7ebcbc9a145fb2cc1d630dea0cd3bf86e0ca7266e04fc091894e4fa24b9",
+        "house_07/items.tsv": "35727834c019f49c746c85d4a57410632a778207f176b289785358902e6d2fac"
+      },
+      "members": [
+        {
+          "name": "house_07/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_07/item_0071_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_07/item_0069_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_07/item_0071_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_07/item_0069_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_07/item_0070_annotations.tsv",
+          "bytes": 143,
+          "compressed_bytes": 87,
+          "crc32": "2156274b"
+        },
+        {
+          "name": "house_07/item_0069_data.tsv.gz",
+          "bytes": 202674715,
+          "compressed_bytes": 202707439,
+          "crc32": "d1d8dde9"
+        },
+        {
+          "name": "house_07/item_0071_data.tsv.gz",
+          "bytes": 114047229,
+          "compressed_bytes": 114065598,
+          "crc32": "0392e899"
+        },
+        {
+          "name": "house_07/house.tsv",
+          "bytes": 512,
+          "compressed_bytes": 120,
+          "crc32": "679c0b14"
+        },
+        {
+          "name": "house_07/item_0068_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_07/item_0068_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_07/item_0068_data.tsv.gz",
+          "bytes": 115875410,
+          "compressed_bytes": 115891382,
+          "crc32": "88888a03"
+        },
+        {
+          "name": "house_07/item_0070_annotation_labels.tsv",
+          "bytes": 68,
+          "compressed_bytes": 67,
+          "crc32": "b9b34b7b"
+        },
+        {
+          "name": "house_07/item_0070_data.tsv.gz",
+          "bytes": 661564009,
+          "compressed_bytes": 661670738,
+          "crc32": "3795262c"
+        },
+        {
+          "name": "house_07/items.tsv",
+          "bytes": 159,
+          "compressed_bytes": 135,
+          "crc32": "72799e79"
+        }
+      ],
+      "sha256": "5600992f76060bca1dad74391bdd80aa05a1ef16228552bfd08478820878877b"
+    },
+    {
+      "id": 26179694,
+      "name": "house_08.zip",
+      "size": 2141569918,
+      "download_url": "https://ndownloader.figshare.com/files/26179694",
+      "computed_md5": "a8c9a7cd8e83a4ad469fb1fc131f3d9b",
+      "metadata_member_sha256": {
+        "house_08/item_0035_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_08/item_0059_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_08/item_0053_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_08/item_0051_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_08/item_0028_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_08/item_0027_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_08/item_0028_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_08/item_0035_annotation_labels.tsv": "b8f070d242f2e66fbbf57d19ea68f8d54786723c76ca905eb3cec108dff5cef7",
+        "house_08/item_0026_annotation_labels.tsv": "b52eb8ab9eec0a16d6ee57f0e0f76f1880c043325d87b3a7218480d56950a1bc",
+        "house_08/item_0051_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_08/item_0059_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_08/item_0053_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_08/item_0052_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_08/item_0024_annotations.tsv": "e9c032fe763803559b203d0d28e36fe0d80785d9934e9148c3143ae83eb99046",
+        "house_08/item_0027_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_08/item_0052_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_08/item_0024_annotation_labels.tsv": "aa3360d8b4b760f395715ec29291d55c3ef97d66f44874fe4705be49e5b04f5e",
+        "house_08/items.tsv": "2277e51857d6784fe4e8df33029cb071fa6957237bf90cacf06debf52e03d347",
+        "house_08/item_0026_annotations.tsv": "8e0c6e109c05314a9dbdfe8cdb0d9649f908dd5e467b0cdced31bbae6eb32686"
+      },
+      "members": [
+        {
+          "name": "house_08/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_08/item_0035_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_08/item_0052_data.tsv.gz",
+          "bytes": 171337359,
+          "compressed_bytes": 171214081,
+          "crc32": "dbd99bf4"
+        },
+        {
+          "name": "house_08/item_0059_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_08/item_0053_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_08/item_0026_data.tsv.gz",
+          "bytes": 57643953,
+          "compressed_bytes": 57653019,
+          "crc32": "917b8e6a"
+        },
+        {
+          "name": "house_08/item_0051_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_08/item_0028_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_08/item_0027_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_08/item_0028_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_08/item_0035_annotation_labels.tsv",
+          "bytes": 42,
+          "compressed_bytes": 42,
+          "crc32": "d1e2472c"
+        },
+        {
+          "name": "house_08/item_0026_annotation_labels.tsv",
+          "bytes": 69,
+          "compressed_bytes": 64,
+          "crc32": "82a22f64"
+        },
+        {
+          "name": "house_08/item_0051_data.tsv.gz",
+          "bytes": 184872062,
+          "compressed_bytes": 184750692,
+          "crc32": "657ffea5"
+        },
+        {
+          "name": "house_08/item_0024_data.tsv.gz",
+          "bytes": 30928071,
+          "compressed_bytes": 30932990,
+          "crc32": "8395a6c0"
+        },
+        {
+          "name": "house_08/item_0027_data.tsv.gz",
+          "bytes": 450678475,
+          "compressed_bytes": 450750592,
+          "crc32": "8d5f227c"
+        },
+        {
+          "name": "house_08/item_0053_data.tsv.gz",
+          "bytes": 176381396,
+          "compressed_bytes": 176362492,
+          "crc32": "8ac2b388"
+        },
+        {
+          "name": "house_08/item_0059_data.tsv.gz",
+          "bytes": 188721089,
+          "compressed_bytes": 188674303,
+          "crc32": "72830ebd"
+        },
+        {
+          "name": "house_08/item_0051_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_08/item_0035_data.tsv.gz",
+          "bytes": 428855203,
+          "compressed_bytes": 428923839,
+          "crc32": "cde91677"
+        },
+        {
+          "name": "house_08/item_0059_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_08/item_0053_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_08/item_0052_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_08/item_0024_annotations.tsv",
+          "bytes": 5041,
+          "compressed_bytes": 1478,
+          "crc32": "e7bbeb48"
+        },
+        {
+          "name": "house_08/item_0027_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_08/house.tsv",
+          "bytes": 214,
+          "compressed_bytes": 98,
+          "crc32": "9238f597"
+        },
+        {
+          "name": "house_08/item_0052_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_08/item_0028_data.tsv.gz",
+          "bytes": 452232039,
+          "compressed_bytes": 452296419,
+          "crc32": "eec76985"
+        },
+        {
+          "name": "house_08/item_0024_annotation_labels.tsv",
+          "bytes": 63,
+          "compressed_bytes": 63,
+          "crc32": "c99f0eae"
+        },
+        {
+          "name": "house_08/items.tsv",
+          "bytes": 408,
+          "compressed_bytes": 200,
+          "crc32": "4aeeca97"
+        },
+        {
+          "name": "house_08/item_0026_annotations.tsv",
+          "bytes": 11391,
+          "compressed_bytes": 3302,
+          "crc32": "eb2f5b11"
+        }
+      ],
+      "sha256": "1930010e05bc0c54bc975c7e3605ac7ab83b6fc4836f1bf09cc3ed31eb8b9e8e"
+    },
+    {
+      "id": 26179697,
+      "name": "house_09.zip",
+      "size": 1451744338,
+      "download_url": "https://ndownloader.figshare.com/files/26179697",
+      "computed_md5": "3e7a1424b007465d385479b726f2b1e8",
+      "metadata_member_sha256": {
+        "house_09/item_0044_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_09/item_0045_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_09/item_0045_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_09/item_0046_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_09/item_0046_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_09/item_0044_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_09/items.tsv": "e52be7d58def5cf1868ca7a81e13e32bcb5c48d4d758d9fdfd9219e678b1c82f"
+      },
+      "members": [
+        {
+          "name": "house_09/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_09/item_0044_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_09/item_0045_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_09/item_0045_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_09/item_0046_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_09/item_0046_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_09/item_0044_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_09/item_0044_data.tsv.gz",
+          "bytes": 353571992,
+          "compressed_bytes": 353628403,
+          "crc32": "16114738"
+        },
+        {
+          "name": "house_09/house.tsv",
+          "bytes": 231,
+          "compressed_bytes": 120,
+          "crc32": "e176dec7"
+        },
+        {
+          "name": "house_09/item_0045_data.tsv.gz",
+          "bytes": 1019659040,
+          "compressed_bytes": 1019819383,
+          "crc32": "b7cd3a00"
+        },
+        {
+          "name": "house_09/item_0046_data.tsv.gz",
+          "bytes": 78281239,
+          "compressed_bytes": 78293883,
+          "crc32": "05beede8"
+        },
+        {
+          "name": "house_09/items.tsv",
+          "bytes": 126,
+          "compressed_bytes": 85,
+          "crc32": "8b52c9c1"
+        }
+      ],
+      "sha256": "914caddaccc93e9c354625f27d300f4cb223f67d0c1404411ff2859d5436ea14"
+    },
+    {
+      "id": 26179700,
+      "name": "house_10.zip",
+      "size": 843042536,
+      "download_url": "https://ndownloader.figshare.com/files/26179700",
+      "computed_md5": "dd5f360092e907e2480053f33c4c2d9f",
+      "metadata_member_sha256": {
+        "house_10/item_0067_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_10/item_0066_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_10/item_0065_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_10/item_0067_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_10/item_0065_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_10/items.tsv": "fdacb34f4ea132daaca94719f29a9e3cc6bcac3cad55ef39e03b20b8e57aec5b",
+        "house_10/item_0066_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8"
+      },
+      "members": [
+        {
+          "name": "house_10/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_10/item_0067_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_10/item_0067_data.tsv.gz",
+          "bytes": 39377586,
+          "compressed_bytes": 39383148,
+          "crc32": "c22ef41e"
+        },
+        {
+          "name": "house_10/item_0065_data.tsv.gz",
+          "bytes": 764565765,
+          "compressed_bytes": 764687302,
+          "crc32": "ec33e2bc"
+        },
+        {
+          "name": "house_10/item_0066_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_10/item_0065_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_10/item_0066_data.tsv.gz",
+          "bytes": 38963411,
+          "compressed_bytes": 38969437,
+          "crc32": "14412d16"
+        },
+        {
+          "name": "house_10/item_0067_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_10/house.tsv",
+          "bytes": 215,
+          "compressed_bytes": 99,
+          "crc32": "8c1b6da5"
+        },
+        {
+          "name": "house_10/item_0065_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_10/items.tsv",
+          "bytes": 129,
+          "compressed_bytes": 86,
+          "crc32": "eb0269ce"
+        },
+        {
+          "name": "house_10/item_0066_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        }
+      ],
+      "sha256": "3a876190539ea4722bfe54cdea985ed3277962d1171bb01b58b4893b4110b3e9"
+    },
+    {
+      "id": 26179703,
+      "name": "house_11.zip",
+      "size": 7562178,
+      "download_url": "https://ndownloader.figshare.com/files/26179703",
+      "computed_md5": "bbb589872ba3d8fdf401d8393d1fbb18",
+      "metadata_member_sha256": {
+        "house_11/item_0038_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_11/items.tsv": "f3b9f11cf56ae632df7881f49a5dabc2991b75fd195973ccb00463a850344b39",
+        "house_11/item_0038_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297"
+      },
+      "members": [
+        {
+          "name": "house_11/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_11/item_0038_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_11/item_0038_data.tsv.gz",
+          "bytes": 7559818,
+          "compressed_bytes": 7560884,
+          "crc32": "6f0826e3"
+        },
+        {
+          "name": "house_11/house.tsv",
+          "bytes": 215,
+          "compressed_bytes": 99,
+          "crc32": "d9b19f16"
+        },
+        {
+          "name": "house_11/items.tsv",
+          "bytes": 47,
+          "compressed_bytes": 43,
+          "crc32": "babfb228"
+        },
+        {
+          "name": "house_11/item_0038_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        }
+      ],
+      "sha256": "1d1a2d3b704196a6fc9e62d92a21ebef5a4f24b4ccab2c27c1fc60390783e90b"
+    },
+    {
+      "id": 26179706,
+      "name": "house_12.zip",
+      "size": 188890006,
+      "download_url": "https://ndownloader.figshare.com/files/26179706",
+      "computed_md5": "6a16cde682ce4e79c84777e288ce1635",
+      "metadata_member_sha256": {
+        "house_12/item_0063_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_12/item_0064_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_12/item_0062_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_12/item_0061_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_12/item_0061_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_12/item_0064_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_12/item_0063_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_12/items.tsv": "067c3300b7339b794d5534ee66babff9a20005bf0b681dcaf121ca4466a68d28",
+        "house_12/item_0062_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297"
+      },
+      "members": [
+        {
+          "name": "house_12/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_12/item_0063_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_12/item_0061_data.tsv.gz",
+          "bytes": 22659405,
+          "compressed_bytes": 22662981,
+          "crc32": "74e21e0e"
+        },
+        {
+          "name": "house_12/item_0064_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_12/item_0062_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_12/item_0061_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_12/item_0061_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_12/item_0064_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_12/house.tsv",
+          "bytes": 320,
+          "compressed_bytes": 134,
+          "crc32": "38a6c173"
+        },
+        {
+          "name": "house_12/item_0062_data.tsv.gz",
+          "bytes": 30646320,
+          "compressed_bytes": 30651202,
+          "crc32": "44a655a5"
+        },
+        {
+          "name": "house_12/item_0064_data.tsv.gz",
+          "bytes": 126251404,
+          "compressed_bytes": 126269460,
+          "crc32": "83178d6a"
+        },
+        {
+          "name": "house_12/item_0063_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_12/items.tsv",
+          "bytes": 147,
+          "compressed_bytes": 96,
+          "crc32": "710cd705"
+        },
+        {
+          "name": "house_12/item_0063_data.tsv.gz",
+          "bytes": 9301598,
+          "compressed_bytes": 9303013,
+          "crc32": "1efad077"
+        },
+        {
+          "name": "house_12/item_0062_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        }
+      ],
+      "sha256": "1c7c8fc766743a3ff86f95ab39ff3c16103e231460af2d3e33edf299da6f1473"
+    },
+    {
+      "id": 26179709,
+      "name": "house_13.zip",
+      "size": 516607222,
+      "download_url": "https://ndownloader.figshare.com/files/26179709",
+      "computed_md5": "98614ed869a4e140c6d972ab0b02aab7",
+      "metadata_member_sha256": {
+        "house_13/item_0039_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_13/item_0041_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_13/item_0039_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_13/item_0040_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_13/item_0041_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_13/items.tsv": "6381353cd69c887e77447e86ba8e30cc4a6b44a8bd3d82969a36571a05d9fd94",
+        "house_13/item_0040_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297"
+      },
+      "members": [
+        {
+          "name": "house_13/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_13/item_0039_data.tsv.gz",
+          "bytes": 42937954,
+          "compressed_bytes": 42944843,
+          "crc32": "dae67c2d"
+        },
+        {
+          "name": "house_13/item_0039_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_13/item_0041_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_13/item_0039_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_13/house.tsv",
+          "bytes": 210,
+          "compressed_bytes": 111,
+          "crc32": "2f629d6e"
+        },
+        {
+          "name": "house_13/item_0040_data.tsv.gz",
+          "bytes": 7664661,
+          "compressed_bytes": 7665826,
+          "crc32": "3c68c3c4"
+        },
+        {
+          "name": "house_13/item_0040_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_13/item_0041_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_13/item_0041_data.tsv.gz",
+          "bytes": 465921273,
+          "compressed_bytes": 465993892,
+          "crc32": "ded8e733"
+        },
+        {
+          "name": "house_13/items.tsv",
+          "bytes": 129,
+          "compressed_bytes": 86,
+          "crc32": "8b81870c"
+        },
+        {
+          "name": "house_13/item_0040_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        }
+      ],
+      "sha256": "86c214f15000164ce4ad82ab8deda3fdd390ea82a5505f13c96d48fb4a44dd55"
+    },
+    {
+      "id": 26179712,
+      "name": "house_14.zip",
+      "size": 1749864691,
+      "download_url": "https://ndownloader.figshare.com/files/26179712",
+      "computed_md5": "1a53ceacbdce9ca1aa671dd17cb5b668",
+      "metadata_member_sha256": {
+        "house_14/item_0082_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_14/item_0083_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_14/item_0081_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8",
+        "house_14/item_0081_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_14/item_0083_annotation_labels.tsv": "501d9962920b1a16739126c552144c4ada41fda1c54e152e0cb4cd753057e297",
+        "house_14/items.tsv": "13060f163994d77ec240056a2a240ac7c6e49f98c2f040db8ff7b12e08e9f7cf",
+        "house_14/item_0082_annotations.tsv": "0d956cd38834e35b5c7674dd7f213beed618fb6b40deb7d75a678b6cd3225ae8"
+      },
+      "members": [
+        {
+          "name": "house_14/",
+          "bytes": 0,
+          "compressed_bytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "house_14/item_0082_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_14/item_0081_data.tsv.gz",
+          "bytes": 637105959,
+          "compressed_bytes": 637200482,
+          "crc32": "7121a17a"
+        },
+        {
+          "name": "house_14/item_0083_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_14/item_0081_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        },
+        {
+          "name": "house_14/house.tsv",
+          "bytes": 17,
+          "compressed_bytes": 17,
+          "crc32": "4df847f4"
+        },
+        {
+          "name": "house_14/item_0083_data.tsv.gz",
+          "bytes": 80533990,
+          "compressed_bytes": 80546838,
+          "crc32": "4ccb653b"
+        },
+        {
+          "name": "house_14/item_0081_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_14/item_0083_annotation_labels.tsv",
+          "bytes": 28,
+          "compressed_bytes": 28,
+          "crc32": "5660ec2f"
+        },
+        {
+          "name": "house_14/item_0082_data.tsv.gz",
+          "bytes": 1031949460,
+          "compressed_bytes": 1032114801,
+          "crc32": "11a1a7c7"
+        },
+        {
+          "name": "house_14/items.tsv",
+          "bytes": 121,
+          "compressed_bytes": 89,
+          "crc32": "f9f70315"
+        },
+        {
+          "name": "house_14/item_0082_annotations.tsv",
+          "bytes": 41,
+          "compressed_bytes": 36,
+          "crc32": "684fa305"
+        }
+      ],
+      "sha256": "de90d1019e2536dab87cba3fd4ab026c87b1268b6e7adb133ec51be8a9df6dee"
+    }
+  ],
+  "author_loader_commit": "d7b551bfa9692624e28238fbde5bd54806f0bda0",
+  "source_documents": [
+    {
+      "name": "README-source.md",
+      "sha256": "51563378088611bcd8459a5b06842c45a60130ac8478411504920c710fdaf2c1"
+    },
+    {
+      "name": "LICENSE-source.txt",
+      "sha256": "64a0fa1c0fec4f1af7592e5a51cf0a2e09f42b2a4edaf96269ecd152bffd2706"
+    },
+    {
+      "name": "create_tables_0.sql",
+      "sha256": "bbae8c02dec892b086f3cdc6bc017cb2ce8aaad44bec8ca8803aa683365f5dea"
+    },
+    {
+      "name": "create_tables_1.sql",
+      "sha256": "fb68a9e5ff1af959b4a97520971a75617d6bf240e55981b5c3463dc4f43dc9db"
+    }
+  ],
+  "storage_gate": {
+    "pilots": [
+      {
+        "house": 1,
+        "source_zip_bytes": 77164768,
+        "complete_output_and_aux_bytes": 53675356,
+        "output_to_source_ratio": 0.6955940825222205,
+        "independent_exact_parity": true
+      },
+      {
+        "house": 8,
+        "source_zip_bytes": 2141569918,
+        "complete_output_and_aux_bytes": 1859526566,
+        "output_to_source_ratio": 0.8683006566213823,
+        "independent_exact_parity": true
+      }
+    ],
+    "method": "Maximum complete pilot output/ZIP ratio times all15 source ZIP bytes, multiplied by1.25, plus64MiB; auxiliary tables included. Add4GiB scratch and18GiB reserve. Cached pilot outputs remain charged in current free space.",
+    "output_with_margin_bytes": 16674620283,
+    "scratch_bytes": 4294967296,
+    "reserve_bytes": 19327352832,
+    "before_full_build": {
+      "free_bytes": 71785308160,
+      "available_ram_bytes": 17368784896,
+      "remaining_source_bytes": 0,
+      "projected_free_bytes": 50815720581
+    }
+  }
+}

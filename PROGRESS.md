@@ -1022,3 +1022,33 @@ Decided by the user on 2026-10-18:
   67,786,424,320 ->70,036,291,584B. Other caches/pilots/logs untouched.
   Logs raw/wesad-{acquisition,full-build,full-validation,full-reconstruction}.log;
   source pins/qualification/README/registry updated. No publication or push.
+
+
+- [ ] Batch3 / DEDDIAG resumed (2026-10-21): fixed Figshare v1 CC BY4.0
+  primary metadata audited across all15houses. Scope corrected to54 native
+  sparse traces (50appliances+4mains),1738 unique positive event rows/14items,
+  37 label definitions/15items; item35 has definitions but no events. Exported
+  observations are irregular value changes/hourly heartbeat, not a dense1Hz
+  grid. Preserve every timestamp/value, >=4000W, duplicates and original fields;
+  stable chronological ordering is exactly invertible through source-row runs.
+  Overlap becomes reversible active-label sets, outside positive coverage -1,
+  no inferred off/standby or annotator identity. Half-second differing-boundary
+  associations remain unscored because source round(float8) tie policy varies.
+  House01 pilot5,892,665points ->53,675,356B; largesthouse08 pilot194,656,014
+  points/9traces ->1,859,526,566B. Independent pilots3/3 and9/9 exact original
+  order, time/value, rawmetadata, overlaps and gaps. Largestpilot validator0/0
+  (17files/8parts). Full output+aux projection maxpilotratio×15.301GB×1.25
+  +64MiB=16,674,620,283B; scratch4GiB, strict18GiBreserve. Free84.980GB at
+  fullacquisition launch vs13.082GBremaining ZIPs leaves50.928GB projected.
+  One acquisition job,<=4 capped32MiB Range206 streams, ETag/retries/MD5/SHA,
+  perMiB disk guard and atomic raw/deddiag/complete-pins.json checkpoint.
+  All15 SHA/fullbuild/independent corpus parity/validator0/0 still required.
+  No source cleanup or publication; see docs/qualification/deddiag.md.
+
+
+  DEDDIAG full source acquisition complete:15/15 archives, all provider MD5
+  and fixed SHA256 verified; builders/checksums/deddiag.json complete and frozen.
+  Fresh build gate71,785,308,160B free,17,368,784,896B RAM available;
+  projected free after output+aux and scratch50,815,720,581B >18GiB reserve.
+  Full54-trace build started alone, log raw/deddiag-full-build.log; all source
+  ZIPs retained. Independent full source reconstruction and validator0/0 pending.

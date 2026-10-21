@@ -403,12 +403,12 @@ datasets:
     registry: industry_energy.yaml
     domain: industry_energy
     task: sd
-    label_type: multi_track
+    label_type: multi_label
     license: CC-BY-4.0
     license_tier: A
-    why: "seul jeu énergie à annotations manuelles début/fin d'usage d'appareils"
-    risks: "~15 Go (dump SQL) ; séries de plusieurs années"
-    subset: "appareils annotés, fenêtres autour des annotations"
+    why: "Recurring human program/usage intervals with native sparse household power and preserved overlaps"
+    risks: "15.3GB compressed; irregular multi-year traces; sparse positive coverage only, no reviewed idle negatives"
+    subset: "All54 native traces from15houses, including data-only streams; all1738 original events, no cropped windows"
     contact_needed: false
   # ---------------- lot 5 : mocap/chirurgie/assemblage, CPD génériques, synthétique ----------------
   - id: andy-lab-oneperson
